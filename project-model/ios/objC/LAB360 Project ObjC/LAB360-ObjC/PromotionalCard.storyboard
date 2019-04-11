@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1GK-Bg-vKh">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Promotional Card MainVC-->
+        <scene sceneID="TNF-oe-uq9">
+            <objects>
+                <viewController storyboardIdentifier="PromotionalCardMainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IyK-7V-E1B" customClass="PromotionalCardMainVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gX6-sb-OLE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-of-qVj">
+                                <rect key="frame" x="20" y="84" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insira o Código Promocional" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PBH-qf-n78">
+                                <rect key="frame" x="20" y="124.5" width="280" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="z1C-wS-Zvc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IyK-7V-E1B" id="Gx3-Ye-Sla"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-UC-Veb">
+                                <rect key="frame" x="20" y="179.5" width="280" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3v2-Lw-U3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="VERIFICAR CÓDIGO"/>
+                                <connections>
+                                    <action selector="actionVerifyCode:" destination="IyK-7V-E1B" eventType="touchUpInside" id="XKw-lC-cwx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EPc-Iw-mN5" firstAttribute="trailing" secondItem="PBH-qf-n78" secondAttribute="trailing" constant="20" id="1H3-ik-pl9"/>
+                            <constraint firstItem="ZEa-of-qVj" firstAttribute="leading" secondItem="EPc-Iw-mN5" secondAttribute="leading" constant="20" id="R8b-4B-8yn"/>
+                            <constraint firstItem="EPc-Iw-mN5" firstAttribute="trailing" secondItem="ZEa-of-qVj" secondAttribute="trailing" constant="20" id="Xtf-rd-uT9"/>
+                            <constraint firstItem="EPc-Iw-mN5" firstAttribute="trailing" secondItem="XZy-UC-Veb" secondAttribute="trailing" constant="20" id="bmT-iG-eOv"/>
+                            <constraint firstItem="XZy-UC-Veb" firstAttribute="leading" secondItem="EPc-Iw-mN5" secondAttribute="leading" constant="20" id="eBJ-tO-0ob"/>
+                            <constraint firstItem="ZEa-of-qVj" firstAttribute="top" secondItem="EPc-Iw-mN5" secondAttribute="top" constant="20" id="gwf-hJ-VdX"/>
+                            <constraint firstItem="XZy-UC-Veb" firstAttribute="top" secondItem="PBH-qf-n78" secondAttribute="bottom" constant="20" id="hAg-ea-7Yt"/>
+                            <constraint firstItem="PBH-qf-n78" firstAttribute="leading" secondItem="EPc-Iw-mN5" secondAttribute="leading" constant="20" id="sjQ-Aw-lLL"/>
+                            <constraint firstItem="PBH-qf-n78" firstAttribute="top" secondItem="ZEa-of-qVj" secondAttribute="bottom" constant="20" id="tin-vA-34V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EPc-Iw-mN5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ED2-D7-GhB"/>
+                    <connections>
+                        <outlet property="btnSubmit" destination="XZy-UC-Veb" id="4eQ-1Q-1Dd"/>
+                        <outlet property="lblTitle" destination="ZEa-of-qVj" id="tAX-Hi-Udl"/>
+                        <outlet property="txtCode" destination="PBH-qf-n78" id="utd-y6-bIO"/>
+                        <segue destination="jaQ-WG-MdN" kind="show" identifier="SegueToCardScratch" id="eXK-sV-GNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQU-cR-8rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="229"/>
+        </scene>
+        <!--Promotional Card ScratchVC-->
+        <scene sceneID="2cQ-5O-bfc">
+            <objects>
+                <viewController storyboardIdentifier="PromotionalCardScratchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jaQ-WG-MdN" customClass="PromotionalCardScratchVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J2D-Pg-Ows">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mp1-Xt-Rl6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yi5-Fi-ez0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-2z-Shb">
+                                        <rect key="frame" x="40" y="40" width="240" height="240"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratch-card-texture.png" translatesAutoresizingMaskIntoConstraints="NO" id="d7E-Cd-v1y">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="d7E-Cd-v1y" secondAttribute="bottom" id="IQw-PS-SE5"/>
+                                            <constraint firstAttribute="width" secondItem="OIZ-2z-Shb" secondAttribute="height" multiplier="1:1" id="Ytd-UY-QZr"/>
+                                            <constraint firstItem="d7E-Cd-v1y" firstAttribute="leading" secondItem="OIZ-2z-Shb" secondAttribute="leading" id="c4L-f4-5jC"/>
+                                            <constraint firstItem="d7E-Cd-v1y" firstAttribute="top" secondItem="OIZ-2z-Shb" secondAttribute="top" id="eDf-qV-2zS"/>
+                                            <constraint firstAttribute="trailing" secondItem="d7E-Cd-v1y" secondAttribute="trailing" id="mnV-B2-p2d"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqi-QW-XYh">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="184"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OIZ-2z-Shb" firstAttribute="leading" secondItem="yi5-Fi-ez0" secondAttribute="leading" constant="40" id="2KK-yW-0gT"/>
+                                    <constraint firstItem="OIZ-2z-Shb" firstAttribute="top" secondItem="yi5-Fi-ez0" secondAttribute="top" constant="40" id="UCc-ku-b46"/>
+                                    <constraint firstAttribute="bottom" secondItem="rqi-QW-XYh" secondAttribute="bottom" id="WTi-eZ-req"/>
+                                    <constraint firstAttribute="trailing" secondItem="OIZ-2z-Shb" secondAttribute="trailing" constant="40" id="nTl-UE-1zo"/>
+                                    <constraint firstItem="rqi-QW-XYh" firstAttribute="top" secondItem="OIZ-2z-Shb" secondAttribute="bottom" constant="40" id="rf5-4S-R6K"/>
+                                    <constraint firstItem="rqi-QW-XYh" firstAttribute="leading" secondItem="yi5-Fi-ez0" secondAttribute="leading" id="sPc-kA-MiY"/>
+                                    <constraint firstAttribute="trailing" secondItem="rqi-QW-XYh" secondAttribute="trailing" id="xFF-cx-b13"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ErC-Ws-LXz" firstAttribute="top" secondItem="Mp1-Xt-Rl6" secondAttribute="top" id="Cl4-3Y-wii"/>
+                            <constraint firstItem="Mp1-Xt-Rl6" firstAttribute="leading" secondItem="ErC-Ws-LXz" secondAttribute="leading" id="DdF-m0-eyY"/>
+                            <constraint firstItem="ErC-Ws-LXz" firstAttribute="trailing" secondItem="Mp1-Xt-Rl6" secondAttribute="trailing" id="HCP-ly-aAJ"/>
+                            <constraint firstItem="Mp1-Xt-Rl6" firstAttribute="bottom" secondItem="ErC-Ws-LXz" secondAttribute="bottom" id="HsA-hr-UeZ"/>
+                            <constraint firstItem="yi5-Fi-ez0" firstAttribute="leading" secondItem="ErC-Ws-LXz" secondAttribute="leading" id="Iim-Eq-CRa"/>
+                            <constraint firstItem="ErC-Ws-LXz" firstAttribute="trailing" secondItem="yi5-Fi-ez0" secondAttribute="trailing" id="VUR-LQ-mBi"/>
+                            <constraint firstItem="ErC-Ws-LXz" firstAttribute="bottom" secondItem="yi5-Fi-ez0" secondAttribute="bottom" id="jUy-zp-cFk"/>
+                            <constraint firstItem="ErC-Ws-LXz" firstAttribute="top" secondItem="yi5-Fi-ez0" secondAttribute="top" id="sMA-6O-yVC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ErC-Ws-LXz"/>
+                    </view>
+                    <connections>
+                        <outlet property="imvBackground" destination="d7E-Cd-v1y" id="NHf-cY-F9b"/>
+                        <outlet property="imvWallpaper" destination="Mp1-Xt-Rl6" id="9cd-lE-bI3"/>
+                        <outlet property="txvCardInfo" destination="rqi-QW-XYh" id="gqt-8s-zzu"/>
+                        <outlet property="viewContainer" destination="yi5-Fi-ez0" id="8Z6-gh-4ED"/>
+                        <outlet property="viewScratch" destination="OIZ-2z-Shb" id="C7b-xR-bph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Sq-tQ-siI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iFr-HA-INw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1GK-Bg-vKh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F1m-FP-w4s">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IyK-7V-E1B" kind="relationship" relationship="rootViewController" id="gRk-gj-Y9b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eR3-3D-K4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="228.93553223388307"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scratch-card-texture.png" width="720" height="720"/>
+    </resources>
+</document>

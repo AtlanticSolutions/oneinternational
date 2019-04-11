@@ -1,0 +1,282 @@
+//
+//  Constants.h
+//  AdAlive
+//
+//  Created by Monique Trevisan on 9/17/14.
+//  Copyright (c) 2014 Lab360. All rights reserved.
+//
+
+#define MACRO_SERVER_URL(SERVER_URL) #SERVER_URL
+#define VALUE_SERVER_URL(SERVER_URL)  MACRO_SERVER_URL(SERVER_URL)
+
+#define MACRO_APP_ID(APP_ID) #APP_ID
+#define VALUE_APP_ID(APP_ID)  MACRO_APP_ID(APP_ID)
+
+#ifdef WILVALE
+
+#define kAccessKey "bef0814d1ba5328642e571c8a3d7cdae997c87e6"
+#define kSecretKey "2ffe78b4988cbb47c1dcb90bb3bfbd13a2645982"
+
+//#elif NATURA
+//
+//#define kAccessKey "602b6ce14130215e563678bfe167541108069194"
+//#define kSecretKey "95f4a882d88093261b8b414dffb8ab3a9e64bf59"
+
+#else
+
+//demo
+//#define kAccessKey "230b088b7b0ec8eaaae307528ef3e4d0ecb12363"
+//#define kSecretKey "60cde0fab8b8903639817774ec2e64e3144a97cf"
+
+//prod
+#define kAccessKey "a6f703306e53ed79b5339616bd311d869ac8770b"
+#define kSecretKey "3c8988b1fc4856cdfa472784810ac2408ebbcebf"
+
+#endif
+
+#define kAccessToken @"kAccessToken"
+#define kNotificationLogin @"LoginWithSuccess"
+#define kNotificationLogout @"LogoutWithSuccess"
+#define NP_CONFIG_PARAMETERS_RESPONSE @"NP_CONFIG_PARAMETERS_RESPONSE"
+
+//#define kMixPanelAccessKey @"fa32dbd63c96c4fd9b1997aa83fc4143"
+//#define kFlurryAccessKey @"V594Y3GK4XMTJM7NPWJQ"
+
+#pragma mark - Service Data
+
+//ambiente backoffice: `http://adalive.herokuapp.com/admin`
+
+#pragma mark - GET Methods
+
+/* Test Server */
+#define SERVICE_URL_TESTE @"http://10.4.0.82:3000/api/v1/products/optimus01"
+#define URL_REGISTER_PAGE_TEST @"http://10.4.0.128:8000/cadastro.html"
+
+// URL dos ambientes
+#define BASE_URL_WILVALE @"http://wilvale.ad-alive.com"
+#define BASE_URL_NATURA @"http://natura.ad-alive.com"
+#define BASE_URL_DEMO @"http://demo.ad-alive.com"
+#define BASE_URL_DEV @"http://dev.ad-alive.com"
+
+// endpoint
+#define SERVICE_URL_GET_PRODUCT @"/api/v1/products/target/"
+#define SERVICE_URL_GET_PRODUCT_ID @"/api/v1/products/"
+#define URL_REGISTER_PAGE @"/app_users/new"
+#define SERVICE_URL_GET_CATALOG @"/api/v1/products"
+#define SERVICE_URL_GET_ORDERS @"/api/v1/orders"
+#define SERVICE_URL_GET_CUSTOMERS @"/api/v1/app_customers"
+#define SERVICE_URL_AUTHENTICATE @"/api/v1/authenticate"
+#define SERVICE_URL_REGISTER @"/api/v1/app_users"
+#define SERVICE_URL_FACE_AUTHENTICATE @"/api/v1/authenticate/facebook"
+#define SERVICE_URL_PROFILE @"/api/v1/profile"
+#define SERVICE_URL_CONFIG @"/api/v1/app_config"
+#define SERVICE_URL_PROMOTION @"/api/v1/promotions"
+#define SERVICE_URL_MASK_COLLECTION @"/api/v1/masks/collection"
+#define SERVICE_URL_RESET_PASSWORD @"/api/v1/app_users/change_password"
+//
+#define SERVICE_URL_MA_GET_PRODUCTS @"/api/v1/ma_products?date=<date>"
+#define SERVICE_URL_MA_GET_ALL_CATALOGS @"/api/v1/ma_catalogs"
+#define SERVICE_URL_MA_GET_ALL_CATEGORIES @"/api/v1/ma_categories"
+#define SERVICE_URL_MA_GET_PREPAYMENT_ORDER @"/api/v1/ma_pre_send_information_order"
+#define SERVICE_URL_MA_GET_ORDER_ITEMS_DETAIL @"/api/v1/ma_order_information/<order_id>"
+#define SERVICE_URL_MA_POST_SEND_SHOP_ORDER @"/api/v1/tab_ma_orders/order"
+//
+#define SERVICE_URL_SHOPPING_GET_PROMOTIONS @"/api/v1/shopping/promotions/app/<app_id>"
+#define SERVICE_URL_SHOPPING_POST_REGISTER_PROMOTION @"/api/v1/shopping/promotions/register"
+<<<<<<< HEAD
+#define SERVICE_URL_SHOPPING_GET_MY_INVOICES @"/api/v1/shopping/nfs"
+#define SERVICE_URL_SHOPPING_POST_INVOICE_PHOTO @"/api/v1/shopping/send/nf"
+#define SERVICE_URL_SHOPPING_GET_STORES @"/api/v1/shopping/stores/app/<app_id>"
+=======
+#define SERVICE_URL_SHOPPING_GET_COSTUMER @"/api/v1/shopping/customer"
+>>>>>>> 89349c050a3bab512869f1cf4fb3240f37fc07b4
+
+#pragma mark - POST Methods
+
+#define SERVICE_URL_LOG_TARGET @"/api/v1/logs/target"
+#define SERVICE_URL_LOG_ACTION @"/api/v1/logs/action"
+#define SERVICE_URL_LOG_DEVICE @"/api/v1/logs/device"
+#define SERVICE_URL_LOG_PRODUCT @"/api/v1/logs/product"
+#define SERVICE_URL_LOG_ORDER @"/api/v1/logs/order"
+#define SERVICE_URL_COUPON @"/api/v1/coupons"
+#define SERVICE_URL_BANNER @"/api/v1/logs/banner"
+#define SERVICE_URL_BANNER_CLICK @"/api/v1/logs/banner_click"
+#define SERVICE_URL_SURVEY @"/api/v1/surveys"
+#define SERVICE_URL_SURVEY_LOG @"/api/v1/logs/survey"
+#define SERVICE_URL_LOG_TRACKING @"/api/v1/logs/user_tracking"
+#define SERVICE_URL_BEACON_LOG @"/api/v1/logs/beacon"
+#define SERVICE_URL_MASK_LOG @"/api/v1/logs/mask"
+
+#pragma mark - UserDefaults keys
+
+#define SERVER_PREFERENCES_KEY @"server_preference"
+#define RESET_DATA_KEY @"reset_data"
+#define LAST_UPDATE_KEY @"last_update"
+#define BEACON_RANGE_COUNT_KEY @"beacon_range_count"
+
+#define LOG_TARGET_NAME_KEY @"target_name"
+#define LOG_LATITUDE_KEY @"latitude" //String
+#define LOG_LONGITUDE_KEY @"longitude" //String
+
+#define LOG_ID_ACTION_KEY @"action_id"
+#define LOG_ACTION_NAME_KEY @"action_name"
+#define LOG_PRODUCT_NAME_KEY @"product_name"
+#define LOG_PRODUCT_ID @"product_id"
+#define LOG_SENDER_NAME @"sender_name"
+#define LOG_FROM_PRODUCT_ID @"from_product_id"
+#define LOG_PRODUCT_QUANTITY @"product_quantity"
+#define LOG_CUSTOMER_IDENTIFICATION @"customer_identification"
+
+#define LOG_SENDER_RECOMENDATION @"RECOMENDATION"
+#define LOG_SENDER_IDENTIFIED @"IDENTIFIED"
+#define LOG_SENDER_CATALOG @"CATALOG"
+#define LOG_SENDER_FAVORITE @"FAVORITE"
+
+#define LOG_DEVICE_NAME_KEY @"device_name"
+#define LOG_DEVICE_SYSTEM_NAME_KEY @"device_system_name"
+#define LOG_DEVICE_SYSTEM_VERSION_KEY @"device_system_version"
+#define LOG_DEVICE_SYSTEM_MODEL_KEY @"device_model"
+#define LOG_DEVICE_ID_VENDOR_KEY @"device_id_vendor"
+#define LOG_DEVICE_VERSION_KEY @"device_version"
+#define LOG_LOGGED_USER @"User Authenticated"
+#define LOG_ORDER_COMPANY_TRADING @"company_trading_name"
+#define LOG_ORDER_COMPANY_NAME @"company_name"
+#define LOG_ORDER_DISCOUNT @"discount"
+#define LOG_ORDER_BUSINESS_CONDITION @"business_condition"
+#define LOG_ORDER_COLOR @"colour_code"
+
+#pragma mark - Directories
+
+#define FAVORITE_DIRECTORY @"favoriteData"
+#define FAVORITE_IMAGE_DIRECTORY @"favoriteImage"
+#define PRODUCT_DIRECTORY @"productData"
+#define CATALOG_DIRECTORY @"catalogData"
+#define PRODUCT_IMAGE_DIRECTORY @"productImage"
+#define PROFILE_DIRECTORY @"profileData"
+#define PROFILE_FILE @"profileFile"
+#define ORDERS_FILE @"orderFile"
+#define ORDERS_DIRECTORY @"orderData"
+#define BEACON_DIRECTORY @"beaconDirectory"
+#define BEACON_FILE @"beaconData"
+
+#pragma mark - Product Dictionary
+
+#define PRODUCT_ID_KEY @"id"
+#define PRODUCT_NAME_KEY @"name"
+#define PRODUCT_TITLE_KEY @"title"
+#define PRODUCT_SUBTITLE_KEY @"subtitle"
+#define PRODUCT_IMAGE_URL_KEY @"image_url"
+#define PRODUCT_ACTIONS_KEY @"actions"
+#define PRODUCT_UPDATED_AT @"updated_at"
+#define PRODUCT_AUTO_LAUNCH_KEY @"auto_launch"
+#define PRODUCT_PRICE_KEY @"price"
+#define PRODUCT_DISCOUNT_PRICE_KEY @"discount_price"
+#define PRODUCT_RECOGNIZE_DATE_KEY @"recognizeDate"
+#define PRODUCT_RECOMMENDED_ITEMS @"recommendations"
+#define PRODUCT_LAST_UPDATED_AT @"last_updated_at"
+
+#define ACTION_ID_KEY @"id"
+#define ACTION_TYPE_KEY @"type"
+#define ACTION_LABEL_KEY @"label"
+#define ACTION_HREF_KEY @"href"
+#define ACTION_POINTS_KEY @"points"
+#define ACTION_ORDER_QUANTITY @"quantidade"
+#define ACTION_ORDER_COLOR_CODE @"codigo_cor"
+
+#define ACTION_VIDEO @"VideoAction"
+#define ACTION_AUDIO @"AudioAction"
+#define ACTION_SELL @"SellAction"
+#define ACTION_PRICE @"PriceAction"
+#define ACTION_ORDER @"OrderAction"
+#define ACTION_LIKE @"LikeAction"
+#define ACTION_INFO @"InfoAction"
+#define ACTION_DRAW @"DrawAction"
+#define ACTION_LINK @"LinkAction"
+#define ACTION_PHONE @"PhoneAction"
+#define ACTION_QUIZ @"QuizAction"
+#define ACTION_REGISTER @"RegisterAction"
+#define ACTION_RSVP @"RsvpAction"
+#define ACTION_TWEET @"TweetAction"
+#define ACTION_EMAIL @"EmailAction"
+#define ACTION_COUPON @"CouponAction"
+#define ACTION_PROMOTION @"PromotionAction"
+#define ACTION_TURISTIK @"TuristikAction"
+#define ACTION_SURVEY @"SurveyAction"
+#define ACTION_TRACKING @"TrackingAction"
+#define ACTION_MASK @"MaskAction"
+
+#define AUTHENTICATE_HTTP_HEADER_FIELD @"Authorization"
+#define AUTHENTICATE_EMAIL_KEY @"email"
+#define AUTHENTICATE_PASSWORD_KEY @"password"
+#define AUTHENTICATE_FIRST_NAME @"first_name"
+#define AUTHENTICATE_LAST_NAME @"last_name"
+#define AUTHENTICATE_PHONE @"phone"
+#define AUTHENTICATE_ROLE @"role"
+#define AUTHENTICATE_ACCESS_TOKEN @"access_token"
+
+#define PROFILE_ROLE_DEFAULT @"default"
+#define PROFILE_ROLE_SELLER @"seller"
+
+#pragma mark - MixPanel Event
+
+#define SP_LOGGED_USER @"User Authenticated"
+#define SP_USER_EMAIL @"User Email"
+
+#define EVENT_DEVICE_LOG @"Device Log"
+#define EVENT_PRODUCT_LOG @"Product Log"
+#define EVENT_PRODUCT_IDENTIFIED @"Product Identified"
+#define EVENT_ACTION_SELECTED @"Action Selected"
+#define EVENT_PRODUCT_RECOMMENDED @"Product Recommended"
+#define EVENT_ADD_FAVORITE @"Favorite Product Added"
+#define EVENT_REMOVE_FAVORITE @"Favorite Product Removed"
+#define EVENT_PRODUCT_PURCHASED @"Product Purchased"
+#define EVENT_USER_LOGIN @"User Logged In"
+#define EVENT_SHARE_FACEBOOK @"Product Shared on Facebook"
+#define EVENT_SHARE_TWITTER @"Product Shared on Twitter"
+
+#define EP_TARGET_NAME @"Target Name"
+#define EP_PRODUCT_TITLE @"Product Title"
+#define EP_NUMBER_OF_ACTIONS @"Number Of Actions"
+#define EP_NUMBER_OF_RECOMMENDED @"Number Of Recommended Products"
+#define EP_ACTION_TYPE @"Action Type"
+#define EP_PRODUCT_TITLE_FROM @"Product Title (From)"
+
+#pragma mark - Customer Keys
+
+#define CUSTOMER_NAME @"name"
+#define CUSTOMER_COMPANY_NAME @"company_name"
+#define CUSTOMER_EMAIL @"email"
+#define CUSTOMER_PHONE @"phone"
+#define CUSTOMER_CREDITS @"credit"
+#define CUSTOMER_NOTES @"notes"
+#define CUSTOMER_PROFILE @"profile"
+#define CUSTOMER_CITY @"addr_city"
+#define CUSTOMER_STATE @"addr_state"
+#define CUSTOMER_DEPUTY @"deputy_name"
+#define CUSTOMER_HAS_RESTRICTIONS @"has_restriction"
+
+#pragma mark - Survey Keys
+
+#define SURVEY_ID @"id"
+#define SURVEY_NAME @"name"
+#define SURVEY_QUESTIONS @"questions"
+#define SURVEY_OPTIONS @"question_options"
+
+#pragma mark - Quiz Keys
+
+#define QUIZ_QUESTION_KEY @"query"
+#define QUIZ_ANSWER_ARRAY_KEY @"answers"
+#define QUIZ_ANSWER_ITEM_KEY @"content"
+
+#pragma mark - New Relic
+
+#define NEW_RELIC_EVENT_URL @"https://insights-collector.newrelic.com/v1/accounts/848422/events"
+#define NEW_RELIC_EVENT_KEY @"II_5fx_XKNDrF3yIvruAzp0nANzC0ZH6"
+
+#pragma mark - Errors keys
+
+#define ERROR_ARRAY_KEY @"errors"
+#define ERROR_OBJECT_KEY @"error"
+#define ERROR_ID_KEY @"id"
+#define ERROR_STATUS_KEY @"status"
+#define ERROR_TITLE_KEY @"title"

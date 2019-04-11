@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hf8-Am-Gqy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stores Search-->
+        <scene sceneID="tzG-53-h67">
+            <objects>
+                <viewController storyboardIdentifier="VC_StoresSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Epn-I2-7em" customClass="VC_StoresSearch" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nkr-bs-Rzl"/>
+                        <viewControllerLayoutGuide type="bottom" id="8E6-im-1Ig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5x1-kU-t55">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WuF-9Q-p65">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Epn-I2-7em" id="dXb-Wr-21A"/>
+                                    <outlet property="delegate" destination="Epn-I2-7em" id="n2l-fP-WRy"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POj-9Q-Szm">
+                                <rect key="frame" x="20" y="64" width="335" height="603"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b2s-KZ-faA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Epn-I2-7em" id="tMi-jp-Muw"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="POj-9Q-Szm" firstAttribute="leading" secondItem="5x1-kU-t55" secondAttribute="leading" constant="20" id="7Yl-a4-CdO"/>
+                            <constraint firstItem="8E6-im-1Ig" firstAttribute="top" secondItem="WuF-9Q-p65" secondAttribute="bottom" id="Acb-ar-VFl"/>
+                            <constraint firstItem="8E6-im-1Ig" firstAttribute="top" secondItem="POj-9Q-Szm" secondAttribute="bottom" id="JVf-sF-Kwu"/>
+                            <constraint firstAttribute="trailing" secondItem="b2s-KZ-faA" secondAttribute="trailing" id="OKv-8P-GXB"/>
+                            <constraint firstAttribute="trailing" secondItem="POj-9Q-Szm" secondAttribute="trailing" constant="20" id="SWP-cK-aE2"/>
+                            <constraint firstAttribute="trailing" secondItem="WuF-9Q-p65" secondAttribute="trailing" id="VBv-Dm-njf"/>
+                            <constraint firstItem="WuF-9Q-p65" firstAttribute="top" secondItem="b2s-KZ-faA" secondAttribute="bottom" id="bhh-JG-LPd"/>
+                            <constraint firstItem="POj-9Q-Szm" firstAttribute="top" secondItem="Nkr-bs-Rzl" secondAttribute="bottom" id="dxb-ih-Tg8"/>
+                            <constraint firstItem="b2s-KZ-faA" firstAttribute="leading" secondItem="5x1-kU-t55" secondAttribute="leading" id="hNa-Ev-IHU"/>
+                            <constraint firstItem="b2s-KZ-faA" firstAttribute="top" secondItem="Nkr-bs-Rzl" secondAttribute="bottom" id="rRe-wF-1QY"/>
+                            <constraint firstItem="WuF-9Q-p65" firstAttribute="leading" secondItem="5x1-kU-t55" secondAttribute="leading" id="zhf-99-SaU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="032-l1-60p"/>
+                    <connections>
+                        <outlet property="lblNoData" destination="POj-9Q-Szm" id="nd8-zG-FyB"/>
+                        <outlet property="searchBarStores" destination="b2s-KZ-faA" id="09h-Gm-BhE"/>
+                        <outlet property="tvStores" destination="WuF-9Q-p65" id="bQc-DK-LvK"/>
+                        <segue destination="axG-4u-Vxm" kind="show" identifier="SegueToStoreDetail" id="xrs-vB-PD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QF-c1-uVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="179"/>
+        </scene>
+        <!--Store Detail-->
+        <scene sceneID="Jyf-MM-vVl">
+            <objects>
+                <viewController id="axG-4u-Vxm" customClass="VC_StoreDetail" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GFO-CF-Itt"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQt-9U-P6D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Uf-1Z-bqq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwR-L7-nhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lg2-EN-Vtb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hf8-Am-Gqy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="04x-5m-zgo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Epn-I2-7em" kind="relationship" relationship="rootViewController" id="rBF-aq-9L4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z12-67-Bqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="179"/>
+        </scene>
+    </scenes>
+</document>

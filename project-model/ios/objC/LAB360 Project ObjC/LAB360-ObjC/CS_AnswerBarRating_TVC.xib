@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerBarRating_TVC_Identifier" rowHeight="93" id="bAo-OV-J9W" customClass="CS_AnswerBarRating_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAo-OV-J9W" id="R7B-VO-ll3">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="92.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="hAp-lc-WXH">
+                        <rect key="frame" x="10" y="37" width="336" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="4Qo-Qx-cjW"/>
+                        </constraints>
+                        <segments>
+                            <segment title="0"/>
+                            <segment title="1"/>
+                            <segment title="2"/>
+                            <segment title="3"/>
+                            <segment title="4"/>
+                            <segment title="5"/>
+                            <segment title="6"/>
+                            <segment title="7"/>
+                            <segment title="8"/>
+                            <segment title="9"/>
+                            <segment title="10"/>
+                        </segments>
+                        <connections>
+                            <action selector="segmentedControlChanged:" destination="bAo-OV-J9W" eventType="valueChanged" id="qfn-Zr-ov1"/>
+                        </connections>
+                    </segmentedControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-M9-02k">
+                        <rect key="frame" x="10" y="10" width="163" height="22"/>
+                        <color key="backgroundColor" red="1" green="0.70980392160000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Uwx-F0-8Cb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DTb-q2-Lxb">
+                        <rect key="frame" x="183" y="10" width="163" height="22"/>
+                        <color key="backgroundColor" red="1" green="0.70980392160000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="L9Q-h3-rtd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Tt9-M9-02k" firstAttribute="leading" secondItem="R7B-VO-ll3" secondAttribute="leading" constant="10" id="7gF-h9-1wV"/>
+                    <constraint firstItem="DTb-q2-Lxb" firstAttribute="width" secondItem="R7B-VO-ll3" secondAttribute="width" multiplier="1/2" constant="-15" id="EyH-GN-jPh"/>
+                    <constraint firstAttribute="trailing" secondItem="hAp-lc-WXH" secondAttribute="trailing" constant="10" id="Jdf-Md-dGm"/>
+                    <constraint firstAttribute="trailing" secondItem="DTb-q2-Lxb" secondAttribute="trailing" constant="10" id="Kc8-5S-2r0"/>
+                    <constraint firstItem="hAp-lc-WXH" firstAttribute="top" secondItem="Tt9-M9-02k" secondAttribute="bottom" constant="5" id="ObN-jb-gpD"/>
+                    <constraint firstItem="hAp-lc-WXH" firstAttribute="leading" secondItem="R7B-VO-ll3" secondAttribute="leading" constant="10" id="YUE-YG-KM1"/>
+                    <constraint firstItem="Tt9-M9-02k" firstAttribute="top" secondItem="R7B-VO-ll3" secondAttribute="top" constant="10" id="dNp-yS-AgG"/>
+                    <constraint firstItem="Tt9-M9-02k" firstAttribute="width" secondItem="R7B-VO-ll3" secondAttribute="width" multiplier="1/2" constant="-15" id="ggA-R5-pyE"/>
+                    <constraint firstItem="DTb-q2-Lxb" firstAttribute="top" secondItem="R7B-VO-ll3" secondAttribute="top" constant="10" id="lpz-K6-DQB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblMaxMessage" destination="DTb-q2-Lxb" id="YSI-fY-lfn"/>
+                <outlet property="lblMinMessage" destination="Tt9-M9-02k" id="VyA-uJ-eUN"/>
+                <outlet property="segControl" destination="hAp-lc-WXH" id="5bO-ZM-xvH"/>
+            </connections>
+            <point key="canvasLocation" x="-222.40000000000001" y="-329.68515742128938"/>
+        </tableViewCell>
+    </objects>
+</document>

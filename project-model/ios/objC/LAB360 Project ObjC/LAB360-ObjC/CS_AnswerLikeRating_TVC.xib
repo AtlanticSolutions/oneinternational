@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerLikeRating_TVC_Identifier" rowHeight="64" id="3Tv-kF-jEN" customClass="CS_AnswerLikeRating_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Tv-kF-jEN" id="ePa-nJ-1HO">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-Ff-Xbb">
+                        <rect key="frame" x="10" y="10" width="168" height="40"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BiJ-BI-U02"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="CustomSurveyIconRatingLikeON"/>
+                        <connections>
+                            <action selector="actionSelection:" destination="3Tv-kF-jEN" eventType="touchUpInside" id="vRo-yv-Ls2"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-i5-Kv6">
+                        <rect key="frame" x="178" y="10" width="168" height="40"/>
+                        <color key="backgroundColor" red="0.58112188909999996" green="1" blue="0.28230935060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="KNx-yg-HlT"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="CustomSurveyIconRatingLikeOFF"/>
+                        <connections>
+                            <action selector="actionSelection:" destination="3Tv-kF-jEN" eventType="touchUpInside" id="UyB-Vh-Yg3"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sSs-Ff-Xbb" firstAttribute="top" secondItem="ePa-nJ-1HO" secondAttribute="top" constant="10" id="MWc-ea-rs0"/>
+                    <constraint firstItem="sSs-Ff-Xbb" firstAttribute="width" secondItem="ePa-nJ-1HO" secondAttribute="width" multiplier="1/2" constant="-10" id="iGG-Y1-hKl"/>
+                    <constraint firstItem="sSs-Ff-Xbb" firstAttribute="leading" secondItem="ePa-nJ-1HO" secondAttribute="leading" constant="10" id="pJl-yM-PjX"/>
+                    <constraint firstItem="VHe-i5-Kv6" firstAttribute="top" secondItem="ePa-nJ-1HO" secondAttribute="top" constant="10" id="png-rg-hN0"/>
+                    <constraint firstItem="VHe-i5-Kv6" firstAttribute="width" secondItem="ePa-nJ-1HO" secondAttribute="width" multiplier="1/2" constant="-10" id="q4w-19-89q"/>
+                    <constraint firstAttribute="trailing" secondItem="VHe-i5-Kv6" secondAttribute="trailing" constant="10" id="vWV-0c-b0f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnLeft" destination="sSs-Ff-Xbb" id="dJo-bl-tjW"/>
+                <outlet property="btnRight" destination="VHe-i5-Kv6" id="xHx-iO-Z5Q"/>
+            </connections>
+            <point key="canvasLocation" x="-403.19999999999999" y="-341.82908545727139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CustomSurveyIconRatingLikeOFF" width="40" height="40"/>
+        <image name="CustomSurveyIconRatingLikeON" width="40" height="40"/>
+    </resources>
+</document>

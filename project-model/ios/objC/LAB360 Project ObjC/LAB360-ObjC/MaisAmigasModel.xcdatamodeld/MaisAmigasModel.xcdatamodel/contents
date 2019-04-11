@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MA_Order" representedClassName="MA_Order" syncable="YES" codeGenerationType="class">
+        <attribute name="orderID" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="MA_Product" representedClassName="MA_Product" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MA_User" representedClassName="MA_User" syncable="YES" codeGenerationType="class">
+        <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MA_User" positionX="-767" positionY="134" width="128" height="73"/>
+        <element name="MA_Product" positionX="-396" positionY="-27" width="128" height="75"/>
+        <element name="MA_Order" positionX="-531" positionY="124" width="146" height="73"/>
+    </elements>
+</model>

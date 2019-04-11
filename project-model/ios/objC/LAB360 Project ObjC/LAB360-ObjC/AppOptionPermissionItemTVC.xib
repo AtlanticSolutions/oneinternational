@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="q50-Ye-nuQ" customClass="AppOptionPermissionItemTVC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q50-Ye-nuQ" id="mRZ-mh-M9F">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aq1-9d-IbF">
+                        <rect key="frame" x="0.0" y="0.0" width="24" height="119.5"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.15686274510000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="R12-6f-TWA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-aF-7tD">
+                        <rect key="frame" x="40" y="34" width="325" height="57"/>
+                        <color key="backgroundColor" red="0.48569327340000001" green="0.55873527050000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <string key="text">Descrição do opção 1
+(pode ter até 2 linhas)</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPTION 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-RR-5gS">
+                        <rect key="frame" x="34" y="96.5" width="331" height="18"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="MDx-pa-L3K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPTION 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Mps-5k-iid">
+                        <rect key="frame" x="34" y="5" width="331" height="24"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Zmc-as-Imi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GDb-aF-7tD" firstAttribute="top" secondItem="Mps-5k-iid" secondAttribute="bottom" constant="5" id="5zG-9H-7PI"/>
+                    <constraint firstAttribute="trailing" secondItem="Mps-5k-iid" secondAttribute="trailing" constant="10" id="BrY-7A-fBA"/>
+                    <constraint firstItem="aq1-9d-IbF" firstAttribute="top" secondItem="mRZ-mh-M9F" secondAttribute="top" id="FGr-Ot-SfH"/>
+                    <constraint firstItem="Jbc-RR-5gS" firstAttribute="top" secondItem="GDb-aF-7tD" secondAttribute="bottom" constant="5" id="J5n-Mw-Ny2"/>
+                    <constraint firstItem="aq1-9d-IbF" firstAttribute="leading" secondItem="mRZ-mh-M9F" secondAttribute="leading" id="JcS-5L-3cV"/>
+                    <constraint firstAttribute="trailing" secondItem="GDb-aF-7tD" secondAttribute="trailing" constant="10" id="Szo-T6-0UC"/>
+                    <constraint firstAttribute="trailing" secondItem="Jbc-RR-5gS" secondAttribute="trailing" constant="10" id="cgh-Vs-WYv"/>
+                    <constraint firstItem="Mps-5k-iid" firstAttribute="leading" secondItem="aq1-9d-IbF" secondAttribute="trailing" constant="10" id="e9p-Eo-QtI"/>
+                    <constraint firstItem="Mps-5k-iid" firstAttribute="top" secondItem="mRZ-mh-M9F" secondAttribute="top" constant="5" id="gea-8K-SsQ"/>
+                    <constraint firstAttribute="bottom" secondItem="Jbc-RR-5gS" secondAttribute="bottom" constant="5" id="jU7-Ne-6af"/>
+                    <constraint firstItem="Jbc-RR-5gS" firstAttribute="leading" secondItem="aq1-9d-IbF" secondAttribute="trailing" constant="10" id="qna-Ba-xgE"/>
+                    <constraint firstAttribute="bottom" secondItem="aq1-9d-IbF" secondAttribute="bottom" id="rPe-8V-VZQ"/>
+                    <constraint firstItem="GDb-aF-7tD" firstAttribute="leading" secondItem="aq1-9d-IbF" secondAttribute="trailing" constant="16" id="rVH-5K-TBP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imvStatus" destination="aq1-9d-IbF" id="qFB-Ma-0wY"/>
+                <outlet property="lblDescription" destination="GDb-aF-7tD" id="we3-6m-fKs"/>
+                <outlet property="lblStatus" destination="Jbc-RR-5gS" id="NIR-Xb-YZd"/>
+                <outlet property="lblTitle" destination="Mps-5k-iid" id="bPb-BJ-mt6"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="-94"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  AHK-100anos
+
+  Created by Erico GT on 10/5/16.
+  Copyright © 2016 Atlantic Solutions. All rights reserved.
+*/
+
+NSCameraUsageDescription = "\nAutorize o acesso a câmera para poder usar o 'Scanner' e também tirar fotos com seu dispositivo.";
+NSPhotoLibraryUsageDescription = "\nAutorize para que você possa usar fotos de sua biblioteca.";
+NSPhotoLibraryAddUsageDescription = "\nAutorize para que você possa salvar imagens em sua biblioteca.";
+NSLocationWhenInUseUsageDescription = "\n Autorize o uso de sua localização para que o aplicativo possa mostrar informações de eventos, como locais e horários, específicas para sua região atual.";
+NSLocationAlwaysUsageDescription = "\n Autorize o uso de sua localização para que o aplicativo possa mostrar informações de eventos, como locais e horários, específicas para sua região atual.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "\n Autorize o uso de sua localização para que o aplicativo possa mostrar informações de eventos, como locais e horários, específicas para sua região atual.";
+NSMicrophoneUsageDescription = "\nAutorize o uso do microfone para gravar vídeos e utilizar o reconhecedor de voz.";
+NSSpeechRecognitionUsageDescription = "\nO reconhecimento de voz será utilizado para agilizar o preenchimento de campos de texto.";

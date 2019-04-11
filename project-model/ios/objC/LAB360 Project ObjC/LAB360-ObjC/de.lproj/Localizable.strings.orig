@@ -1,0 +1,179 @@
+/*
+ Localized.strings
+ AHK-100anos
+ 
+ Created by Erico GT on 10/5/16.
+ Copyright © 2016 Atlantic Solutions. All rights reserved.
+ */
+
+/* Navigation Controller */
+//Tittles
+"MENU_TITLE_APPNAME" = "AHK - 100 anos";
+"SCREEN_TITLE_SIGNUP" = "Cadastro";
+"SCREEN_TITLE_ACCOUNT" = "Meus Dados";
+"SCREEN_TITLE_EVENTS"= "Eventos / Cursos";
+"SCREEN_TITLE_MYEVENTS" = "Evento";
+<<<<<<< HEAD
+"SCREEN_TITLE_SUBSCRIBE" = "Inscrição";
+=======
+"SCREEN_TITLE_DOWNLOADS" = "Downloads";
+"SCREEN_TITLE_MY_DOWNLOADS" = "Meus Downloads";
+>>>>>>> 781f167ad20736bb15dec62e61ea2b059f7ac82a
+
+/* Alert Messages */
+"ALERT_TITLE_SUCCESS" = "Sucesso";
+"ALERT_TITLE_ERROR" = "Erro";
+
+"ALERT_TITLE_EMPTY_FIELDS" = "Campos Vazios";
+"ALERT_MESSAGE_EMPTY_FIELDS" = "Os campos Email e Senha são obrigatórios.";
+"ALERT_MESSAGE_EMPTY_FIELDS_USER" = "Os campos Nome, Sobrenome, Telefone e Email são obrigatórios.";
+"ALERT_MESSAGE_EMAIL_INVALID" = "Email inválido. Verifique se digitou corretamente o email.";
+"ALERT_MESSAGE_PASSWORD_INVALID" = "Sua senha deve conter entre 6 e 16 caracteres.";
+
+"ALERT_MESSAGE_EMPTY_FIELDS_GENEREAL" = "Todos os campos são obrigatórios.";
+
+"ALERT_MESSAGE_CREATION_SUCCESS" = "Usuário criado com sucesso.";
+"ALERT_MESSAGE_UPDATE_SUCCESS" = "Usuário atualizado com sucesso.";
+
+"ALERT_TITLE_AUTHENTICATION_ERROR" = "Erro Autenticação";
+"ALERT_MESSAGE_AUTHENTICATION_ERROR" = "Não foi possível verificar o usuário. Verifique o Email e Senha informados.";
+
+"ALERT_TITLE_CREATION_ERROR" = "Erro Criação";
+"ALERT_MESSAGE_CREATION_ERROR" = "Não foi possível criar o usuário. Tente novamente.";
+"ALERT_MESSAGE_UPDATE_ERROR" = "Não foi possível atualizar o usuário. Tente novamente.";
+
+"ALERT_TITLE_FORGOT_PASSWORD" = "Recuperar Senha";
+"ALERT_MESSAGE_FORGOT_PASSWORD" = "Insira o email associado à sua conta.";
+
+"ALERT_MESSAGE_PASSWORD_RESET_SUCCESS" = "Verifique o email informado para continuar com a recuperação da Senha.";
+"ALERT_MESSAGE_PASSWORD_RESET_ERROR" = "Um problema impede que a Senha seja recuperada neste momento. Tente mais tarde.";
+
+"ALERT_TITLE_NO_CONNECTION" = "Sem Conexão";
+"ALERT_MESSAGE_NO_CONNECTION" = "Por favor, verifique sua conexão com a internet e tente novamente.";
+
+"ALERT_TITLE_INCORRECT_EMAIL_FORMAT" = "Formato Incorreto";
+"ALERT_MESSAGE_INCORRECT_EMAIL_FORMAT" = "O endereço de email informado não possui um formato válido para envio.";
+
+"ALERT_TITLE_PICK_PHOTO" = "Escolher Foto";
+"ALERT_MESSAGE_PICK_PHOTO" = "Tire uma foto ou selecione uma da sua biblioteca de fotos.";
+
+"ALERT_TITLE_LOGOUT" = "Desconectar";
+"ALERT_MESSAGE_LOGOUT" = "Desejar finalizar a sessão atual e voltar para a tela de autenticação?";
+
+"ALERT_TITLE_CONFIRM" = "Confirmar";
+"ALERT_MESSAGE_EVENT_CONFIRM" = "Deseja confirmar sua inscrição no evento?";
+"ALERT_MESSAGE_SUBSCRIBE_ERROR" = "Inscrição não realizada, tente novamente.";
+"ALERT_TITLE_SUBSCRIBE_SUCCESS" = "Parabéns! Você acaba de se inscrever neste evento.";
+"ALERT_MESSAGE_SUBSCRIBE_SUCCESS" = "Enviamos um email com todas as informações.";
+
+
+/* Components Interface*/
+//Buttons
+"BUTTON_TITLE_LOGIN" = "ACESSAR";
+"BUTTON_TITLE_ACCOUNT" = "cadastrar-se";
+"BUTTON_TITLE_PASSWORD_RECOVERY" = "ESQUECEU A SENHA?";
+"BUTTON_TITLE_ACCOUNT_SAVE" = "SALVAR";
+"BUTTON_TITLE_CHANGE_PASSWORD" = "REDEFINIR SENHA";
+"BUTTON_TITLE_EVENT_SUBSCRIBE" = "INSCREVA-SE";
+
+//Labels
+"LABEL_WELCOME" = "Bem-vindo!";
+"LABEL_TITLE_EVENT_CHAT" = "Chat";
+"LABEL_TITLE_EVENT_DOWNLOAD" = "Downloads";
+"LABEL_TITLE_EVENT_CANCEL" = "Cancelar Inscrição";
+"LABEL_TITLE_EVENT_RESEARCH" = "Pesquisa de Satisfação";
+"LABEL_EVENT_DESC_TITLE_TYPE" = "TIPO";
+"LABEL_EVENT_DESC_TITLE_PALES" = "PALESTRANTE";
+"LABEL_EVENT_DESC_TITLE_SYNOPSIS" = "SINOPSE";
+"LABEL_EVENT_DESC_TITLE_LANGUAGE" = "IDIOMAS";
+"LABEL_EVENT_DESC_TITLE_DATETIME" = "DATA | HORÁRIO";
+"LABEL_EVENT_DESC_TITLE_LOCAL" = "LOCAL";
+
+//Menus
+"MAIN_MENU_OPTION_1_EVENTS" = "Eventos / Cursos";
+"MAIN_MENU_OPTION_1_DIENSTLEISTUNGEN" = "Dienstleistungen"; //Não traduzir este label (mas incluí-lo em todos os arquivos)
+"MAIN_MENU_OPTION_2_ASSOCIATED" = "Associados";
+"MAIN_MENU_OPTION_3_YEARS" = "Anos";
+"MAIN_MENU_OPTION_4_CONTACTS" = "Contatos";
+"MAIN_MENU_OPTION_4_PUBLICATIONS" = "Publicações";
+"MAIN_MENU_OPTION_5_NEWSPORTAL" = "Portal de Notícias";
+"MAIN_MENU_OPTION_5_WOCHENBERICHT" = "Wochenbericht"; //Não traduzir este label (mas incluí-lo em todos os arquivos)
+"MAIN_MENU_OPTION_6_SCANNER" = "Scanner";
+
+"SIDE_MENU_OPTION_1_START" = "Início";
+"SIDE_MENU_OPTION_2_USER_INFO" = "Meus dados";
+"SIDE_MENU_OPTION_3_EVENTS" = "Meus eventos/cursos";
+"SIDE_MENU_OPTION_4_DOWNLOADS" = "Meus downloads";
+"SIDE_MENU_OPTION_5_GERMAN" = "Estou na Alemanha";
+"SIDE_MENU_OPTION_5_BRAZIL" = "Estou no Brasil";
+"SIDE_MENU_OPTION_6_ABOUT" = "Sobre AHK";
+"SIDE_MENU_OPTION_7_HELP" = "Ajuda";
+"SIDE_MENU_OPTION_8_EXIT" = "Sair";
+
+//SegmentedControl
+"SEGMENTEDCONTROL_OPTION_LIST" = "Lista";
+"SEGMENTEDCONTROL_OPTION_CALENDAR" = "Calendário";
+
+//Footer
+"FOOTER_LABEL_TODAY" = "Dia atual";
+"FOOTER_LABEL_REGISTERED" = "Inscrito";
+"FOOTER_LABEL_AVAILABLE" = "Inscreva-se";
+
+/* Alerts Options*/
+"ALERT_OPTION_OK" = "OK";
+"ALERT_OPTION_CONFIRM" = "Confirmar";
+"ALERT_OPTION_CANCEL" = "Cancelar";
+"ALERT_OPTION_CLOSE" = "Fechar";
+"ALERT_OPTION_YES" = "Sim";
+"ALERT_OPTION_NO" = "Não";
+"ALERT_OPTION_SEND" = "Enviar";
+"ALERT_OPTION_SETTINGS" = "Ajustes";
+"ALERT_OPTION_TAKE_PHOTO" = "Tirar foto";
+"ALERT_OPTION_PICK_PHOTO"= "Biblioteca";
+
+/* Placeholders and Labels*/
+"PLACEHOLDER_EMAIL" = "Email";
+"PLACEHOLDER_PASSWORD" = "Senha";
+"PLACEHOLDER_NAME" = "Nome";
+"PLACEHOLDER_LAST_NAME" = "Sobrenome";
+"PLACEHOLDER_PHONE" = "Telefone";
+"PLACEHOLDER_CPF" = "CPF";
+"PLACEHOLDER_COMPANY" = "Empresa";
+"PLACEHOLDER_CNPJ" = "CNPJ";
+"PLACEHOLDER_ROLE" = "Cargo";
+"PLACEHOLDER_COUNTRY" = "País";
+"PLACEHOLDER_STATE" = "Estado";
+"PLACEHOLDER_CITY" = "Cidade";
+"PLACEHOLDER_ZIPCODE" = "CEP";
+"PLACEHOLDER_ADDRESS" = "Endereço";
+"PLACEHOLDER_NUMBER" = "Número";
+"PLACEHOLDER_ADJUNCT" = "Complemento";
+"PLACEHOLDER_NOTE" = "Observações";
+"PLACEHOLDER_HOMEPAGE" = "Home Page";
+
+
+/* Activity Indicator*/
+"MESSAGE_ACTIVITY_INDICATOR_LOADING" = "Carregando...";
+"MESSAGE_ACTIVITY_INDICATOR_PROCESSING" = "Processando...";
+
+
+/* Labels Event*/
+"LABEL_EVENT_START" = "Início";
+"LABEL_EVENT_FINISH" = "Término";
+"LABEL_EVENT_AVAILABLE" = "Inscreva-se";
+"LABEL_EVENT_SUBSCRIBED" = "Inscrito";
+
+
+/* Abbreviated Months*/
+"MONTH_NAME_JAN" = "Janeiro";
+"MONTH_NAME_FEV" = "Fevereiro";
+"MONTH_NAME_MAR" = "Março";
+"MONTH_NAME_ABR" = "Abril";
+"MONTH_NAME_MAI" = "Maio";
+"MONTH_NAME_JUN" = "Junho";
+"MONTH_NAME_JUL" = "Julho";
+"MONTH_NAME_AGO" = "Agosto";
+"MONTH_NAME_SET" = "Setembro";
+"MONTH_NAME_OUT" = "Outubro";
+"MONTH_NAME_NOV" = "Novembro";
+"MONTH_NAME_DEZ" = "Dezembro";

@@ -1,0 +1,61 @@
+{
+	"product": {
+		"actions": [{
+			"action_type": 102,
+			"auto_launch": 0,
+			"enabled": 1,
+			"id": 1002,
+			"label": "ActionModel3D-TargetImage-Label",
+			"name": "ActionModel3D-TargetImage-Name",
+			"short_description": "ActionModel3D-TargetImage-ShortDescription",
+			"type": "Model3dAction",
+			"action_model_3d" : {
+				"id" : 2,
+				"type" : 2,
+				"cache_policy" : 3,
+				"target_image_set" : {
+					"id" : 1000,
+					"image_url" : "http://d2h29zwvl2qzvf.cloudfront.net/attachments/bf6342dd3faae3ce767a3e7acce02b9d59afc2ab/store/0235ad9264e0ad1dae8ab13f5aa97e22638c6d2a9b9ea8f8eb5fbc2847c1/image_target_image_target20190130-26623-16g8hhe.jpg",
+					"physical_width" : 0.15
+				},
+				"screen_set" : {
+					"show_photo_button" : true,
+					"show_light_controls" : true,
+					"screen_title" : "Image Target Viewer",
+					"footer_message" : ""
+				},
+				"obj_set" : {
+					"id" : 12,
+					"obj_url" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/objects3D/obj1.zip",
+					"auto_size_fit" : true,
+					"auto_shadow" : false,
+					"enable_material_auto_illumination" : false,
+					"model_rotation_x" : 0.0,
+					"model_rotation_y" : 0.0,
+					"model_rotation_z" : 0.0,
+					"model_translation_x" : 0.0,
+					"model_translation_y" : 0.0,
+					"model_translation_z" : 0.0,
+					"model_scale" : 0.5
+				},
+				"scene_set" : {
+					"background_color" : "",
+					"background_url" : "",
+					"scene_quality" : 4,
+					"rotation_mode" : 0,
+					"background_style" : 4,
+					"hdr_state" : 2,
+					"max_horizontal_angle" : 0.0,
+					"min_horizontal_angle" : 0.0,
+					"max_vertical_angle" : 0.0,
+					"min_vertical_angle" : 0.0
+				}
+			}
+		}],
+		"id": 1003,
+		"image_url": "http://d2h29zwvl2qzvf.cloudfront.net/attachments/f6f97f07ed4f257ad81956fb3c26193e6d2bbd4a/store/f09127e0868fbdff39cf1cf637064b4f1158978a52a10c53f2191d0492b6/image_target_image_target.png",
+		"name": "LAB360 - ActionModel3D - Type Image Target",
+		"sku": "AM3D-03",
+		"title": ""
+	}
+}

@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  AHK-100anos
+
+  Created by Erico GT on 10/5/16.
+  Copyright © 2016 Atlantic Solutions. All rights reserved.
+*/
+
+NSCameraUsageDescription = "\nAuthorize access to the camera so that you can use the 'Scanner' and also take pictures with your device.";
+NSPhotoLibraryUsageDescription = "\nAuthorize so you can use photos from your library.";
+NSPhotoLibraryAddUsageDescription = "\nAuthorize so you can save photos in your library.";
+NSLocationWhenInUseUsageDescription = "\n Authorize the use of your location so that the application can show event information, such as locations and times, specific to your current region.";
+NSLocationAlwaysUsageDescription = "\n Authorize the use of your location so that the application can show event information, such as locations and times, specific to your current region.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "\n Authorize the use of your location so that the application can show event information, such as locations and times, specific to your current region.";
+NSMicrophoneUsageDescription = "\nAuthorize the use of the microphone to record videos and use the speech recognition.";
+NSSpeechRecognitionUsageDescription = "\nVoice recognition will be used to expedite the filling of text fields.";

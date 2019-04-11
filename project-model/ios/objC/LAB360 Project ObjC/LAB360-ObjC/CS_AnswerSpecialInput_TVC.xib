@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerSpecialInput_TVC_Identifier" id="xxk-6X-drR" customClass="CS_AnswerSpecialInput_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxk-6X-drR" id="eXw-Sh-QUA">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-sO-vKe">
+                        <rect key="frame" x="10" y="10" width="333" height="80.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        <connections>
+                            <outlet property="delegate" destination="xxk-6X-drR" id="DOR-Uk-XxL"/>
+                        </connections>
+                    </textView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-21-5gs">
+                        <rect key="frame" x="18" y="22" width="317" height="20"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="n6q-Nz-SL6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilI-rD-YbP">
+                        <rect key="frame" x="353" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="QBd-Ld-AyD"/>
+                            <constraint firstAttribute="height" constant="40" id="jjS-Mq-ptb"/>
+                        </constraints>
+                        <state key="normal" title="X"/>
+                        <connections>
+                            <action selector="actionSpecialInput:" destination="xxk-6X-drR" eventType="touchUpInside" id="RzP-3O-iZY"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ilI-rD-YbP" secondAttribute="trailing" constant="10" id="Djv-3n-lzg"/>
+                    <constraint firstItem="kv0-21-5gs" firstAttribute="leading" secondItem="eXw-Sh-QUA" secondAttribute="leading" constant="18" id="Dmm-HY-CDc"/>
+                    <constraint firstItem="ilI-rD-YbP" firstAttribute="leading" secondItem="kv0-21-5gs" secondAttribute="trailing" constant="18" id="LFI-wX-MmF"/>
+                    <constraint firstItem="IXg-sO-vKe" firstAttribute="leading" secondItem="eXw-Sh-QUA" secondAttribute="leading" constant="10" id="TI6-B3-vCc"/>
+                    <constraint firstAttribute="bottom" secondItem="IXg-sO-vKe" secondAttribute="bottom" constant="10" id="U23-pB-ANk"/>
+                    <constraint firstItem="IXg-sO-vKe" firstAttribute="top" secondItem="eXw-Sh-QUA" secondAttribute="top" constant="10" id="glm-A7-g6h"/>
+                    <constraint firstItem="ilI-rD-YbP" firstAttribute="top" secondItem="eXw-Sh-QUA" secondAttribute="top" constant="10" id="ijl-aF-0dy"/>
+                    <constraint firstItem="kv0-21-5gs" firstAttribute="top" secondItem="eXw-Sh-QUA" secondAttribute="top" constant="22" id="oEX-ot-XLy"/>
+                    <constraint firstItem="ilI-rD-YbP" firstAttribute="leading" secondItem="IXg-sO-vKe" secondAttribute="trailing" constant="10" id="pPv-0T-QZt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnInput" destination="ilI-rD-YbP" id="7gI-r4-VFk"/>
+                <outlet property="lblPlaceholder" destination="kv0-21-5gs" id="4j6-hl-Iud"/>
+                <outlet property="txtResultView" destination="IXg-sO-vKe" id="H2N-j3-7ut"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="-310.79460269865069"/>
+        </tableViewCell>
+    </objects>
+</document>

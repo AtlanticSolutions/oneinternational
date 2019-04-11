@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerMultiLineText_TVC_Identifier" id="zjQ-ZM-ife" customClass="CS_AnswerMultiLineText_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zjQ-ZM-ife" id="9ae-Tp-auD">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fiJ-J7-Zou">
+                        <rect key="frame" x="10" y="10" width="383" height="80.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        <connections>
+                            <outlet property="delegate" destination="zjQ-ZM-ife" id="u8F-WH-J6N"/>
+                        </connections>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWl-uO-XHW">
+                        <rect key="frame" x="18" y="22" width="367" height="20"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="8l5-FC-3EC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fiJ-J7-Zou" secondAttribute="bottom" constant="10" id="4Bk-qT-mn5"/>
+                    <constraint firstItem="fiJ-J7-Zou" firstAttribute="leading" secondItem="9ae-Tp-auD" secondAttribute="leading" constant="10" id="JaE-ap-4Ms"/>
+                    <constraint firstAttribute="trailing" secondItem="fiJ-J7-Zou" secondAttribute="trailing" constant="10" id="aQ0-aF-0KR"/>
+                    <constraint firstItem="fWl-uO-XHW" firstAttribute="leading" secondItem="9ae-Tp-auD" secondAttribute="leading" constant="18" id="abj-Nk-YOd"/>
+                    <constraint firstItem="fiJ-J7-Zou" firstAttribute="top" secondItem="9ae-Tp-auD" secondAttribute="top" constant="10" id="ds8-cm-8Vj"/>
+                    <constraint firstAttribute="trailing" secondItem="fWl-uO-XHW" secondAttribute="trailing" constant="18" id="rCi-ow-Pkq"/>
+                    <constraint firstItem="fWl-uO-XHW" firstAttribute="top" secondItem="9ae-Tp-auD" secondAttribute="top" constant="22" id="z14-aI-d9G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblPlaceholder" destination="fWl-uO-XHW" id="jEV-1Q-jMm"/>
+                <outlet property="txtResultView" destination="fiJ-J7-Zou" id="nGX-Xi-GIj"/>
+            </connections>
+            <point key="canvasLocation" x="166" y="-378"/>
+        </tableViewCell>
+    </objects>
+</document>

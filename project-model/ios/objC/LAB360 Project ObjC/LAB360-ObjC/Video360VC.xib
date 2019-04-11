@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Video360VC">
+            <connections>
+                <outlet property="backButton" destination="Fv3-PU-BJc" id="KYu-JC-Jl4"/>
+                <outlet property="gyroButton" destination="p7c-OL-Cd1" id="0xV-uj-6Ca"/>
+                <outlet property="labelTime" destination="TEF-rk-RF2" id="9JJ-0N-jZ2"/>
+                <outlet property="playButton" destination="8b4-Yq-kWx" id="BeI-Gw-VFw"/>
+                <outlet property="playerControlBackgroundView" destination="taj-e3-Eho" id="xC1-f8-jMv"/>
+                <outlet property="progressSlider" destination="Qu2-G6-Js4" id="nVB-JG-DYt"/>
+                <outlet property="view" destination="8QC-V9-3DL" id="aLb-L7-XaB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8QC-V9-3DL">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taj-e3-Eho" userLabel="Play Control Background View">
+                    <rect key="frame" x="16" y="571" width="343" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b4-Yq-kWx" userLabel="Play Button">
+                            <rect key="frame" x="151.5" y="5" width="40" height="40"/>
+                            <color key="backgroundColor" red="0.00193524558" green="0.41697426389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7MA-w5-Wqz"/>
+                                <constraint firstAttribute="width" constant="40" id="9ij-E8-CqD"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="AudioControlPlay"/>
+                            <connections>
+                                <action selector="playButtonTouched:" destination="-1" eventType="touchUpInside" id="yvX-yf-NYN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv3-PU-BJc" userLabel="Back Button">
+                            <rect key="frame" x="8" y="8" width="32" height="32"/>
+                            <color key="backgroundColor" red="0.00193524558" green="0.41697426389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="RPs-fJ-u3Z"/>
+                                <constraint firstAttribute="width" constant="32" id="gkg-pg-kJL"/>
+                            </constraints>
+                            <state key="normal" image="cross"/>
+                            <connections>
+                                <action selector="backButtonTouched:" destination="-1" eventType="touchUpInside" id="wUB-xO-O27"/>
+                            </connections>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qu2-G6-Js4">
+                            <rect key="frame" x="6" y="52" width="281" height="21"/>
+                            <color key="backgroundColor" red="0.00193524558" green="0.41697426389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Hqm-WW-phR"/>
+                            </constraints>
+                            <color key="minimumTrackTintColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="thumbTintColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="beginScrubbing:" destination="-1" eventType="valueChanged" id="T6f-vf-P8S"/>
+                                <action selector="endScrubbing:" destination="-1" eventType="valueChanged" id="R2W-Pf-GT4"/>
+                                <action selector="scrub:" destination="-1" eventType="valueChanged" id="4sK-tu-Ld8"/>
+                            </connections>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7c-OL-Cd1" userLabel="Gyro Button">
+                            <rect key="frame" x="290" y="5" width="45" height="40"/>
+                            <color key="backgroundColor" red="0.00193524558" green="0.41697426389999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="6tZ-pQ-AJL"/>
+                                <constraint firstAttribute="width" constant="45" id="SIq-Su-Okc"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="motionMove"/>
+                            <connections>
+                                <action selector="gyroButtonTouched:" destination="-1" eventType="touchUpInside" id="n7w-Pz-By4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TEF-rk-RF2">
+                            <rect key="frame" x="289" y="52" width="46" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="2Pk-fH-TAa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.28254268040000002" blue="0.13546958749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Qu2-G6-Js4" firstAttribute="leading" secondItem="taj-e3-Eho" secondAttribute="leading" constant="8" id="6Z3-sk-7y0"/>
+                        <constraint firstAttribute="trailing" secondItem="p7c-OL-Cd1" secondAttribute="trailing" constant="8" id="Msp-Pv-VxZ"/>
+                        <constraint firstItem="Fv3-PU-BJc" firstAttribute="top" secondItem="taj-e3-Eho" secondAttribute="top" constant="8" id="Os3-vb-Jp6"/>
+                        <constraint firstItem="p7c-OL-Cd1" firstAttribute="top" secondItem="taj-e3-Eho" secondAttribute="top" constant="5" id="PBS-cO-PHv"/>
+                        <constraint firstAttribute="trailing" secondItem="TEF-rk-RF2" secondAttribute="trailing" constant="8" id="RzI-oN-6nX"/>
+                        <constraint firstItem="8b4-Yq-kWx" firstAttribute="centerX" secondItem="taj-e3-Eho" secondAttribute="centerX" id="bqu-YO-076"/>
+                        <constraint firstAttribute="bottom" secondItem="TEF-rk-RF2" secondAttribute="bottom" constant="8" id="kCK-l0-PzE"/>
+                        <constraint firstAttribute="height" constant="80" id="ltn-6Z-F3h"/>
+                        <constraint firstItem="8b4-Yq-kWx" firstAttribute="top" secondItem="taj-e3-Eho" secondAttribute="top" constant="5" id="npZ-u3-2nH"/>
+                        <constraint firstItem="TEF-rk-RF2" firstAttribute="leading" secondItem="Qu2-G6-Js4" secondAttribute="trailing" constant="4" id="pMh-hm-WKU"/>
+                        <constraint firstItem="Fv3-PU-BJc" firstAttribute="leading" secondItem="taj-e3-Eho" secondAttribute="leading" constant="8" id="t8A-5N-KDl"/>
+                        <constraint firstAttribute="bottom" secondItem="Qu2-G6-Js4" secondAttribute="bottom" constant="8" id="tQl-iI-An0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="taj-e3-Eho" firstAttribute="leading" secondItem="8QC-V9-3DL" secondAttribute="leading" constant="16" id="1t8-Np-iPO"/>
+                <constraint firstItem="taj-e3-Eho" firstAttribute="top" secondItem="8QC-V9-3DL" secondAttribute="top" constant="570" id="H08-X1-hib"/>
+                <constraint firstAttribute="bottom" secondItem="taj-e3-Eho" secondAttribute="bottom" constant="16" id="VOi-Fu-0la"/>
+                <constraint firstItem="taj-e3-Eho" firstAttribute="centerX" secondItem="8QC-V9-3DL" secondAttribute="centerX" id="ca1-ad-EYM"/>
+                <constraint firstAttribute="trailing" secondItem="taj-e3-Eho" secondAttribute="trailing" constant="16" id="hPB-Mk-eaj"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="H08-X1-hib"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AudioControlPlay" width="50" height="50"/>
+        <image name="cross" width="512" height="512"/>
+        <image name="motionMove" width="170" height="170"/>
+    </resources>
+</document>

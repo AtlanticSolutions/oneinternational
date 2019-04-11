@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CS_GroupImage_TVC_Identifier" rowHeight="116" id="zot-qJ-qmV" customClass="CS_GroupImage_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zot-qJ-qmV" id="58b-w3-eGU">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-WB-LUS">
+                        <rect key="frame" x="10" y="0.0" width="394" height="105.5"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BFI-eR-TPW">
+                        <rect key="frame" x="188.5" y="34.5" width="37" height="37"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qoR-WB-LUS" secondAttribute="trailing" constant="10" id="3w2-2B-ZDZ"/>
+                    <constraint firstAttribute="bottom" secondItem="qoR-WB-LUS" secondAttribute="bottom" constant="10" id="3zw-ph-VOW"/>
+                    <constraint firstItem="qoR-WB-LUS" firstAttribute="leading" secondItem="58b-w3-eGU" secondAttribute="leading" constant="10" id="RWD-Nf-g76"/>
+                    <constraint firstItem="BFI-eR-TPW" firstAttribute="centerY" secondItem="qoR-WB-LUS" secondAttribute="centerY" id="mkb-MD-Js7"/>
+                    <constraint firstItem="BFI-eR-TPW" firstAttribute="centerX" secondItem="qoR-WB-LUS" secondAttribute="centerX" id="nzT-0I-KAT"/>
+                    <constraint firstItem="qoR-WB-LUS" firstAttribute="top" secondItem="58b-w3-eGU" secondAttribute="top" id="piR-Ps-bHr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imvImage" destination="qoR-WB-LUS" id="eLy-k4-dia"/>
+                <outlet property="indicatorView" destination="BFI-eR-TPW" id="hBq-49-Eoi"/>
+            </connections>
+            <point key="canvasLocation" x="290" y="-325"/>
+        </tableViewCell>
+    </objects>
+</document>

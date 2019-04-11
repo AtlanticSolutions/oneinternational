@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LF8-Op-ip9" customClass="LoadingView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-QC-4nO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-Am-E7Z">
+                    <rect key="frame" x="70" y="150" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="0cN-d3-di8"/>
+                        <constraint firstAttribute="width" constant="180" id="KKZ-xk-IR3"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saZ-Gh-3p7">
+                    <rect key="frame" x="70" y="250" width="180" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-Xz-Af1">
+                    <rect key="frame" x="142" y="202" width="37" height="37"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn5-N6-rRg">
+                    <rect key="frame" x="70" y="286" width="180" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teD-qt-YgX">
+                    <rect key="frame" x="70" y="390" width="180" height="40"/>
+                    <color key="backgroundColor" red="0.32278899652423898" green="1" blue="0.89550149181232963" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hay-p4-qiC"/>
+                    </constraints>
+                    <state key="normal" title="Cancelar Download"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SVU-Xz-Af1" firstAttribute="centerY" secondItem="ZVH-Am-E7Z" secondAttribute="centerY" constant="-20" id="1Nq-w7-rPT"/>
+                <constraint firstItem="saZ-Gh-3p7" firstAttribute="centerY" secondItem="ZVH-Am-E7Z" secondAttribute="centerY" constant="20" id="3h9-8M-gdU"/>
+                <constraint firstAttribute="bottom" secondItem="teD-qt-YgX" secondAttribute="bottom" constant="50" id="73Z-8u-4rc"/>
+                <constraint firstItem="saZ-Gh-3p7" firstAttribute="centerX" secondItem="ZVH-Am-E7Z" secondAttribute="centerX" id="Bmz-Ji-kYE"/>
+                <constraint firstItem="ZVH-Am-E7Z" firstAttribute="centerX" secondItem="LF8-Op-ip9" secondAttribute="centerX" id="BqV-dl-VHC"/>
+                <constraint firstItem="D2o-QC-4nO" firstAttribute="centerX" secondItem="LF8-Op-ip9" secondAttribute="centerX" id="CFI-rH-E2X"/>
+                <constraint firstItem="SVU-Xz-Af1" firstAttribute="centerX" secondItem="ZVH-Am-E7Z" secondAttribute="centerX" id="GUo-2T-f2h"/>
+                <constraint firstItem="sn5-N6-rRg" firstAttribute="height" secondItem="saZ-Gh-3p7" secondAttribute="height" id="Mtn-Us-Tla"/>
+                <constraint firstItem="saZ-Gh-3p7" firstAttribute="width" secondItem="ZVH-Am-E7Z" secondAttribute="width" id="TbS-1e-eSu"/>
+                <constraint firstItem="sn5-N6-rRg" firstAttribute="centerX" secondItem="LF8-Op-ip9" secondAttribute="centerX" id="ece-vA-7vE"/>
+                <constraint firstItem="teD-qt-YgX" firstAttribute="centerX" secondItem="LF8-Op-ip9" secondAttribute="centerX" id="edT-hO-0lg"/>
+                <constraint firstItem="ZVH-Am-E7Z" firstAttribute="centerY" secondItem="LF8-Op-ip9" secondAttribute="centerY" id="kGN-NR-vsA"/>
+                <constraint firstItem="sn5-N6-rRg" firstAttribute="top" secondItem="saZ-Gh-3p7" secondAttribute="bottom" constant="15" id="nvQ-MX-GB1"/>
+                <constraint firstItem="D2o-QC-4nO" firstAttribute="width" secondItem="LF8-Op-ip9" secondAttribute="width" id="oBG-7X-sY0"/>
+                <constraint firstItem="D2o-QC-4nO" firstAttribute="height" secondItem="LF8-Op-ip9" secondAttribute="height" id="qBP-5z-Wg8"/>
+                <constraint firstItem="D2o-QC-4nO" firstAttribute="centerY" secondItem="LF8-Op-ip9" secondAttribute="centerY" id="qij-65-4gd"/>
+                <constraint firstItem="sn5-N6-rRg" firstAttribute="width" secondItem="saZ-Gh-3p7" secondAttribute="width" id="qxt-xs-QZX"/>
+                <constraint firstItem="teD-qt-YgX" firstAttribute="width" secondItem="ZVH-Am-E7Z" secondAttribute="width" id="wNk-bi-p23"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicator" destination="SVU-Xz-Af1" id="Chz-i6-51O"/>
+                <outlet property="btnDownloadCancel" destination="teD-qt-YgX" id="TDM-lj-hWk"/>
+                <outlet property="imvBackground" destination="D2o-QC-4nO" id="FHs-eN-PfJ"/>
+                <outlet property="imvCenter" destination="ZVH-Am-E7Z" id="3Fy-2R-5Ji"/>
+                <outlet property="lblDownload" destination="sn5-N6-rRg" id="CJo-bQ-sOE"/>
+                <outlet property="lblMessage" destination="saZ-Gh-3p7" id="trI-UW-zlm"/>
+            </connections>
+            <point key="canvasLocation" x="-357.5" y="57.5"/>
+        </view>
+    </objects>
+</document>

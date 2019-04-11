@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerStarRating_TVC_Identifier" id="zsT-Ag-CFp" customClass="CS_AnswerStarRating_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zsT-Ag-CFp" id="ckB-oC-A2Y">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43q-Hp-YnV">
+                        <rect key="frame" x="140" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.67159697600000001" green="0.85757590620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Red-HO-kWa"/>
+                            <constraint firstAttribute="height" constant="40" id="dyj-iP-K32"/>
+                        </constraints>
+                        <state key="normal" image="CustomSurveyIconRatingStarFull"/>
+                        <connections>
+                            <action selector="actionStartSelection:" destination="zsT-Ag-CFp" eventType="touchUpInside" id="LrE-rh-Xzf"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDB-o0-Akk">
+                        <rect key="frame" x="240" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.67159697600000001" green="0.85757590620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7hb-pH-Qwv"/>
+                            <constraint firstAttribute="height" constant="40" id="FQf-qD-zj1"/>
+                        </constraints>
+                        <state key="normal" image="CustomSurveyIconRatingStarFull"/>
+                        <connections>
+                            <action selector="actionStartSelection:" destination="zsT-Ag-CFp" eventType="touchUpInside" id="DVm-m1-qNZ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-ux-0sb">
+                        <rect key="frame" x="40" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.67159697600000001" green="0.85757590620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3yK-WV-trn"/>
+                            <constraint firstAttribute="height" constant="40" id="5mO-a7-DXV"/>
+                        </constraints>
+                        <state key="normal" image="CustomSurveyIconRatingStarFull"/>
+                        <connections>
+                            <action selector="actionStartSelection:" destination="zsT-Ag-CFp" eventType="touchUpInside" id="WcP-ib-TAY"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW5-ni-bCy">
+                        <rect key="frame" x="80" y="0.0" width="60" height="59.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYG-ET-h3X">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.67159697600000001" green="0.85757590620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2R3-vf-XbX"/>
+                                    <constraint firstAttribute="width" constant="40" id="MDW-mq-vjJ"/>
+                                </constraints>
+                                <state key="normal" image="CustomSurveyIconRatingStarFull"/>
+                                <connections>
+                                    <action selector="actionStartSelection:" destination="zsT-Ag-CFp" eventType="touchUpInside" id="1gu-r2-BV9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uYG-ET-h3X" firstAttribute="centerY" secondItem="oW5-ni-bCy" secondAttribute="centerY" id="AxL-Ks-kZ0"/>
+                            <constraint firstItem="uYG-ET-h3X" firstAttribute="centerX" secondItem="oW5-ni-bCy" secondAttribute="centerX" id="gzF-MN-bBn"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTd-lE-Vrm">
+                        <rect key="frame" x="180" y="0.0" width="60" height="59.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzg-bx-UUe">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.67159697600000001" green="0.85757590620000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="AQF-4m-XzK"/>
+                                    <constraint firstAttribute="height" constant="40" id="jhy-Z5-G6T"/>
+                                </constraints>
+                                <state key="normal" image="CustomSurveyIconRatingStarFull"/>
+                                <connections>
+                                    <action selector="actionStartSelection:" destination="zsT-Ag-CFp" eventType="touchUpInside" id="B18-Iv-0OK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zzg-bx-UUe" firstAttribute="centerX" secondItem="XTd-lE-Vrm" secondAttribute="centerX" id="Amt-KJ-yx3"/>
+                            <constraint firstItem="zzg-bx-UUe" firstAttribute="centerY" secondItem="XTd-lE-Vrm" secondAttribute="centerY" id="HEp-iU-lwN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oW5-ni-bCy" firstAttribute="centerY" secondItem="ckB-oC-A2Y" secondAttribute="centerY" id="4WE-5P-NFh"/>
+                    <constraint firstItem="b1n-ux-0sb" firstAttribute="leading" secondItem="ckB-oC-A2Y" secondAttribute="leading" constant="40" id="C3B-pM-Tio"/>
+                    <constraint firstItem="iDB-o0-Akk" firstAttribute="leading" secondItem="XTd-lE-Vrm" secondAttribute="trailing" id="CXE-IB-2Pj"/>
+                    <constraint firstItem="43q-Hp-YnV" firstAttribute="centerY" secondItem="ckB-oC-A2Y" secondAttribute="centerY" id="GQ1-2X-4yf"/>
+                    <constraint firstItem="43q-Hp-YnV" firstAttribute="centerX" secondItem="ckB-oC-A2Y" secondAttribute="centerX" id="In3-uj-unG"/>
+                    <constraint firstItem="iDB-o0-Akk" firstAttribute="centerY" secondItem="ckB-oC-A2Y" secondAttribute="centerY" id="QqQ-WF-XUP"/>
+                    <constraint firstItem="oW5-ni-bCy" firstAttribute="height" secondItem="ckB-oC-A2Y" secondAttribute="height" id="R39-6G-ZFE"/>
+                    <constraint firstItem="43q-Hp-YnV" firstAttribute="leading" secondItem="oW5-ni-bCy" secondAttribute="trailing" id="Vqz-7Q-fzz"/>
+                    <constraint firstItem="oW5-ni-bCy" firstAttribute="leading" secondItem="b1n-ux-0sb" secondAttribute="trailing" id="bfF-MI-7nY"/>
+                    <constraint firstItem="XTd-lE-Vrm" firstAttribute="centerY" secondItem="ckB-oC-A2Y" secondAttribute="centerY" id="g2S-X1-CaY"/>
+                    <constraint firstItem="XTd-lE-Vrm" firstAttribute="leading" secondItem="43q-Hp-YnV" secondAttribute="trailing" id="hI7-4a-YjF"/>
+                    <constraint firstItem="b1n-ux-0sb" firstAttribute="centerY" secondItem="ckB-oC-A2Y" secondAttribute="centerY" id="jE6-3e-rsi"/>
+                    <constraint firstAttribute="trailing" secondItem="iDB-o0-Akk" secondAttribute="trailing" constant="40" id="qhn-Co-bVx"/>
+                    <constraint firstItem="XTd-lE-Vrm" firstAttribute="height" secondItem="ckB-oC-A2Y" secondAttribute="height" id="w3J-is-k3t"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnStar1" destination="b1n-ux-0sb" id="yMd-pp-Mle"/>
+                <outlet property="btnStar2" destination="uYG-ET-h3X" id="TWm-7o-eYP"/>
+                <outlet property="btnStar3" destination="43q-Hp-YnV" id="CaF-KX-lSj"/>
+                <outlet property="btnStar4" destination="zzg-bx-UUe" id="yf0-DE-d9E"/>
+                <outlet property="btnStar5" destination="iDB-o0-Akk" id="e4t-vG-C6g"/>
+            </connections>
+            <point key="canvasLocation" x="-92" y="-323"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CustomSurveyIconRatingStarFull" width="40" height="40"/>
+    </resources>
+</document>

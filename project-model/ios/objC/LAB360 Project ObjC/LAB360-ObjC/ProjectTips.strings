@@ -1,0 +1,60 @@
+/* 
+  ProjectTips.strings
+  LAB360-ObjC
+
+  Created by Erico GT on 25/10/18.
+  Copyright © 2018 Atlantic Solutions. All rights reserved.
+*/
+
+/*
+ 
+//==================================================================================================
+ 
+• Menu Dinâmico
+> Para desabilitar o menu dinâmico comente a chamada do método 'getSideMenuDataFromServer' na classe 'VC_Configurations', e habilite o código '[viewMenu createCompleteMenu]' no AppDelegate.m (application:didFinishLaunchingWithOptions:).
+ 
+//==================================================================================================
+
+• Geofence / Beacons
+> Caso o app não precise destas funcionalidades, remova as chamadas a SDK AdAlive feitas na classe VC_Configurations ('getGeofenceRegionsWithAppID' e 'findBeaconsWithAppId').
+ 
+//==================================================================================================
+ 
+• Trocar o nome do projeto (clonar)
+ > Sigas as orientações contidas no arquivo de ajuda 'ChangeProjectNameTutorial'.
+ 
+//==================================================================================================
+ 
+• Verificações para lançamento na loja:
+ > Conferir nas configurações do projeto, guia 'Capabities', as opções que o app vai utilizar;
+ > Quando o 'Push Notification' estiver habilitado verificar se os certificados foram criados corretamente e se o arquivo 'GoogleService-Info.plist' está sendo referenciado para produção/hologação;
+ > Remover (com cuidado) módulos não utilizados, mas contidos por causa do projeto base, para reduzir o tamanho do pacote final;
+ 
+//==================================================================================================
+ 
+• Arquivo dSYM (projeto local):
+ 1) Abrir o projeto no Xcode;
+ 2) Menu Window > Organizer;
+ 3) Localize o respectivo arquive na guia 'Arquives', botão direito, opção 'Show in Finder';
+ 4) Botão direito no arquivo 'projectName.xcarchive', opção 'Show Package Contents';
+ 5) Dentro da pasta 'dSYMs' estará o respectivo arquivo 'projectName.app.dSYM'.
+ 
+• Arquivo dSYM (iTunes):
+ 1) Na página do app, no iTunes Connect, acesse a guia 'Activity';
+ 2) Selecione 'All Builds' na guia lateral e depois 'Build Detail;
+ 3) Caso a opção 'Includes Symbols' esteja habilitada será possível fazer o download do arquivo dSYM.
+ 
+• Para que o arquivo dSYM seja criado é necessário que o mesmo esteja habilitado no Xcode:
+ 1) Selecione o projeto no Xcode (Project Navigator);
+ 2) Selecione o target correspondente;
+ 3) Build Settings;
+ 4) Debug Information Format;
+ 5) Selecione a opção 'DWARF with dSYM File'.
+ 
+NOTAS:
+ 1) O arquivo dSYM é utilizado para processar falhas (simbolização dos crashs). O Crashlytics, por exemplo, pode solicitar este arquivo.
+ 2) Cada arquivo dSYM está associado a um UUID. Para saber o UUID de um arquivo dSYM, execute no console: "dwarfdump --uuid MyApp.app.dSYM".
+ 
+//==================================================================================================
+ 
+ */

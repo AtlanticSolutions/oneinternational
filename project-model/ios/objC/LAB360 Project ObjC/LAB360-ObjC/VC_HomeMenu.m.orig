@@ -1,0 +1,431 @@
+//
+//  VC_HomeMenu.m
+//  AHK-100anos
+//
+//  Created by Erico GT on 10/5/16.
+//  Copyright © 2016 Atlantic Solutions. All rights reserved.
+//
+
+#pragma mark - • HEADER IMPORT
+#import "VC_HomeMenu.h"
+
+#pragma mark - • INTERFACE PRIVATE PROPERTIES
+@interface VC_HomeMenu()
+
+//componentes
+@property (nonatomic, weak) IBOutlet UIImageView *imvBackground;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionViewMenu;
+
+//controle
+@property (nonatomic, strong) NSMutableArray *optionsList;
+@property (nonatomic, assign) bool isTouchResolved;
+
+@end
+
+#pragma mark - • IMPLEMENTATION
+@implementation VC_HomeMenu
+{
+#pragma mark - • I_VARS
+    //here...
+    //i.e. NSString* _sampleName;
+    
+}
+
+#pragma mark - • SYNTESIZES
+@synthesize imvBackground, collectionViewMenu;
+@synthesize optionsList, isTouchResolved;
+
+#pragma mark - • CLASS METHODS
+
+#pragma mark - • INTERFACE METHODS
+
+#pragma mark - • INITIALISERS
+
+#pragma mark - • DEALLOC
+
+#pragma mark - • CONTROLLER LIFECYCLE/ TABLEVIEW/ DATA-SOURCE
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    isTouchResolved = true;
+    
+    self.automaticallyAdjustsScrollViewInsets = false;
+    collectionViewMenu.contentInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    [self.navigationItem setHidesBackButton:YES];
+    
+    //Button Profile Pic
+    self.navigationItem.rightBarButtonItem = [AppD createProfileButton];
+    
+    //Title
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:AppD.styleManager.colorTextNormal, NSFontAttributeName:[UIFont fontWithName:FONT_MYRIAD_PRO_SEMIBOLD size:FONT_SIZE_TITLE_NAVBAR]}];
+    self.navigationItem.title = NSLocalizedString(@"MENU_TITLE_APPNAME", @"");
+    
+    //Notificação para troca de linguagem
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupLayout:) name:SYSNOT_UPDATE_MAIN_MENU object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //Layout
+    [self.view layoutIfNeeded];
+    [self setupLayout:nil];
+    
+    if (AppD.loggedUser.profilePic == nil){
+        
+        if (AppD.loggedUser.urlProfilePic != nil && ![AppD.loggedUser.urlProfilePic isEqualToString:@""]){
+            
+            [[[AsyncImageDownloader alloc] initWithMediaURL:AppD.loggedUser.urlProfilePic successBlock:^(UIImage *image) {
+                
+                if (image == nil){
+                    AppD.loggedUser.profilePic = nil;//[UIImage imageNamed:@"icon-user-default"];
+                }else{
+                    AppD.loggedUser.profilePic = image;
+                    NSDictionary *temp = [AppD.loggedUser dictionaryJSON];
+                    
+                    [AppD registerLoginForUser:AppD.loggedUser.email data: [temp valueForKey:@"app_user"]];
+                }
+ 
+                dispatch_async(dispatch_get_main_queue(),^{
+                    self.navigationItem.rightBarButtonItem = nil;
+                    self.navigationItem.rightBarButtonItem = [AppD createProfileButton];
+                });
+                
+            } failBlock:^(NSError *error) {
+                NSLog(@"Erro ao buscar imagem: %@", error.domain);
+            }]startDownload];
+            
+        }else{
+            
+            AppD.loggedUser.profilePic = [UIImage imageNamed:@"icon-user-default"];
+        }
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - • SUPER CLASS
+
+#pragma mark - • PUBLIC METHODS
+
+#pragma mark - • ACTION METHODS
+
+#pragma mark - • CUSTOM ACCESSORS (SETS & GETS)
+
+#pragma mark - • OTHER DELEGATE/ PROTOCOL METHODS
+
+#pragma mark - CollectionView Delegates
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return optionsList.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = @"CustomCell";
+    
+    CVC_CustomIconButton *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    if(cell == nil)
+    {
+        cell = [[CVC_CustomIconButton alloc] init];
+    }
+    
+    CGFloat lado = (self.view.frame.size.width - 20 - 20 -20 )/ 2;
+    
+    cell.imvIcon.image = [self imageForIndex:(int)indexPath.row];
+    cell.lblTitle.text = [NSString stringWithFormat:@"%@", [optionsList objectAtIndex:indexPath.row]];
+    cell.imvBackground.image = [AppD.styleManager createFlatImageWithSize:CGSizeMake(lado, lado) byRoundingCorners:UIRectCornerAllCorners cornerRadius:CGSizeMake(6.0, 6.0) andColor:[AppD.styleManager colorBackground]] ;
+    //
+    [cell updateLayoutForMultilineLabel:!AppD.isGermanLayout];
+    
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (isTouchResolved)
+    {
+        isTouchResolved = false;
+        
+<<<<<<< HEAD
+        CVC_CustomIconButton *c = (CVC_CustomIconButton*)[collectionView cellForItemAtIndexPath:indexPath];
+        
+        [AppD.styleManager applyRippleEffectInView:c withColor:[AppD.styleManager colorButtonBackgroundNormal] andRadius:0];
+        
+        //Resolução da seleção
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(ANIMA_TIME_SUPER_FAST * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self selectionResolverForIndex:indexPath.row];
+        });
+=======
+        case 1:{
+            //Associados:
+//            if (AppD.isGermanLayout){
+//                
+//            }else{
+//                
+//            }
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Associates" bundle:[NSBundle mainBundle]];
+            VC_FindAssociates *vcFindAssociates = [storyboard instantiateViewControllerWithIdentifier:@"VC_FindAssociates"];
+            [vcFindAssociates awakeFromNib];
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+            self.navigationController.navigationBar.tintColor = AppD.styleManager.colorTextNormal;
+            //Abrindo a tela
+            [self.navigationController pushViewController:vcFindAssociates animated:YES];
+        }break;
+            
+        case 2:{
+            //Anos:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 3]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 3:{
+            //Contatos:
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Contact" bundle:[NSBundle mainBundle]];
+            VC_ContactList *vcContactList = [storyboard instantiateViewControllerWithIdentifier:@"VC_ContactList"];
+            [vcContactList awakeFromNib];
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+            self.navigationController.navigationBar.tintColor = AppD.styleManager.colorTextNormal;
+            //Abrindo a tela
+            [self.navigationController pushViewController:vcContactList animated:YES];
+            
+            //[alert showWarning:@"Not Implemented" subTitle:@"[Option 4]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 4:{
+            //Portal de Notícias:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 5]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 5:{
+            //Scanner:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 6]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+>>>>>>> 27e19ee4d7148f8bc94439e78fc12860be4b9c1e
+    }
+}
+
+/////////////
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat lado = (self.view.frame.size.width - 20 - 20 -20 )/ 2;
+    return CGSizeMake(lado, lado);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(30, 20, 0, 20);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 20;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeZero;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    return CGSizeZero;
+}
+
+#pragma mark - • PRIVATE METHODS (INTERNAL USE)
+
+- (void)setupLayout:(NSNotification*)notification
+{
+    //Textos (conforme localização)
+    optionsList = [NSMutableArray new];
+    if (AppD.isGermanLayout){
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_1_DIENSTLEISTUNGEN", @"")];
+    }else{
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_1_EVENTS", @"")];
+    }
+    //
+    [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_2_ASSOCIATED", @"")];
+    [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_3_YEARS", @"")];
+    //
+    if (AppD.isGermanLayout){
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_4_PUBLICATIONS", @"")];
+    }else{
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_4_CONTACTS", @"")];
+    }
+    //
+    if (AppD.isGermanLayout){
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_5_WOCHENBERICHT", @"")];
+    }else{
+        [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_5_NEWSPORTAL", @"")];
+    }
+    //
+    [optionsList addObject:NSLocalizedString(@"MAIN_MENU_OPTION_6_SCANNER", @"")];
+    
+    //Self
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    //Navigation Controller (Transparente)
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundImage:[AppD.styleManager createFlatImageWithSize:self.navigationController.view.frame.size byRoundingCorners:UIRectCornerAllCorners cornerRadius:CGSizeZero andColor:AppD.styleManager.colorBackground] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[AppD.styleManager createFlatImageWithSize:CGSizeMake(self.navigationController.view.frame.size.width, 1) byRoundingCorners:UIRectCornerAllCorners cornerRadius:CGSizeZero andColor:AppD.styleManager.colorBackground]];
+    
+    //CollectionView
+    collectionViewMenu.backgroundColor = [UIColor clearColor];
+    [collectionViewMenu reloadData];
+    
+    //Background and Icons
+    imvBackground.backgroundColor = [UIColor clearColor];
+    imvBackground.image = [AppD createDefaultBackgroundImage];
+}
+
+- (UIImage*)imageForIndex:(int)index
+{
+    if (AppD.rootViewController){
+        
+        int width = (int) AppD.rootViewController.view.frame.size.width;
+        
+        NSString *sizeSpec;
+        
+        //file size
+        switch (width) {
+                //320 x 480
+            case 320:{
+                sizeSpec = @"260x260.png";
+            }break;
+                //375 x 667
+            case 375:{
+                sizeSpec = @"316x316.png";
+            }break;
+                //414 x 736
+            case 414:{
+                sizeSpec = @"531x531.png";
+            }break;
+        }
+        
+        //file name
+        switch (index) {
+            case 0:{
+                //Eventos:
+                if (AppD.isGermanLayout){
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-dienstleistungen-%@", sizeSpec]];
+                }else{
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-events-%@", sizeSpec]];
+                }
+                
+            }break;
+                
+            case 1:{
+                //Associados:
+                return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-associated-%@", sizeSpec]];
+            }break;
+                
+            case 2:{
+                //Anos:
+                return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-years-%@", sizeSpec]];
+            }break;
+                
+            case 3:{
+                //Contatos:
+                if (AppD.isGermanLayout){
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-publications-%@", sizeSpec]];
+                }else{
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-contacts-%@", sizeSpec]];
+                }
+            }break;
+                
+            case 4:{
+                //Portal de Notícias:
+                if (AppD.isGermanLayout){
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-wochenbericht-%@", sizeSpec]];
+                }else{
+                    return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-newsportal-%@", sizeSpec]];
+                }
+            }break;
+                
+            case 5:{
+                //Scanner:
+                return [UIImage imageNamed:[NSString stringWithFormat:@"icon-main-menu-scanner-%@", sizeSpec]];
+            }break;
+        }
+    }
+    
+    return nil;
+}
+
+- (void)selectionResolverForIndex:(int)index
+{
+    SCLAlertViewPlus *alert = [AppD createDefaultAlert];
+    switch (index) {
+        case 0:{
+            //Eventos:
+            
+            //Instanciando a nova view destino
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Events" bundle:[NSBundle mainBundle]];
+            VC_Events *vcEvents = [storyboard instantiateViewControllerWithIdentifier:@"VC_Events"];
+            [vcEvents awakeFromNib];
+            //
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+            [self.navigationController pushViewController:vcEvents animated:YES];
+            
+        }break;
+            
+        case 1:{
+            //Associados:
+            //            if (AppD.isGermanLayout){
+            //
+            //            }else{
+            //
+            //            }
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Associates" bundle:[NSBundle mainBundle]];
+            VC_FindAssociates *vcFindAssociates = [storyboard instantiateViewControllerWithIdentifier:@"VC_FindAssociates"];
+            [vcFindAssociates awakeFromNib];
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+            self.navigationController.navigationBar.tintColor = AppD.styleManager.colorTextNormal;
+            //Abrindo a tela
+            [self.navigationController pushViewController:vcFindAssociates animated:YES];
+        }break;
+            
+        case 2:{
+            //Anos:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 3]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 3:{
+            //Contatos:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 4]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 4:{
+            //Portal de Notícias:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 5]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+            
+        case 5:{
+            //Scanner:
+            [alert showWarning:@"Not Implemented" subTitle:@"[Option 6]" closeButtonTitle:@"Close" duration:0.0];
+        }break;
+    }
+    isTouchResolved = true;
+}
+
+@end

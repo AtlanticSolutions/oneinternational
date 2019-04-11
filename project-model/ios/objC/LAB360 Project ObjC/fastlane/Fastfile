@@ -1,0 +1,98 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+  update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+   desc "Runs all the tests"
+
+# BUILD S3 FOR HOMOLOGATION
+   lane :buildHS3 do
+           laneHS3
+           laneaws_s3
+           slack_message
+   end
+
+# BUILD S3 FOR PRODUCTION
+   lane :buildPS3 do
+           lanePS3
+           laneaws_s3
+           slack_message
+   end
+
+
+### lanes
+
+lane :laneHS3 do
+       gym(
+        scheme: "LAB360-Dev",
+        export_method: "enterprise",
+        configuration: "Debug",
+        export_xcargs: "-allowProvisioningUpdates",
+        output_name:   "lab360.ipa"
+  )
+end
+
+lane :lanePS3 do
+       gym(
+        scheme: "LAB360-ProdS3",
+        export_method: "enterprise",
+        configuration: "Release",
+        export_xcargs: "-allowProvisioningUpdates",
+        output_name:   "lab360.ipa"
+  )
+end
+
+lane :laneaws_s3 do
+    aws_s3(
+        access_key: ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        bucket: ENV['S3_BUCKET'],
+        region: ENV['AWS_REGION'],
+        app_directory: "downloads/lab360",
+	ipa: "lab360.ipa",
+	path: "ipa/",
+	files: './LAB360-ObjC/Assets.xcassets/AppIcon-LAB360.appiconset/icone1024.jpg',
+        upload_metadata: true
+	)  
+end
+
+lane :slack_message do
+    slack(
+        message: "App successfully uploaded to Amazon S3.",
+        success: true,
+        slack_url: ENV['SLACK_URL'],
+        payload: {  # Optional, lets you specify any number of your own Slack attachments.
+          "Build Date" => Time.new.to_s,
+          "Built by" => "fastlane",
+          "Application" => "lab360",
+        }
+  ) 
+end
+
+### Methods
+
+error do |lane, exception|
+    slack(
+       # message with short human friendly message
+       message: exception.to_s, 
+       success: false, 
+       slack_url: ENV['SLACK_URL'],
+       # Output containing extended log output
+       payload: { "Output" => exception.error_info.to_s } 
+    )
+end
+
+end

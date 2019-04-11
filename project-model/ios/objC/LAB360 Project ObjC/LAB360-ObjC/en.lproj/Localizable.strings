@@ -1,0 +1,845 @@
+/*
+ Localized.strings
+ AHK-100anos
+ 
+ Created by Erico GT on 10/5/16.
+ Copyright © 2016 Atlantic Solutions. All rights reserved.
+ */
+
+/* Navigation Controller */
+//Tittles
+"MENU_TITLE_APPNAME" = "GS&MD";
+"SCREEN_TITLE_100_YEARS" = "100 years";
+"SCREEN_TITLE_SIGNUP" = "Sign-up";
+"SCREEN_TITLE_ACCOUNT" = "Edit Profile";
+"SCREEN_TITLE_EVENTS"= "Events";
+"SCREEN_TITLE_AGENDA"= "My Agenda";
+"SCREEN_TITLE_MYEVENTS" = "Event";
+"SCREEN_TITLE_SUBSCRIBE" = "Sign-up";
+"SCREEN_TITLE_DOWNLOADS" = "Available Files";
+"SCREEN_TITLE_MY_DOWNLOADS" = "My Files";
+"SCREEN_TITLE_FILE" = "Archive";
+"SCREEN_TITLE_RESET_PASSWORD" = "Forgot Password";
+"SCREEN_TITLE_FIND_ASSOCIATES" = "Search Associates";
+"SCREEN_TITLE_ASSOCIATES_RESULT" = "Search Results";
+"SCREEN_TITLE_ASSOCIATE" = "Associate";
+"SCREEN_TITLE_CONTACT" = "Contact";
+"SCREEN_TITLE_TIMELINE" = "Chamber's History";
+"SCREEN_TITLE_SCANNER" = "Scanner";
+"SCREEN_TITLE_NEWS_PORTAL" = "News Portal";
+"SCREEN_TITLE_NEWS_DETAIL" = "News";
+"SCREEN_TITLE_CAMERA_ADALIVE" = "Scanner AdAlive";
+"SCREEN_TITLE_ABOUT" = "About";
+"SCREEN_TITLE_HELP" = "Help";
+"SCREEN_TITLE_NEWS_CATEGORY_FILTER" = "Categories";
+"SCREEN_TITLE_FOTO" = "Photo";
+"SCREEN_TITLE_GROUPS" = "Groups";
+"SCREEN_TITLE_MASK" = "Mask";
+"SCREEN_TITLE_MASK_SHARE" = "Share!";
+"SCREEN_TITLE_NOTIFICATIONS"="Notifications";
+"SCREEN_TITLE_SHOPPING" = "Shoppings";
+"SCREEN_TITLE_TEAM" = "Team";
+"SCREEN_TITLE_SPONSORS" = "Sponsors";
+"SCREEN_TITLE_CHAT" = "Chat";
+"SCREEN_TITLE_NEW_CHAT" = "New Chat";
+"SCREEN_TITLE_FEED_VIDEOS" = "Videos";
+"SCREEN_TITLE_PARTICIPANTS" = "Participants";
+"SCREEN_TITLE_COMMENTS" = "Comments";
+"SCREEN_TITLE_ORDER" = "Orders";
+"SCREEN_TITLE_PRODUCT_DETAIL" = "Product Detail";
+"SCREEN_TITLE_CATALOGS" = "Select the Catalog";
+"SCREEN_TITLE_SHOP_CART" = "Cart";
+"SCREEN_TITLE_POINTS" = "My Points";
+"SCREEN_TITLE_ORDERS" = "My Orders";
+"SCREEN_TITLE_CATEGORIES" = "Categories";
+"SCREEN_TITLE_PRODUCTS" = "Products";
+"SCREEN_TITLE_PROMOTIONS" = "Promotions";
+"SCREEN_TITLE_SURVEY_PROMOTION" = "Survey";
+"SCREEN_TITLE_INVOICE_SCAN" = "Scanner";
+"SCREEN_TITLE_MY_INVOICES" = "My Invoices";
+"SCREEN_TITLE_INVOICE_EXTRACT" = "Balance";
+"SCREEN_TITLE_QUIZ" = "Quiz";
+"SCREEN_TITLE_CONFIRM_ATTENDANCE" = "Confirm Presence";
+"SCREEN_TITLE_COUPOM" = "Coupom";
+"SCREEN_TITLE_VOUCHER" = "Voucher";
+"SCREEN_TITLE_SHOWCASE_USER_COLLECTION" = "My Collection";
+"SCREEN_TITLE_APP_OPTIONS" = "Options";
+"SCREEN_TITLE_PERMISSIONS" = "Permissões";
+"SCREEN_TITLE_MONITORED_REGIONS" = "Virtual Fences";
+
+/* Alert Messages */
+"ALERT_TITLE_SUCCESS" = "Success";
+"ALERT_TITLE_ERROR" = "Error";
+"ALERT_TITLE_NO_APP" = "Attention";
+"ALERT_MESSAGE_NO_APP" = "This app is not currently available, try again later.";
+"ALERT_TITLE_INVALID_INVOICE" = "Invalid Invoice";
+
+"ALERT_TITLE_EMPTY_FIELDS" = "Empty Fields";
+"ALERT_MESSAGE_EMPTY_FIELDS" = "Email and password required.";
+"ALERT_MESSAGE_EMPTY_FIELDS_USER" = "All the fields are required.";
+"ALERT_MESSAGE_EMAIL_INVALID" = "Email invalid. Verify that you entered the correct e-mail address.";
+"ALERT_MESSAGE_CPF_INVALID" = "CPF invalid. Verify that you entered the correct CPF.";
+"ALERT_MESSAGE_CNPJ_INVALID" = "CNPJ invalid. Verify that you entered the correct CNPJ.";
+"ALERT_MESSAGE_PASSWORD_INVALID" = "Your password must contain min. 8 and max. 14 characters.";
+"ALERT_MESSAGE_PASSWORD_MATCH" = "The confirmation must match the new password.";
+
+"ALERT_MESSAGE_EMPTY_FIELDS_GENERAL" = "Every field is required.";
+
+"ALERT_MESSAGE_EMPTY_FIELDS_EVENT" = "With the exception of the Additional information and Observation fields, all are required.";
+"ALERT_MESSAGE_CREATION_SUCCESS" = "User created successfully.";
+"ALERT_MESSAGE_UPDATE_SUCCESS" = "Profile updated successfully.";
+
+"ALERT_TITLE_AUTHENTICATION_ERROR" = "Error Authentication";
+"ALERT_MESSAGE_AUTHENTICATION_ERROR" = "It was not possible to verify the user. Verify entered email and password";
+"ALERT_MESSAGE_CODE_AUTHENTICATION_ERROR" = "This event code doesn't exists.";
+
+"ALERT_TITLE_CONFIGURATION_ERROR" = "Error";
+"ALERT_MESSAGE_CONFIGURATION_ERROR" = "It was not possible to verify the configuration data to app.";
+
+"ALERT_MESSAGE_AUTHENTICATION_AFTER_SIGNUP_ERROR" = "Your account was created successfully, but it was not possible to connect you automatically. Please login manually.";
+
+"ALERT_TITLE_CREATION_ERROR" = "Creation Error";
+"ALERT_MESSAGE_CREATION_ERROR" = "It was not possible to create the user. Please try again.";
+"ALERT_MESSAGE_UPDATE_ERROR" = "It was not possible to update the user. Please try again.";
+"ALERT_MESSAGE_PASSWORD_ERROR" = "It was not possible to update the password. Please try again.";
+"ALERT_MESSAGE_ASSOCIATES_SEARCH_ERROR" = "It was not possible to complete your search. Please try again later.";
+"ALERT_MESSAGE_CONTACTS_SEARCH_ERROR" = "It was not possible to complete your search. Please try again later.";
+"ALERT_MESSAGE_UPDATE_PASSWORD_SUCCESS" = "Password updated successfully.";
+
+"ALERT_TITLE_EMPTY_RESULT_ASSOCIATES_SEARCH" = "No Results.";
+"ALERT_MESSAGE_EMPTY_RESULT_ASSOCIATES_SEARCH" = "No associates found. Try changing the filter.";
+
+"ALERT_TITLE_FORGOT_PASSWORD" = "New Password";
+"ALERT_MESSAGE_FORGOT_PASSWORD" = "Enter your email.";
+
+"ALERT_MESSAGE_PASSWORD_RESET_SUCCESS" = "Verify your email to proceed.";
+"ALERT_MESSAGE_PASSWORD_RESET_ERROR" = "An error accured. Please try again later.";
+"ALERT_MESSAGE_PASSWORD_RESET_NOT_FOUND" = "The E-mail was not found.";
+
+"ALERT_TITLE_NO_CONNECTION" = "No Connection";
+"ALERT_MESSAGE_NO_CONNECTION" = "Please ensure your phone has an active internet connection.";
+
+"ALERT_TITLE_ERROR_CONNECTION_DATA" = "Attention!";
+"ALERT_MESSAGE_ERROR_CONNECTION_DATA" = "Server Unavailable. Try again later.";
+
+"ALERT_TITLE_ERROR_NEW_POST" = "New Post";
+"ALERT_MESSAGE_ERROR_NEW_POST" = "You must enter an image or valid text to perform the publication.";
+
+"ALERT_TITLE_INCORRECT_EMAIL_FORMAT" = "Wrong Filetype";
+"ALERT_MESSAGE_INCORRECT_EMAIL_FORMAT" = "Email invalid";
+
+"ALERT_TITLE_PICK_PHOTO" = "Choose Photo";
+"ALERT_MESSAGE_PICK_PHOTO" = "Take a picture or choose from gallery.";
+
+"ALERT_TITLE_LOGOUT" = "Log out";
+"ALERT_MESSAGE_LOGOUT" = "Do you really want log out?";
+
+"ALERT_TITLE_DOWNLOAD" = "Download";
+"ALERT_MESSAGE_DOWNLOAD_EXISTS" = "Download succeeded. Access it through 'My files'.";
+"ALERT_MESSAGE_DOWNLOAD_SUCCESS" = "Downloaded and saved successfully!";
+"ALERT_MESSAGE_DOWNLOAD_ERROR" = "Download not possible. Please try again later.";
+"ALERT_MESSAGE_DOWNLOAD_ERROR_SAVE_TO_DISC" = "Error saving file.";
+"ALERT_MESSAGE_DOWNLOAD_DELETE" = "If you delete this file, you have to download it again to access it in your files. Do you want to proceed?";
+"ALERT_MESSAGE_DOWNLOAD_NODATA_RESPONSE" = "Not possible to verify the documents for this event. Please try again later.";
+"ALERT_MESSAGE_MASTER_DOWNLOAD_NODATA_RESPONSE"="Not possible to verify the documents. Please try again later.";
+
+"ALERT_TITLE_CONFIRM" = "Confirm";
+"ALERT_MESSAGE_EVENT_CONFIRM" = "Do you like to confirm your registration for this event?";
+"ALERT_MESSAGE_SUBSCRIBE_ERROR" = "Unable to sign up for the event, please try again.";
+"ALERT_TITLE_SUBSCRIBE_SUCCESS" = "Congratulations!";
+"ALERT_MESSAGE_SUBSCRIBE_SUCCESS" = "You have been sign up in the event. You can see your events on the calendar or on the menu My agenda.";
+"ALERT_MESSAGE_DELETE_EVENT_SUCCESS" = "Event removed with success.";
+
+"ALERT_TITLE_EMPTY_DOCUMENTS" = "Documents";
+"ALERT_MESSAGE_EMPTY_DOCUMENTS" = "Your downloads will appear here. Check for available documents at each events.";
+
+"ALERT_MESSAGE_CANCEL_SUBSCRIPTION" = "Would you like to cancel your registration for the event?";
+"ALERT_TITLE_CANCEL_SUBSCRIPTION" = "Cancel Registration";
+
+"ALERT_MESSAGE_EVENTLIST_ERROR" = "Not possible to load list of events. Please try again later.";
+
+"ALERT_MESSAGE_NEWS_PORTAL_ERROR" = "Not possible to load news. Please try again later.";
+
+"ALERT_TITLE_DOWNLOADS" = "Downloads";
+"ALERT_MESSAGE_DOWNLOADS" = "Downloads available at date of event.";
+
+"ALERT_MESSAGE_TIMELINE_ERROR" = "Not possible to load the history of the chamber. Please try again later";
+
+"ALERT_TITLE_CLOSED_SESSION" = "Session Expired";
+"ALERT_MESSAGE_CLOSED_SESSION" = "Session expired, please log in again.";
+
+"ALERT_TITLE_NO_CHANGES" = "No Updates.";
+"ALERT_MESSAGE_NO_CHANGES" = "No updates of the information confirmed.";
+
+"ALERT_MESSAGE_PHOTO_SAVE" = "Photo saved sucessfully";
+"ALERT_TITLE_SHARE_PHOTO" = "Share";
+"ALERT_MESSAGE_SHARE_PHOTO" = "Would you like to project the picture to the wall?";
+"ALERT_MESSAGE_SHARE_PHOTO_ERROR" = "Not possible to show the picture. Please try again later.";
+"ALERT_MESSAGE_SHARE_PHOTO_SUCCESS" = "Your picture was shared successfully. Have an eye on the wall, your picture will be shown soon.";
+
+"ALERT_MESSAGE_CHAT_ERROR" = "Connection to chat failed. Please try again later.";
+"ALERT_MESSAGE_CHAT_NO_REGISTER" = "You don't participate in any chat.";
+"ALERT_MESSAGE_CHAT_NO_MESSAGE_TO_SHOW" = "No messages to show.";
+
+"ALERT_TITLE_CAMERA_PERMISSION" = "Permission Camera";
+"ALERT_MESSAGE_CAMERA_SCANNER_PERMISSION" = "To be able to access special media and videos, allow the access to the camera.";
+"ALERT_MESSAGE_CAMERA_PHOTO_PERMISSION" = "Authorize the use of the camera so you can add photos to your posts.";
+"ALERT_MESSAGE_EMAIL_EXISTS" = "E-mail alredy used. Please, enter with another email.";
+"ALERT_MESSAGE_CAMERA_PHOTO_PERMISSION_NF_REGISTER" = "Authorize the use of the camera so that you can scan your invoices.";
+"ALERT_MESSAGE_CAMERA_PHOTO_PERMISSION_QRCODE_READER" = "Authorize the use of the camera to scan the QRCode of digital cards.";
+
+"ALERT_TITLE_PHOTO_LIBRARY_PERMISSION" = "Permission Photos";
+"ALERT_MESSAGE_PHOTO_LIBRARY_PERMISSION" = "Authorize access to your photos for use in your posts.";
+
+"ALERT_TITLE_SEND_MESSAGE_ERROR" = "Send Error";
+"ALERT_MESSAGE_SEND_MESSAGE_ERROR" = "Failed to send the message.\nDo you want to try again?";
+
+"ALERT_MESSAGE_SECTOR_SEARCH_ERROR" = "Not possible to load the list of sectors. Please, try again.";
+"ALERT_MESSAGE_CATEGORY_SEARCH_ERROR" = "Not possible to load the list of categories. Please, try again.";
+
+"ALERT_TITLE_EMAIL" = "E-mail";
+"ALERT_MESSAGE_NEED_EMAIL" = "We noticed that you refused to give the information about your e-mail. For the application to work properly we need this information. Please, fill the e-mail field to complete your registration.";
+
+"ALERT_MESSAGE_REMOVE_ERROR" = "Unable to sign up, please try again.";
+
+"ALERT_MESSAGE_SPONSOR_SEARCH_ERROR" = "Not possible to load the list of sponsors. Please, try again.";
+"ALERT_MESSAGE_SPONSOR_FIRST" = "First choose the sector that your company operates.";
+
+"ALERT_MESSAGE_CONVERSATION_ERROR" = "Not possible to load the chats. Please, try again.";
+"ALERT_MESSAGE_GROUP_SEARCH_ERROR" = "Not possible to load the group chats. Please, try again.";
+
+"ALERT_TITLE_LEAVE_CHAT" = "Leave";
+"ALERT_MESSAGE_LEAVE_CHAT" = "Are you sure that you want to leave the chat group?";
+"ALERT_MESSAGE_LEAVE_CHAT_ERROR" = "Not possible to leave the group. Please, try again.";
+
+"ALERT_MESSAGE_BLOCK_UNBLOCK_USER_ERROR" = "This user's status could not be changed at this time. Please, try again.";
+
+"ALERT_MESSAGE_CHAT_BLOCK" = "Do you want to block this user?\n\nYou can not send or receive messages from him.";
+"ALERT_MESSAGE_CHAT_UNBLOCK" = "Do you want to unblock this user?\n\nYou can send and receive messages from him.";
+
+"ALERT_TITLE_CHAT_BLOCKED_USER" = "Blocked";
+"ALERT_MESSAGE_CHAT_BLOCKED_USER" = "This user has been blocked and can not send messages to it.";
+
+"ALERT_MESSAGE_FEED_VIDEOS_ERROR" = "We could not fetch information about the videos right now. Please try again later.";
+
+"ALERT_MESSAGE_PARTICIPANTS_ERROR" = "We could not fetch information about the participants right now. Please try again later.";
+"ALERT_MESSAGE_POINTS_ERROR" = "We could not fetch information about your points right now. Please try again later.";
+
+"ALERT_MESSAGE_ORDERS_ERROR" = "We could not fetch information about the orders right now. Please try again later.";
+"ALERT_MESSAGE_ORDER_HIST_ERROR" = "We could not fetch information about the order history right now. Please try again later.";
+"ALERT_MESSAGE_CATALOGS_ERROR" = "We could not fetch information about the catalogs right now. Please try again later.";
+"ALERT_MESSAGE_POINTS_ERROR" = "We could not fetch information about the points right now. Please try again later.";
+"ALERT_MESSAGE_CATEGORIES_ERROR" = "We could not fetch information about the categories right now. Please try again later.";
+"ALERT_MESSAGE_PROFILE_INFOS_ERROR" = "We could not fetch profile informations right now. Please try again later.";
+"ALERT_MESSAGE_GET_PROMOTIONS_ERROR" = "We were not able to get the deals right now. Please try again later.";
+"ALERT_MESSAGE_REGISTER_PROMOTION_ERROR" = "We were unable to register for the promotion at this time. Please try again later.";
+"ALERT_MESSAGE_SEND_INVOICE_ERROR" = "We could not process your invoice at this time. Please try again later.";
+
+"ALERT_TITLE_NO_FILES_AVAILABLE" = "Attention";
+"ALERT_MESSAGE_NO_FILES_AVAILABLE" = "This event does not have any files currently available.";
+
+"ALERT_TITLE_NO_MASTER_FILES_AVAILABLE" = "Attention";
+"ALERT_MESSAGE_NO_MASTER_FILES_AVAILABLE" = "Any files currently available.";
+
+"ALERT_MESSAGE_EMPTY_FIELDS_CODE" = "Please, fill the code field.";
+"ALERT_MESSAGE_SEND_COMMENT_ERROR" = "It was not possible to send your comment. Try again.";
+
+"ALERT_MESSAGE_CREATE_POST_ERROR" = "It was not possible to create the post. Try again.";
+
+"ALERT_TITLE_NOTIFICATION_INTERACTIVE_FEEDBACK" = "Success!";
+"ALERT_MESSAGE_NOTIFICATION_INTERACTIVE_FEEDBACK" = "Thank you for participating!";
+
+"ALERT_MESSAGE_CREATION_ERROR_EMAIL" = "E-mail not available.";
+
+"ALERT_TITLE_POST_DELETE_CONFIRMATION" = "Post";
+"ALERT_MESSAGE_POST_DELETE_CONFIRMATION" = "Do you want to permanently remove this publication?\n\nThis operation can not be rolled back.";
+
+"ALERT_TITLE_ORDER_PRODUCT_NOT_FOUND" = "Products Search";
+"ALERT_MESSAGE_ORDER_PRODUCT_NOT_FOUND" = "No products with this reference were found.";
+
+"ALERT_TITLE_ORDER_NO_PRODUCTS" = "Without Products";
+"ALERT_MESSAGE_ORDER_NO_PRODUCTS" = "There are no products available for search at this time.";
+
+"ALERT_MESSAGE_SUCCESS_ADD_PRODUCT_CART" = "Product added to cart!";
+"ALERT_MESSAGE_ERROR_ADD_PRODUCT_CART" = "We could not add this product to your cart at this time. Please try again later.";
+
+"ALERT_MESSAGE_GET_PRE_PAYMENT_ERROR" = "Could not process order data at this time. Please try again later.";
+"ALERT_MESSAGE_SEND_ORDER_ERROR_MAX_PRODUCT_ITEMS" = "One of the items in your cart has more units than the order allowed (maximum <qtd>). Please review your products.";
+"ALERT_MESSAGE_SEND_ORDER_ERROR_MIN_PRICE_VALUE" = "Your request does not have the minimum value needed to continue (minimum <value>). Please review your cart.";
+"ALERT_MESSAGE_ERROR_GET_ORDER_DETAIl_ITEMS" = "We could not find the items for this order at this time. Please try again later.";
+
+"ALERT_TITLE_ERROR_SURVEY_ANSWER" = "Incorrect Answer!";
+"ALERT_MESSAGE_ERROR_SURVEY_ANSWER" = "Please check the option you want and try again.";
+"ALERT_MESSAGE_SUCCESS_SURVEY_REGISTER" = "Your promotion registration was successful!";
+
+"ALERT_TITLE_INCORRECT_CPF_FORMAT" = "Invalid CPF!";
+"ALERT_MESSAGE_INCORRECT_CPF_FORMAT" = "Please enter a valid CPF to review your data.";
+"ALERT_MESSAGE_CPF_DATA" = "Enter your CPF to autocomplete your data.";
+
+"ALERT_MESSAGE_INVOICE_SCAN_EMPTY" = "Take a photo of your Invoice looking to make the data readable in the image. This way the information you need is more likely to be scanned correctly.";
+"ALERT_MESSAGE_INVOICE_SCAN_SUCCESS" = "Invoice successfully registered!";
+
+"ALERT_TITLE_INVOICE_SCAN_INFO" = "Invoice Scanner";
+"ALERT_MESSAGE_INVOICE_SCAN_INFO" = "Shoot your invoice by enclosing it in full.\n\nAfter shipping it will be processed and will be subject to due validation.";
+"ALERT_MESSAGE_INVOICE_SCAN_NO_REGISTRATION" = "You are not signed up for any promotion. Before you photograph your Invoices, sign up.";
+"ALERT_MESSAGE_INVOICE_SCAN_NO_PROMOTION" = "No valid promotions allow the scan of Invoices.\nCheck if there are valid promotions and if you have registered in any of them.";
+
+"ALERT_TITLE_INVALID_URL" = "Error";
+"ALERT_MESSAGE_INVALID_URL" = "The address you provided can not be reached at this time. Check if the link is valid or if your device has internet access.";
+
+"ALERT_TITLE_ACCOUNT_ERROR" = "Accounts";
+"ALERT_MESSAGE_ACCOUNT_ERROR" = "Please share your account credentials in the device settings application to share.";
+
+"ALERT_TITLE_SOCIAL_SHARE_ERROR" = "Attention!";
+"ALERT_MESSAGE_SOCIAL_SHARE_ERROR" = "Error occurred sharing your message, try again.";
+
+"ALERT_TITLE_ERROR_CALL_PHONE" = "Attention!";
+"ALERT_MESSAGE_ERROR_CALL_PHONE" = "The phone call is not available.";
+
+"ALERT_TITLE_CONFIRM_ATTENDANCE" = "Done!";
+"ALERT_MESSAGE_CONFIRM_ATTENDANCE" = "Your presence has been confirmed. You will receive an email with event and contact information.";
+
+"ALERT_TITLE_EMAIL_ERROR" = "Email";
+"ALERT_MESSAGE_EMAIL_ERROR" = "Please make sure your device has a properly configured email account and try again.";
+
+"ALERT_TITLE_NOTIFICATION_LINK_ERROR" = "Attention!";
+"ALERT_MESSAGE_NOTIFICATION_LINK_ERROR" = "Unable to view additional content at this time.\nPlease try again later.";
+
+"ALERT_TITLE_SHOWCASE_LOAD_IMAGES_ERROR"= "Error";
+"ALERT_MESSAGE_SHOWCASE_LOAD_IMAGES_ERROR"= "We were unable to load all the resources needed to run the Virtual Showcase. Please try again later.";
+
+"ALERT_TITLE_SHOWCASE_USER_COLLECTION" = "Collection";
+"ALERT_MESSAGE_SHOWCASE_USER_COLLECTION_ADD_SUCCESS" = "The photo has been added to your gallery.";
+"ALERT_MESSAGE_SHOWCASE_USER_COLLECTION_ADD_ERROR" = "An error prevents your photo from being added to the gallery at this time. Please try again.";
+
+"ALERT_TITLE_REMOVE_PHOTO_USER_COLLECTION" = "Remove Photos";
+"ALERT_MESSAGE_REMOVE_PHOTO_USER_COLLECTION" = "Do you want to remove the selected photos from your collection?\n\nThis operation can not be undone!";
+
+"ALERT_TITLE_SAVE_TO_COLLECTION_ERROR" = "Error";
+"ALERT_MESSAGE_SAVE_TO_COLLECTION_ERROR" = "An error prevents the contents of your collection from loading at this time.";
+
+//Zone Navigator
+"ALERT_TITLE_ZONE_NAVIGATOR_ERROR" = "Error";
+"ALERT_MESSAGE_ZONE_NAVIGATOR_ERROR_LOAD_MAP" = "The map can not be loaded for the requested zone. Please check your connection or try again later.";
+
+"ALERT_TITLE_ZONE_NAVIGATOR_TITLE" = "Zone Navigator";
+"ALERT_MESSAGE_ZONE_NAVIGATOR_TITLE" = "This component allows you to navigate between environments (called zones), interacting with points of interest and alternating zones during navigation.";
+
+//3D Viewers
+"ALERT_TITLE_3DVIEWER_HINT" = "Target Image";
+"ALERT_MESSAGE_3DVIEWER_HINT" = "This is the target image where you should point your device to. The 3D object will appear over the image. \nWhen printing, make sure the image is 18 cm (7 in) apart.";
+
+"ALERT_TITLE_3DVIEWER_TUTORIAL_AR" = "Tutorial";
+"ALERT_MESSAGE_3DVIEWER_TUTORIAL_AR" = "When a horizontal plane is recognized in the environment, touch the screen to lock the object in position.\n\nWith two touches it will be free again for repositioning.";
+
+//App Options
+"ALERT_TITLE_APP_OPTIONS_RESET_TUTORIALS" = "Tutorials";
+"ALERT_MESSAGE_APP_OPTIONS_RESET_TUTORIALS" = "Do you want to restore all application tutorials?";
+
+/* Components Interface*/
+//Buttons
+"BUTTON_TITLE_LOGIN" = "SIGN-IN";
+"BUTTON_TITLE_ACCOUNT" = "SIGN-UP";
+"BUTTON_TITLE_ACCOUNT_AMIGAS" = "I WANT TO BE RESELLER";
+"BUTTON_TITLE_ROLE_DIST" = "I AM DISTRIBUITOR";
+"BUTTON_TITLE_ROLE_RESELLER" = "I AM RESELLER";
+"BUTTON_TITLE_PASSWORD_RECOVERY" = "FORGOT PASSWORD?";
+"BUTTON_TITLE_ACCOUNT_SAVE" = "SAVE";
+"BUTTON_TITLE_CHANGE_PASSWORD" = "RESET PASSWORD";
+"BUTTON_TITLE_EVENT_SUBSCRIBE" = "SIGN-UP";
+"BUTTON_TITLE_DOWNLOAD_FILE" = "DOWNLOAD";
+"BUTTON_TITLE_RESET" = "RESET";
+"BUTTON_TITLE_SEARCH_ASSOCIATES" = "SEARCH";
+"BUTTON_TITLE_DONE" = "Done";
+"BUTTON_TITLE_CLEAR_FILTER" = "CLEAR FILTER";
+"BUTTON_TITLE_CLEAR_ALL_FILTERS" = "Clear all filters";
+"BUTTON_TITLE_CATEGORY" = "Filter categories";
+"BUTTON_TITLE_VIEW_IN_WEBSITE" = "View website";
+"BUTTON_TITLE_100_PHOTO_SAVE" = "Save";
+"BUTTON_TITLE_100_PHOTO_SHARE" = "Share to screen";
+"BUTTON_TITLE_EVENT_FAVORITE" = "SIGN-UP";
+"BUTTON_TITLE_EVENT_UNFAVORITE" = "CANCEL";
+"BUTTON_TITLE_OPEN_LINKEDIN" = "Open LinkedIn";
+"BUTTON_TITLE_DOWNLOAD_CANCEL" = "Cancel Download";
+"BUTTON_TITLE_LEAVE_CHAT" = "Leave";
+"BUTTON_TITLE_VALIDATE" = "CONFIRM";
+"BUTTON_TITLE_POST" = "Post";
+"BUTTON_TITLE_LOGIN_BACK_TO_CODE" = "ACCESS ANOTHER EVENT";
+"BUTTON_TITLE_SEARCH" = "SEARCH";
+"BUTTON_TITLE_FINALIZE_ORDER" = "FINALIZE ORDER";
+"BUTTON_TITLE_CONTINUE_SHOPPING" = "CONTINUE SHOPPING";
+"BUTTON_TITLE_REVENDOR_ACCOUNT_NORMAL" = "SIGN-UP";
+"BUTTON_TITLE_REVENDOR_ACCOUNT_FACEBOOK" = "SIGN-UP WITH FACEBOOK";
+"BUTTON_TITLE_TERMS_ACCEPT" = "I ACCEPT THE TERMS AND CONDITIONS";
+"BUTTON_TITLE_TERMS_AND_RULES" = "TERMS AND CONDITIONS";
+"BUTTON_TITLE_COUPON_REGISTER" = "REGISTER COUPONS";
+"BUTTON_TITLE_RETURN_TO_START" = "Return to start";
+"BUTTON_TITLE_SEND_ANSWER" = "SEND ANSWER";
+//
+"BUTTON_TITLE_PROMOTION_DONE_REGISTER" = "SEE BALANCE PROMOTION";
+"BUTTON_TITLE_SIGNUP_PROMOTION" = "REGISTER";
+"BUTTON_TITLE_NF_SCAN_TAKE_PHOTO" = "TAKE PHOTO";
+"BUTTON_TITLE_NF_SCAN_INVOICE_REGISTER" = "INVOICE REGISTER";
+"BUTTON_TITLE_NF_SCAN_INVOICE_NEW" = "REGISTER NEW INVOICE";
+"BUTTON_TITLE_NF_SCAN_SEE_MY_INVOICES" = "SEE MY INVOICES";
+"BUTTON_TITLE_CREATE_LUCKY_NUMBERS" = "GENERATE LUCKY NUMBERS";
+//
+"BUTTON_TITLE_RSVP_CONFIRM" = "Confirm";
+"BUTTON_TITLE_RSVP_LOGIN" = "Login";
+//
+"BUTTON_COUPON_TITLE" = "Generate Coupon";
+"BUTTON_VOUCHER_TITLE" = "Gerar Voucher";
+//
+"BUTTON_TITLE_GALLERY_EDIT" = "Edit";
+//
+"BUTTON_TITLE_PRINT" = "Print";
+
+//Labels
+"LABEL_WELCOME" = "Welcome!";
+"LABEL_TITLE_EVENT_CHAT" = "Chat";
+"LABEL_TITLE_EVENT_DOWNLOAD" = "AVAILABLE FILES";
+"LABEL_TITLE_EVENT_CANCEL" = "Cancel event";
+"LABEL_TITLE_EVENT_RESEARCH" = "Feedback";
+"LABEL_EVENT_DESC_TITLE_TYPE" = "TYPE";
+"LABEL_EVENT_DESC_TITLE_PALES" = "SPEAKER";
+"LABEL_EVENT_DESC_TITLE_SYNOPSIS" = "INFORMATIONS";
+"LABEL_EVENT_DESC_TITLE_LANGUAGE" = "LANGUAGES";
+"LABEL_EVENT_DESC_TITLE_DATETIME" = "DATE | TIME";
+"LABEL_EVENT_DESC_TITLE_LOCAL" = "LOCATION";
+"LABEL_EVENT_DESC_TITLE_SPONSORS" = "SPONSORS";
+"LABEL_EVENT_DESC_TITLE_DESCRIPTION" = "DESCRIPTION"; 
+//
+"LABEL_ASSOCIATE_IDENTIFIER" = "ASSOCIATE";
+"LABEL_ASSOCIATE_PRODUCTS_SERVICES" = "PRODUCT(S)/SERVICE(S)";
+"LABEL_ASSOCIATE_HIVE_OF_ACTIVITY" = "INDUSTRY";
+"LABEL_ASSOCIATE_CNPJ" = "CNPJ";
+"LABEL_ASSOCIATE_PLACE" = "LOCATION";
+"LABEL_ASSOCIATE_HOMEPAGE" = "HOMEPAGE";
+//
+"LABEL_CONTACT_DESC_TITLE_NAME" = "MANAGER NAME";
+"LABEL_CONTACT_DESC_TITLE_ROLE" = "TITLE";
+"LABEL_CONTACT_DESC_TITLE_PHONE" = "PHONE";
+"LABEL_CONTACT_DESC_TITLE_EMAIL" = "EMAIL";
+"LABEL_CONTACT_DESC_TITLE_DESCRIPTION" = "DESCRIPTION OF DEPARTMENT";
+//
+"LABEL_100ANOS_MASK" = "Take your picture";
+"LABEL_100ANOS_TIMELINE" = "Chamber's History";
+"LABEL_TITLE_TAKE_PHOTO" = "Touch screen to take picture";
+//
+"LABEL_TEXT_ABOUT" = "This app has as purpose to give easy access to information and work.";
+"LABEL_TEXT_HELP" = "In case you have questions or suggestions, send an e-mail to app@ahkbrasil.com.";
+//
+"LABEL_CHAT_TODAY" = "Today";
+"LABEL_CHAT_YESTERDAY" = "Yesterday";
+"LABEL_CHAT_TOMORROW" = "Tomorrow";
+//
+"LABEL_APP_VERSION" = "App Version";
+"LABEL_APP_DEVELOPED_BY" = "Developed by";
+//
+"LABEL_TEXT_PRODUCT_SEARCH" = "What do you want to order?";
+//
+"LABEL_TERMS_AND_RULES_NO_DATA" = "An error prevents content from loading at this time.\nPlease check your connection or try again later.";
+"LABEL_MY_INVOICES_FOOTER" = "* Pending invoices: wait for validation.";
+"LABEL_MY_INVOICES_STATUS_PENDING" = "PENDING";
+"LABEL_MY_INVOICES_STATUS_ANALISING" = "ANALYSING";
+"LABEL_MY_INVOICES_STATUS_PROCESSED" = "REGISTERED";
+"LABEL_MY_INVOICES_STATUS_INVALID" = "REFUSED";
+"LABEL_MY_INVOICES_NO_DATA" = "You have not yet submitted any invoices.";
+//
+"LABEL_PROMOTION_EXTRACT_NO_DATA" = "No information for this promotion was found at this time.";
+"LABEL_PROMOTION_EXTRACT_COUPONS" = "COUPONS";
+"LABEL_PROMOTION_EXTRACT_GIFTS" = "GIFTS";
+"LABEL_PROMOTION_EXTRACT_LUCKY_NUMBERS" = "LUCKY NUMBERS";
+"LABEL_PROMOTION_EXTRACT_NF_REGISTERED"= "Registered";
+"LABEL_PROMOTION_EXTRACT_NF_CONSUMED"= "Consumed";
+"LABEL_PROMOTION_EXTRACT_NF_BALANCE"= "Balance";
+"LABEL_PROMOTION_EXTRACT_GIFT_AVAILABLE"= "Available";
+"LABEL_PROMOTION_EXTRACT_GIFT_CONSUMED"= "Redeemed";
+"LABEL_PROMOTION_ALREADY_REGISTERED" = "already registered!";
+"LABEL_PROMOTION_NO_DATA" = "No promotion found at the moment.";
+//
+"LABEL_PHOTO_CROP_AVATAR_TITLE" = "Adjust the image";
+//
+"LABEL_SHOWCASE_INSTRUCTION" = "tap the image to enlarge";
+"LABEL_SHOWCASE_EMPTY_COLLECTION" = "Your collection does not have any photos to view.\n\nAfter taking a photo with a product from the shop window, touch the button to add it to your collection.";
+//
+"LABEL_3DVIEWER_NO_MODEL_LOADED" = "No template loaded.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_MANIPULATION" = "Swipe your finger over the object to change the display shape.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_LOAD_ERROR" = "Failed to open object model. Check the url informed.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_INVALID_ASSET" = "No asset can be loaded from the object model found.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_FILETYPE_ERROR" = "Failed to open object model. Unsupported file extension.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_NO_MESH" = "No mesh can be loaded for the object model found.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_INVALID_MESH" = "The object model found does not have a valid mesh.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_INVALID_TEXTURE_MAP" = "An invalid texture map was found while loading the material.";
+"LABEL_3DVIEWER_MESSAGE_MODEL_EMPTY_OBJ" = "No objects found for display.";
+
+//Label Actions
+"LABEL_ACTION_QUANTITY" = "Amount";
+
+//Menus
+"MAIN_MENU_OPTION_1_EVENTS" = "Events";
+"MAIN_MENU_OPTION_2_SPONSORS" = "Sponsors";
+"MAIN_MENU_OPTION_3_TEAM" = "Team";
+"MAIN_MENU_OPTION_1_DIENSTLEISTUNGEN" = "Dienstleistungen"; //Não traduzir este label (mas incluí-lo em todos os arquivos)
+"MAIN_MENU_OPTION_2_ASSOCIATED" = "Associates";
+"MAIN_MENU_OPTION_3_YEARS" = "Years";
+"MAIN_MENU_OPTION_4_CONTACTS" = "Contacts";
+"MAIN_MENU_OPTION_4_PUBLICATIONS" = "Publications";
+"MAIN_MENU_OPTION_5_NEWSPORTAL" = "News";
+"MAIN_MENU_OPTION_5_WOCHENBERICHT" = "Wochenbericht"; //Não traduzir este label (mas incluí-lo em todos os arquivos)
+"MAIN_MENU_OPTION_6_SCANNER" = "Scanner";
+
+//Side Menu
+"SIDE_MENU_OPTION_1_HOME" = "Home";
+"SIDE_MENU_OPTION_2_PROMOTIONS" = "Promotions";
+"SIDE_MENU_OPTION_3_NF_REGISTER" = "Submit Your Invoices";
+"SIDE_MENU_OPTION_4_MY_NFS" = "My Invoices";
+"SIDE_MENU_OPTION_5_EXTRACT" = "Balance";
+"SIDE_MENU_OPTION_6_STORES" = "Stores";
+"SIDE_MENU_OPTION_7_CHRISTMAS_SCHEDULE" = "Holiday Schedule";
+"SIDE_MENU_OPTION_8_EXIT" = "Exit";
+"SIDE_MENU_OPTION_9_USER_INFO" = "Edit Profile";
+"SIDE_MENU_OPTION_9_B_USER_INFO" = "My Profile";
+
+//SegmentedControl
+"SEGMENTEDCONTROL_OPTION_LIST" = "List";
+"SEGMENTEDCONTROL_OPTION_CALENDAR" = "Calendar";
+"SEGMENTEDCONTROL_OPTION_MY_DOCUMENTS" = "My Documents";
+"SEGMENTEDCONTROL_OPTION_ALL_DOCUMENTS" = "All";
+
+//Footer
+"FOOTER_LABEL_TODAY" = "Today";
+"FOOTER_LABEL_REGISTERED" = "Subscribe";
+"FOOTER_LABEL_AVAILABLE" = "Sign-up";
+"FOOTER_LABEL_SELECTED" = "Selected";
+
+//TableView
+"TABLE_VIEW_CELL_LANGUAGE" = "Language";
+"TABLE_VIEW_CELL_NUMBER_OF_PAGES" = "Number of pages";
+"TABLE_VIEW_CELL_PAGES" = "page (s)";
+
+"TVC_LABEL_FIELD_AUTHOR" = "Author";
+"TVC_LABEL_FIELD_DESCRIPTION" = "Description";
+"TVC_LABEL_FIELD_LANGUAGE" = "Language(s)";
+"TVC_LABEL_FIELD_NUMBER_OF_PAGES" = "Number of pages";
+
+/* Custom Components*/
+"CUSTOM_BUTTON_TITLE_CONFIRM" = "Select";
+"CUSTOM_BUTTON_TITLE_CLEAR" = "Clear";
+
+"TRY_AGAIN" = "Try Again";
+
+/* Alerts Options*/
+"ALERT_OPTION_OK" = "OK";
+"ALERT_OPTION_CONFIRM" = "Confirm";
+"ALERT_OPTION_CANCEL" = "Cancel";
+"ALERT_OPTION_CLOSE" = "Close";
+"ALERT_OPTION_YES" = "Yes";
+"ALERT_OPTION_NO" = "No";
+"ALERT_OPTION_SEND" = "Send";
+"ALERT_OPTION_SETTINGS" = "Settings";
+"ALERT_OPTION_TAKE_PHOTO" = "Take picture";
+"ALERT_OPTION_PICK_PHOTO"= "Gallery";
+"ALERT_OPTION_DELETE"= "Delete";
+"ALERT_OPTION_CANCEL_SUBSCRIPTION" = "Cancel subscription";
+"ALERT_OPTION_CONTINUE_AND_DELETE" = "Continue and delete";
+"ALERT_OPTION_RESEND" = "Resend";
+"ALERT_OPTION_LEAVE" = "Finalize";
+"ALERT_OPTION_CHAT_BLOCK" = "Block";
+"ALERT_OPTION_CHAT_UNBLOCK" = "Unblock";
+"ALERT_OPTION_END_REGISTER" = "Cancel Registration";
+"ALERT_OPTION_SEE_INVOICE" = "See Invoice Photo";
+"ALERT_OPTION_RESET" = "Reset";
+//
+"ALERT_OPTION_REMOVE" = "Delete";
+"ALERT_SHEET_OPTION_LIKE" = "Like";
+"ALERT_SHEET_OPTION_UNLIKE" = "Unlike";
+"ALERT_SHEET_OPTION_COMMENT" = "Comment";
+"ALERT_SHEET_OPTION_SHARE" = "Share";
+"ALERT_SHEET_OPTION_DELETE_POST" = "Delete Post";
+
+/* Placeholders and Labels*/
+"PLACEHOLDER_DIST_CODE" = "Code";
+"PLACEHOLDER_PASSWORD_DIST" = "Password";
+"PLACEHOLDER_CPF" = "CPF";
+"PLACEHOLDER_EMAIL" = "Email";
+"PLACEHOLDER_PASSWORD" = "Password";
+"PLACEHOLDER_PASSWORD_ENASUPER"="CPF(No points)";
+"PLACEHOLDER_NAME" = "Name";
+"PLACEHOLDER_LAST_NAME" = "Last Name";
+"PLACEHOLDER_PHONE" = "Phone";
+"PLACEHOLDER_PHONE_FIX" = "Home Phone";
+"PLACEHOLDER_CPF" = "CPF";
+"PLACEHOLDER_COMPANY" = "Company";
+"PLACEHOLDER_CNPJ" = "CNPJ";
+"PLACEHOLDER_ROLE" = "Role";
+"PLACEHOLDER_SHOPPING" = "Shopping";
+"PLACEHOLDER_COUNTRY" = "Country";
+"PLACEHOLDER_STATE" = "State";
+"PLACEHOLDER_CITY" = "City";
+"PLACEHOLDER_ZIPCODE" = "Zip";
+"PLACEHOLDER_ADDRESS" = "Address";
+"PLACEHOLDER_NUMBER" = "Number";
+"PLACEHOLDER_ADJUNCT" = "Additional information";
+"PLACEHOLDER_NOTE" = "Observations";
+"PLACEHOLDER_HOMEPAGE" = "Homepage";
+"PLACEHOLDER_ACTUAL_PASSWORD" = "Current password";
+"PLACEHOLDER_NEW_PASSWORD" = "New password";
+"PLACEHOLDER_NEW_PASSWORD2" = "Password confirmation";
+"PLACEHOLDER_ENTERPRISE_NAME" = "Company";
+"PLACEHOLDER_PRODUCTS" = "Products / Services";
+"PLACEHOLDER_BUTTON_HIVE_OF_ACTIVITY" = "Industry";
+"PLACEHOLDER_BUTTON_RELOAD_HIVE_OF_ACTIVITY" = "Reload list";
+"PLACEHOLDER_SECTOR" = "Company sector";
+"PLACEHOLDER_CATEGORY" = "Area of interest";
+"PLACEHOLDER_CODE" = "Enter with the event code";
+"PLACEHOLDER_POST" = "What are you thinking?";
+"PLACEHOLDER_PRODUCT_SEARCH" = "Enter the product reference";
+"PLACEHOLDER_RG" = "RG";
+"PLACEHOLDER_BIRTHDATE" = "Birthdate";
+"PLACEHOLDER_GENDER" = "Gender";
+"PLACEHOLDER_DDD" = "DDD";
+"PLACEHOLDER_DISTRICT" = "District";
+"PLACEHOLDER_MOBILE_PHONE" = "Mobile Phone";
+"PLACEHOLDER_UF" = "UF";
+"PLACEHOLDER_GENDER_MALE" = "Male";
+"PLACEHOLDER_GENDER_FEMALE" = "Female";
+"PLACEHOLDER_GENDER_OTHER" = "Other";
+"PLACEHOLDER_DOCUMENT_SEARCH" = "Search document...";
+"PLACEHOLDER_VIDEO_SEARCH" = "Search video...";
+"PLACEHOLDER_PRODUCT_SEARCH" = "Search product...";
+
+/* Activity Indicator*/
+"MESSAGE_ACTIVITY_INDICATOR_LOADING" = "Loading...";
+"MESSAGE_ACTIVITY_INDICATOR_PROCESSING" = "In progress...";
+"MESSAGE_ACTIVITY_INDICATOR_DOWNLOADING" = "Downloading...";
+"MESSAGE_ACTIVITY_INDICATOR_UPDATING" = "Updating...";
+"MESSAGE_ACTIVITY_INDICATOR_PUBLISHING" = "Posting...";
+
+/* Labels Event*/
+"LABEL_EVENT_START" = "Start";
+"LABEL_EVENT_FINISH" = "End";
+"LABEL_EVENT_AVAILABLE" = "Sign-up";
+"LABEL_EVENT_SUBSCRIBED" = "Signed up";
+
+/* Abbreviated Months*/
+"MONTH_NAME_JAN" = "January";
+"MONTH_NAME_FEV" = "February";
+"MONTH_NAME_MAR" = "March";
+"MONTH_NAME_ABR" = "April";
+"MONTH_NAME_MAI" = "May";
+"MONTH_NAME_JUN" = "June";
+"MONTH_NAME_JUL" = "July";
+"MONTH_NAME_AGO" = "August";
+"MONTH_NAME_SET" = "September";
+"MONTH_NAME_OUT" = "October";
+"MONTH_NAME_NOV" = "November";
+"MONTH_NAME_DEZ" = "December";
+
+/* Labels Questions */
+"LABEL_QUESTION_1" = "Did you like the event?";
+"LABEL_QUESTION_2" = "How would you rate the speaker(s)?";
+"LABEL_QUESTION_3" = "How would you rate the organization of the event?";
+"LABEL_QUESTION_4" = "How did you hear about the event?";
+"LABEL_QUESTION_5" = "Comments or suggestions:";
+
+/* Labels Asnwer*/
+"LABEL_ANSWER_Q1_1" = "Exceeded expactions";
+"LABEL_ANSWER_Q1_2" = "Completely";
+"LABEL_ANSWER_Q1_3" = "Expectations met";
+"LABEL_ANSWER_Q1_4" = "Not met expactations";
+"LABEL_ANSWER_Q1_5" = "Lower than expected";
+"LABEL_ANSWER_Q4_1" = "Website AHK";
+"LABEL_ANSWER_Q4_2" = "Application";
+"LABEL_ANSWER_Q4_3" = "Facebook";
+"LABEL_ANSWER_Q4_4" = "LinkedIn";
+"LABEL_ANSWER_Q4_5" = "Twitter";
+"LABEL_ANSWER_GREAT" = "Great";
+"LABEL_ANSWER_GOOD" = "Good";
+"LABEL_ANSWER_REGULAR" = "Normal";
+"LABEL_ANSWER_INSUFFICIENT" = "Insufficient";
+"LABEL_ANSWER_BAD" = "Bad";
+
+/* Labels Post*/
+"LABEL_POST_CREATE_NEW" = "What is on your mind?";
+"LABEL_POST_SPONSOR_ACTION" = "Visit";
+"LABEL_POST_BUTTON_COMMENT" = "comment";
+"LABEL_POST_QTD_COMMENTS_SINGULAR" = "comment";
+"LABEL_POST_QTD_COMMENTS_PLURAL" = "comments";
+"LABEL_POST_NO_CONNECTION" = "No internet connection...";
+"LABEL_POST_NO_ITEMS_AVAILABLES" = "No data is currently available. Please pull down to refresh.";
+"LABEL_POST_REFRESH_CONTROL_PULL_TO_UPDATE" = "Pull down to refresh";
+"LABEL_POST_REFRESH_CONTROL_UPDATING" = "Updating...";
+
+/* Labels Show case*/
+"LABEL_SHOWCASE_NO_ITEMS_AVAILABLES" = "No data is currently available.";
+
+/* Labels App Options */
+"LABEL_APP_OPTIONS_TITLE" = "In this menu you can define various settings for the application, including appearance and some modes of operation.";
+//
+"LABEL_APP_OPTIONS_ITEM_TUTORIAL_MAIN" = "Tutorials";
+"LABEL_APP_OPTIONS_ITEM_TUTORIAL_A" = "Tap to restore application tutorials.";
+//
+"LABEL_APP_OPTIONS_ITEM_SECURITY_MAIN" = "Safety";
+"LABEL_APP_OPTIONS_ITEM_SECURITY_A" = "Use biometric protection (TouchID or FaceID) to unlock access to the application.";
+//
+"LABEL_APP_OPTIONS_ITEM_PERMISSIONS_MAIN" = "Permissions";
+"LABEL_APP_OPTIONS_ITEM_PERMISSIONS_A" = "Check the status of permissions used by the application.";
+//
+"LABEL_APP_OPTIONS_ITEM_SOUNDS_MAIN" = "Sounds";
+"LABEL_APP_OPTIONS_ITEM_SOUNDS_A" = "Sound effects Enabled.";
+"LABEL_APP_OPTIONS_ITEM_SOUNDS_B" = "Sound effects Disabled.";
+//
+"LABEL_APP_OPTIONS_ITEM_LANGUAGE_MAIN" = "Language";
+"LABEL_APP_OPTIONS_ITEM_LANGUAGE_A" = "Toggle the interface language.";
+//
+"LABEL_APP_OPTIONS_ITEM_GEOFENCE_MAIN" = "Geofence";
+"LABEL_APP_OPTIONS_ITEM_GEOFENCE_A" = "Check conditions and geofences currently active.";
+//
+"LABEL_APP_OPTIONS_ITEM_CONTACTS_MAIN" = "Contact";
+"LABEL_APP_OPTIONS_ITEM_CONTACTS_A" = "Report app errors, ask questions, and share tips.";
+
+/*Strings*/
+//
+"STRING_ITEM" = "selected item";
+"STRING_ITENS"= "selected items";
+//
+
+//SECTIONS
+"SECTION_TITLE_GROUP" = "Groups";
+"SECTION_TITLE_CHAT" = "Chats";
+"SECTION_TITLE_SPEAKER" = "Speakers";
+
+/*Language*/
+"LANGUAGE_TYPE" = "1"; //Inglês
+
+/*Push Notification*/
+"PUSH_NOTIFICATION_OPTION_READ_MESSAGE" = "Read Message";
+"PUSH_NOTIFICATION_OPTION_INTERACTIVE_YES" = "Yes";
+"PUSH_NOTIFICATION_OPTION_INTERACTIVE_NO" = "No";
+
+/*Calendar Helper*/
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_1" = "Sunday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_2" = "Monday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_3" = "Tuesday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_4" = "Wednesday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_5" = "Thursday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_6" = "Friday";
+"TOOL_BOX_CALENDAR_DAYOFWEEK_DAY_7" = "Saturday";
+//
+"TOOL_BOX_CALENDAR_LABEL_TODAY" = "today";
+"TOOL_BOX_CALENDAR_LABEL_YESTERDAY" = "yesterday";
+
+/*Survey Messages */
+"SURVEY_ERROR" = "Error!";
+"SURVEY_ERROR_MESSAGE" = "A server error has occurred, try again later.";
+"SURVEY_SUCCESS" = "Success!";
+"SURVEY_SUCCESS_MESSAGE" = "Thanks for submitting!";
+"SURVEY_ATENTION" = "Attention";
+"SURVEY_ONE_QUESTIONS_NEEDED" = "At least one field is required.";
+"SURVEY_REQUIRED_QUESTIONS_NEEDED" = "All fields with (*) are required.";
+"SURVEY_CANCEL" = "Cancel";
+"SURVEY_SEND_CONFIRM" = "Do you want to subit the survey?";
+"SURVEY_SEND" = "Submit";
+
+/*Register Form*/
+"MESSAGE_REGISTER_EMPTY" = "All fields with (*) are required";
+"LABEL_FIRST_NAME" = "First Name *";
+"LABEL_LAST_NAME" = "Last Name *";
+"LABEL_EMAIL" = "Email *";
+"LABEL_PHONE" = "Phone";
+"LABEL_GENDER" = "Gender";
+"LABEL_COMPANY_NAME" = "Company";
+"LABEL_PASSWORD" = "Password *";
+"LABEL_CONFIRM_PASSWORD" = "Password confirmation *";
+"LABEL_FEMALE" = "Female";
+"LABEL_MALE" = "Male";
+"LABEL_BIRTH_DATE" = "Birthdate";
+"MESSAGE_TYPE_EMAIL" = "Type your email";
+"MESSAGE_SUCCESS_RESET" = "An email with instructions to recover your password has been sent.";
+
+"LABEL_IMPORTANTS_NEWS" = " The app from eldiariosur.com";
+"LABEL_BEST_DEALS" = " Best deals";
+
+"MESSAGE_TOTAL_POINTS"="Total: <total> points \n\n Points required for draw: <minimo>";
+"MESSAGE_NOT_ENABLED_TO_PROMOTION"="There are <pontos> points to participate in the draw.";
+"MESSAGE_ENABLED_TO_PROMOTION"="Congratulations, you are participating in the draw.";
+
+/* Labels Points */
+"LABEL_POINTS_DATE" = "Date";
+"LABEL_POINTS_POINTS" = "points";
+"LABEL_POINTS_TOTAL" = "Total";
+"LABEL_POINTS_STORE" = "Store";
+
+/* Labels Orders */
+"LABEL_ORDERS_ORDER" = "ORDER";
+"LABEL_ORDERS_PRICE" = "PRICE";
+
+/* Labels Terms */
+"LABEL_ACCEPT_TERMS" = "I accept the terms and conditions of the Regulations of the Promotion";
+"LABEL_HIGHLIGHT_TERMS" = "the terms and conditions";
+
+/* Labels Contact Email */
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_MESSAGE" = "Choose the subject you want to treat:";
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_FEEDBACK" = "Thank you for contacting us!";
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_1" = "Report Bug";
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_2" = "Ask Questions";
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_3" = "Suggestions";
+"LABEL_APP_OPTIONS_CONTACT_EMAIL_4" = "Others";
+
+/* Labels 3DViewer */
+"LABEL_3DVIEWERS_TUTORIAL_GOTIT" = "Entendi";
+"LABEL_3DVIEWERS_TUTORIAL_DONTSHOWAGAIN" = "Não mostrar novamente";
+"LABEL_3DVIEWERS_TUTORIAL_FIX" = "fixar";
+"LABEL_3DVIEWERS_TUTORIAL_REMOVE" = "desafixar";
+
+/* VUFORIA Keys */
+"INIT_LICENSE_ERROR_NO_NETWORK_TRANSIENT" = "Unable to contact server. Please try again later.";
+"INIT_LICENSE_ERROR_NO_NETWORK_PERMANENT" = "No network available. Please make sure you are connected to the Internet.";
+"INIT_LICENSE_ERROR_INVALID_KEY" = "Invalid Key used. Please make sure you are using a valid Vuforia App Key.";
+"INIT_LICENSE_ERROR_CANCELED_KEY" = "This app license key has been canceled and may no longer be used. Please get a new license key.";
+"INIT_LICENSE_ERROR_MISSING_KEY" = "Vuforia App key is missing. Please get a valid key, by logging into your account at developer.vuforia.com and creating a new project.";
+"INIT_LICENSE_ERROR_PRODUCT_TYPE_MISMATCH" = "Vuforia App key is not valid for this product. Please get a valid key, by logging into your account at developer.vuforia.com and choosing the right product type during project creation.";
+"INIT_default" = "Initialization error";
+
+/* Tela configuração de linguagem */
+"LABEL_IDIOMA_SELECIONADA" = "Current Language:";
+"LABEL_SELECIONAR_IDIOMA" = "Select your language:";
+"LINGUAGEM_DO_DEVICE" = "Device language";
+"TITLE_CONFIGURANTION_LANGUAGE" = "Language";
+"TITLE_ALERT_LANGUAGE" = "Warning";
+"SUBTITLE_ALERT_LANGUAGE" = "By confirming you will change the language of the application to the language chosen.";
+"TITLE_CONFIRM_BUTTON_ALERT" = "Confirm";
+"TITLE_CANCEL_BUTTON_ALERT" = "Cancel";
+"SUBTITLE_CHANGED_LANGUAGE" = "Language changed successfully";
+"TITLE_SAME_LANGUAGE" = "This language is already active";
+
+//Special Input - ReverseGeocode
+"SPECIAL_INPUT_KEY_LOCATION_LATITUDE" = "Latitude";
+"SPECIAL_INPUT_KEY_LOCATION_LONGITUDE" = "Longitude";
+"SPECIAL_INPUT_KEY_LOCATION_COUNTRY" = "Country";
+"SPECIAL_INPUT_KEY_LOCATION_COUNTRYCODE" = "Country Code";
+"SPECIAL_INPUT_KEY_LOCATION_CITY" = "City";
+"SPECIAL_INPUT_KEY_LOCATION_SUBLOCALITY" = "SubLocality";
+"SPECIAL_INPUT_KEY_LOCATION_NAME" = "Name";
+"SPECIAL_INPUT_KEY_LOCATION_STREET" = "Street";
+"SPECIAL_INPUT_KEY_LOCATION_ZIP" = "ZIP";
+"SPECIAL_INPUT_KEY_LOCATION_TIMEZONE" = "Timezone";
+"SPECIAL_INPUT_KEY_LOCATION_STATE" = "State";
+//
+"SPECIAL_INPUT_KEY_CODEREADER_TYPE" = "Type";
+"SPECIAL_INPUT_KEY_CODEREADER_CONTENT" = "Content";
+//
+"SPECIAL_INPUT_KEY_COLORPICKER_RGB" = "RGB";
+"SPECIAL_INPUT_KEY_COLORPICKER_HSB" = "HSB";
+"SPECIAL_INPUT_KEY_COLORPICKER_CMYK" = "CMYK";
+"SPECIAL_INPUT_KEY_COLORPICKER_HEX" = "HEX";
+"SPECIAL_INPUT_KEY_COLORPICKER_NAME" = "Name";
+
+//Nomes das linguagens
+"DeviceLanguageKey_Default" = "Device language"; //somente traduzir esta
+"DeviceLanguageKey_en" = "English";
+"DeviceLanguageKey_fr" = "Français";
+"DeviceLanguageKey_pt-BR" = "Português";
+"DeviceLanguageKey_de" = "Deutsch";
+"DeviceLanguageKey_es" = "Español";
