@@ -3809,5 +3809,40 @@
      }];
 }
 
+- (void)getUrlForSMWebViewWithUrl:(NSString *)url withCompletionHandler:(void (^)(NSDictionary * response, NSInteger statusCode, NSError * error)) handler
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestSerializer *requestSerializer = [self getHeaderParametersForServiceAHK:false];
+    
+    if (requestSerializer) {
+        [manager setRequestSerializer:requestSerializer];
+    }
+    
+    ////
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSDictionary *dicUser = (NSDictionary *)responseObject;
+         
+         if (handler != nil){
+             handler(responseObject,operation.response.statusCode, nil);
+         }else{
+             if ([self.delegate respondsToSelector:@selector(didConnectWithSuccess:)])
+             {
+                 [self.delegate didConnectWithSuccess:dicUser];
+             }
+         }
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         
+         if (handler != nil){
+             handler(nil,operation.response.statusCode, error);
+         }else{
+             if ([self.delegate respondsToSelector:@selector(didConnectWithFailure:)])
+             {
+                 [self.delegate didConnectWithFailure:error];
+             }
+         }
+     }];
+}
+
 
 @end

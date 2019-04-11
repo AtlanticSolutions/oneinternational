@@ -67,6 +67,7 @@ typedef enum {
 @property(nonatomic, strong) NSString *webPageURL;
 @property(nonatomic, assign) BOOL webShowControls;
 @property(nonatomic, assign) BOOL webShowShareButton;
+@property(nonatomic, assign) BOOL webNeedCheckUrl;
 //
 @property(nonatomic, assign) BOOL blocked;
 @property(nonatomic, strong) NSString *blockedMessage;

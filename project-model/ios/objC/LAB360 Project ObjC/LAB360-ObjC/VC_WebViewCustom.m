@@ -34,7 +34,7 @@
 
 #pragma mark - • SYNTESIZES
 
-@synthesize fileURL, fileType, titleNav, fileUrlToShare, isFileDownload, fileName;
+@synthesize fileURL, fileType, titleNav, fileUrlToShare, isFileDownload, fileName, checkUrl;
 @synthesize webViewContainer, webView, viewButtons;
 @synthesize btnGoBack, btnGoForward, btnReloadCancel, showShareButton, hideViewButtons;
 
@@ -194,22 +194,74 @@
 
 - (void) configureWebViewController {
     
-    /* Add a web view to the container */
-    CGRect frame = webViewContainer.frame;
-    frame.origin.y = 0;
-    
-    webView = [[WKWebView alloc] initWithFrame:frame];
-    [webViewContainer addSubview:webView];
-    [webViewContainer setBackgroundColor: [UIColor grayColor]];
-    
-    webView.UIDelegate = self;
-    [webView setNavigationDelegate:self];
-    
-    /* Configure the webView */
-    NSURL *url = [[NSURL alloc] initWithString:fileURL];
-    NSURLRequest *rqst = [[NSURLRequest alloc] initWithURL:url];
-    [webView loadRequest:rqst];
-    
+    if(checkUrl) {
+        
+        ConnectionManager *connectionManager = [[ConnectionManager alloc] init];
+        
+        if ([connectionManager isConnectionActive])
+        {
+            dispatch_async(dispatch_get_main_queue(),^{
+                [AppD showLoadingAnimationWithType:eActivityIndicatorType_Loading];
+            });
+            
+            [connectionManager getUrlForSMWebViewWithUrl:fileURL withCompletionHandler:^(NSDictionary * _Nonnull response, NSInteger statusCode, NSError * _Nonnull error) {
+                [AppD performSelectorOnMainThread:@selector(hideLoadingAnimation) withObject:nil waitUntilDone:NO];
+                
+                if (error){
+                    SCLAlertView *alert = [AppD createDefaultAlert];
+                    [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_ERROR", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_CATEGORY_ERROR", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
+                }else{
+                    
+                    if ([response.allKeys containsObject:@"url"]){
+                        
+                        /* Add a web view to the container */
+                        CGRect frame = webViewContainer.frame;
+                        frame.origin.y = 0;
+                        
+                        webView = [[WKWebView alloc] initWithFrame:frame];
+                        [webViewContainer addSubview:webView];
+                        [webViewContainer setBackgroundColor: [UIColor grayColor]];
+                        
+                        webView.UIDelegate = self;
+                        [webView setNavigationDelegate:self];
+                        
+                        /* Configure the webView */
+                        NSURL *url = [[NSURL alloc] initWithString:[response valueForKey:@"url"]];
+                        NSURLRequest *rqst = [[NSURLRequest alloc] initWithURL:url];
+                        [webView loadRequest:rqst];
+                        
+                    }
+                }
+            }];
+            
+        }
+        else
+        {
+            SCLAlertView *alert = [AppD createDefaultAlert];
+            [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_NO_CONNECTION", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_NO_CONNECTION", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
+        }
+        
+
+    } else {
+        
+        /* Add a web view to the container */
+        CGRect frame = webViewContainer.frame;
+        frame.origin.y = 0;
+        
+        webView = [[WKWebView alloc] initWithFrame:frame];
+        [webViewContainer addSubview:webView];
+        [webViewContainer setBackgroundColor: [UIColor grayColor]];
+        
+        webView.UIDelegate = self;
+        [webView setNavigationDelegate:self];
+        
+        /* Configure the webView */
+        NSURL *url = [[NSURL alloc] initWithString:fileURL];
+        NSURLRequest *rqst = [[NSURLRequest alloc] initWithURL:url];
+        [webView loadRequest:rqst];
+        
+    }
+
 }
 
 - (void)shareURLWeb:(id)sender{

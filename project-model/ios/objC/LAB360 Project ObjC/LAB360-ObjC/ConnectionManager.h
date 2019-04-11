@@ -187,6 +187,9 @@
 - (void)getVideosWithLimit:(NSString*)limit offset:(NSString*)offset videoId:(NSString*)videoId category_id:(NSString*)catId subcategory_id:(NSString*)subcatId tag:(NSString*)tag withCompletionHandler:(void (^)(NSDictionary *response, NSInteger statusCode, NSError *error)) handler;
 - (void)getDocumentsWithLimit:(NSString*)limit offset:(NSString*)offset documentId:(NSString*)videoId category_id:(NSString*)catId subcategory_id:(NSString*)subcatId tag:(NSString*)tag withCompletionHandler:(void (^)(NSDictionary *response, NSInteger statusCode, NSError *error)) handler;
 
+//
+- (void)getUrlForSMWebViewWithUrl:(NSString *)url withCompletionHandler:(void (^)(NSDictionary * response, NSInteger statusCode, NSError * error)) handler;
+
 #pragma mark - Exemplos
 - (void)getTicketDiscountInfo:(NSString*)ticketCode consumerID:(int)consumerID withCompletionHandler:(void (^)(NSDictionary *response, NSInteger statusCode, NSError *error)) handler;
 - (void)consumeTicketDiscount:(NSDictionary*)dicParameters withCompletionHandler:(void (^)(NSDictionary *response, NSError *error)) handler;

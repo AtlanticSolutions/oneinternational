@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSString *titleNav;
 @property (nonatomic, assign) BOOL hideViewButtons;
 @property (nonatomic, assign) BOOL showShareButton;
+@property (nonatomic, assign) BOOL checkUrl;
 
 @end

@@ -16,6 +16,7 @@
 #define CLASS_SIDEMENU_ITEM_WEB_URL @"url"
 #define CLASS_SIDEMENU_ITEM_WEB_SHOW_CONTROLS @"flg_web_controls"
 #define CLASS_SIDEMENU_ITEM_WEB_SHOW_SHAREBUTTON @"flg_web_share_button"
+#define CLASS_SIDEMENU_ITEM_WEB_CHECK_URL @"flg_api_adalive"
 #define CLASS_SIDEMENU_ITEM_ICON_URL @"icon_url"
 #define CLASS_SIDEMENU_ITEM_BLOCKED @"flg_blocked"
 #define CLASS_SIDEMENU_ITEM_SHOWINTIMELINE @"flg_timeline"
@@ -58,7 +59,7 @@
 
 @implementation SideMenuItem
 
-@synthesize itemName, itemType, prototypeID, itemID, icon, iconDataGIF, iconURL, order, subItems, webPageURL, webShowControls, webShowShareButton, itemInternalCode, blocked, blockedMessage, highlighted, featuredMessage, badgeCount, showShortcut;
+@synthesize itemName, itemType, prototypeID, itemID, icon, iconDataGIF, iconURL, order, subItems, webPageURL, webShowControls, webShowShareButton, itemInternalCode, blocked, blockedMessage, highlighted, featuredMessage, badgeCount, showShortcut, webNeedCheckUrl;
 @synthesize uiControlOptionLevel, uiControlGroupIdentifier, uiControlState;
 
 //-------------------------------------------------------------------------------------------------------------
@@ -81,6 +82,7 @@
         webPageURL = nil;
         webShowControls = YES;
         webShowShareButton = YES;
+        webNeedCheckUrl = NO;
         itemInternalCode = SideMenuItemCode_Prototype;
         blocked = NO;
         blockedMessage = nil;
@@ -138,6 +140,7 @@
         sm.webPageURL = [keysList containsObject:CLASS_SIDEMENU_ITEM_WEB_URL] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_SIDEMENU_ITEM_WEB_URL]] : sm.iconURL;
         sm.webShowControls = [keysList containsObject:CLASS_SIDEMENU_ITEM_WEB_SHOW_CONTROLS] ? [[neoDic  valueForKey:CLASS_SIDEMENU_ITEM_WEB_SHOW_CONTROLS] boolValue] : sm.webShowControls;
         sm.webShowShareButton = [keysList containsObject:CLASS_SIDEMENU_ITEM_WEB_SHOW_SHAREBUTTON] ? [[neoDic  valueForKey:CLASS_SIDEMENU_ITEM_WEB_SHOW_SHAREBUTTON] boolValue] : sm.webShowShareButton;
+        sm.webNeedCheckUrl = [keysList containsObject:CLASS_SIDEMENU_ITEM_WEB_CHECK_URL] ? [[neoDic  valueForKey:CLASS_SIDEMENU_ITEM_WEB_CHECK_URL] boolValue] : sm.webNeedCheckUrl;
         //
         if ([keysList containsObject:CLASS_SIDEMENU_ITEM_SUB_ITEMS]) {
             NSArray *itemsL = nil;
@@ -199,6 +202,7 @@
     sm.webPageURL = self.webPageURL != nil ? [NSString stringWithFormat:@"%@", self.webPageURL] : nil;
     sm.webShowControls = self.webShowControls;
     sm.webShowShareButton = self.webShowShareButton;
+    sm.webNeedCheckUrl = self.webNeedCheckUrl;
     sm.blocked = self.blocked;
     sm.blockedMessage = self.blockedMessage != nil ? [NSString stringWithFormat:@"%@", self.blockedMessage] : nil;
     sm.highlighted = self.highlighted;
@@ -236,6 +240,7 @@
     [dicData setValue:self.webPageURL != nil ? self.webPageURL : @"" forKey:CLASS_SIDEMENU_ITEM_WEB_URL];
     [dicData setValue:@(self.webShowControls) forKey:CLASS_SIDEMENU_ITEM_WEB_SHOW_CONTROLS];
     [dicData setValue:@(self.webShowShareButton) forKey:CLASS_SIDEMENU_ITEM_WEB_SHOW_SHAREBUTTON];
+    [dicData setValue:@(self.webNeedCheckUrl) forKey:CLASS_SIDEMENU_ITEM_WEB_CHECK_URL];
     //
     NSMutableArray *itemsL = [NSMutableArray new];
     for (SideMenuItem *item in self.subItems) {

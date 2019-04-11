@@ -35,7 +35,7 @@
         imageLogo = nil;
         imageBanner = nil;
         //
-        defaultBackground = [UIImage imageNamed:@"default-background.jpg"];
+        defaultBackground = [UIImage imageNamed:@"default-background.png"];
         defaultLogo = nil; //[UIImage imageNamed:@"default-logo.png"];
         defaultBanner = nil;
     }

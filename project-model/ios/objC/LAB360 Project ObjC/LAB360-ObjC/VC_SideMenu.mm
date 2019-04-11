@@ -1369,6 +1369,7 @@
             vcWV.titleNav = currentItem.itemName;
             vcWV.hideViewButtons = !currentItem.webShowControls;
             vcWV.showShareButton = currentItem.webShowShareButton;
+            vcWV.checkUrl = currentItem.webNeedCheckUrl;
             //
             [vcWV awakeFromNib];
             //
