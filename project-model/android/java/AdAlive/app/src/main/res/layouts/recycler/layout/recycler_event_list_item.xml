@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/PLACEHOLDER_LOADING"
+        android:textColor="@color/darkBlue"
+        android:textSize="18sp"
+        android:transitionName="event_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/PLACEHOLDER_LOADING"
+            android:textColor="@color/graySignUp"
+            android:transitionName="event_hour"
+            android:layout_weight="9"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivFavorited"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/BUTTON_TITLE_FAVORITE"
+                android:src="@drawable/ic_heart_outline"
+                android:tint="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black_alpha_20" />
+
+</LinearLayout>

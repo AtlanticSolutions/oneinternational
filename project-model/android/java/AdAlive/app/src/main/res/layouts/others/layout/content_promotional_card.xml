@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/lvReceipt"
+        android:layout_width="540px"
+        android:layout_height="960px"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBackgroundScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_gray"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rlPromotionalCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/scratch_transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/llBorderPromotionalCard"
+                    android:layout_width="244dp"
+                    android:layout_height="244dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="false"
+                    android:background="@drawable/promotional_card_radius"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBackgroundCard"
+                    android:layout_width="232dp"
+                    android:layout_height="232dp"
+                    android:layout_centerInParent="false"
+                    android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <RelativeLayout
+                    android:id="@+id/rlPrize"
+                    android:layout_width="232dp"
+                    android:layout_height="232dp"
+                    android:layout_margin="6dp">
+
+                    <AbsoluteLayout
+                        android:id="@+id/absPrize"
+                        android:layout_width="232dp"
+                        android:layout_height="232dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/ivPrize"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </AbsoluteLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="232dp"
+                    android:layout_height="232dp"
+                    android:layout_centerInParent="false"
+                    android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <br.com.lab360.oneinternacional.ui.decorator.CoverCardView
+                        android:id="@+id/coverCardView"
+                        android:layout_width="232dp"
+                        android:layout_height="232dp"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="false"
+                android:background="@color/black_alpha_60"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <br.com.lab360.oneinternacional.ui.decorator.AnimationPromotionalCard
+        android:id="@+id/animationParticleObject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fallCount="5"
+        android:visibility="gone"
+        app:fallSpeed="0.35" />
+</RelativeLayout>

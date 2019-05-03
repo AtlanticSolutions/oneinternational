@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: libAdAlive:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libAdAlive.aar/b70f61a90aabb5c5118c50b5267c9e59/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libAdAlive.aar/b70f61a90aabb5c5118c50b5267c9e59/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/libAdAlive.aar/b70f61a90aabb5c5118c50b5267c9e59/jars/libs/libAR.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

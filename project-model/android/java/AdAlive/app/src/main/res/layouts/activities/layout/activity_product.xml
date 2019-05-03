@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlProductContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="br.com.lab360.oneinternacional.ui.activity.product.ProductActivity">
+
+
+    <include
+        android:visibility="invisible"
+        layout="@layout/content_loading_layout"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <FrameLayout
+        android:id="@+id/flPortrait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/black_alpha_10">
+
+
+        <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="37dp"
+            android:fillViewport="true"
+            android:overScrollMode="always"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/flHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/parallax_image_height">
+
+                    <ImageView
+                        android:id="@+id/ivImgProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:transitionName="profile" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitleProd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textAppearance="@android:style/TextAppearance.Medium"
+                            android:textColor="@color/black_alpha_10" />
+
+                        <TextView
+                            android:id="@+id/tvSubTitleProd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/anchor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/parallax_image_height"
+                    android:minHeight="@dimen/parallax_image_height" />
+
+                <LinearLayout
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/anchor"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/llContainerActions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_alpha_10"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:scrollbars="none">
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black_alpha_10" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvRecommend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Recomendado"
+                            android:textStyle="bold"></TextView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvProductRecommends"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="80dp"
+                            android:minHeight="80dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+        <View
+            android:id="@+id/flexible_space"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize" />
+
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/banner"
+        layout="@layout/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <!--br.com.lab360.adaliveapp.ui.activity.product.TouchImageView
+        android:id="@+id/ivLandscape"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:visibility="gone" /-->
+
+</RelativeLayout>

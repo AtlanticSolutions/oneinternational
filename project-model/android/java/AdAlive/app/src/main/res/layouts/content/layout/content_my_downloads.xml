@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_my_downloads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.downloads.MyDownloadsActivity"
+    tools:showIn="@layout/activity_my_downloads">
+
+    <!--<include layout="@layout/content_loading_layout" />-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        app:tabIndicatorColor="@android:color/holo_red_dark"
+        app:tabIndicatorHeight="4dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white_alpha_40" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablayout" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvEmptyList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="16dp"-->
+    <!--android:text="@string/ALERT_MESSAGE_EMPTY_DOCUMENTS"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_below="@+id/viewpager"-->
+    <!--android:id="@+id/swipeRefreshLayout"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rvMyDownloads"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</RelativeLayout>

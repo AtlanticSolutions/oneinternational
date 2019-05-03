@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.adrielcafe:AndroidOAuth-1.1.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AndroidOAuth-1.1.5.aar/bfead29a0e15bf3cdda29ec8962d09af/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AndroidOAuth-1.1.5.aar/bfead29a0e15bf3cdda29ec8962d09af/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

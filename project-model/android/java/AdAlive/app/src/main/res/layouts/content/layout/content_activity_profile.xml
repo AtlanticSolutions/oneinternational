@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_profile">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Registration Form -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/fieldsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnPhoto"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="16dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:src="@drawable/ic_photo_plus"
+                        android:visibility="visible"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="2dp" />
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtCpf"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:focusable="true"
+                        android:hint="@string/hint_cpf"
+                        android:inputType="number"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        app:mask="###.###.###-##" />
+
+                    <EditText
+                        android:id="@+id/edtName"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_name"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/edtRg"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edtRg"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_rg"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:nextFocusDown="@+id/edtDDDTel"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtDataNasc"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:focusable="false"
+                        android:hint="@string/hint_data_nascimento"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/sexo"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:entries="@array/gender"
+                        android:padding="4dp"
+                        android:spinnerMode="dropdown"></Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtDDDTel"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_ddd"
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/edtTelefone"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        app:mask="##" />
+
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtTelefone"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_telefone"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:nextFocusDown="@+id/edtDDDCelular"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        app:mask="####-####" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtDDDCelular"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_ddd"
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/edtCelular"
+                        android:padding="7dp"
+                        app:mask="##" />
+
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtCelular"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_cell"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:nextFocusDown="@+id/edtCep"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        app:mask="#####-####" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/back_ground_edt_promotion_sign"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="7dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtEmpresa"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/back_ground_edt_promotion_sign"
+                    android:hint="@string/hint_empresa"
+                    android:inputType="textCapSentences"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/edtCep"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/back_ground_edt_promotion_sign"
+                    android:hint="@string/hint_cep"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    app:mask="#####-###" />
+
+
+                <EditText
+                    android:id="@+id/edtEndereco"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/back_ground_edt_promotion_sign"
+                    android:hint="@string/hint_endereco"
+                    android:inputType="textEmailAddress"
+                    android:padding="7dp"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtNumero"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_numero"
+                        android:inputType="number"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edtComplemento"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="@string/hint_complemento"
+                        android:inputType="textEmailAddress"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtBairro"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/back_ground_edt_promotion_sign"
+                    android:hint="@string/hint_bairro"
+                    android:inputType="text"
+                    android:padding="7dp"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtMunicipio"
+                            style="@style/AppTheme.EditText.Base"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/back_ground_edt_promotion_sign"
+                            android:hint="@string/hint_municipio"
+                            android:inputType="textEmailAddress"
+                            android:padding="7dp"
+                            android:textColor="@color/black" />
+
+
+                        <Spinner
+                            android:id="@+id/edtEstado"
+                            style="@style/AppTheme.EditText.Base"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/back_ground_edt_promotion_sign"
+                            android:entries="@array/estados"
+                            android:padding="4dp"
+                            android:spinnerMode="dropdown"></Spinner>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/back_ground_light_gray_rounded"
+                    android:text="@string/BUTTON_TITLE_CHANGE_PASSWORD"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/BUTTON_TITLE_SAVE_PROFILE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- To show progress -->
+        <LinearLayout
+            android:id="@+id/containerProgressBar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_with_border_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBarShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:minHeight="50dp"
+                android:minWidth="50dp" />
+
+            <TextView
+                android:id="@+id/titleProgressBarShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

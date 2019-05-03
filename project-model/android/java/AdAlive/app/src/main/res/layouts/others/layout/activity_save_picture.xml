@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_showcase_background"
+    tools:context=".ui.activity.showcase.SavePictureActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/savePictureToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/title_take_a_picture"
+        app:titleTextColor="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/savePictureFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/savePictureBarrier"
+        app:layout_constraintDimensionRatio="5:7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/savePictureToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/savePictureIvBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_showcase_save_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="5:7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/savePictureViewLab360LogoSpace"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/savePictureIvBackground"
+                app:layout_constraintEnd_toEndOf="@id/savePictureIvBackground"
+                app:layout_constraintStart_toStartOf="@id/savePictureIvBackground" />
+
+            <ImageView
+                android:id="@+id/savePictureIvPhoto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/savePictureViewLab360LogoSpace"
+                app:layout_constraintDimensionRatio="10:13"
+                app:layout_constraintEnd_toEndOf="@id/savePictureIvBackground"
+                app:layout_constraintStart_toStartOf="@id/savePictureIvBackground"
+                app:layout_constraintTop_toTopOf="@id/savePictureIvBackground"
+                app:layout_constraintVertical_bias="0.0"
+                tools:scaleType="centerCrop"
+                tools:src="@drawable/mocked_mask" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/savePictureBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="savePictureBtnShare,savePictureBtnSave" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/savePictureBtnShare"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:drawableLeft="@drawable/ic_share_white_24dp"
+        android:drawableStart="@drawable/ic_share_white_24dp"
+        android:gravity="center"
+        android:text="@string/LABEL_SHARE"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/savePictureBtnSave"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/savePictureBtnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/savePictureBtnShare"
+        app:srcCompat="@drawable/ic_save" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activitySaveConstraintExpand"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="@color/black_alpha_60">
+
+        <com.alexvasilkov.gestures.views.GestureImageView
+            android:id="@+id/activitySaveGestureExpanded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/bg_showcase_save_background" />
+
+        <ImageButton
+            android:id="@+id/activitySaveIvBtnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/float_transparent"
+            android:src="@drawable/com_facebook_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

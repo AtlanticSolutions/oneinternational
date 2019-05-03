@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/photoShowcaseConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_showcase_background"
+    tools:context=".ui.activity.showcase.PhotoShowcaseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/photoShowcaseToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/Toolbar.WhiteMenuText"
+        app:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/photoShowcaseIvUserPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/mocked_mask"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/photoShowcaseRvMasks"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoShowcaseToolbar"
+        tools:src="@tools:sample/avatars" />
+
+    <com.alexvasilkov.gestures.views.GestureImageView
+        android:id="@+id/photoShowcaseIvMask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="@drawable/bg_white_border"
+        app:layout_constraintBottom_toBottomOf="@id/photoShowcaseIvUserPhoto"
+        app:layout_constraintEnd_toEndOf="@id/photoShowcaseIvUserPhoto"
+        app:layout_constraintStart_toStartOf="@id/photoShowcaseIvUserPhoto"
+        app:layout_constraintTop_toTopOf="@id/photoShowcaseIvUserPhoto"
+        tools:src="@drawable/icone_mask" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/photoShowcaseIvAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/photoShowcaseCoodinator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_black" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/photoShowcaseIvRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:tint="@android:color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/photoShowcaseCoodinator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_remove"
+        tools:visibility="visible" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/photoShowcaseCoodinator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@id/photoShowcaseRvMasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photoShowcaseRvMasks"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/recycler_showcase_mini_item"
+        tools:orientation="horizontal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

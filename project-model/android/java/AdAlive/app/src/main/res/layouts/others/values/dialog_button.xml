@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="DIALOG_BUTTON_1" type="id"/>
+    <item name="DIALOG_BUTTON_2" type="id"/>
+    <item name="DIALOG_BUTTON_3" type="id"/>
+    <item name="DIALOG_BUTTON_4" type="id"/>
+    <item name="DIALOG_BUTTON_5" type="id"/>
+    <item name="DIALOG_BUTTON_6" type="id"/>
+    <item name="DIALOG_BUTTON_7" type="id"/>
+    <item name="DIALOG_BUTTON_8" type="id"/>
+    <item name="DIALOG_BUTTON_9" type="id"/>
+    <item name="DIALOG_BUTTON_10" type="id"/>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_showcase_background"
+    tools:context=".ui.activity.showcase.CapturePhotoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/captureToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/title_take_a_picture"
+        app:titleTextColor="@color/white" />
+
+    <io.fotoapparat.view.CameraView
+        android:id="@+id/captureCameraView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:foreground="@drawable/bg_white_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/captureToolbar" />
+
+    <ImageView
+        android:id="@+id/captureMask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/captureCameraView"
+        app:layout_constraintDimensionRatio="h,"
+        app:layout_constraintEnd_toEndOf="@id/captureCameraView"
+        app:layout_constraintStart_toStartOf="@id/captureCameraView"
+        app:layout_constraintTop_toTopOf="@id/captureCameraView"
+        tools:srcCompat="@drawable/mocked_mask" />
+
+    <ImageView
+        android:id="@+id/captureIvCapture"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_round_with_white_borders"
+        android:padding="10dp"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/captureCameraView"
+        app:layout_constraintEnd_toEndOf="@id/captureCameraView"
+        app:layout_constraintStart_toStartOf="@id/captureCameraView"
+        app:layout_constraintTop_toBottomOf="@id/captureCameraView"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

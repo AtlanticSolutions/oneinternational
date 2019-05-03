@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.lab360.oneinternacional">
+
+    <!-- FEATURES -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- PERMISSIONS [1] -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- PERMISSIONS [2] -->
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:description="@string/permdesc_flashlight"
+        android:label="@string/permlab_flashlight"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="br.com.lab360.oneinternacional.application.AdaliveApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:name">
+
+        <!-- =========================== -->
+        <!-- Meta-data -->
+        <!-- =========================== -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.maps.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/transparent" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${fabricApiKey}" />
+
+        <!-- =========================== -->
+        <!-- Provider -->
+        <!-- =========================== -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- =========================== -->
+        <!-- Services -->
+        <!-- =========================== -->
+
+
+        <service
+            android:name="br.com.lab360.oneinternacional.logic.geofence.GeolocationService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+        </service>
+        <service
+            android:name="br.com.lab360.oneinternacional.logic.geofence.GeofenceReceiver"
+            android:exported="false" >
+        </service>
+
+        <service android:name="br.com.lab360.oneinternacional.logic.fcm.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="br.com.lab360.oneinternacional.logic.fcm.FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="br.com.lab360.oneinternacional.logic.fcm.RegistrationInstanceIDService"
+            android:exported="false" />
+        <service
+            android:name="br.com.lab360.oneinternacional.logic.fcm.InteractiveNotificationWsService"
+            android:exported="false" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+
+        <!-- =========================== -->
+        <!-- Receive notification -->
+        <!-- =========================== -->
+        <receiver android:name="br.com.lab360.oneinternacional.logic.fcm.ButtonReceiver" />
+
+        <receiver
+            android:name="br.com.lab360.oneinternacional.logic.geofence.GeofenceReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".logic.geofence.ACTION_RECEIVE_GEOFENCE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- =========================== -->
+        <!-- Activities -->
+        <!-- =========================== -->
+        <!-- Splash Screen -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="br.com.atlantic.SECTOR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="br.com.atlantic.INTERACTIVE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.login.LoginActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatActivity"
+            android:label="@string/SCREEN_TITLE_CHAT"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="br.com.atlantic.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatSearchActivity"
+            android:label="@string/SCREEN_TITLE_SEARCH_CHAT"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.chat.ChatGroupListActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatGroupListActivity"
+            android:label="@string/SCREEN_TITLE_CHAT"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.CommentActivity"
+            android:label="@string/TITLE_ACTIVITY_COMMENT"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.CreatePostActivity"
+            android:label=""
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+        </activity>
+
+        <!-- Notificacoes -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.notifications.NotificationActivity"
+            android:label="@string/SCREEN_TITLE_NOTIFICATIONS"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity"
+            android:label="@string/SCREEN_TITLE_EVENT_TABS"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.videos.VideoFeedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.videos.VideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.sponsors.SponsorsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.profile.EditProfileActivity"
+            android:label="@string/BUTTON_TITLE_MY_PROFILE"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.downloads.MyDownloadsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.scanner.ScannerActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCaseActivity"
+            android:label="@string/BUTTON_SHOWCASE"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.RotateProductActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.RotateHDProductActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.RotateProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.video360.Video360Activity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.GalleryImagesActivity"
+            android:label="@string/BUTTON_GALLERY"
+
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.survey.SurveyActionActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.survey.LaucherSurveyActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.profile.ChangePasswordActivity"
+            android:label="Redefinir Senha"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.profile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.login.SignupActivity"
+            android:label="@string/SCREEN_TITLE_SIGNUP"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.webview.WebviewActivity"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.about.AboutActivity"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventDetailActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.downloads.FileDescriptionActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventDetailActivity"
+            android:label="@string/SCREEN_TITLE_EVENT_DETAIL"
+            android:launchMode="singleTask"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity" />
+        </activity>
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.mediaplayer.MediaPlayerActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.GallerySliderActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.GalleryImagesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Category -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- SubCategory -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- AllDocuments -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentsAllActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Search -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSearchActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- Document -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- Category -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- SubCategory -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- AllDocuments -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideosAllActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Search -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSearchActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- Document -->
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.CapturePhotoActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.PhotoShowcaseActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.managerapplication.ManagerApplicationActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.SavePictureActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.product.ProductActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.scanner.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.mediaplayer.ExoPlayerActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.product.ProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.promotionalcard.PrePromotionalCardActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.promotionalcard.PromotionalCardActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="br.com.lab360.oneinternacional.ui.activity.geofence.GeofenceActivity"
+            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+    </application>
+
+</manifest>

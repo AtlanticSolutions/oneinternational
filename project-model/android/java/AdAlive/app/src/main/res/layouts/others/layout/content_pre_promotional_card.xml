@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Para interagir com a Raspadinha insira o código promocional relacionado. Todas as configurações de interação e visualização devem ser inseridas ambiente Amazon S3, pasta adalive/downloads/lab360/promotionalcards."
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+        <EditText
+            android:id="@+id/edtPromotionalCard"
+            style="@style/AppTheme.EditText.Base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:hint="Insira o Código Promocional"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPromotionalCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:paddingLeft="60dip"
+            android:paddingRight="70dip"
+            android:text="Verificar Código"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+</LinearLayout>

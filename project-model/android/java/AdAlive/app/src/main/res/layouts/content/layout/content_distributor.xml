@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_distributor">
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_back"
+         />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true">
+
+
+        <LinearLayout
+            android:id="@+id/container_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/linEmail"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <ImageView
+                    android:id="@+id/imgEmail"
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_id" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/DISTRIBUTOR_HINT_LOGIN"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linPsw"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <ImageView
+                    android:id="@+id/imgPsw"
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_pwd" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/DISTRIBUTOR_HINT_PASSWORD"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/AppTheme.Button.Base"
+                android:background="@drawable/button_signup"
+                android:text="@string/DISTRIBUTOR_BUTTON_TITLE"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnReseller"
+            style="@style/AppTheme.Button.Base"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_access"
+            android:text="REVENDEDORA"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

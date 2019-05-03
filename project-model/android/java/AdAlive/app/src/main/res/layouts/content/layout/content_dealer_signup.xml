@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.lab360.oneinternacional.ui.activity.dealer.DealerSignupActivity"
+    tools:showIn="@layout/activity_dealer_signup">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/dealerForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Nome, CPF, Celular, E-mail, Cep, Addr, Endereço, -->
+            <!-- Numero - Complemento, Bairro, Cidade -> UF       -->
+
+            <Button
+                android:id="@+id/btnFBSignUp"
+                android:visibility="gone"
+                style="@style/AppTheme.Button.Base"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_blue"
+                android:text="@string/BUTTON_TITLE_FACEBOOK"
+                android:textColor="@android:color/white" />
+
+            <!-- Nome -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_FULLNAME" />
+
+            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_FULLNAME"
+                    android:inputType="textCapWords" />
+            </LinearLayout>
+
+            <!-- CPF -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_DOCUMENT" />
+
+            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/etCPF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/PLACEHOLDER_DOCUMENT"
+                    android:inputType="number"
+                    android:typeface="monospace"
+                    app:mask="###.###.###-##" />
+
+            </LinearLayout>
+
+            <!-- Celular -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_PASSWORD" />
+
+            <LinearLayout
+                android:id="@+id/containerPassword"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etCell"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_PASSWORD"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <!-- E-mail -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_EMAIL" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword1"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_EMAIL"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <!-- CEP -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_ZIPCODE" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword2"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etCEP"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_ZIPCODE"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <!-- Endereço -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_ADDRESS" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword3"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_ADDRESS"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- Numero -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_NUMBER" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword4"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etNumber"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_NUMBER"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <!-- Complemento -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_COMPLEMENT" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword5"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etComplement"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_COMPLEMENT"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- Bairro -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_NEIGHBORHOOD" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword6"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etNeighborhood"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_NEIGHBORHOOD"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- Cidade -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_CITY" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword7"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etCity"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_CITY"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <!-- UF -->
+            <TextView
+                style="@style/TextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PLACEHOLDER_REGION" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword8"
+                style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <EditText
+                    android:id="@+id/etRegion"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_REGION"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/AppTheme.Button.Base"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_signup"
+                android:text="@string/BUTTON_TITLE_SIGNUP"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

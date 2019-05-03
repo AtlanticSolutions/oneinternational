@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:id="@+id/videoFrame"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_below="@+id/tvMessage">
+
+        <VideoView
+
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:soundEffectsEnabled="false"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tvCountDownTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="13dp"
+            android:layout_marginRight="5dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+        <ProgressBar
+            android:id="@+id/videoProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_above="@+id/bottom_header_relativelayout"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="00"
+            android:progressTint="@color/white"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/tvMessage"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_picture_placeholder" />
+
+        <LinearLayout
+            android:id="@+id/llControlPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_sound" />
+
+            <ImageView
+                android:id="@+id/ivPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_pause" />
+
+            <ImageView
+                android:id="@+id/ivFullScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_full_screen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPlayButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:src="@android:drawable/ic_media_play" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="Text"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@color/black_alpha_10" />
+
+
+</LinearLayout>

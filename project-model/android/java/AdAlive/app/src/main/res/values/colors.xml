@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DB9F6E</color>
+    <color name="colorPrimaryDark">#DB9F6E</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#448AFF</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="colorAccent">#DB9F6E</color>
+
+
+
+
+
+    <color name="no_connection_yellow">#FFEB3B</color>
+    <color name="darkBlue">#01375B</color>
+    <color name="white">#ffffff</color>
+
+    <color name="bkgProfileColor">#FFD7D7</color>
+
+    <color name="yellowButton">#F0C14B</color>
+    <color name="darkYellowButton">#BC8603</color>
+
+    <color name="white_alpha_80">#CCFFFFFF</color>
+    <color name="white_alpha_60">#99FFFFFF</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="white_alpha_40">#66FFFFFF</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="white_alpha_10">#1AFFFFFF</color>
+
+    <color name="black_alpha_80">#CC000000</color>
+    <color name="black_alpha_60">#99000000</color>
+    <color name="black_alpha_50">#80000000</color>
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha_20">#33000000</color>
+    <color name="black_alpha_10">#1a000000</color>
+
+    <color name="almost_white">#f4f4f4</color>
+    <color name="orange">#df282d</color>
+    <color name="orange_dark">#cc1616</color>
+    <color name="red">#C62828</color>
+    <color name="facebook_blue">#275388</color>
+    <color name="facebook_blue_dark">#1c4777</color>
+    <color name="green">#00bd5a</color>
+    <color name="green_dark">#14A377</color>
+
+    <color name="graySignUp">#a6a6a6</color>
+    <color name="blueEditText">#284d65</color>
+    <color name="whiteblue_dark">#53a4d9</color>
+    <color name="whiteblue">#61c0ff</color>
+
+
+    <color name="greenRegisteredCalendar">#00bd5a</color>
+    <color name="graySignUpCalendar">#a6a6a6</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="color_bg">#8ea9c4</color>
+    <color name="dark_gray">#ABABAB</color>
+    <color name="light_gray">#BEBEBE</color>
+    <color name="blue_background_light">#2475e2</color>
+    <color name="blue_background_dark">#2866bf</color>
+    <color name="lighter_gray">#FFE0E0E0</color>
+    <color name="timelineBackground">#F1F2F2</color>
+    <color name="blue_timeline_sponsor">#00a6e9</color>
+
+    <color name="blue_btn_boleto">#00bfff</color>
+
+
+
+    <color name="default_color">#c41601</color>
+
+    <color name="green_btn_bg_color">#00bd5a</color>
+    <color name="green_btn_bg_pressed_color">#14A377</color>
+    <color name="red_btn_bg_color">#C62828</color>
+    <color name="red_btn_bg_pressed_color">#b12626</color>
+    <color name="yellow_btn_bg_color">#F0C14B</color>
+    <color name="yellow_btn_bg_pressed_color">#daad3b</color>
+    <color name="blue_btn_bg_color">#2866bf</color>
+    <color name="blue_btn_bg_pressed_color">#245aa7</color>
+</resources>

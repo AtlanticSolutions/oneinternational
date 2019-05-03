@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbarBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/timelineBackground"
+    android:clipToPadding="false"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:layout_collapseMode="pin"
+    app:layout_scrollFlags="exitUntilCollapsed"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    tools:showIn="@layout/content_timeline">
+
+    <RelativeLayout
+        android:id="@+id/container_post"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePhoto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_user_timeline_default" />
+
+        <ImageView
+            android:id="@+id/btnCamera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_post_photo"
+            android:tint="@color/default_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/btnCamera"
+            android:layout_toRightOf="@id/ivProfilePhoto"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/HINT_TIMELINE_NEW_POST"
+            android:maxLines="3"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

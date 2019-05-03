@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_chat_group_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.chat.ChatGroupListActivity"
+    tools:showIn="@layout/app_bar_chat_group_list">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lighter_gray">
+
+                <ImageView
+                    android:id="@+id/ivGroup"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/ic_chat_group"
+                    android:tint="@color/default_color" />
+
+                <TextView
+                    android:id="@+id/txt_groups"
+                    style="@style/AppTheme.TextView.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toRightOf="@id/ivGroup"
+                    android:gravity="center_vertical"
+                    android:text="@string/BUTTON_TITLE_CHAT_GROUPS"
+                    android:textColor="@color/default_color" />
+
+                <ImageButton
+                    android:id="@+id/btnAddGroup"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/default_color" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvEmptyListGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_groups"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/ALERT_MESSAGE_EMPTY_GROUP_LIST" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGroupChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmptyListGroup" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lighter_gray">
+
+                <ImageButton
+                    android:id="@+id/btnAddChat"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/default_color" />
+
+                <ImageView
+                    android:id="@+id/ivChat"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/ic_chat_dialogue"
+                    android:tint="@color/default_color" />
+
+                <TextView
+                    android:id="@+id/txt_talks"
+                    style="@style/AppTheme.TextView.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toRightOf="@id/ivChat"
+                    android:gravity="center_vertical"
+                    android:text="@string/talk"
+                    android:textColor="@color/default_color" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvEmptyListTalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_talks"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/ALERT_MESSAGE_EMPTY_GROUP_LIST" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTalkChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmptyListTalk" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/lighter_gray">
+
+                <ImageView
+                    android:id="@+id/ivChatSpeaker"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/ic_chat_dialogue"
+                    android:tint="@color/default_color" />
+
+                <TextView
+                    android:id="@+id/txt_speakers"
+                    style="@style/AppTheme.TextView.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toRightOf="@id/ivChatSpeaker"
+                    android:gravity="center_vertical"
+                    android:text="@string/speakers"
+                    android:textColor="@color/default_color" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvEmptyListSpeaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_talks"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/ALERT_MESSAGE_EMPTY_SPEAKER_LIST"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSpeakerChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmptyListTalk" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

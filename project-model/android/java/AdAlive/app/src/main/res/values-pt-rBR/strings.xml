@@ -1,0 +1,514 @@
+<resources>
+    <string name="fb_app_id">299465907183064</string>
+    <string name="fb_app_secret">90acb762bb9c9a6fdce990bb3680d98a</string>
+    <string name="facebook_app_id">299465907183064</string>
+    <string name="fb_login_protocol_scheme">fb299465907183064</string>
+    <string name="app_name">One Internacional</string>
+    <string name="SCREEN_TITLE_MAIN">One Internacional</string>
+    <string name="SCREEN_TITLE_ABOUT">Sobre</string>
+
+    <string name="geofence_enter">Entrando na Região %1$s</string>
+    <string name="geofence_dwell">Dwelling in %1$s</string>
+    <string name="geofence_exit">Saindo na Região %1$s</string>
+    <string name="events">Events</string>
+    <string name="map">Map</string>
+    <string name="transition">Transition</string>
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">App registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">Too many PendingIntents provided</string>
+    <string name="unknown_geofence_error">Unknown error</string>
+    <string name="geofences_added">Geofences added</string>
+    <string name="geofences_removed">Geofences removed</string>
+
+    <!--SCREEN_TITLE-->
+    <string name="SCREEN_TITLE_LOGIN">Login</string>
+    <string name="SCREEN_TITLE_RESET_PASSWORD">Recuperar senha</string>
+    <string name="SCREEN_TITLE_REMOVE_GALLERY">Remover imagens.</string>
+    <string name="SCREEN_TITLE_SIGNUP">Cadastro</string>
+    <string name="SCREEN_TITLE_LIST_PICKER">Lista</string>
+    <string name="SCREEN_TITLE_EVENT_DETAIL">Evento</string>
+    <string name="SCREEN_TITLE_EVENT_TABS">Eventos</string>
+    <string name="SCREEN_TITLE_EDIT_PROFILE">Editar Perfil</string>
+    <string name="SCREEN_TITLE_CHANGE_PASSWORD">Redefinir senha</string>
+    <string name="SCREEN_TITLE_CHAT">Chat</string>
+    <string name="SCREEN_TITLE_SEARCH_CHAT">Novo Chat</string>
+    <string name="SCREEN_TITLE_PARTICIPANTS">Participantes</string>
+    <string name="SCREEN_TITLE_NOTIFICATIONS">Notificações</string>
+    <string name="SCREEN_TITLE_ORDER">Pedidos</string>
+    <string name="SCREEN_TITLE_PRODUCT_REF">Buscar por referência</string>
+    <string name="SCREEN_TITLE_PRODUCT">Produto</string>
+    <string name="SCREEN_TITLE_MY_ORDER">Meus Pedidos</string>
+    <string name="SCREEN_TITLE_DEALER_SIGNUP">Quero ser revendedora</string>
+    <string name="SCREEN_TITLE_CATALOG">Catálogos de produtos</string>
+    <string name="SCREEN_TITLE_BOLETO">Boleto</string>
+    <string name="SCREEN_TITLE_CATALOG_CATEGORY">Busca de produtos</string>
+    <string name="SCREEN_TITLE_CATALOG_PRODUCTS">Produtos</string>
+    <string name="SCREEN_TITLE_MY_POINTS">Meus pontos</string>
+    <string name="SCREEN_CHECKOUT">Online Payment</string>
+    <string name="SCREEN_TITLE_POINTS">Pontos</string>
+    <string name="SCREEN_POINTS_POINTS">pontos</string>
+    <string name="SCREEN_POINTS_EVENT_LINE">Evento:</string>
+    <string name="SCREEN_POINTS_DATE_LINE">Data:</string>
+    <string name="SCREEN_POINTS_TITLE_INFORMATION">Pontos necessários para sorteio %d</string>
+    <string name="SCREEN_POINTS_TITLE_CONGRATULATIONS">Parabéns! você esta participando do sorteio</string>
+    <string name="SCREEN_POINTS_TITLE_TARGET">Faltam %d pontos para participar do sorteio</string>
+    <string name="SCREEN_TITLE_INFORMATION">Informações</string>
+    <string name="SCREEN_TITLE_DOCUMENTS_TABS">Documentos</string>
+    <string name="SCREEN_SHOWCASE">Vitrine</string>
+    <string name="SCREEN_MANAGER_APPLICATION">Gerenciador de Apps</string>
+
+
+    <string name="LABEL_MY_DOCUMENTS">Meus Documentos</string>
+    <string name="LABEL_ALL_DOCUMENTS">Todos</string>
+
+    <string name="MESSAGE_ACTIVITY_INDICATOR_LOADING">Carregando, por favor aguarde...</string>
+
+    <string name="LABEL_WELCOME">Bem-vindo!</string>
+    <string name="LABEL_TEXT_ONE_ITEM_SELECTED">item selecionado</string>
+    <string name="LABEL_TEXT_MANY_ITEMS_SELECTED">items selecionados</string>
+
+    <!--PLACEHOLDER-->
+    <string name="PLACEHOLDER_NAME">Nome</string>
+    <string name="PLACEHOLDER_OFFICE">Cargo</string>
+    <string name="PLACEHOLDER_EMAIL">E-mail</string>
+    <string name="PLACEHOLDER_PASSWORD">Senha</string>
+    <string name="PLACEHOLDER_NEW_PASSWORD">Nova Senha</string>
+    <string name="PLACEHOLDER_FULLNAME">Nome</string>
+    <string name="PLACEHOLDER_COMPANY">Empresa</string>
+    <string name="PLACEHOLDER_SECTOR">Posição</string>
+    <string name="PLACEHOLDER_NUMBER">Número</string>
+    <string name="PLACEHOLDER_COMPLEMENT">Complemento</string>
+    <string name="PLACEHOLDER_NEIGHBORHOOD">Bairro</string>
+    <string name="PLACEHOLDER_CITY">Cidade</string>
+    <string name="PLACEHOLDER_REGION">Estado</string>
+    <string name="PLACEHOLDER_ROLE">Posição</string>
+    <string name="PLACEHOLDER_PHONE">Telefone</string>
+    <string name="PLACEHOLDER_INTEREST">Áreas de interesse</string>
+    <string name="PLACEHOLDER_ADDRESS">Endereço</string>
+    <string name="PLACEHOLDER_ZIPCODE">CEP</string>
+    <string name="PLACEHOLDER_SEARCH_PRODUCT">Pesquisar produto</string>
+
+    <!--ERROR_ALERT_MESSAGE-->
+    <string name="ERROR_ALERT_MESSAGE_NO_CONNECTION">Sem conexão com a internet</string>
+    <string name="ERROR_ALERT_MESSAGE_EMAIL_INVALID">E-mail inválido</string>
+    <string name="ERROR_ALERT_UNKNOWN">An error has occurred, please try again..</string>
+    <string name="ERROR_ALERT_UNAUTHORIZED">Session expired! Please sign in again..</string>
+    <string name="ERROR_ALERT_MESSAGE_CODE_INVALID">Código inválido</string>
+    <string name="ERROR_ALERT_MESSAGE_EMAIL_SERVER">Este email já foi cadastrado</string>
+    <string name="ERROR_ALERT_MESSAGE_PASSWORD_INVALID">Password inválido</string>
+    <string name="ERROR_ALERT_MESSAGE_PASSWORD_INVALID_2">Senha inválida</string>
+    <string name="ERROR_ALERT_MESSAGE_PASSWORD_SERVER">A senha deve ter entre 8 e 14 caracteres</string>
+    <string name="ERROR_ALERT_MESSAGE_NETWORK_REQUEST">Problemas ao conectar ao servidor. Tente novamente.</string>
+    <string name="ERROR_ALERT_MESSAGE_NOT_FOUND">O código promocional inserido não existe ou os recursos para a raspadinha não estão todos disponíveis no momento Por favor, tente novamente mais tarde ou insira um novo código.</string>
+    <string name="ERROR_ALERT_MESSAGE_DISK_SAVE">Erro durante a tentativa de criar um arquivo.</string>
+    <string name="ERROR_ALERT_MESSAGE_SECTOR_NULL">Selecione um setor antes</string>
+    <string name="ERROR_ALERT_REQUIRED_FIELD">Campo obrigatório</string>
+    <string name="ERROR_ALERT_MESSAGE_AUTHENTICATION">Não foi possivel validar o usuário. Verifique seu código e senha.</string>
+    <string name="ERROR_ALERT_MESSAGE_AUTHENTICATION_RESELLER">Verifique seu CPF e Celular. Caso estejam incorretos, solicite ao seu Distribuidor para atualizar seus dados ou escreva para maisamigas@maisamigas.com.br</string>
+
+    <string name="BUTTON_TITLE_TRY_AGAIN">Tente novamente</string>
+    <string name="BUTTON_TITLE_ACCESS">Acessar</string>
+    <string name="BUTTON_TITLE_FORGOT_PWD">Esqueceu a senha?</string>
+    <string name="BUTTON_TITLE_SIGNUP_LOGIN">Cadastrar</string>
+    <string name="BUTTON_TITLE_SIGNUP">SALVAR</string>
+    <string name="BUTTON_TITLE_FACEBOOK">Conectar com o Facebook</string>
+
+    <string name="ALERT_MESSAGE_FORGOT_PASSWORD">Insira o e-mail associado à sua conta.</string>
+    <string name="ALERT_MESSAGE_REMOVE_GALLERY">Deseja realmente remover as imagens selecionadas?</string>
+
+    <string name="ALERT_OPTION_CONFIRM">OK</string>
+    <string name="ALERT_OPTION_EDIT">Editar</string>
+    <string name="ALERT_OPTION_RESET_PWD">Enviar</string>
+    <string name="ALERT_OPTION_CANCEL">Cancelar</string>
+    <string name="ALERT_OPTION_TAKE_PHOTO">Tirar foto</string>
+    <string name="ALERT_OPTION_PICK_PHOTO">Abrir galeria</string>
+
+    <string name="ALERT_TITLE_PICK_PHOTO">Selecionar foto</string>
+    <string name="ALERT_MESSAGE_PICK_PHOTO">Tire uma foto ou selecione uma imagem da galeria.</string>
+    <string name="ALERT_MESSAGE_SELECT">Selecione uma opção</string>
+    <string name="ERROR_ALERT_MESSAGE_FACEBOOK">Nâo foi possível conectar pelo Facebook. Tente novamente.</string>
+
+    <string name="title_activity_teste">teste</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Fechar navigation drawer</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="LABEL_DEVELOPED_BY">Desenvolvido por</string>
+    <string name="LABEL_EVENTS">Eventos</string>
+    <string name="LABEL_PARTNERS">Patrocinadores</string>
+    <string name="LABEL_TEAM">Equipe</string>
+    <string name="LABEL_CAM">Scanner</string>
+    <string name="BUTTON_TITLE_HOME">Início</string>
+    <string name="BUTTON_TITLE_MY_PROFILE">Meus dados</string>
+    <string name="BUTTON_TITLE_MY_AGENDA">Minha agenda</string>
+    <string name="BUTTON_TITLE_ABOUT">Sobre</string>
+    <string name="BUTTON_TITLE_EXIT">Sair</string>
+    <string name="LABEL_EMPTY_EVENTS">Nenhum evento disponível</string>
+    <string name="LABEL_SELECTED">Selecionado</string>
+    <string name="LABEL_REGISTERED">Favorito</string>
+    <string name="LABEL_SIGNUP">Inscreva-se</string>
+    <string name="LABEL_CURRENT_DAY">Hoje</string>
+    <string name="title_activity_events_tab">Eventos</string>
+    <string name="title_activity_equip">Equipes</string>
+    <string name="LABEL_LIST">Lista</string>
+    <string name="LABEL_CALENDAR">Calendário</string>
+    <string name="BUTTON_TITLE_MENU_GENERAL_SURVEY">Pesquisa Geral</string>
+    <string name="BUTTON_TITLE_MENU_SPECIFIC_SURVEY">Pesquisa de Painel</string>
+    <string name="LABEL_LOAD_SURVEY">Carregando pesquisa...</string>
+    <string name="ALERT_NO_ROLES_REGISTER">Não há cargos cadastrados</string>
+    <string name="BUTTON_TITLE_ORDER">Pedido</string>
+    <string name="BUTTON_TITLE_SENDORDER">Enviar Pedido</string>
+    <string name="BUTTON_TITLE_CHECK_ORDER">Consultar Pedido</string>
+    <string name="BUTTON_TITLE_CATALOG">Catálogo</string>
+    <string name="BUTTON_TITLE_INSURANCE">Comprar Seguros</string>
+    <string name="BUTTON_TITLE_CANDIDATES">Candidatos</string>
+
+    <string name="PLACEHOLDER_SINOPSE">INFORMAÇÕES</string>
+    <string name="PLACEHOLDER_DATETIME">DATA | HORÁRIO</string>
+    <string name="PLACEHOLDER_LOADING">Carregando...</string>
+    <string name="BUTTON_TITLE_FAVORITE">INSCREVA-SE</string>
+    <string name="PLACEHOLDER_LOCAL">LOCAL</string>
+    <string name="BUTTON_TITLE_REMOVE_FAVORITE">REMOVER INSCRIÇÃO</string>
+    <string name="SCREEN_TITLE_MY_AGENDA">Minha Agenda</string>
+    <string name="DIALOG_TITLE_SUCCESS_UNREGISTER">Sucesso</string>
+
+    <!--SCANNER-->
+    <string name="DIALOG_TITLE_PERMISSION">Permissões são necessárias</string>
+    <string name="DIALOG_MESSAGE_PERMISSION">Para continuar é necessário permitir o acesso à câmera, GPS e configuração do estado do telefone.</string>
+    <string name="DIALOG_SCANNER_MESSAGE_PERMISSION">Para continuar é necessário permitir o acesso à câmera, GPS e configuração do estado do telefone.</string>
+    <string name="DIALOG_PROFILE_MESSAGE_PERMISSION">Para continuar é necessário permitir o acesso à câmera, GPS e configuração do estado do telefone.</string>
+    <string name="DIALOG_BLUETOOTH_MESSAGE_PERMISSION">Permitir o acesso ao Bluetooth.</string>
+    <string name="DIALOG_COARSE_LOCATION_MESSAGE_PERMISSION">Permitir o acesso a Localização.</string>
+    <string name="DIALOG_PHONE_STATE_MESSAGE_PERMISSION">Para continuar é necessário permitir o acesso aos dados do Dispositivo.</string>
+    <string name="DIALOG_POST_MESSAGE_PERMISSION">Para continuar é necessário permitir o acesso à câmera, GPS, leitura e escrita da memóra externa e configuração do estado do telefone.</string>
+    <string name="BUTTON_TITLE_CHANGE_PASSWORD">REDEFINIR SENHA</string>
+    <string name="BUTTON_TITLE_EDIT_PROFILE">Salvar</string>
+    <string name="MESSAGE_UPDATE_USER_SUCCESS">Perfil atualizado com sucesso!</string>
+    <string name="ERROR_ALERT_TITLE_UPDATE_USER">Sem alterações</string>
+    <string name="ERROR_ALERT_MESSAGE_UPDATE_USER">Nenhuma alteração nos dados do usuário foram verificadas.</string>
+
+    <string name="BUTTON_TITLE_SAVE_PASSWORD">Redefinir</string>
+    <string name="PLACEHOLDER_CONFIRM_PASSWORD">Confirmar senha</string>
+    <string name="ERROR_ALERT_MESSAGE_PASSWORD_MATCH">As senhas devem ser iguais</string>
+    <string name="ERROR_ALERT_MESSAGE_PASSWORD_LENGHT">A senha deve possuir entre 8 e 14 caracteres</string>
+    <string name="SCREEN_TITLE_DOWNLOAD">Arquivo</string>
+
+    <!--SHOWCASE-->
+    <string name="BUTTON_SHOWCASE">Vitrine</string>
+    <string name="LABEL_SHOWCASE">Vitrine</string>
+    <string name="EMPTY_SHOWCASE">Vitrine Vazia</string>
+    <string name="LABEL_SHOWCASE360">Vitrine 360</string>
+    <string name="showcase360_note">NOTA: O visualizar Rotacional é mais indicado para visualização de objetos (detalhes de produtos, por exempo). O visualizador Panorama exibe muito bem ambientes, permitindo ao usuário direcionar seu foco (ele pode utilizar o modelo esférico ou cilíndrico).</string>
+    <string name="showcase360_rotate_product">Rotacione horizontalmente para girar a imagem. Toque no botão de zoom para baixar o frame atual em alta resolução.</string>
+
+
+    <!--GALLERY-->
+    <string name="BUTTON_GALLERY">Galeria</string>
+    <string name="LABEL_GALLERY">Galeria</string>
+    <string name="LABEL_EMPTY_GALLERY">Nenhuma foto salva</string>
+
+    <!-- DOWNLOAD -->
+    <string name="SCREEN_TITLE_MY_DOWNLOADS">Documentos</string>
+    <string name="TITLE_ACTIVITY_INDICATOR_DOWNLOADING">Em andamento...</string>
+    <string name="ALERT_TITLE_DOWNLOAD">Baixar</string>
+    <string name="ALERT_MESSAGE_DOWNLOAD_ERROR_SAVE_TO_DISC">Erro ao salvar o arquivo.</string>
+    <string name="ALERT_MESSAGE_DOWNLOAD_ERROR">Não foi possível fazer o download.\nTente novamente mais tarde.</string>
+    <string name="ALERT_MESSAGE_DOWNLOAD_SUCCESS">Transferido e salvo com sucesso!</string>
+    <string name="MESSAGE_ACTIVITY_INDICATOR_DOWNLOADING">Transferindo arquivo:</string>
+    <string name="ALERT_OPTION_DELETE">Deletar</string>
+    <string name="ALERT_MESSAGE_DOWNLOAD_EXISTS">O download foi bem-sucedido. Acesse por meio da opção \'Meus documentos\'.</string>
+    <string name="SCREEN_TITLE_PDF_VIEW">Leitor PDF</string>
+    <string name="LABEL_SHARE">Compartilhar!</string>
+    <string name="ALERT_MESSAGE_EMPTY_DOCUMENTS">Os documentos transferidos e disponíveis para \nvisualização serão exibidos nesta tela.\nVerifique nos detalhes do Evento quais são os arquivos disponíveis para download.</string>
+    <string name="ALERT_MESSAGE_NO_PDF">Não há nenhum leitor de PDF em seu telefone.</string>
+    <string name="ALERT_MESSAGE_DOWNLOAD_NODATA_RESPONSE">Não existe documentos para este evento. Por favor, tente novamente mais tarde.</string>
+    <string name="BUTTON_TITLE_OK">Ok</string>
+    <string name="BUTTON_TITLE_CANCEL">Cancelar</string>
+    <string name="ALERT_MESSAGE_FILE_NOT_FOUND">Arquivo não encontrado</string>
+    <string name="BUTTON_TITLE_DOWNLOAD_FILE">Baixar</string>
+    <string name="LABEL_NUM_PAGES">Número de páginas</string>
+    <string name="LABEL_DESCRIPTION">Descrição</string>
+    <string name="LABEL_FIELD_AUTHOR">Autor</string>
+    <string name="LABEL_LANGUAGES">Idioma(s)</string>
+    <string name="MESSAGE_ACTIVITY_QUESTION_DOWNLOAD">Deseja baixar o arquivo?</string>
+    <string name="BUTTON_TITLE_MY_DOWNLOADS">Documentos</string>
+    <string name="BUTTON_TITLE_AVAILABLE_FILES">ARQUIVOS DISPONÍVEIS</string>
+    <string name="ALLOW_STORAGE">Permitir Armazenamento</string>
+    <string name="ALERT_MESSAGE_STORAGE">Sem permissão não será possível armazenar seus downloads.</string>
+    <string name="ALLOW_STORAGE_ERRO">Erro de permissão</string>
+    <string name="ALERT_MESSAGE_STORAGE_ERRO">Houve um erro ao tentar permissão de armazenamento.</string>
+    <string name="ALLOW_READ">Permitir leitura</string>
+    <string name="ALERT_MESSAGE_READ">Sem permissão não será possível ler seus downloads.</string>
+    <string name="ALLOW_READ_ERRO">Erro de permissão</string>
+    <string name="ALERT_MESSAGE_READ_ERRO">Houve um erro ao tentar permissão de leitura.</string>
+    <string name="LABEL_EMPTY_DOCUMENTS">Nenhum documento disponível</string>
+
+    <!--SPONSOR-->
+    <string name="SCREEN_TITLE_SPONSORS">Patrocinadores</string>
+    <string name="LABEL_EMPTY_SPONSORS">Nenhum patrocinador encontrado.</string>
+    <string name="ALERT_MESSAGE_PASSWORD_RESETED">Sucesso Verifique o e-mail informado para continuar com a recuperação da senha.</string>
+    <string name="ALERT_MESSAGE_SUBSCRIBE_SUCCESS">Incrição realizada com sucesso, você poderá ver seus eventos em destaque no calendário ou pelo menu Minha Agenda.</string>
+    <string name="ALERT_MESSAGE_DELETE_EVENT_SUCCESS">Evento removido com sucesso.</string>
+    <string name="ERROR_ALERT_MESSAGE_VUFURIA_KEY">Chave Vufuria não encontrada</string>
+
+    <!-- CHAT -->
+    <string name="grupos">Grupos</string>
+    <string name="chat_title">Chat</string>
+    <string name="talk">Conversa individual</string>
+    <string name="speakers">Palestrantes</string>
+
+    <string name="LABEL_CHAT_HEADER_TODAY">Hoje</string>
+    <string name="LABEL_CHAT_HEADER_YESTERDAY">Ontem</string>
+    <string name="ALERT_MESSAGE_EMPTY_GROUP_LIST">Você não participa de nenhum chat</string>
+    <string name="ALERT_MESSAGE_EMPTY_SPEAKER_LIST">Não há palestrantes disponíveis.</string>
+    <string name="LABEL_CONTACT_DESC_MESSAGE">Mensagem</string>
+    <string name="ALERT_MESSAGE_EMPTY_CHAT_MESSAGES">Nenhuma mensagem para exibir.</string>
+    <string name="PLACEHOLDER_SEARCH">Pesq. distribuidor ou consultora</string>
+    <string name="BUTTON_TITLE_CHAT">Chat</string>
+    <string name="BUTTON_TITLE_CHAT_GROUPS">Conversa em grupo</string>
+    <string name="ALERT_MESSAGE_LEAVE_CHAT">Tem certeza que seja sair do grupo de chat?</string>
+    <string name="ALERT_MESSAGE_CHAT_BLOCK">Deseja bloquear este usuário?\n\nVocê não poderá enviar nem receberá mensagens dele.</string>
+    <string name="ALERT_MESSAGE_CHAT_UNBLOCK">Deseja desbloquear este usuário?\n\nVocê poderá enviar e receber mensagens dele.</string>
+    <string name="ALERT_TITLE_BLOCK_USER">Bloquear usuário</string>
+    <string name="ALERT_TITLE_UNBLOCK_USER">Desbloquear usuário</string>
+    <string name="ALERT_TITLE_LEAVE_GROUP">Sair do grupo</string>
+    <string name="ALERT_MESSAGE_BLOCK_UNBLOCK_USER_ERROR">Não foi possível alterar o status deste usuário no momento. Tente novamente.</string>
+    <string name="ALERT_MESSAGE_LEAVE_CHAT_ERROR">Não foi possível deixar o grupo. Tente novamente.</string>
+    <string name="ALERT_MESSAGE_CHAT_BLOCKED_USER">Este usuário foi bloqueado e não é possível enviar mensagens para o mesmo.</string>
+    <string name="ALERT_TITLE_CHAT_BLOCKED_USER">Bloqueado</string>
+
+    <!--ABOUT-->
+    <string name="ABOUT_DESCRIPTION">O aplicativo Lab360 tem o objetivo de facilitar o acesso a informações e atividades desenvolvidas pela intituição.</string>
+    <string name="VERSION">Versão App.: </string>
+    <string name="ERRO_ABOUT">Texto não disponível.</string>
+
+
+    <!--FEED DE VÍDEOS-->
+    <string name="BUTTON_FEED_VIDEOS">Vídeos</string>
+    <string name="TITLE_DEFAULT_VIDEO">Vídeo</string>
+    <string name="LABEL_EMPTY_VIDEOS">Nenhum vídeo encontrado</string>
+    <string name="ACTION_SHARE">Compartilhar</string>
+    <string name="ACTION_REMOVE">Remover</string>
+    <!-- Equipe -->
+    <string name="ERROR_ALERT_MESSAGE_EMAIL_NOT_FOUND">E-mail informado não está registrado.</string>
+    <string name="OPEN_LIKEDIN">Abrir no LinkedIn</string>
+    <string name="BUTTON_TEAM">Equipe</string>
+
+    <!--Código-->
+    <string name="LABEL_CODE">CÓDIGO</string>
+    <string name="SCREEN_TITLE_ERRO_CODE">Código Inválido</string>
+    <string name="ALERT_MESSAGE_ERRO_CODE">Este código de evento não existe.</string>
+    <string name="ALERT_OPTION_OK">OK</string>
+
+    <!-- REGISTER -->
+    <string name="BUTTON_TITLE_REGISTER">CADASTRE-SE</string>
+    <string name="BUTTON_TITLE_DISTRIBUTOR">DISTRIBUIDOR</string>
+    <string name="INSERT_YOUR_CODE">Digite o código do evento</string>
+    <string name="BUTTON_TITLE_CODE">Confirmar</string>
+    <string name="BUTTON_TITLE_VISIT">Visite</string>
+
+    <string name="title_activity_timeline">Timeline</string>
+    <string name="title_activity_create_face_user">Criar usuário</string>
+    <!--Timeline -->
+    <string name="BUTTON_TITLE_LIKE">curtir</string>
+    <string name="BUTTON_TITLE_COMMENT">comentar</string>
+    <string name="LABEL_EMPTY_COMMENTS">0 comentário</string>
+    <string name="LABEL_SIGLE_COMMENT">1 comentário</string>
+    <string name="LABEL_COMMENTS">comentarios</string>
+    <string name="HINT_TIMELINE_NEW_POST">No que você está pensando?</string>
+    <string name="TITLE_ACTIVITY_COMMENT">Comentários</string>
+    <string name="TITLE_ACTIVITY_CREATE_POST">Adicionar publicação</string>
+    <string name="LABEL_ADD_PHOTO">Adicionar uma foto</string>
+    <string name="ERROR_ALERT_OPEN_PHOTO">Erro ao abrir a foto</string>
+
+    <string name="LIKE">Curtir</string>
+    <string name="UNLIKE">Descurtir</string>
+    <string name="COMMENT">Comentário</string>
+    <string name="DELETE_POST">Deletar Post</string>
+    <string name="REPORT_POST">Reportar Post</string>
+    <string name="BUTTON_TITLE_POST">Publicar</string>
+    <string name="menu_publish">Publicar</string>
+
+    <!--INTERACTIVE NOTIFICATION-->
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+
+    <!--EXIT-->
+    <string name="DIALOG_EXIT_MESSAGE">Deseja finalizar a sessão atual? </string>
+    <string name="ANOTHER_EVENT">Acessar outro evento</string>
+    <string name="ERROR_POST_TIMELINE">Não foi possível criar a publicação. Tente novamente.</string>
+
+    <string name="send_email">Sending e-mail&#8230;</string>
+
+    <!-- SURVEY -->
+    <string name="action_send">Enviar</string>
+    <string name="survey_title_success_dialog">Sucesso</string>
+    <string name="value_number">%1$s/10</string>
+    <string name="required_field">Os campos com * são obrigatórios</string>
+    <string name="field_not_answered">Campo requerido</string>
+    <string name="one_field_need_answered">Ao minimo um campo precisa ser respondido.</string>
+    <string name="answered_survey">Obrigado por responder a pesquisa!</string>
+    <string name="all_fields_required">Os campos com * sao obrigatórios.</string>
+    <string name="send_survey">Deseja envia a pesquisa?</string>
+
+    <!--Start Download file -->
+    <string name="DIALOG_DOWNLOAD_TITLE">Transferência</string>
+    <string name="DIALOG_DOWNLOAD_MESSAGE">Download do arquivo iniciado, ao término estará disponível na pasta de downloads</string>
+    <string name="DIALOG_DOWNLOAD_POSITIVE_BUTTON">Ok</string>
+
+    <!--Delete Download file -->
+    <string name="DIALOG_DELETE_TITLE">Transferência</string>
+    <string name="DIALOG_DELETE_MESSAGE">Caso o arquivo seja excluido será necessário transferi-lo novamente para que o mesmo possa ser visualizado no futuro.\nDeseja continuar?</string>
+    <string name="DIALOG_DELETE_BUTTON_FINISH">Continuar e excluir</string>
+    <string name="DIALOG_DELETE_BUTTON_CANCEL">Cancelar</string>
+
+    <!--Internet Dialog -->
+    <string name="DIALOG_INTERNET_TITLE">Conexão</string>
+    <string name="DIALOG_INTERNET_MESSAGE">Não há conexão com a internet, por favor verificar a conexão antes de utilizar</string>
+    <string name="DIALOG_INTERNET_POSITIVE_BUTTON">Ok</string>
+
+    <!-- DISTRIBUTOR -->
+    <string name="DISTRIBUTOR_BUTTON_TITLE">Acessar</string>
+    <string name="DISTRIBUTOR_HINT_LOGIN">Código</string>
+    <string name="DISTRIBUTOR_HINT_PASSWORD">Senha</string>
+
+    <!-- PRODUCT SEARCH -->
+    <string name="LABEL_SEARCH_TITLE">O que você quer pedir?</string>
+    <string name="LABEL_SEARCH_HINT">Digite a referência do produto</string>
+
+    <!-- PRODUCT ORDER -->
+    <string name="BUTTON_ADD_CART">ADICIONAR AO CARRINHO</string>
+    <string name="BUTTON_ADD_CART_REFERENCE">Resgate produto +pontos</string>
+    <string name="BUTTON_REF_BACK">VOLTAR</string>
+    <string name="BUTTON_SEARCH_BACK">BUSCAR</string>
+    <string name="DIALOG_ADD_CART">Produto adicionado ao carrinho!</string>
+    <string name="BUTTON_CLOSE_ORDER">FECHAR PEDIDO</string>
+    <string name="BUTTON_CONTINUE_ORDER">CONTINUAR COMPRANDO</string>
+    <string name="LABEL_TOTAL_ORDER">Total pedido</string>
+    <string name="LABEL_TOTAL_POINST">Total em pontos</string>
+    <string name="DIALOG_PRODUCT_SEARCH_ERROR">Produto não localizado</string>
+
+    <string name="LABEL_PRODUCT_CATALOG">Catálogo</string>
+    <string name="LABEL_PRODUCT_REFERENCE">Referência</string>
+    <string name="LABEL_PRODUCT_CATEGORY">Categoria</string>
+    <string name="LABEL_PRODUCT_PAGE">Página</string>
+    <string name="LABEL_PRODUCT_POSITION">Posição</string>
+
+
+    <!--GENERAL-->
+    <string name="DIALOG_SUCCESS">Sucesso</string>
+    <string name="DIALOG_ERROR">Erro</string>
+    <string name="DIALOG_INFORMATION">Informações</string>
+    <string name="SCREEN_TITLE_OPEN_ORDER">Pedido</string>
+    <string name="SCREEN_TITLE_FINAL_ORDER">Finalizar Pedido</string>
+    <string name="SCREEN_TITLE_CART">Carrinho</string>
+    <string name="PLACEHOLDER_DOCUMENT">CPF</string>
+    <string name="BUTTON_PAYMENT_ORDER">REALIZAR PAGAMENTO</string>
+
+    <string name="DIALOG_CLOSE_CART">Confirma o fechamento do pedido?</string>
+    <string name="LABEL_TOTAL_POINTS">Total de pontos disponives:</string>
+    <string name="LABEL_COUPON_CODE">Código de cupom:</string>
+    <string name="HINT_COUPON_CODE">Código do cupom</string>
+    <string name="LABEL_REFERENCE_CODE">Informe o código de referência do produto que deseja trocar pelos seus pontos</string>
+    <string name="HINT_REFERENCE_CODE">Digite o código de referência</string>
+
+
+    <!-- Warning Actions -->
+    <string name="TITLE_MESSAGE_UPDATE">Atualização</string>
+    <string name="BUTTON_UPDATE">ATUALIZAR</string>
+    <string name="BUTTON_CANCEL">CANCELAR</string>
+
+    <!-- No results -->
+    <string name="empty_results">Entre com o nome ou a referência de um produto para realizar a pesquisa...</string>
+    <string name="no_results">Nenhum produto encontrado. Tente novamente.</string>
+
+    <!-- Screen Profile-->
+    <string name="hint_cpf">CPF*</string>
+    <string name="hint_cpf_no_required">CPF</string>
+    <string name="hint_rg">RG*</string>
+    <string name="hint_name">Nome*</string>
+    <string name="hint_data_nascimento">Data de nascimento*</string>
+    <string name="hint_sexo">Sexo*</string>
+    <string name="hint_ddd">DDD*</string>
+    <string name="hint_telefone">Telefone*</string>
+    <string name="hint_cell">Celular*</string>
+    <string name="hint_cep">Cep*</string>
+    <string name="hint_email">E-mail*</string>
+    <string name="hint_empresa">Empresa*</string>
+    <string name="hint_endereco">Endereço*</string>
+    <string name="hint_numero">Número*</string>
+    <string name="hint_complemento">Complemento</string>
+    <string name="hint_bairro">Bairro*</string>
+    <string name="hint_municipio">Cidade*</string>
+    <string name="hint_estado">UF*</string>
+    <string name="btn_realizar_cadastro">REALIZAR CADASTRO</string>
+    <string name="btn_cadastrar">CADASTRE-SE</string>
+
+
+    <string name="BUTTON_TITLE_SAVE_PROFILE">Salvar</string>
+
+    <string name="loading_progress">Aguarde, recuperando dados</string>
+
+    <string name="custom_dialog_title"><b>CPF</b></string>
+    <string name="dialog_email_title"><b>E-mail</b></string>
+    <string name="msg_dialog_title">Por favor, insira seu CPF\n para localizarmos seu cadastro</string>
+
+    <string name="msg_dialog_sucesso">Seu cadastro foi\n realizado com sucesso!</string>
+    <string name="btn_volta_inicio">Voltar para o início</string>
+
+    <string name="msg_flash_unavaiable">Flash disponível apenas na câmera traseira</string>
+    <string name="title_take_a_picture">Tire uma foto</string>
+    <string name="menu_msg_finish">Finalizar</string>
+
+    <string name="DIALOG_BUTTON_FINISH">Log out</string>
+
+    <!-- String dialogs -->
+    <string name="title_success">Sucesso</string>
+    <string name="title_erro">Erro</string>
+    <string name="msg_invalid_coupon">O cupom apresentado náo é válido.</string>
+    <string name="msg_add_product">Produto adicionado ao carrinho!</string>
+    <string name="title_btn_close_order">FECHAR PEDIDO</string>
+    <string name="title_btn_continue_order">CONTINUAR COMPRANDO</string>
+    <string name="msg_send_order_erro">Confira todos os dados antes de\n enviar novamente o pedido.</string>
+    <string name="msg_send_order_success">Pedido enviado para seu distribuidor!</string>
+
+    <string name="title_search_product_error">Busca Produtos</string>
+    <string name="msg_search_product_error">Nenhum produto com a\n referência foi encontrado.</string>
+    <string name="title_btn_ok">OK</string>
+    <string name="title_btn_cancel">Cancelar</string>
+
+    <string name="msg_send_boleto">O pedido foi enviado com sucesso para o seu distribuidor! Use seu Chat e confirme se ele recebeu seu pedido.</string>
+    <string name="msg_choose_payment">Escolha a forma de pagamento:</string>
+
+    <!-- PRE PROMOTIONAL CARD ACTIVITY-->
+    <string name="SCREEN_TITLE_PRE_PROMOTIONAL_CARDS">Raspadinha Promocional</string>
+    <string name="DIALOG_TITLE_TYPE_PRE_PROMOTIONAL_CARDS">Resultado</string>
+    <string name="DIALOG_MESSAGE_INFORMATIVE_PRE_PROMOTIONAL_CARDS">As promoções válidas no momento são:\n\nlab360\natlantic\nadalive</string>
+    <string name="DIALOG_MESSAGE_TYPE_PRE_PROMOTIONAL_CARDS">Você deseja simular uma raspadinha premiada ou não? \n Ambas as opções não irão consumir a raspadinha definitivamente após o uso</string>
+    <string name="DIALOG_BUTTON_AWARDED">Premiada</string>
+    <string name="DIALOG_BUTTON_NOT_AWARDED">Não Premiada</string>
+
+    <!-- PROMOTIONAL CARD ACTIVITY-->
+    <string name="DIALOG_TITLE_AWARDED_PROMOTIONAL_CARDS">Parabéns</string>
+    <string name="DIALOG_TITLE_NOT_AWARDED_PROMOTIONAL_CARDS">Ops!</string>
+    <string name="DIALOG_MESSAGE_TUTORIAL_PROMOTIONAL_CARDS">Passe o dedo sobre uma raspadinha até descobrir uma área de interesse. \ n Continue a limpar a imagem até que seja exibida correctamente \ n Boa sorte!</string>
+    <string name="DIALOG_MESSAGE_PREVIOUS_ACTIVITY_ACTION">Você ainda não finalizou a raspadinha. Continue \'raspando\' até o resultado ser revelado!</string>
+    <string name="DIALOG_MESSAGE_NOT_AWARDED_PROMOTIONAL_CARDS">Não Foi deste vez. Assim que você tiver uma outra raspadinha disponível tente novamente!</string>
+    <string name="DIALOG_BUTTON_SHOW_MORE">Saiba Mais</string>
+
+    <!-- GENERIC TEXT FROM BUTTON DIALOG-->
+    <string name="DIALOG_BUTTON_OK">Ok</string>
+    <string name="DIALOG_BUTTON_CANCEL">Cancelar</string>
+    <string name="DIALOG_BUTTON_BACK">Voltar</string>
+    <string name="DIALOG_BUTTON_EXIT">Sair</string>
+    <string name="DIALOG_BUTTON_CLOSE">Fechar</string>
+    <string name="DIALOG_BUTTON_LOG_OUT">Desconectar</string>
+
+    <!-- GENERIC TEXT FROM TITLE DIALOG-->
+    <string name="DIALOG_TITLE_ERROR">Erro</string>
+    <string name="DIALOG_TITLE_SUCCESS">Sucesso</string>
+    <string name="DIALOG_TITLE_INFORMATION">Informação</string>
+    <string name="DIALOG_TITLE_ATENTION">Atenção</string>
+    <string name="DIALOG_TITLE_HELP">Ajuda</string>
+
+</resources>

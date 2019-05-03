@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "653285967912",
+    "firebase_url": "https://lab360-clickme-1be5a.firebaseio.com",
+    "project_id": "lab360-clickme-1be5a",
+    "storage_bucket": "lab360-clickme-1be5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653285967912:android:bdf5c4aff2f51a68",
+        "android_client_info": {
+          "package_name": "br.com.lab360.fehosp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653285967912-log415ui25j0fvmgbmvv2j8defo4enhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOsEtPNJ2bSNZQBXkvY9Bj-1MJLJPMVPA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RelativeLayout style="@style/AppTheme.MainButton">
+            <Button
+                android:id="@+id/btnEvents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_monthly_calendar" />
+            <TextView
+                style="@style/AppTheme.TextView.Menu"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:text="@string/LABEL_EVENTS" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/AppTheme.MainButton">
+            <Button
+                android:id="@+id/btnPartners"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_partners" />
+            <TextView
+                style="@style/AppTheme.TextView.Menu"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:text="@string/LABEL_PARTNERS" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RelativeLayout style="@style/AppTheme.MainButton">
+            <Button
+                android:id="@+id/btnTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="12dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_team" />
+            <TextView
+                style="@style/AppTheme.TextView.Menu"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:text="@string/LABEL_TEAM" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/AppTheme.MainButton">
+            <Button
+                android:id="@+id/btnScanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:paddingBottom="12dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_photo_camera" />
+            <TextView
+                style="@style/AppTheme.TextView.Menu"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:text="@string/LABEL_CAM" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivEventLogo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_gsmd_white_logo" />
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_logo_adalive" />
+    </RelativeLayout>
+</LinearLayout>

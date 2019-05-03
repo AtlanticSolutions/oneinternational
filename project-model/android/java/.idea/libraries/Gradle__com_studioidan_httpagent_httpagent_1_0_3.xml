@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.studioidan.httpagent:httpagent-1.0.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/httpagent-1.0.3.aar/a1b240a4395a260744ea568e75690a62/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/httpagent-1.0.3.aar/a1b240a4395a260744ea568e75690a62/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.studioidan.httpagent/httpagent/1.0.3/35d8ad1bb5f87879ca6c6b4f7a46bd5f25103bbf/httpagent-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

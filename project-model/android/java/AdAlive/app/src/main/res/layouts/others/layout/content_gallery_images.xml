@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_showcase"
+    android:orientation="vertical">
+
+
+    <GridView
+        android:id="@+id/gdGallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llActions"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="5dp"
+        android:columnWidth="120dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:numColumns="auto_fit" />
+
+    <LinearLayout
+        android:id="@+id/llActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_menu_share"
+            android:drawableTint="@color/white"
+            android:text="@string/ACTION_SHARE"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:background="@color/red"
+            android:drawableLeft="@drawable/ic_delete"
+            android:drawableTint="@color/white"
+            android:text="@string/ACTION_REMOVE"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/galleryConstraintExpand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_alpha_60"
+        android:visibility="gone">
+
+        <com.alexvasilkov.gestures.views.GestureImageView
+            android:id="@+id/galleryGestureExpanded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/bg_showcase_save_background" />
+
+        <ImageButton
+            android:id="@+id/galleryIvBtnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/float_transparent"
+            android:src="@drawable/com_facebook_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/galleryTvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/LABEL_EMPTY_GALLERY"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

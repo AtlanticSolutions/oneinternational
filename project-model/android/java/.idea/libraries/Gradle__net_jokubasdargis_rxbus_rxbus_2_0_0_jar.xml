@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.jokubasdargis.rxbus:rxbus:2.0.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jokubasdargis.rxbus/rxbus/2.0.0/4737ed02fd83951facc3ac43e262825f7ce58d6f/rxbus-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jokubasdargis.rxbus/rxbus/2.0.0/643875144319e5b00aff72a8370a1daa56cc9ec5/rxbus-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

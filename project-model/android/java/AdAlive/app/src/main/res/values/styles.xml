@@ -1,0 +1,188 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlHighlight">#FF131E</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+    <style name="SplashScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.EditText.Base" parent="@android:style/Widget.EditText">
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppTheme.TextView.Base" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppTheme.TextView.Bold" parent="AppTheme.TextView.Base">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="AppTheme.EditText.Bold" parent="AppTheme.EditText.Base">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.Button.Base" parent="@android:style/Widget.Button.Small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="AppTheme.LinearLayoutMargin">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="AppTheme.LinearLayoutMargin.Field" parent="AppTheme.LinearLayoutMargin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/background_edittext</item>
+    </style>
+
+    <style name="AppTheme.LinearLayoutMargin.FieldSearch" parent="AppTheme.LinearLayoutMargin">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/background_edittext</item>
+    </style>
+
+    <style name="TextLabel">
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/black_alpha_60</item>
+    </style>
+
+    <style name="defaultText">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/black_alpha_60</item>
+    </style>
+
+    <style name="AppTheme.ImageViewField">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+    <style name="AppTheme.MainButton">
+        <item name="android:gravity">center</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:background">@drawable/background_button_blue</item>
+        <item name="android:layout_width">142dp</item>
+        <item name="android:layout_height">112dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="AppTheme.TextView.Menu" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="AppTheme.DrawerButton" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/black_alpha_80</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.EditText.ChatBox" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/background_white_border_blue</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/blueEditText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="AppTheme.TextView.AHKBlue" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/blueEditText</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="MenuItemStyle">
+        <item name="android:textColor">@color/black_alpha_80</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="Toolbar.WhiteMenuText" parent="Toolbar">
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="normalText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#C0C0C0</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+
+    </style>
+
+    <!-- Splash Screen theme. -->
+    <style name="SplashTheme"  parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+
+
+</resources>

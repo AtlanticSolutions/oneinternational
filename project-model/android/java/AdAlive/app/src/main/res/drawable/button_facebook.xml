@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Image display in background in select state -->
+    <item android:drawable="@drawable/background_button_facebook_blue_pressed" android:state_pressed="true"/>
+    <!-- Image display in background in select state -->
+    <item android:drawable="@drawable/background_button_facebook_blue_pressed" android:state_focused="true"/>
+    <!-- Default state -->
+    <item android:drawable="@drawable/background_button_facebook_blue"/>
+
+</selector>

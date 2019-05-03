@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.lab360.oneinternacional.ui.activity.login.SignupActivity"
+    tools:showIn="@layout/activity_signup">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btnPhoto"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="16dp"
+                android:src="@drawable/ic_photo_plus"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabel"
+                android:text="@string/PLACEHOLDER_FULLNAME"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_nome" />
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_FULLNAME"
+                    android:inputType="textCapWords" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabel"
+                android:text="@string/PLACEHOLDER_EMAIL"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                style="@style/AppTheme.LinearLayoutMargin.Field"
+               >
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_mail" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_EMAIL"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabel"
+                android:text="@string/PLACEHOLDER_PASSWORD"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/containerPassword"
+                style="@style/AppTheme.LinearLayoutMargin.Field"
+                >
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_pwd" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_PASSWORD"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabel"
+                android:text="@string/PLACEHOLDER_CONFIRM_PASSWORD"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/containerConfirmPassword"
+                style="@style/AppTheme.LinearLayoutMargin.Field"
+                >
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_pwd" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_CONFIRM_PASSWORD"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                style="@style/TextLabel"
+                android:text="@string/PLACEHOLDER_COMPANY"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/containerCompany"
+                style="@style/AppTheme.LinearLayoutMargin.Field"
+                >
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_empresa" />
+
+                <EditText
+                    android:id="@+id/etCompany"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_COMPANY"
+                    android:inputType="textCapSentences" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                style="@style/AppTheme.Button.Base"
+                android:layout_marginTop="15dp"
+                android:text="@string/BUTTON_TITLE_SIGNUP"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+</ScrollView>

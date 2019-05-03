@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CHECKOUT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script>
+function androidBridgeCheckout(message){
+    lab360.checkoutMethod (message);
+}
+function iOSBridgeCheckout(callback){
+    if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+    if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+    window.WVJBCallbacks = [callback];
+    var WVJBIframe = document.createElement('iframe');
+    WVJBIframe.style.display = 'none';
+    WVJBIframe.src = 'https://__bridge_loaded__';
+    document.documentElement.appendChild(WVJBIframe);
+    setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+}
+function bridgeCheckout(){
+    if ($('#plataforma').val()=='A') {
+        androidBridgeCheckout ('{success : true}');
+    }
+    if ($('#plataforma').val()=='I') {
+        iOSBridgeCheckout(function(bridge) {
+            bridge.registerHandler('JS Echo', function(data, responseCallback) {
+                console.log("JS Echo called with:", data)
+                responseCallback(data)
+            })
+            bridge.callHandler('ObjC Echo', {'success':'true'}, function responseCallback(responseData) {
+                console.log("JS received response:", responseData)
+            })
+        });
+    }
+}
+function finalizaChechout(status){
+    switch(status) {
+        case 200: bridgeCheckout(); break;
+        case 901: alert('O CPF informado não é válido'); break;
+        case 412: alert('Cartão de crédito inválido.'); break;
+        case 422: alert('Dados inválidos. Favor verificar os dados informados.'); break;
+        default: alert('Houve um erro ao fechar o pedido. Por favor, tente novamente mais tarde.');
+    }
+}
+$(document).ready(function(){
+    // Só permite numeros nos campos numéricos
+    $('input[type="tel"]').on('input',function(){
+        $(this).val($(this).val().replace(/[^0-9]/g,''));
+    });
+    // Busca de CEP para autocompletar endereço
+    $('#cc_cep').on('input',function(){
+        $('#cc_cep_ok').val('0');
+        if($(this).val().length==8){
+            $.ajax({
+                dataType: "json",
+                url: "/cep/" + $(this).val(),
+                success: function(data){
+                    var ufEncontrado = false;
+                    if(typeof(data[0].retorno.logradouro) != 'undefined'){
+                        $('#cc_endereco').val(data[0].retorno.logradouro);
+                    }
+                    if(typeof(data[0].retorno.logradouro) != 'undefined' && typeof(data[0].retorno.tipo_logradouro) != 'undefined'){
+                        $('#cc_endereco').val(data[0].retorno.tipo_logradouro + ' ' + data[0].retorno.logradouro);
+                    }
+                    if(typeof(data[0].retorno.bairro) != 'undefined'){
+                        $('#cc_bairro').val(data[0].retorno.bairro);
+                    }
+                    if(typeof(data[0].retorno.uf) != 'undefined'){
+                        $('#cc_estado').val(data[0].retorno.uf);
+                        ufEncontrado = true;
+                    }
+                    if(typeof(data[0].retorno.cidade) != 'undefined'){
+                        $('#cc_cidade').val(data[0].retorno.cidade);
+                    }
+                    if (ufEncontrado) {
+                        $('#cc_cep_ok').val('1');
+                    } else {
+                        alert('O CEP informado não é válido.');
+                    }
+                }
+            })
+        }
+    })
+    // Ação de enviar o formulário
+    $('#btn-checkout').on('click',function(){
+        var erro = 0;
+        $('.validar').each(function(){
+            $(this).removeClass('erro');
+            $(this).val( $(this).val().trim() );
+            if ($(this).val()=='') {
+                $(this).addClass('erro');
+                erro++;
+            }
+        });
+        if (erro>0) {
+            alert('Favor preencher todos os campos obrigatórios.');
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/mobile/checkout",
+            data: $("#frm-cartao").serialize(),
+            success: function(dados){
+                finalizaChechout(dados.status);
+            },
+            error: function(){
+                finalizaChechout(500);
+            }
+        });
+    });
+});
+</script>
+</head>
+<style>
+LABEL { font-weight:bold; }
+.spacer { height:1.75em; }
+.erro { border-color:red; }
+.titulo { margin:0.5em; font-size:1.25em; font-weight:bold; }
+</style>
+<body>
+    <div class="container-fluid">
+        <form id="frm-cartao">
+        <input type="hidden" name="cc_cep_ok" id="cc_cep_ok" value="0">
+        <input type="hidden" name="plataforma" id="plataforma" value="">
+        <input type="hidden" name="cc_tipo_venda" id="cc_tipo_venda" value="">
+        <input type="hidden" name="cc_valor_total" id="cc_valor_total" value="0">
+        <input type="hidden" name="cc_tipo_cartao" id="cc_tipo_cartao" value="0">
+        <input type="hidden" name="cc_id_pedido" id="cc_id_pedido" value="0">
+        <input type="hidden" name="cc_id_consultor" id="cc_id_consultor" value="0">
+        <div class="row">
+            <div class="col-sm-12 text-center titulo">Dados do Titular do Cart&atilde;o</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="cc_cpf">CPF do Titular do Cart&atilde;o</label>
+                <input type="tel" class="form-control validar" name="cc_cpf" id="cc_cpf" value="" maxlength="11">
+            </div>
+            <div class="col-sm-6">
+                <label for="cc_cep">CEP do Titular do Cart&atilde;o</label>
+                <input type="tel" class="form-control validar" name="cc_cep" id="cc_cep" value="" maxlength="8">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="cc_endereco">Endere&ccedil;o Completo (Logradouro, N&uacute;mero e Complemento)</label>
+                <input type="text" class="form-control validar" name="cc_endereco" id="cc_endereco" value="" maxlength="50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="cc_bairro">Bairro</label>
+                <input type="text" class="form-control validar" name="cc_bairro" id="cc_bairro" value="" maxlength="50">
+            </div>
+            <div class="col-sm-6">
+                <label for="cc_cidade">Cidade</label>
+                <input type="text" class="form-control validar" name="cc_cidade" id="cc_cidade" value="" maxlength="50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="cc_estado">Estado</label>
+                <input type="text" class="form-control validar" name="cc_estado" id="cc_estado" value="" style="text-transform: uppercase" maxlength="2">
+            </div>
+            <div class="col-sm-3">
+                <label for="cc_ddd1">DDD</label>
+                <input type="tel" class="form-control validar" name="cc_ddd1" id="cc_ddd1" value="" maxlength="3">
+            </div>
+            <div class="col-sm-6">
+                <label for="cc_tel1">Telefone ou Celular</label>
+                <input type="tel" class="form-control validar" name="cc_tel1" id="cc_tel1" value="" maxlength="9">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center titulo">Dados do Cart&atilde;o de Cr&eacute;dito</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="cc_name">Nome do Titular (Igual ao impresso no cart&atilde;o)</label>
+                <input type="text" name="cc_name" id="cc_name" data-mundicheckout-input="holder_name" class="form-control validar" style="text-transform: uppercase" maxlength="50">
+            </div>
+            <div class="col-sm-6">
+                <label for="cc_number">N&uacute;mero do Cart&atilde;o de Cr&eacute;dito</label>
+                <input type="tel" name="cc_number" id="cc_number" data-mundicheckout-input="number" class="form-control validar" maxlength="19">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="cc_month">Validade do Cart&atilde;o (M&ecirc;s)</label>
+                <select name="cc_month" id="cc_month" data-mundicheckout-input="exp_month" class="form-control validar">
+                    <option value=''></option><option value='01'>01</option><option value='02'>02</option><option value='03'>03</option><option value='04'>04</option><option value='05'>05</option><option value='06'>06</option><option value='07'>07</option><option value='08'>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option>                </select>
+            </div>
+            <div class="col-sm-4">
+                <label for="cc_year">Validade do Cart&atilde;o (Ano)</label>
+                <select name="cc_year" id="cc_year" data-mundicheckout-input="exp_year" class="form-control validar">
+                    <option value=''></option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option>                </select>
+            </div>
+            <div class="col-sm-4">
+                <label for="cc_cvv">CVV (no verso do cart&atilde;o)</label>
+                <input type="tel" name="cc_cvv" id="cc_cvv" data-mundicheckout-input="cvv" class="form-control validar" maxlength="4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <label for="cc_parcelas">Selecione o Parcelamento</label>
+                <select name="cc_parcelas" id="cc_parcelas" class="form-control validar">
+                    <option value=''></option>
+                                    </select>
+            </div>
+            <div class="col-sm-4">
+                <div class="spacer">&nbsp;</div>
+                <button type="button" class="btn btn-success form-control" id="btn-checkout">CONFIRMAR PAGAMENTO</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="spacer">&nbsp;</div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

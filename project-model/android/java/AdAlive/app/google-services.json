@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "208422456958",
+    "firebase_url": "https://lab360-oneinternacional.firebaseio.com",
+    "project_id": "lab360-oneinternacional",
+    "storage_bucket": "lab360-oneinternacional.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208422456958:android:8a3e0a74fdcdbe47",
+        "android_client_info": {
+          "package_name": "br.com.lab360.oneinternacional"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208422456958-1r8nvalkm5ih4jpi9iui4fdg9id34uk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF5Aj6ToO5wS3BbVqdnso5znIZZgpJfBs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

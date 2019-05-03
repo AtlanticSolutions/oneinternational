@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="0dp"
+    android:id="@+id/cardview_header">
+
+    <LinearLayout
+
+        android:background="@color/black_alpha_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is RV header"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#ffff00"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

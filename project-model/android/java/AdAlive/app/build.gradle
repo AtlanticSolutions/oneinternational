@@ -1,0 +1,245 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'realm-android'
+
+android {
+    signingConfigs {
+//        release {
+//            storeFile file("../sign/shoppingbh.jks")
+//            storePassword "shoppingbh"
+//            keyAlias "shoppingbh"
+//            keyPassword "shoppingbh"
+//        }
+    }
+
+    defaultConfig {
+        applicationId "br.com.lab360.oneinternacional"
+        compileSdkVersion rootProject.ext.compileSdkVersion
+        buildToolsVersion rootProject.ext.buildToolsVersion
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        vectorDrawables.useSupportLibrary = true
+
+    }
+
+    flavorDimensions "tier"
+    productFlavors {
+        defaultApp {
+            applicationId = "br.com.lab360.oneinternacional"
+            versionCode 1
+            versionName '1.0.0'
+            buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.prefs"'
+            buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.fileprovider"'
+            buildConfigField 'String', 'DEFAULT_ROLE', '""'
+            dimension "tier"
+
+            ndk {
+                abiFilters "x86", "armeabi-v7a", "armeabi"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            buildConfigField 'String', 'APP_ID', '"11025"'
+            manifestPlaceholders = [ fabricApiKey :"d145d112565ed09d0136325b9feaf2473d9ed507"]
+        }
+
+        release {
+            //signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled false
+            buildConfigField 'String', 'APP_ID', '"12"'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [ fabricApiKey :"3de84e93e4f29fa7a0107f648f758d68d8dd9a5f"]
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            universalApk false
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/others',
+                            'src/main/res/layouts/recycler',
+                            'src/main/res/layouts/fragments',
+                            'src/main/res/layouts/dialogs',
+                            'src/main/res/layouts/content',
+                            'src/main/res/layouts/bars',
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+    buildToolsVersion '28.0.3'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven { url "https://maven.google.com" }
+    flatDir {
+        dirs 'libs'
+    }
+
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'libAdAlive', ext: 'aar')
+    implementation files('src/main/libs/YouTubeAndroidPlayerApi.jar')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    configurations.all {exclude group: 'com.android.support', module: 'support-v13'}
+
+
+    //Android Framework
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation "com.google.guava:guava:$rootProject.guavaVersion"
+
+    //A fast circular ImageView for profile images.
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    //Material calendar View
+    implementation 'com.prolificinteractive:material-calendarview:1.4.2'
+
+    //RxBus: Event bus running on type safe RxJava queues
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'net.jokubasdargis.rxbus:rxbus:2.0.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //HttpLogInterceptor - a network interceptor for log all http requests
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+
+    //Joda Time - quality replacement for the Java date and time classes.
+    implementation 'joda-time:joda-time:2.9.9'
+
+    //Fast Scroller
+    implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.11'
+    implementation 'com.github.ksoichiro:android-observablescrollview:+'
+
+    //Animation library
+    implementation 'com.andkulikov:transitionseverywhere:1.7.0'
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.4'
+
+    //AndroidOAUth - A simple way to authenticate with Google and Facebook using OAuth 2.0 in Android
+    implementation 'com.github.adrielcafe:AndroidOAuth:1.1.5'
+
+    //Butterknife - View Injection
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+
+    //Retrofit - A type-safe HTTP client for Android and Java
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.1.0'
+
+    //Google Services
+    implementation 'com.github.omadahealth:swipy:1.2.3@aar'
+    implementation 'com.google.android.gms:play-services:11.8.0'
+
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true
+    }
+
+    //Utils
+    implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.1'
+
+    //Google Firebase, Push notification
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+
+    //Simplify Permissions
+    implementation 'com.github.anshulagarwal06:Simplify-Permissions:v1'
+
+    //Facebook SDK
+    implementation 'com.facebook.android:facebook-android-sdk:4.31.0'
+
+    //Calligraphy - Custom fonts in Android an OK way.
+    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+
+    //Utility for detecting and notifying when your Android app goes background / becomes foreground.
+    implementation 'com.sjl:Foredroid:1.0.0'
+
+    //NoSQL mobile database
+    implementation 'io.realm:android-adapters:2.0.0'
+
+    //Custon componentes
+    implementation 'com.github.pinball83:masked-edittext:1.0.3'
+    implementation 'cn.pedant.sweetalert:library:1.3'
+    implementation 'com.vicmikhailau:MaskedEditText:2.0.3'
+
+    //Swipe recycler layout
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    //Camera
+    implementation 'io.fotoapparat.fotoapparat:library:2.2.0'
+
+    //Gesture Views
+    implementation 'com.alexvasilkov:gesture-views:2.5.2'
+
+    //Exo Player
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.1'
+
+    //AltBeacon
+    implementation 'org.altbeacon:android-beacon-library:2.12'
+
+    //ExpandableRecyclerView
+    implementation 'com.thoughtbot:expandablerecyclerview:1.0'
+
+
+    //ScratchView
+    implementation 'com.github.cooltechworks:ScratchView:v1.1'
+    implementation 'dyanamitechetan.vusikview:vusikview:1.1'
+
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.6.+'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
+
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+}
+apply plugin: 'com.google.gms.google-services'

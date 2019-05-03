@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnBlock"
+        android:layout_toStartOf="@+id/btnBlock"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="50dp"
+        android:text="E-mail"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:paddingLeft="16dp"
+        android:paddingTop="60dp"
+        android:text="Cargo"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_alpha_20" />
+
+    <ImageButton
+        android:id="@+id/btnBlock"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_block_talk"
+        android:tint="@color/dark_gray" />
+
+    <Button
+        android:id="@+id/btnTitle"
+        style="@style/AppTheme.TextView.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/btnBlock"
+        android:background="?attr/selectableItemBackground"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:padding="16dp"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvTotalMessages"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignEnd="@+id/btnTitle"
+        android:layout_alignRight="@+id/ivChat"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_circle_blue"
+        android:paddingTop="3dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
