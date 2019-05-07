@@ -37,6 +37,19 @@
                 android:src="@drawable/ic_menu"
                 android:visibility="visible" />
 
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ivMenu"
+                android:src="@drawable/ic_shopping_cart_white_50dp"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/title"
                 style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
@@ -44,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/ivChat"
-                android:layout_toRightOf="@+id/ivMenu"
+                android:layout_toRightOf="@+id/ivCart"
                 android:ellipsize="end"
                 android:lines="1" />
 

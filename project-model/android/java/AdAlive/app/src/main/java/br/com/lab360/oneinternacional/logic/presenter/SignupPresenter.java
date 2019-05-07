@@ -51,7 +51,8 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
         loadLayout();
     }
 
-    public void attemptToSignUp(String fullName, String email, String confirmEmail, String password, String confirmPassword, String mCurrentPhotoPath, String companyName) {
+    public void attemptToSignUp(String fullName, String email, String confirmEmail, String password, String confirmPassword,
+                                String mCurrentPhotoPath, String companyName, String cpf, String cnpj) {
         boolean isValid = true;
 
         if (!mView.isOnline()) {
@@ -75,7 +76,7 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
         }
 
         String photoBase64 = getPhotoEncoded(mCurrentPhotoPath);
-        User user = User.createUserForRegistration(fullName, email, password, facebookToken, photoBase64, companyName);
+        User user = User.createUserForRegistrationOneInternacional(fullName, email, password, cpf, cnpj, facebookToken, photoBase64);
 
         ArrayList<Integer> validation = user.validateSignup();
         if (!performValidation(validation) || !isValid) {

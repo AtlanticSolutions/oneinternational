@@ -88,6 +88,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
     //region Binds
     @BindView(R.id.containerProgressBar)    protected LinearLayout containerProgressBar;
     @BindView(R.id.edtCpf)                  protected EditText edtCpf;
+    @BindView(R.id.edtCnpj)                  protected EditText edtCnpj;
     @BindView(R.id.edtRg)                   protected EditText edtRg;
     @BindView(R.id.edtName)                 protected EditText edtNome;
     @BindView(R.id.edtDataNasc)             protected EditText edtDataNasc;
@@ -587,6 +588,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         User user = new User();
         user.setId(UserUtils.loadUser(this).getId());
         user.setCpf(edtCpf.getText().toString().replaceAll("[^\\d]",""));
+        user.setCnpj(edtCnpj.getText().toString().replaceAll("[^\\d]",""));
         user.setFirstName(edtNome.getText().toString());
         user.setRg(edtRg.getText().toString().replaceAll("[^\\d]",""));
         user.setBirthDate(edtDataNasc.getText().toString());
@@ -617,12 +619,6 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
             user.setGender(0);
         }
 
-        if (spinnerSexo.getSelectedItem().toString().equalsIgnoreCase("Feminino")) {
-            user.setGender(1);
-        } else if (spinnerSexo.getSelectedItem().toString().equalsIgnoreCase("Masculino")) {
-            user.setGender(0);
-        }
-
         return user;
     }
 
@@ -633,6 +629,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
             return;
 
         edtCpf.setText(user.getCpf());
+        edtCnpj.setText(user.getCnpj());
         edtRg.setText(user.getRg());
         edtNome.setText(user.getFirstName());
         edtDataNasc.setText(user.getBirthDate());
@@ -684,11 +681,8 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
 
         if (Integer.valueOf(user.getGender().toString()) == 0) {
             spinnerSexo.setSelection(2);
-        }
-        else if (Integer.valueOf(user.getGender().toString()) == 1) {
+        }else if (Integer.valueOf(user.getGender().toString()) == 1) {
             spinnerSexo.setSelection(1);
-        }else{
-
         }
     }
 

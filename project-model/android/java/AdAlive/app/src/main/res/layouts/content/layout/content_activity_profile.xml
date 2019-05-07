@@ -66,6 +66,20 @@
                         android:textColor="@color/black"
                         app:mask="###.###.###-##" />
 
+                    <com.vicmikhailau.maskededittext.MaskedEditText
+                        android:id="@+id/edtCnpj"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:focusable="true"
+                        android:hint="@string/hint_cnpj"
+                        android:inputType="number"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        app:mask="##.###.###/####-##" />
+
                     <EditText
                         android:id="@+id/edtName"
                         style="@style/AppTheme.EditText.Base"

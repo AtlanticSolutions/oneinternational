@@ -84,6 +84,7 @@ public class AdaliveConstants {
     public static final String COUNTRY = "country";
     public static final String SECTOR_ID = "sector_id";
     public static final String CPF = "cpf";
+    public static final String CNPJ = "cnpj";
     public static final String RG = "rg";
     public static final String BIRTHDATE = "birthdate";
     public static final String GENDER = "gender";

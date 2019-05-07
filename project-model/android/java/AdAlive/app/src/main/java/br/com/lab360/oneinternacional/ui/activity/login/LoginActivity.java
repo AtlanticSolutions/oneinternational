@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -109,6 +110,8 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
 
     private CallbackManager callbackManager;
     private static final int RC_SIGN_IN = 007;
+
+    public EditText email;
 
     //region Android Lifecycle
     @Override
@@ -480,14 +483,19 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
         final View view = getLayoutInflater().inflate(R.layout.dialog_reset_password, null);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setView(view)
+                .setCancelable(false)
                 .setTitle(getString(R.string.SCREEN_TITLE_RESET_PASSWORD))
                 .setMessage(getString(R.string.ALERT_MESSAGE_FORGOT_PASSWORD))
                 .setPositiveButton(getString(R.string.ALERT_OPTION_RESET_PWD), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        EditText email = ((EditText) view.findViewById(R.id.etEmail));
-                        mPresenter.attemptToResetPassword(email.getText().toString());
-                        dialog.dismiss();
+                        email = ((EditText) view.findViewById(R.id.etEmail));
+                        if(isValidEmail(email.getText().toString())) {
+                            mPresenter.attemptToResetPassword(email.getText().toString());
+                            dialog.dismiss();
+                        }else{
+                            showErrorMessage("Digite um e-mail válido");
+                        }
                     }
                 })
                 .setNegativeButton(getString(R.string.ALERT_OPTION_CANCEL), new DialogInterface.OnClickListener() {
@@ -495,8 +503,12 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
                     public void onClick(DialogInterface dialog, int i) {
                         dialog.dismiss();
                     }
-                }).create();
-        dialog.show();
+                }).show();
+
+    }
+
+    public final static boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
     @Override

@@ -282,7 +282,8 @@ public class LoginPresenter implements IBasePresenter, OnLoginFinishedListener, 
     @Override
     public void onForgotPassError(String error) {
         mView.hideProgress();
-        mView.showToastMessage(error);
+        mView.hideKeyboard();
+        mView.showErrorMessage(error);
     }
 
     @Override

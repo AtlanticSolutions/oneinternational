@@ -42,6 +42,7 @@ import br.com.lab360.oneinternacional.logic.interactor.MenuInteractor;
 import br.com.lab360.oneinternacional.logic.listeners.Chat.OnChatRequestListener;
 import br.com.lab360.oneinternacional.logic.listeners.OnUrlLoadedListener;
 import br.com.lab360.oneinternacional.logic.model.pojo.Url;
+import br.com.lab360.oneinternacional.logic.model.pojo.menu.AppMenu;
 import br.com.lab360.oneinternacional.logic.model.pojo.user.User;
 import br.com.lab360.oneinternacional.logic.model.pojo.chat.ChatBaseResponse;
 import br.com.lab360.oneinternacional.logic.model.pojo.menu.MenuItem;
@@ -127,6 +128,8 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
     protected ImageView ivSearch;
     @BindView(R.id.ivDownload)
     protected ImageView ivDownload;
+    @BindView(R.id.ivCart)
+    protected ImageView ivCart;
     @BindView(R.id.txtEdit)
     protected TextView txtEdit;
     @BindView(R.id.rvMenu)
@@ -153,6 +156,7 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
     private boolean isReadMockedMenu;
 
     public String title;
+    public String urlLojaVirtual, menuName;
 
     //region Lifecycle
     @Override
@@ -234,7 +238,16 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
             if(BuildConfig.APP_ID.equals("1000012")){
                 menuItems.addAll(createMockManagerApplicationItem());
             }
+
+            for(MenuItem menuItem : appMenu.getAppMenu().getMenuItems()) {
+                if(menuItem.getName().equals("Loja Virtual")){
+                    urlLojaVirtual = menuItem.getUrl();
+                    menuName = menuItem.getName();
+                }
+            }
+
         }
+
         return menuItems;
     }
 
@@ -456,6 +469,13 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
     protected void onIvNotificationTouched() {
         Intent intent = new Intent(this, NotificationActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.ivCart)
+    protected void onIvCartTouched() {
+        showProgress();
+        title = menuName;
+        menuInteractor.getUrl(urlLojaVirtual.substring(urlLojaVirtual.length() - 2), this, getUserToken());
     }
 
     //endregion

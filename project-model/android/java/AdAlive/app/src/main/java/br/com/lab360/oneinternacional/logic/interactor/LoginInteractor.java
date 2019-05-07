@@ -129,7 +129,7 @@ public class LoginInteractor extends BaseInteractor {
 
                     @Override
                     public void onError(Throwable e) {
-                        listener.onForgotPassError(AdaliveApplication.getInstance().getString(R.string.ERROR_ALERT_MESSAGE_NETWORK_REQUEST));
+                        listener.onForgotPassError(e.getMessage());
 
                     }
 

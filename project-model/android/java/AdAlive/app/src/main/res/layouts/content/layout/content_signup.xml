@@ -30,7 +30,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                style="@style/TextLabel"
+                style="@style/TextLabelWhite"
                 android:text="@string/PLACEHOLDER_FULLNAME"
                 android:layout_height="wrap_content" />
 
@@ -51,7 +51,51 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                style="@style/TextLabel"
+                style="@style/TextLabelWhite"
+                android:text="@string/PLACEHOLDER_CPF"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_menu_documents" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/etCpf"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_CPF"
+                    android:inputType="textCapWords"
+                    app:mask="###.###.###-##" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabelWhite"
+                android:text="@string/PLACEHOLDER_CNPJ"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
+
+                <ImageView
+                    style="@style/AppTheme.ImageViewField"
+                    android:src="@drawable/ic_menu_documents" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/etCnpj"
+                    style="@style/AppTheme.EditText.Base"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PLACEHOLDER_CNPJ"
+                    app:mask="##.###.###/####-##"
+                    android:inputType="textCapWords" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/TextLabelWhite"
                 android:text="@string/PLACEHOLDER_EMAIL"
                 android:layout_height="wrap_content" />
 
@@ -75,7 +119,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                style="@style/TextLabel"
+                style="@style/TextLabelWhite"
                 android:text="@string/PLACEHOLDER_PASSWORD"
                 android:layout_height="wrap_content" />
 
@@ -100,7 +144,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                style="@style/TextLabel"
+                style="@style/TextLabelWhite"
                 android:text="@string/PLACEHOLDER_CONFIRM_PASSWORD"
                 android:layout_height="wrap_content" />
 
@@ -125,7 +169,7 @@
             <TextView
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                style="@style/TextLabel"
+                style="@style/TextLabelWhite"
                 android:text="@string/PLACEHOLDER_COMPANY"
                 android:layout_height="wrap_content" />
 

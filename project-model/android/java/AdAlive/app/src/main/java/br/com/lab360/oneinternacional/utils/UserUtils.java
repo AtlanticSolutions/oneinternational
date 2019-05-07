@@ -46,7 +46,7 @@ public abstract class UserUtils {
         editor.putString(AdaliveConstants.DDD_PHONE, user.getDddPhone());
         editor.putString(AdaliveConstants.PHONE, user.getPhone());
         editor.putString(AdaliveConstants.DDD_CELL_PHONE, user.getDddCellPhone());
-        editor.putString(AdaliveConstants.CELL_PHONE, user.getPhone());
+        editor.putString(AdaliveConstants.CELL_PHONE, user.getCellPhone());
         editor.putString(AdaliveConstants.ROLE, user.getJobRoleID());
         editor.putString(AdaliveConstants.COMPANY_NAME, user.getCompanyName());
         editor.putString(AdaliveConstants.ADDRESS, user.getAddress());
@@ -59,6 +59,7 @@ public abstract class UserUtils {
         editor.putString(AdaliveConstants.COUNTRY, user.getCountry());
         editor.putInt(AdaliveConstants.SECTOR_ID, user.getSectorId());
         editor.putString(AdaliveConstants.CPF, user.getCpf());
+        editor.putString(AdaliveConstants.CNPJ, user.getCnpj());
         editor.putString(AdaliveConstants.RG, user.getRg());
         editor.putString(AdaliveConstants.BIRTHDATE, user.getBirthDate());
         editor.putString(AdaliveConstants.INTEREST_LIST, new Gson().toJson(user.getInterestArea()));
@@ -127,6 +128,7 @@ public abstract class UserUtils {
         user.setCountry(preferences.getString(AdaliveConstants.COUNTRY, ""));
         user.setSectorId(preferences.getInt(AdaliveConstants.SECTOR_ID, 0));
         user.setCpf(preferences.getString(AdaliveConstants.CPF, ""));
+        user.setCnpj(preferences.getString(AdaliveConstants.CNPJ, ""));
         user.setRg(preferences.getString(AdaliveConstants.RG, ""));
         user.setBirthDate(preferences.getString(AdaliveConstants.BIRTHDATE, ""));
         user.setGender(preferences.getInt(AdaliveConstants.GENDER, 99));

@@ -80,6 +80,8 @@
     <string name="PLACEHOLDER_COMPLEMENT">Complemento</string>
     <string name="PLACEHOLDER_NEIGHBORHOOD">Bairro</string>
     <string name="PLACEHOLDER_CITY">Cidade</string>
+    <string name="PLACEHOLDER_CPF">CPF</string>
+    <string name="PLACEHOLDER_CNPJ">CNPJ</string>
     <string name="PLACEHOLDER_REGION">Estado</string>
     <string name="PLACEHOLDER_ROLE">Posição</string>
     <string name="PLACEHOLDER_PHONE">Telefone</string>
@@ -424,6 +426,7 @@
 
     <!-- Screen Profile-->
     <string name="hint_cpf">CPF*</string>
+    <string name="hint_cnpj">CNPJ</string>
     <string name="hint_cpf_no_required">CPF</string>
     <string name="hint_rg">RG*</string>
     <string name="hint_name">Nome*</string>

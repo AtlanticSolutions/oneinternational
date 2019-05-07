@@ -356,7 +356,12 @@ public class BaseActivity extends MarshmallowSupportActivity implements Thread.U
     }
 
     @Override
-    public void showSnackMessage(String message) {}
+    public void showSnackMessage(String message) {
+        Snackbar snackbar = Snackbar.make(findViewById(R.id.coordinator_layout), message, Snackbar.LENGTH_LONG);
+        TextView txtMessage = (TextView) snackbar.getView().findViewById(com.google.android.material.R.id.snackbar_text);
+        txtMessage.setTextColor(ContextCompat.getColor(this, R.color.white));
+        snackbar.show();
+    }
 
     @Override
     public void showNoConnectionSnackMessage() {

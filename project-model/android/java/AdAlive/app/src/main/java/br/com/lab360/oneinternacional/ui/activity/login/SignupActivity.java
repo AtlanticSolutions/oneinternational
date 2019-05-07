@@ -69,6 +69,10 @@ public class SignupActivity extends BaseActivity implements ISignupView {
     protected EditText etPassword;
     @BindView(R.id.etConfirmPassword)
     protected EditText etConfirmPassword;
+    @BindView(R.id.etCpf)
+    protected EditText etCpf;
+    @BindView(R.id.etCnpj)
+    protected EditText etCnpj;
     @BindView(R.id.etCompany)
     protected EditText etCompany;
     @BindView(R.id.btnSignUp)
@@ -417,6 +421,9 @@ public class SignupActivity extends BaseActivity implements ISignupView {
                 String name = etFullName.getText().toString().trim();
                 String password = etPassword.getText().toString();
                 String confirmPassword = etConfirmPassword.getText().toString();
+                String cpf = etCpf.getText().toString();
+                String cnpj = etCnpj.getText().toString();
+
                 //String companyName = etCompany.getText().toString();
 
 
@@ -427,7 +434,9 @@ public class SignupActivity extends BaseActivity implements ISignupView {
                         password,
                         confirmPassword,
                         mCurrentPhotoPath,
-                        "");
+                        "",
+                        cpf,
+                        cnpj);
                 break;
         }
     }

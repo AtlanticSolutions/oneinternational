@@ -84,6 +84,9 @@ public class User implements Parcelable {
     @SerializedName("cpf")
     private String cpf;
 
+    @SerializedName("cnpj")
+    private String cnpj;
+
     @SerializedName("rg")
     private String rg;
 
@@ -131,6 +134,10 @@ public class User implements Parcelable {
 
     public static User createUserForRegistration(String firstName, String email, String password, String facebookToken, String photoBase64, String companyName) {
         return new User(facebookToken, firstName, null, companyName, 0, photoBase64, null, null, email, null, null, null, null, null, null, password, 0);
+    }
+
+    public static User createUserForRegistrationOneInternacional(String firstName, String email, String password, String cpf, String cnpj, String facebookToken, String photoBase64) {
+        return new User(facebookToken, firstName, cpf, cnpj, 0, photoBase64, email, password, 0);
     }
 
     public static User createUserToUpdateProfile(int id, String firstName, String companyName, String state, String city, String role, int sectorId, String profileImage, ArrayList<Integer> interestArea, String email, String newPassword) {
@@ -184,6 +191,18 @@ public class User implements Parcelable {
         this.zipcode = zipcode;
         this.state = state;
         this.country = country;
+        this.password = password;
+        this.id = id;
+    }
+
+    private User(String accessToken, String firstName, String cpf, String cnpj, int sectorId, String profileImage, String email, String password, int id) {
+        this.accessToken = accessToken;
+        this.firstName = firstName;
+        this.cpf = cpf;
+        this.cnpj = cnpj;
+        this.sectorId = sectorId;
+        this.profileImage = profileImage;
+        this.email = email;
         this.password = password;
         this.id = id;
     }
@@ -516,6 +535,14 @@ public class User implements Parcelable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getRg() {
