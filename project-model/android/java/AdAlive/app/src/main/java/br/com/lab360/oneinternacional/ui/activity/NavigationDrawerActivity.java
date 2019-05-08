@@ -156,7 +156,7 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
     private boolean isReadMockedMenu;
 
     public String title;
-    public String urlLojaVirtual, menuName;
+    public String urlCarrinho, menuName;
 
     //region Lifecycle
     @Override
@@ -240,8 +240,8 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
             }
 
             for(MenuItem menuItem : appMenu.getAppMenu().getMenuItems()) {
-                if(menuItem.getName().equals("Loja Virtual")){
-                    urlLojaVirtual = menuItem.getUrl();
+                if(menuItem.getName().equals("Carrinho")){
+                    urlCarrinho = menuItem.getUrl();
                     menuName = menuItem.getName();
                 }
             }
@@ -475,7 +475,7 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
     protected void onIvCartTouched() {
         showProgress();
         title = menuName;
-        menuInteractor.getUrl(urlLojaVirtual.substring(urlLojaVirtual.length() - 2), this, getUserToken());
+        menuInteractor.getUrl(urlCarrinho.substring(urlCarrinho.length() - 2), this, getUserToken());
     }
 
     //endregion
@@ -546,6 +546,9 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
             txtEdit.setVisibility(View.GONE);
             ivSearch.setVisibility(View.GONE);
             ivDownload.setVisibility(View.GONE);
+            if(title.equals("Loja Virtual")){
+                ivCart.setVisibility(View.VISIBLE);
+            }
         }else {
             ivMenu.setVisibility(View.GONE);
             ivChat.setVisibility(View.GONE);
