@@ -94,7 +94,7 @@ public class User implements Parcelable {
     private String birthDate;
 
     @SerializedName("gender")
-    private Object gender;
+    private int gender;
 
     @SerializedName("profile_image")
     private String profileImageURL;
@@ -561,11 +561,11 @@ public class User implements Parcelable {
         this.birthDate = birthDate;
     }
 
-    public Object getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(Object gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

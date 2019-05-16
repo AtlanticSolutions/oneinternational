@@ -79,15 +79,8 @@ public abstract class UserUtils {
             e.printStackTrace();
         }
 
-        if(user.getGender() instanceof Integer){
-            editor.putInt(AdaliveConstants.GENDER, Integer.valueOf(user.getGender().toString()));
-        }else if(user.getGender() instanceof String){
-            if(user.getGender().toString().equals("male")){
-                editor.putInt(AdaliveConstants.GENDER, 0);
-            }else if (user.getGender().toString().equals("female")){
-                editor.putInt(AdaliveConstants.GENDER, 1);
-            }
-        }
+        editor.putInt(AdaliveConstants.GENDER, user.getGender());
+
 
         if(user.getProfileImageURL() != null && !user.getProfileImageURL().equals("")){
             editor.putString(AdaliveConstants.BASE64_PROFILE_IMAGE, user.getProfileImageURL());
@@ -307,7 +300,9 @@ public abstract class UserUtils {
     public static List<RoleProfileObject> getRoles(Context context) {
         Gson gson = new Gson();
         SharedPreferences preferences = context.getSharedPreferences(AdaliveConstants.SHARED_PREFS, Context.MODE_PRIVATE);
-        return Arrays.asList(gson.fromJson(preferences.getString(AdaliveConstants.ROLES, null), RoleProfileObject[].class));
+        String preferencesString = preferences.getString(AdaliveConstants.ROLES, "[]");
+        RoleProfileObject[] roleProfileObjects = gson.fromJson(preferencesString, RoleProfileObject[].class);
+        return Arrays.asList(roleProfileObjects);
     }
 
     public static void saveLogoUrl(Context context, String logoUrl) {

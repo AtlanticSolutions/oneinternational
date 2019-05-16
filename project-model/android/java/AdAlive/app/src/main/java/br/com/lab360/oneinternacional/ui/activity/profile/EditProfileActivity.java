@@ -565,7 +565,14 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
             }*/
 
             /* Proceed */
-            attemptToProceed();
+
+            if (edtTelefone.getEditableText().toString().equalsIgnoreCase("") &&
+                    edtCelular.getEditableText().toString().equalsIgnoreCase("")){
+                infoDialog("Atenção", "Ao menos um dos telefones deve ser preenchido", null);
+            }else {
+
+                attemptToProceed();
+            }
 
         } else {
 
@@ -679,9 +686,9 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
 
         }
 
-        if (Integer.valueOf(user.getGender().toString()) == 0) {
+        if (user.getGender() == 0) {
             spinnerSexo.setSelection(2);
-        }else if (Integer.valueOf(user.getGender().toString()) == 1) {
+        }else if (user.getGender() == 1) {
             spinnerSexo.setSelection(1);
         }
     }
@@ -729,10 +736,10 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         edtToValidate.put(FieldsValidator.FieldType.RG,edtRg);
         edtToValidate.put(FieldsValidator.FieldType.NAME,edtNome);
         edtToValidate.put(FieldsValidator.FieldType.BORN,edtDataNasc);
-        edtToValidate.put(FieldsValidator.FieldType.DDD_TEL,edtDddTel);
-        edtToValidate.put(FieldsValidator.FieldType.TELEPHONE,edtTelefone);
-        edtToValidate.put(FieldsValidator.FieldType.DDD_CELL,edtDddCelular);
-        edtToValidate.put(FieldsValidator.FieldType.CELULAR,edtCelular);
+        //edtToValidate.put(FieldsValidator.FieldType.DDD_TEL,edtDddTel);
+        //edtToValidate.put(FieldsValidator.FieldType.TELEPHONE,edtTelefone);
+        //edtToValidate.put(FieldsValidator.FieldType.DDD_CELL,edtDddCelular);
+        //edtToValidate.put(FieldsValidator.FieldType.CELULAR,edtCelular);
         edtToValidate.put(FieldsValidator.FieldType.ZONE,edtCep);
         edtToValidate.put(FieldsValidator.FieldType.ADDRESS,edtEndereco);
         edtToValidate.put(FieldsValidator.FieldType.NUMBER,edtNumero);

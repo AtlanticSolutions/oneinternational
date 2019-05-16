@@ -7,6 +7,9 @@ import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JavascriptInterface;
+import android.webkit.JsResult;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -95,7 +98,7 @@ public class WebviewActivity extends NavigationDrawerActivity{
 
         wvNavigation.loadUrl(urlWeb);
         wvNavigation.setWebViewClient(new MyWebClient());
-
+        
         initToolbar();
         configStatusBarColor();
     }
@@ -136,6 +139,15 @@ public class WebviewActivity extends NavigationDrawerActivity{
         ScreenUtils.updateStatusBarcolor(this, topColor);
     }
 
+    final class MyWebChromeClient extends WebChromeClient {
+        @Override
+        public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+            Log.d("LogTag", message);
+            result.confirm();
+            return true;
+        }
+    }
+
 
     private class MyWebClient extends WebViewClient {
 
@@ -164,6 +176,8 @@ public class WebviewActivity extends NavigationDrawerActivity{
                     "****Error: " + description + " code: " + errorCode);
 
         }
+
+
     }
 
 

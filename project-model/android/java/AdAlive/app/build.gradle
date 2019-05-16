@@ -32,7 +32,7 @@ android {
             versionName '1.0.0'
             buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.prefs"'
             buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.fileprovider"'
-            buildConfigField 'String', 'DEFAULT_ROLE', '"ADMIN"'
+            buildConfigField 'String', 'DEFAULT_ROLE', '"DEFAULT"'
             dimension "tier"
 
             ndk {
