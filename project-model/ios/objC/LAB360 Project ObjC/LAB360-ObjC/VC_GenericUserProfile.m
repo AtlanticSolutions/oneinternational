@@ -18,6 +18,7 @@
 //
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *cpfTextField;
+@property (nonatomic, weak) IBOutlet UITextField *cnpjTextField;
 @property (nonatomic, weak) IBOutlet UITextField *rgTextField;
 @property (nonatomic, weak) IBOutlet UITextField *birthdateTextField;
 @property (nonatomic, weak) IBOutlet UITextField *genderTextField;
@@ -64,7 +65,7 @@
 #pragma mark - • SYNTESIZES
 
 @synthesize imgBackground, btnNavPhoto, btnChangePassword, btnSave, activeTextField;
-@synthesize nameTextField, cpfTextField, rgTextField, birthdateTextField, genderTextField, dddTextField, phoneTextField, dddMobileTextField, mobilePhoneTextField, emailTextField, zipCodeTextField, addressTextField, addressNumberTextField,complementTextField, districtTextField, cityTextField,stateTextField;
+@synthesize nameTextField, cnpjTextField,cpfTextField, rgTextField, birthdateTextField, genderTextField, dddTextField, phoneTextField, dddMobileTextField, mobilePhoneTextField, emailTextField, zipCodeTextField, addressTextField, addressNumberTextField,complementTextField, districtTextField, cityTextField,stateTextField;
 @synthesize userModificado, userEstatico, selectedPhoto, selectedItem, isFirstLoad, isState, photoChanged, lastTagSelected;
 
 #pragma mark - • CLASS METHODS
@@ -156,8 +157,9 @@
 
     //Preenchendo dados do usuário:
 
-    if ([nameTextField.text         isEqualToString:@""]
+        if ([nameTextField.text         isEqualToString:@""]
         || [cpfTextField.text           isEqualToString:@""]
+        || [cnpjTextField.text          isEqualToString:@""]
         || [rgTextField.text            isEqualToString:@""]
         || [birthdateTextField.text     isEqualToString:@""]
         || [genderTextField.text        isEqualToString:@""]
@@ -327,13 +329,19 @@
     
     activeTextField = textField;
     
-    if ((textField == cpfTextField) || (textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
+    if ((textField == cpfTextField) || (textField == cnpjTextField)||(textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
         
         NSString *mask = @"";
         
+        //99.999.999/9999-99"
+        
         if (textField == self.cpfTextField) {
             mask = @"###.###.###-##";
-        } else if (textField == self.zipCodeTextField) {
+        }
+        else if (textField == self.cnpjTextField) {
+            mask = @"##.###-###/####-##";
+        }
+        else if (textField == self.zipCodeTextField) {
             mask = @"##.###-###";
         } else if (textField == self.dddTextField) {
             mask = @"##";
@@ -403,6 +411,9 @@
     }
     else if (textField == self.cpfTextField) {
         self.userModificado.CPF = self.cpfTextField.text;
+    }
+    else if (textField == self.cnpjTextField) {
+        self.userModificado.CNPJ = self.cnpjTextField.text;
     }
     else if (textField == self.rgTextField) {
         self.userModificado.RG = self.rgTextField.text;
@@ -492,6 +503,7 @@
     //TextFields & Labels
     nameTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_NAME", @"")];
     cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CPF", @"")];
+    cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
     rgTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_RG", @"")];
     birthdateTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_BIRTHDATE", @"")];
     dddTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_DDD", @"")];
@@ -510,6 +522,7 @@
     
     [nameTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [cpfTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
+    [cnpjTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [rgTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [birthdateTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [dddTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
@@ -528,6 +541,7 @@
     
     nameTextField.delegate = self;
     cpfTextField.delegate = self;
+    cnpjTextField.delegate = self;
     rgTextField.delegate = self;
     genderTextField.delegate = self;
     birthdateTextField.delegate = self;
@@ -547,6 +561,7 @@
     nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     cpfTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     rgTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    cnpjTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     emailTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     phoneTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     mobilePhoneTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -571,6 +586,7 @@
     
     cpfTextField.inputAccessoryView = [self createAcessoryViewWithTarget:cpfTextField andSelector:@selector(resignFirstResponder)];
     rgTextField.inputAccessoryView = [self createAcessoryViewWithTarget:rgTextField andSelector:@selector(resignFirstResponder)];
+      cnpjTextField.inputAccessoryView = [self createAcessoryViewWithTarget:cnpjTextField andSelector:@selector(resignFirstResponder)];
     birthdateTextField.inputAccessoryView = [self createAcessoryViewWithTarget:birthdateTextField andSelector:@selector(resignFirstResponder)];
     dddTextField.inputAccessoryView = [self createAcessoryViewWithTarget:dddTextField andSelector:@selector(resignFirstResponder)];
     dddMobileTextField.inputAccessoryView = [self createAcessoryViewWithTarget:dddMobileTextField andSelector:@selector(resignFirstResponder)];
@@ -659,10 +675,16 @@
 {
     //CPF
     self.cpfTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.CPF usingMask:@"###.###.###-##"];
+    //CNPJ
+    //99.999.999/9999-99"
+    self.cnpjTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.CPF usingMask:@"##.###.###-###-##"];
+    //Nome
     //Nome
     self.nameTextField.text = userData.name;
     //RG
     self.rgTextField.text = userData.RG;
+    //CNPJ
+    self.cnpjTextField.text = userData.CNPJ;
     //Data Nascimento
     self.birthdateTextField.text = [ToolBox dateHelper_StringFromDate:userData.birthdate withFormat:TOOLBOX_DATA_BARRA_CURTA_NORMAL];
     //Sexo
@@ -736,6 +758,8 @@
     self.userModificado.name = self.nameTextField.text;
     //RG
     self.userModificado.RG = self.rgTextField.text;
+    //CNPJ
+    self.userModificado.CNPJ = self.cnpjTextField.text;
     //Data Nascimento
     self.userModificado.birthdate = [ToolBox dateHelper_DateFromString:self.birthdateTextField.text withFormat:TOOLBOX_DATA_BARRA_CURTA_NORMAL];
     //Sexo

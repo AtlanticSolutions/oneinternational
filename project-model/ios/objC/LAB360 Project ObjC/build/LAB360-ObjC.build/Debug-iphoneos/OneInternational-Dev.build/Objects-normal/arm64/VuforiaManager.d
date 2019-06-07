@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/VuforiaManager.mm \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/VuforiaManager.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/VuforiaObjects.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/VuforiaEAGLView.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/UIGLViewProtocol.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Vuforia.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/System.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Vuforia_iOS.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/TrackerManager.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Tracker.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/NonCopyable.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Type.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/ObjectTracker.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/List.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Tool.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Matrices.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Vectors.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Renderer.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/State.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Frame.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/CameraCalibration.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Illumination.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/CameraDevice.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/VideoMode.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/CameraField.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/VideoBackgroundConfig.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/UpdateCallback.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/DataSet.h \
+  /Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/Frameworks/Vuforia.framework/Headers/Trackable.h

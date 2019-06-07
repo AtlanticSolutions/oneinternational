@@ -177,6 +177,8 @@
         
         //Imagem Ícone Padrão:
         sm.itemInternalCode = [sm codeForString:sm.itemID];
+        
+     
         //sm.icon = [sm defaultImageForCode:sm.itemInternalCode];
     }
     

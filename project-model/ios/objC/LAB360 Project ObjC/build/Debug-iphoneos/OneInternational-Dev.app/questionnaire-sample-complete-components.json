@@ -1,0 +1,1364 @@
+{
+    "custom_survey": {    
+		"id" : 0,
+		"name" : "📗 Catálogo de Componentes",
+		"presentation" : "Apresentação de todos os tipos de questões suportadas pelo questionário. Este questionário é um exemplo fixo e pode ser testado ilimitadamente por qualquer usuário.\n\nModo FULLPAGE.",
+		"url_banner" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/lab360_banner_questionnaire_components.jpg",
+		"link" : "http://www.lab360.com.br",
+		"link_message" : "Toque para visitar o site!",
+		"seconds_to_finish" : 0,
+		"accepts_interruption" : true,
+		"form_type" : 1,
+        "consumption_type" : 1,
+        "shareable_code" : "{\"APPID\" : \"1000012\", \"QID\" : \"0\"}",
+		"required_media" : true,
+        "available_from_date" : "2019-03-28 08:00:00 -0300",
+        "valid_until_date" : "2019-04-20 00:00:00 -0300",
+        "version" : "3.0",
+        "string_set" : {
+            "msg_incompletequestions" : "Pelo menos umas das questões é obrigatória e não foi preenchida.\nPor favor, revise seu questionário antes de submetê-lo.",
+            "msg_futuredate" : "Este questionário estará disponível para preenchimento à partir de <DATE>.",
+            "msg_passeddate" : "Este questionário não está mais disponível para preenchimento (expirou dia <DATE>).",
+            "msg_incompatibleversion" : "A versão deste questionário não é suportada por esta versão do aplicativo.\nPor favor, verifique se existem atualizações pendentes.",
+            "msg_unanswerable" : "Este questionário não está disponível para ser respondido no momento.",
+            "msg_nogroups" : "Este questionário não possui nenhum grupo atribuído e não pode ser respondido no momento.",
+            "msg_interruptedbyuser" : "Você pode recomeçar este questionário a qualquer momento.\n\nDeseja sair agora?",
+            "msg_withdrawalbyuser" : "Este questionário não aceita interrupções/cancelamentos. Isto significa que se você sair agora a mesma não estará mais disponível para preenchimento futuro.\n\nTem certeza que deseja sair?",
+            "msg_timeoutexit" : "O tempo limite para este questionário já foi atingido.\nVocê ainda pode ver as questões mas não será mais possível submeter suas respostas.\n\nDeseja sair agora?",
+            "msg_timeoutfinish" : "O tempo limite para este questionário foi atingido e não é mais possível submeter suas respostas.\n\nAgradecemos sua participação!",
+            "msg_successfinish" : "Suas respostas foram submetidas com sucesso.\nObrigado por responder este questionário!",
+            "msg_invalidgroup" : "Este questionário possui pelo menos um grupo inválido e não pode ser respondido no momento.",
+            "msg_questionserror" : "Este questionário possui pelo menos um grupo com questões inválidas e não pode ser respondido no momento.",
+            "msg_incompletestage" : "Pelo menos umas das questões desta etapa é obrigatória e não foi preenchida.\nPor favor, verifique."
+        },
+		"groups" : [
+			{
+				"id" : 11,
+                "order" : 1,
+				"name" : "Grupo - Alternativas",
+				"url_image" : "https://i.gifer.com/Difj.gif",
+				"header_message" : "Todo 'Questionário Personalizável' é constituído de pelo menos um grupo. Cada grupo pode ter (opcionalmente) cabeçalho, imagem de cabeçalho e rodapé.\nAs questões também podem conter imagens, assim com alguns tipos de alternativas.",
+				"footer_message" : "Esta mensagem de rodapé é opcional.",
+				"questions" : [
+					{
+						"id" : 101,
+						"text" : "1)  Single Selection\n\nApenas uma alternativa fica selecionada por vez.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 1, 
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1001,
+								"text" : "A) Opção 1 (multi-linhas)\nLinha 2...\nLinha 3...\nLinha 4...",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1002,
+								"text" : "B) Opção 2 (texto + imagem)",
+								"url_image" : "https://www.mymaldives.com.au/wp-content/uploads/sites/11/2016/12/Beach-Banner.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1003,
+								"text" : "",
+								"url_image" : "https://www.defatoonline.com.br/wp-content/uploads/2018/05/cisne.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 102,
+						"text" : "2)  Multi Selection\n\nVários itens podem ser selecionados ao mesmo tempo.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 2,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1001,
+								"text" : "a. Opção 1",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1002,
+								"text" : "b. Opção 2",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1003,
+								"text" : "c.  Opção 3",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1004,
+								"text" : "d. Opção 4",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1005,
+								"text" : "e. Opção 5",
+								"url_image" : "http://pa1.narvii.com/7052/6bd05bf39e3e99d0c82646b544492939f76f201dr1-1040-130_00.gif",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					}
+				
+				
+				]
+			},
+			{
+				"id" : 12,
+                "order" : 2,
+				"name" : "Grupo - Textuais",
+				"url_image" : "",
+				"header_message" : "",
+				"footer_message" : "",
+				"questions" : [
+					{
+						"id" : 103,
+						"text" : "3-a)  Single Line Text\n\nPara entradas textuais objectivas. Possui limitador de caracteres configurável (32 neste exemplo).\nToda questão também pode conter uma imagem para referência.",
+						"url_image" : "http://pa1.narvii.com/7087/b00fe2eab7b207c0ab95d9a1bcc89b9a49aec72cr1-1143-142_00.gif",
+						"required" : false,
+						"type" : 3,
+						"max_text_lenght" : 32,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "insira texto",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1005,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+                    {
+                        "id" : 1003,
+                        "text" : "3-b)  Single Line Text\n\nEsta versão possui validação de dados por regex.",
+                        "url_image" : "",
+                        "required" : false,
+                        "type" : 3,
+                        "max_text_lenght" : 0,
+                        "mask_text" : "",
+                        "image_max_dimension" : 0,
+                        "image_quality" : 0,
+                        "hint" : "insira seu email",
+                        "unit_identifier" : "",
+                        "max_bar_rating_message" : "",
+                        "min_bar_rating_message" : "",
+                        "decimal_precision" : 0,
+                        "decimal_left_symbol" : "",
+                        "decimal_right_symbol" : "",
+                        "regex_validator" : "^[_a-zA-Z0-9-]+([.]{1}[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+([.]{1}[a-zA-Z0-9-]+)*([.]{1}[a-zA-Z]{2,6})",
+                        "answers" : [
+                            {
+                                "id" : 1,
+                                "text" : "",
+                                "url_image" : "",
+                                "min_value" : "",
+                                "max_value" : "",
+                                "default_value" : "",
+                                "base-64_image" : ""
+                            }
+                        ],
+                        "user_answers" : []
+                    },
+					{
+						"id" : 104,
+						"text" : "4)  Multi Line Text\n\nPara respostas mais complexas. Possui limitador de caracteres configurável.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 4,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "insira texto",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1006,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 105,
+						"text" : "5)  Masked Text\n\nPermite que a entrada numérica seja específica para uma dada máscara, como Telefone, CPF, CEP, etc.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 5,
+						"max_text_lenght" : 0,
+						"mask_text" : "(##) #####-####",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "(__) _____-____",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1007,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 112,
+						"text" : "6) Numeric Entry\n\nTipo dedicado à entrada de valores numéricos, tendo a precisão decimal configurável, assim como o símbolo ('R$' neste exemplo).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 12,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "R$ 0,00 (unidade)",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 2,
+						"decimal_left_symbol" : "R$",
+						"decimal_right_symbol" : "(unidade)",
+						"answers" : [
+							{
+								"id" : 1020,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 116,
+						"text" : "7-1)  Entrada Especial\n\n[ Modelo Normal ] \nUtiliza entrada por teclado, com suporte para emojis e símbolos especiais. (será utilizado apenas em casos de não especificação).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 0,
+						"max_text_lenght" : 128,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Placeholder",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4001,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 117,
+						"text" : "7-2)  Entrada Especial\n\n[ Modelo Geolocalização ] \nPermite ao usuário selecionar um ponto no mapa.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 1,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Escolha no mapa o endereço desejado.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4002,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 118,
+						"text" : "7-3)  Entrada Especial\n\n[ Modelo QRCode ] \nAbre a camera do aparelho para que o usuário possa escanear os seguintes tipos: QRCode, AztecCode, DataMatrixCode.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 2,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Escaneie a imagem.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4003,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 119,
+						"text" : "7-4)  Entrada Especial\n\n[ Modelo Barcode ] \nAbre a camera do aparelho para que o usuário possa escanear os seguintes tipos: EAN8Code, EAN13Code, UPCECode, Code128Code.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 3,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Escaneie a imagem.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4004,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 120,
+						"text" : "7-5)  Entrada Especial\n\n[ Modelo PDF417 ] \nAbre a camera do aparelho para que o usuário possa escanear o tipo: PDF417.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 4,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Escaneie a imagem.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4005,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 121,
+						"text" : "7-6)  Entrada Especial\n\n[ Boleto ] \nAbre a camera do aparelho para que o usuário possa escanear Boletos Bancários / Convênios.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 5,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Escaneie a imagem.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4006,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 122,
+						"text" : "7-7)  Entrada Especial\n\n[ Seleção de Cor ] \nO usuário pode entrar com uma cor, através de um componente específico.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 16, 
+						"special_input_type" : 6,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Selecione uma cor da paleta.",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 0,
+						"answers" : [
+							{
+								"id" : 4007,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					}
+				
+				]
+			},
+			{
+				"id" : 13,
+                "order" : 3,
+				"name" : "Grupo - Coleções",
+				"url_image" : "",
+				"header_message" : "",
+				"footer_message" : "",
+				"questions" : [
+					{
+						"id" : 106,
+						"text" : "8)  Image Selection\n\nPermite a seleção de imagens do galeria do usuário, ou da câmera. A dimensão máxima da imagem e a qualidade são configuráveis.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 6,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 1024,
+						"image_quality" : 1.0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 5,
+						"display_columns" : 0,
+						"answers" : [
+							{
+								"id" : 8001,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 107,
+						"text" : "9)  List Options\n\nExibe uma lista de opções para o usuário, onde apenas um elemento pode ser escolhido. É uma versão compacta do modelo 'Single Selection'.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 7,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "selecione um item",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1013,
+								"text" : "Opção 1",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1014,
+								"text" : "Opção 2",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 1015,
+								"text" : "Opção 3",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 113,
+						"text" : "10)  Collection View\n\nPermite que o usuário selecione 'n' imagens da coleção, destacando-as (máx. 3 neste exemplo).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 13,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 3,
+						"display_columns" : 4,
+						"answers" : [
+							{
+								"id" : 2001,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_01.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2002,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_02.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2003,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_03.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2004,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_04.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2005,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_05.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2006,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_06.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2007,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_07.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2008,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_08.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2009,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_09.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2010,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_10.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2011,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_11.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 2012,
+								"text" : "",
+								"url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/collection_view_sample_12.jpg",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 115,
+						"text" : "11)  Itens Adicionáveis\n\nAtravés deste tipo é possível inserir <n> items na listagem. O limite máximo de itens pode ser pré-determinado assim como o tamanho máximo dos textos dos itens.\n(5 itens e 64 caracteres neste exemplo)",
+						"url_image" : "",
+						"required" : false,
+						"type" : 15, 
+						"max_text_lenght" : 64,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "Insira nome do item",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"selectable_items" : 5,
+						"answers" : [
+							{
+								"id" : 3001,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					}
+				
+				]
+			},
+			{
+				"id" : 14,
+                "order" : 4,
+				"name" : "Grupo - Rating",
+				"url_image" : "",
+				"header_message" : "Este grupo concentra os exemplos de questões com resposta de pontuação.",
+				"footer_message" : "Fim dos exemplos...",
+				"questions" : [
+					{
+						"id" : 108,
+						"text" : "12)  Star Rating\n\nPara avaliações de 1 até 5.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 8,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1016,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 109,
+						"text" : "13)  Bar Rating\n\nPara demonstração de intensidade (0 até 10).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 9,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "(msg MIN)",
+						"min_bar_rating_message" : "(msg MAX)",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1017,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "5",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 110,
+						"text" : "14)  Like Rating\n\nPermite avaliação binária, com textos variáveis.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 10,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "Não Gostei",
+						"min_bar_rating_message" : "Gostei",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1018,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 111,
+						"text" : "15)  Unit Rating\n\nCom este slider o usuário pode definir valores dentro de um range pré definido. O texto identificador de unidades é configurável ('peças' neste exemplo).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 11,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : " peças",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1019,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "1",
+								"max_value" : "100",
+								"default_value" : "50",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 114,
+						"text" : "16)  Orderly Options\n\nOrdene a importância dos itens na lista.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 14,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 3001,
+								"text" : "Saúde e Bem Estar",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 3002,
+								"text" : "Definição de Prioridades",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 3003,
+								"text" : "Conhecimento Tecnológico",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 3004,
+								"text" : "Relacionamento com Colegas de Trabalho",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 3005,
+								"text" : "Organização do Ambiente de Trabalho",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 3006,
+								"text" : "Controle sobre Processo",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 123,
+						"text" : "17-1)  Options Rating\n\nQual a capacidade interna de armazenamento ideal para o seu smartphone?.\nEste componente permite a seleção de um item num carrossel, com número variável de opções.",
+						"url_image" : "",
+						"required" : false,
+						"type" : 17,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 1701,
+								"text" : "32 GB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							},
+							{
+								"id" : 1702,
+								"text" : "64 GB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							},
+							{
+								"id" : 1703,
+								"text" : "128 GB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							},
+							{
+								"id" : 1704,
+								"text" : "256 GB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							},
+							{
+								"id" : 1705,
+								"text" : "512 GB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							},
+							{
+								"id" : 1706,
+								"text" : "1 TB",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 124,
+						"text" : "17-2)  Options Rating\n\nEscolha um item dentre as disponíveis. Cada opções tem uma nota vinculada, para observações e esclarecimentos (versão alternativa do componente).",
+						"url_image" : "",
+						"required" : false,
+						"type" : 17,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 2001,
+								"text" : "",
+								"url_image" : "https://cdn.shopify.com/s/files/1/1061/1924/products/Crab_Iphone_Emoji_JPG_large.png",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : "O caranguejo-de-água-doce, ou caranguejo-dulcícola (nome científico: Trichodactylus fluviatilis) é uma espécie de crustáceo dulcícola encontrada distribuída em rios costeiros ao longo da faixa litorânea do Brasil, desde Pernambuco ao Rio Grande do Sul."
+							},
+							{
+								"id" : 2002,
+								"text" : "",
+								"url_image" : "https://cdn.shopify.com/s/files/1/1061/1924/products/Lizard_Iphone_Emoji_JPG_large.png",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : "Os lagartos pertencem ao grupo de animais chamados répteis e têm o corpo coberto de escamas em lugar de pelos ou de penas. Existem mais de 3 mil espécies, ou tipos, de lagartos. Iguanas, camaleões, lagartixas e os lagartos da família Scincidae são alguns desses tipos."
+							},
+							{
+								"id" : 2003,
+								"text" : "",
+								"url_image" : "https://cdn.shopify.com/s/files/1/1061/1924/products/Big_Tuna_Iphone_Emoji_JPG_large.png",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : "Salmão é um peixe ósseo e de nadadeiras raiadas, da família Salmonidae, que também inclui as trutas, típicos das águas frias do norte da Eurásia e da América. Várias espécies são criadas em aquacultura, especialmente a espécie Salmo salar."
+							},
+							{
+								"id" : 2004,
+								"text" : "",
+								"url_image" : "https://cdn.shopify.com/s/files/1/1061/1924/products/Shrimp_Iphone_Emoji_JPG_large.png",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : "O termo camarão (do latim cammārus, caranguejo do mar, camarão, derivado do grego kámmaros, ou kámmoros) é a designação comum a diversos crustáceos da ordem dos decápodes, podendo ser marinhos ou de água doce."
+							},
+							{
+								"id" : 2005,
+								"text" : "",
+								"url_image" : "https://cdn.shopify.com/s/files/1/1061/1924/products/Whale_Spouting_Iphone_Emoji_JPG_large.png",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : "",
+								"note" : "A subordem Mysticeti compreende os maiores cetáceos, conhecidos popularmente por baleias ou rorquais."
+							}
+						],
+						"user_answers" : []
+					}
+					
+				]
+			},
+			{
+				"id" : 15,
+                "order" : 5,
+				"name" : "Grupo - Extra",
+				"url_image" : "",
+				"header_message" : "Casos especiais...",
+				"footer_message" : "Fim dos casos especiais...",
+				"questions" : [
+					{
+						"id" : 901,
+						"text" : "18)  Questão com conteúdo web\n\nAlém do texto, a questão pode exibir um conteúdo dinâmico.",
+						"url_image" : "",
+						"web_content_url" : "https://www.instructables.com/id/Make-your-HTML-Website-suitable-for-Mobile-Devices/",
+						"web_content_aspect_ratio" : 1.25,
+						"required" : false,
+						"type" : 3,
+						"max_text_lenght" : 64,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "https://www.instructables...",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 9001,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 902,
+						"parent_question_id" : 0,
+						"parent_answer_id" : 0,
+						"text" : "19)  Questão condicional\n\nHá quanto anos você trabalha na mesma área? (neste exemplo a descrição da alternativa variável só fica disponível quando necessário):",
+						"url_image" : "",
+						"required" : false,
+						"type" : 1,
+						"discrete_display" : false,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "",
+						"answers" : [
+							{
+								"id" : 9001,
+								"text" : "1 ano",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 9002,
+								"text" : "2 anos",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 9003,
+								"text" : "3 anos",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							},
+							{
+								"id" : 9004,
+								"text" : "Mais tempo",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+					{
+						"id" : 903,
+						"parent_question_id" : 902,
+						"parent_answer_id" : 9004,
+						"text" : "Por favor, especifique:",
+						"url_image" : "",
+						"required" : false,
+						"type" : 12,
+						"discrete_display" : true,
+						"max_text_lenght" : 0,
+						"mask_text" : "",
+						"image_max_dimension" : 0,
+						"image_quality" : 0,
+						"hint" : "(anos)",
+						"unit_identifier" : "",
+						"max_bar_rating_message" : "",
+						"min_bar_rating_message" : "",
+						"decimal_precision" : 0,
+						"decimal_left_symbol" : "",
+						"decimal_right_symbol" : "anos",
+						"answers" : [
+							{
+								"id" : 1,
+								"text" : "",
+								"url_image" : "",
+								"min_value" : "",
+								"max_value" : "",
+								"default_value" : "",
+								"base-64_image" : ""
+							}
+						],
+						"user_answers" : []
+					},
+                    {
+                        "id" : 904,
+                        "parent_question_id" : 0,
+                        "parent_answer_id" : 0,
+                        "text" : "20-A)  Questão não respondível 1.",
+                        "url_image" : "",
+                        "required" : false,
+                        "type" : 0,
+                        "discrete_display" : false,
+                        "max_text_lenght" : 0,
+                        "mask_text" : "",
+                        "image_max_dimension" : 0,
+                        "image_quality" : 0,
+                        "hint" : "(anos)",
+                        "unit_identifier" : "",
+                        "max_bar_rating_message" : "",
+                        "min_bar_rating_message" : "",
+                        "decimal_precision" : 0,
+                        "decimal_left_symbol" : "",
+                        "decimal_right_symbol" : "",
+                        "answers" : [],
+                        "user_answers" : []
+                    },
+                    {
+                        "id" : 905,
+                        "parent_question_id" : 0,
+                        "parent_answer_id" : 0,
+                        "text" : "20-B)  Questão não respondível 2 (discreta).",
+                        "url_image" : "",
+                        "required" : false,
+                        "type" : 0,
+                        "discrete_display" : true,
+                        "max_text_lenght" : 0,
+                        "mask_text" : "",
+                        "image_max_dimension" : 0,
+                        "image_quality" : 0,
+                        "hint" : "(anos)",
+                        "unit_identifier" : "",
+                        "max_bar_rating_message" : "",
+                        "min_bar_rating_message" : "",
+                        "decimal_precision" : 0,
+                        "decimal_left_symbol" : "",
+                        "decimal_right_symbol" : "",
+                        "answers" : [],
+                        "user_answers" : []
+                    },
+                    {
+                        "id" : 906,
+                        "parent_question_id" : 0,
+                        "parent_answer_id" : 0,
+                        "text" : "",
+                        "url_image" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/customsurvey/footer-animated_background.gif",
+                        "required" : false,
+                        "type" : 0,
+                        "discrete_display" : false,
+                        "max_text_lenght" : 0,
+                        "mask_text" : "",
+                        "image_max_dimension" : 0,
+                        "image_quality" : 0,
+                        "hint" : "(anos)",
+                        "unit_identifier" : "",
+                        "max_bar_rating_message" : "",
+                        "min_bar_rating_message" : "",
+                        "decimal_precision" : 0,
+                        "decimal_left_symbol" : "",
+                        "decimal_right_symbol" : "",
+                        "answers" : [],
+                        "user_answers" : []
+                    }
+				]
+			}
+		]
+	}        
+}

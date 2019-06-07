@@ -12,7 +12,9 @@
 		21DBD34920851869009E610E /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 21DBD34720851869009E610E /* Shader.vsh */; };
 		21DBD35020851F7D009E610E /* Video360VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21DBD34F20851F7D009E610E /* Video360VC.xib */; };
 		3D9FC81720977DC10049F6FA /* VC_WebAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9FC81620977DC10049F6FA /* VC_WebAbout.m */; };
-		59E869D77028EFB8618FEDB0 /* Pods_LAB360_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9D06B80648C855FD0E8BA /* Pods_LAB360_Dev.framework */; };
+		70E7EF064E10C516C04991EE /* Pods_OneInternational_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60C3FD0BF829521B09A686 /* Pods_OneInternational_Dev.framework */; };
+		9013EDD622A8659D0086794F /* icons8-shopping-cart-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 9013EDD422A8659C0086794F /* icons8-shopping-cart-24.png */; };
+		9013EDD722A8659D0086794F /* icons8-shopping-cart-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 9013EDD522A8659D0086794F /* icons8-shopping-cart-48.png */; };
 		A0B30000225F5B99005F79A9 /* CS_AnswerUnitRating_TVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E761FC8321EF7D0200F6B857 /* CS_AnswerUnitRating_TVC.xib */; };
 		A0B30001225F5B99005F79A9 /* icon-cancelado@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E71C63AA1F94D0C700C3E26D /* icon-cancelado@3x.png */; };
 		A0B30002225F5B99005F79A9 /* SFDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E7AFE4BB21BA90D2004B3E5A /* SFDisplay-Regular.otf */; };
@@ -826,7 +828,6 @@
 		A0B3FF95225F5B99005F79A9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B7C9B31DB5263400B872F9 /* QuickLook.framework */; };
 		A0B3FF96225F5B99005F79A9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F18C071F75390200D2EABE /* libsqlite3.tbd */; };
 		A0B3FF97225F5B99005F79A9 /* Vuforia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E701F9322100D141000629F2 /* Vuforia.framework */; };
-		A0B3FF98225F5B99005F79A9 /* Pods_LAB360_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9D06B80648C855FD0E8BA /* Pods_LAB360_Dev.framework */; };
 		A0B3FF9A225F5B99005F79A9 /* ImagesURL in Resources */ = {isa = PBXBuildFile; fileRef = E770F27E1E2E87A800E6BFB1 /* ImagesURL */; };
 		A0B3FF9B225F5B99005F79A9 /* icon-cancelado@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E71C63A81F94D0C600C3E26D /* icon-cancelado@2x.png */; };
 		A0B3FF9C225F5B99005F79A9 /* adalive_doc_icon_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = E7EAFBC821876D32005B9EE1 /* adalive_doc_icon_64x64.png */; };
@@ -1275,6 +1276,7 @@
 		E7A774C122245E8F00A20F61 /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A774AE22245E8C00A20F61 /* HRHSVColorUtil.m */; };
 		E7A774C422245E8F00A20F61 /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A774AF22245E8D00A20F61 /* UIImage+CoreGraphics.m */; };
 		E7A774C722245E8F00A20F61 /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A774B022245E8E00A20F61 /* HRColorMapView.m */; };
+		E7A8C7B8C98046AA8A4AA5D1 /* Pods_OneInternational_Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBA6F7A2EF01A03F3F31EE9 /* Pods_OneInternational_Prod.framework */; };
 		E7AA4B50210A2D8100CCF787 /* SpeechRecognitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AA4B4F210A2D8000CCF787 /* SpeechRecognitionManager.m */; };
 		E7AA87911FBEEFB900D1254F /* icon-info-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AA878F1FBEEFB800D1254F /* icon-info-button@2x.png */; };
 		E7AA87921FBEEFB900D1254F /* icon-info-button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AA87901FBEEFB900D1254F /* icon-info-button@3x.png */; };
@@ -2042,8 +2044,12 @@
 		3DE834321DF095C800D28068 /* Sponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sponsor.h; sourceTree = "<group>"; };
 		3DE834331DF095C800D28068 /* Sponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sponsor.m; sourceTree = "<group>"; };
 		43ADC06DC512D246565B2362 /* Pods-LAB360-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAB360-Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		4CF5FFE8013CCFF3B8D8298B /* Pods-OneInternational-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		6DEF2F2B04419E298F1C57C1 /* Pods_LAB360_Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAB360_Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84B9D06B80648C855FD0E8BA /* Pods_LAB360_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAB360_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		866633F221675FC5CBBDD5EA /* Pods-OneInternational-Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod.debug.xcconfig"; sourceTree = "<group>"; };
+		9013EDD422A8659C0086794F /* icons8-shopping-cart-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-shopping-cart-24.png"; sourceTree = "<group>"; };
+		9013EDD522A8659D0086794F /* icons8-shopping-cart-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-shopping-cart-48.png"; sourceTree = "<group>"; };
+		938110A4D6F058A65F087CCE /* Pods-OneInternational-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev.release.xcconfig"; sourceTree = "<group>"; };
 		A0B30185225F5B9A005F79A9 /* OneInternational-Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OneInternational-Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B30186225F5B9B005F79A9 /* OneInternational-Dev copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OneInternational-Dev copy-Info.plist"; path = "/Users/lucas/Desktop/Lab360/Git/OneInternational/project-model/ios/objC/LAB360 Project ObjC/OneInternational-Dev copy-Info.plist"; sourceTree = "<absolute>"; };
 		A0B30187225F6C7F005F79A9 /* default-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-background.png"; sourceTree = "<group>"; };
@@ -2084,6 +2090,8 @@
 		AC9DA3F520DABFB2005498DB /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		AC9DA3F620DABFB2005498DB /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		ACE1863721518256005D8E7E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BC60C3FD0BF829521B09A686 /* Pods_OneInternational_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneInternational_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8E72C0D2B4ED1A0D470308 /* Pods-OneInternational-Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod.release.xcconfig"; sourceTree = "<group>"; };
 		DF99AEDF84903C83F0DDA5C3 /* Pods-LAB360-ProdS3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAB360-ProdS3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LAB360-ProdS3/Pods-LAB360-ProdS3.release.xcconfig"; sourceTree = "<group>"; };
 		E1D4D1B2ADA985BFE99C353E /* Pods_LAB360_ProdS3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAB360_ProdS3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E515A49B21F5E8CB00570C92 /* CustomSurveyAvailableSamplesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSurveyAvailableSamplesVC.h; sourceTree = "<group>"; };
@@ -3189,6 +3197,7 @@
 		FA7CC7E41DC55CA800993C07 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 		FA7CC7E51DC55CA800993C07 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture.jpg; sourceTree = "<group>"; };
 		FA7CC7F81DC55D0800993C07 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FCBA6F7A2EF01A03F3F31EE9 /* Pods_OneInternational_Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneInternational_Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3232,7 +3241,7 @@
 				A0B3FF95225F5B99005F79A9 /* QuickLook.framework in Frameworks */,
 				A0B3FF96225F5B99005F79A9 /* libsqlite3.tbd in Frameworks */,
 				A0B3FF97225F5B99005F79A9 /* Vuforia.framework in Frameworks */,
-				A0B3FF98225F5B99005F79A9 /* Pods_LAB360_Dev.framework in Frameworks */,
+				E7A8C7B8C98046AA8A4AA5D1 /* Pods_OneInternational_Prod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3276,7 +3285,7 @@
 				E7F6CFA91FA3384500D1FC0D /* QuickLook.framework in Frameworks */,
 				E7F6D0FC1FA34F3700D1FC0D /* libsqlite3.tbd in Frameworks */,
 				E701F9372100D8FE000629F2 /* Vuforia.framework in Frameworks */,
-				59E869D77028EFB8618FEDB0 /* Pods_LAB360_Dev.framework in Frameworks */,
+				70E7EF064E10C516C04991EE /* Pods_OneInternational_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3535,7 +3544,6 @@
 				E77B31BA204DB46600D872A5 /* MediaPlayer.framework */,
 				E787AFEE200669800067A45B /* opencv2.framework */,
 				E77B31B2204DA3F700D872A5 /* OpenGLES.framework */,
-				84B9D06B80648C855FD0E8BA /* Pods_LAB360_Dev.framework */,
 				E77B31A7204D8B8300D872A5 /* QuartzCore.framework */,
 				E7B7C9B31DB5263400B872F9 /* QuickLook.framework */,
 				E77B31C2204DBE7B00D872A5 /* Security.framework */,
@@ -3544,6 +3552,8 @@
 				041C1AB31F3265DF0062382E /* UserNotifications.framework */,
 				6DEF2F2B04419E298F1C57C1 /* Pods_LAB360_Prod.framework */,
 				E1D4D1B2ADA985BFE99C353E /* Pods_LAB360_ProdS3.framework */,
+				BC60C3FD0BF829521B09A686 /* Pods_OneInternational_Dev.framework */,
+				FCBA6F7A2EF01A03F3F31EE9 /* Pods_OneInternational_Prod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -4227,6 +4237,8 @@
 				E7A92D6E1DF9BB1700B58FAE /* icon-block-talk@3x.png */,
 				3D7A70F61DE8A64100253BE4 /* icon-camera@2x.png */,
 				E71C63A81F94D0C600C3E26D /* icon-cancelado@2x.png */,
+				9013EDD422A8659C0086794F /* icons8-shopping-cart-24.png */,
+				9013EDD522A8659D0086794F /* icons8-shopping-cart-48.png */,
 				E71C63AA1F94D0C700C3E26D /* icon-cancelado@3x.png */,
 				E7377F3B1DF872A6002868E6 /* icon-chat-dialogue@2x.png */,
 				E7377F3C1DF872A6002868E6 /* icon-chat-dialogue@3x.png */,
@@ -6050,6 +6062,10 @@
 				38AFF64CE67A99ED4FAAF815 /* Pods-LAB360-Prod.release.xcconfig */,
 				27F6D3756D12C01EA89D6A0B /* Pods-LAB360-ProdS3.debug.xcconfig */,
 				DF99AEDF84903C83F0DDA5C3 /* Pods-LAB360-ProdS3.release.xcconfig */,
+				4CF5FFE8013CCFF3B8D8298B /* Pods-OneInternational-Dev.debug.xcconfig */,
+				938110A4D6F058A65F087CCE /* Pods-OneInternational-Dev.release.xcconfig */,
+				866633F221675FC5CBBDD5EA /* Pods-OneInternational-Prod.debug.xcconfig */,
+				DD8E72C0D2B4ED1A0D470308 /* Pods-OneInternational-Prod.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -6148,7 +6164,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					E7F6CEF21FA3384500D1FC0D = {
-						DevelopmentTeam = G6SQG7XCNV;
+						DevelopmentTeam = 6R2226FVJJ;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -6159,6 +6175,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"pt-BR",
@@ -6678,6 +6695,7 @@
 				E7B67001214AEFD400730E2D /* virtual-scene-reflection-map-2.jpg in Resources */,
 				E70F4F3220AEF53A00549E7A /* web_server_dev_data_logger.html in Resources */,
 				E7BFEAD321E3B207002108B8 /* icon-timeline-post-modern@3x.png in Resources */,
+				9013EDD722A8659D0086794F /* icons8-shopping-cart-48.png in Resources */,
 				E7F6CFB11FA3384500D1FC0D /* icon_envelope@2x.png in Resources */,
 				E7F6CFB21FA3384500D1FC0D /* icon-map-marker-2@3x.png in Resources */,
 				E785C0A620D0077000DCE4C1 /* BeaconShowroom.storyboard in Resources */,
@@ -6981,6 +6999,7 @@
 				E7DBDF1121AFF5F10079A02B /* background_cupom_action_line.png in Resources */,
 				E7F6D08B1FA3384500D1FC0D /* icon-new-company@3x.png in Resources */,
 				E7F6D08C1FA3384500D1FC0D /* icon-block-talk@2x.png in Resources */,
+				9013EDD622A8659D0086794F /* icons8-shopping-cart-24.png in Resources */,
 				E7D61EB12121F94700A957C0 /* cutting_package.mp3 in Resources */,
 				E7F6D08D1FA3384500D1FC0D /* icon_message@3x.png in Resources */,
 				E550FAC420950655000073C5 /* promotional_card_frame_05.jpg in Resources */,
@@ -7172,7 +7191,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LAB360-Dev-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OneInternational-Dev-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -7185,7 +7204,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CTPanoramaView/CTPanoramaView.framework",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
@@ -7224,7 +7243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0B3017C225F5B99005F79A9 /* [CP] Embed Pods Frameworks */ = {
@@ -7233,7 +7252,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CTPanoramaView/CTPanoramaView.framework",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
@@ -7272,7 +7291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0B3017D225F5B99005F79A9 /* ShellScript */ = {
@@ -7309,7 +7328,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -7318,7 +7337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0B3FDE9225F5B99005F79A9 /* [CP] Check Pods Manifest.lock */ = {
@@ -7332,7 +7351,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LAB360-Dev-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OneInternational-Prod-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -7345,7 +7364,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -7354,7 +7373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LAB360-Dev/Pods-LAB360-Dev-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E706ED9F216640B2004593D7 /* Setup Firebase Environment GoogleService-Info.plist */ = {
@@ -8230,7 +8249,7 @@
 /* Begin XCBuildConfiguration section */
 		A0B30183225F5B99005F79A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43ADC06DC512D246565B2362 /* Pods-LAB360-Dev.debug.xcconfig */;
+			baseConfigurationReference = 866633F221675FC5CBBDD5EA /* Pods-OneInternational-Prod.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -8372,7 +8391,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -8387,7 +8406,7 @@
 		};
 		A0B30184225F5B99005F79A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BF4784B5787F99DA445BF55 /* Pods-LAB360-Dev.release.xcconfig */;
+			baseConfigurationReference = DD8E72C0D2B4ED1A0D470308 /* Pods-OneInternational-Prod.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -8528,7 +8547,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -8654,7 +8673,7 @@
 		};
 		E7F6D0F21FA3384500D1FC0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43ADC06DC512D246565B2362 /* Pods-LAB360-Dev.debug.xcconfig */;
+			baseConfigurationReference = 4CF5FFE8013CCFF3B8D8298B /* Pods-OneInternational-Dev.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -8663,13 +8682,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = "LAB360-ObjcC.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CRASHLYTICS_API_KEY = 06fcfa9e5508a54f8f3e0e14aaa477c17a1cb7e6;
 				CRASHLYTICS_BUILD_SECRET = c6b56ab717b1759b98c7978a45166ca85c8e88dc52d75648d97d7aa4e70a14d1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = G6SQG7XCNV;
+				DEVELOPMENT_TEAM = 6R2226FVJJ;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8796,7 +8816,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -8811,7 +8831,7 @@
 		};
 		E7F6D0F31FA3384500D1FC0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BF4784B5787F99DA445BF55 /* Pods-LAB360-Dev.release.xcconfig */;
+			baseConfigurationReference = 938110A4D6F058A65F087CCE /* Pods-OneInternational-Dev.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -8820,12 +8840,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = "LAB360-ObjcC.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CRASHLYTICS_API_KEY = 06fcfa9e5508a54f8f3e0e14aaa477c17a1cb7e6;
 				CRASHLYTICS_BUILD_SECRET = c6b56ab717b1759b98c7978a45166ca85c8e88dc52d75648d97d7aa4e70a14d1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = G6SQG7XCNV;
+				DEVELOPMENT_TEAM = 6R2226FVJJ;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8952,7 +8973,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

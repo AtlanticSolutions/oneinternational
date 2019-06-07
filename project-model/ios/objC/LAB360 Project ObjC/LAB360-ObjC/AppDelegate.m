@@ -88,6 +88,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 
     NSInteger logged = [[userDefaults valueForKey:PLISTKEY_USER_ID] integerValue];
+  
     if (logged > 0){
 
         FileManager *fileManager = [FileManager sharedInstance];
@@ -107,7 +108,7 @@
         AppD.loggedUser = nil;
     }
 
-    AppD.masterEventID = [userDefaults integerForKey:PLISTKEY_MASTER_EVENT_ID];
+    AppD. masterEventID = [userDefaults integerForKey:PLISTKEY_MASTER_EVENT_ID];
 
     //Contador de usos
     NSInteger startCount = [userDefaults integerForKey:PLISTKEY_APP_START_COUNT];

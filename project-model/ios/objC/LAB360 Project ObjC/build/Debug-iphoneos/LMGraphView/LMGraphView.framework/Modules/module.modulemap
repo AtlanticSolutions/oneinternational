@@ -1,0 +1,6 @@
+framework module LMGraphView {
+  umbrella header "LMGraphView-umbrella.h"
+
+  export *
+  module * { export * }
+}

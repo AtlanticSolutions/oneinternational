@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xul-qr-osf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xul-qr-osf">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -265,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezC-sI-wv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1675.3623188405797" y="-769.56521739130437"/>
+            <point key="canvasLocation" x="-1904" y="-794"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="URU-5q-V10">
@@ -2137,7 +2137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDP-7g-Z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-840" y="-769"/>
+            <point key="canvasLocation" x="-839" y="-770"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="Vka-Pl-In7">
@@ -3807,7 +3807,7 @@ Server 10.0.102.235:8080</string>
     </scenes>
     <resources>
         <image name="AudioControlPlay" width="50" height="50"/>
-        <image name="CouponScannerIcon_Coupon" width="93" height="40"/>
+        <image name="CouponScannerIcon_Coupon" width="93.333335876464844" height="40"/>
         <image name="SharePhotoMask" width="40" height="40"/>
         <image name="TakePhotoNormal" width="70" height="70"/>
         <image name="TakePhotoSelected" width="70" height="70"/>

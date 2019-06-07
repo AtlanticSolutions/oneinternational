@@ -1,0 +1,10 @@
+framework module CTPanoramaView {
+  umbrella header "CTPanoramaView-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module CTPanoramaView.__Swift {
+    exclude header "CTPanoramaView-Swift.h"
+}

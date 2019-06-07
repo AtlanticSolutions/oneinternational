@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewButtons;
 
 @property (nonatomic, strong) NSString *fileType;
+@property (nonatomic, strong) NSString *flag;
 @property (nonatomic, strong) NSURL *fileUrlToShare;
 @property (nonatomic, assign) BOOL isFileDownload;
 @end
@@ -34,7 +35,7 @@
 
 #pragma mark - • SYNTESIZES
 
-@synthesize fileURL, fileType, titleNav, fileUrlToShare, isFileDownload, fileName, checkUrl;
+@synthesize fileURL,flag, fileType, titleNav, fileUrlToShare, isFileDownload, fileName, checkUrl;
 @synthesize webViewContainer, webView, viewButtons;
 @synthesize btnGoBack, btnGoForward, btnReloadCancel, showShareButton, hideViewButtons;
 
@@ -52,7 +53,8 @@
         fileType = @"";
         titleNav = @"";
         fileName = @"";
-        hideViewButtons = NO;
+        flag=@"";
+        hideViewButtons = YES;
         showShareButton = YES;
         
     }
@@ -66,6 +68,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,16 +78,43 @@
     
     [self setupLayout:titleNav];
     
-    if (showShareButton) {
+    
+    
+  if (showShareButton) {
         if ([self isFileURL:fileURL]){
             self.navigationItem.rightBarButtonItem = [self createLoadingView];
             [self loadContentToShare];
-        }else{
-            fileUrlToShare = [NSURL URLWithString:fileURL];
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareURLWeb:)];
         }
+      
+        else if ([titleNav isEqualToString:@"Loja Virtual"]){
+            
+            UIImage* shopImage = [UIImage imageNamed:@"icons8-shopping-cart-24.png"];
+            self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]
+                                                    initWithImage:shopImage style:UIBarButtonItemStyleDone target:self action:@selector(urlToshop)];
+            
+            }
+      
+        else{
+            fileUrlToShare = [NSURL URLWithString:fileURL];
+         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareURLWeb:)];
+            
+        }
+    
+      
     }
 }
+
+-(void) urlToshop {
+    
+    
+    flag=@"carrinho";
+    NSLog(@"carregando Carrinho: %@", flag);
+    
+    
+}
+
+
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -149,6 +179,13 @@
 - (void)setupLayout:(NSString *)screenName
 {
     [super setupLayout:screenName];
+    
+   /* if ([screenName isEqualToString:@"Loja Virtual"]) {
+        
+        UIImage* shopImage = [UIImage imageNamed:@"icons8-shopping-cart-24.png"];
+        self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]
+                                                initWithImage:shopImage style:UIBarButtonItemStyleDone target:nil action:nil];
+    }*/
     
     viewButtons.backgroundColor = AppD.styleManager.colorPalette.backgroundNormal;
     self.view.backgroundColor = AppD.styleManager.colorPalette.backgroundNormal;
@@ -263,6 +300,10 @@
     }
 
 }
+
+
+
+
 
 - (void)shareURLWeb:(id)sender{
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[fileUrlToShare] applicationActivities:nil];

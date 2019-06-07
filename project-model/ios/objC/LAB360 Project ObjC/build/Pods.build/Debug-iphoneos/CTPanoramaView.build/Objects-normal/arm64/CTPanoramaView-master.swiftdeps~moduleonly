@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "4b1b8c3c773d93261842e01ac252b533"
+build_time: [1559948854, 715865000]
+inputs:
+  "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/Pods/CTPanoramaView/Source/CTPanoramaView.swift": [1559757171, 598808270]
+  "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/Pods/CTPanoramaView/Source/CTPieSliceView.swift": [1559757171, 598104768]

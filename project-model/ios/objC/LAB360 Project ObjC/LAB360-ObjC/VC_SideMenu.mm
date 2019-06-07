@@ -85,6 +85,10 @@
 //
 @property(nonatomic, assign) CGPoint touchPoint;
 
+//salva url do carrinho para posterior uso
+
+@property(nonatomic, assign)NSUserDefaults  *itemCar;
+
 @end
 
 @implementation VC_SideMenu
@@ -441,6 +445,20 @@
     
     SideMenuItem *item = [optionsList objectAtIndex:indexPath.row];
     
+    if([item.itemName isEqualToString:@"Carrinho"]){
+        
+        // NSLog(@" valor do item %@",optionsList[indexPath.row]);
+        NSLog(@" valor do item %@",item.webPageURL);
+      
+        NSUserDefaults *carrinhoTemp = [NSUserDefaults standardUserDefaults];
+        [carrinhoTemp setValue:item.webPageURL  forKey:@"CarrinhoURL"];
+        [carrinhoTemp synchronize];
+   
+        NSUserDefaults *recover = [NSUserDefaults standardUserDefaults];
+        NSString *carrinhoURL = [recover valueForKey:@"CarrinhoURL"];
+        NSLog(@" valor da url do carrinho %@",carrinhoURL);
+    }
+    
     if (item.uiControlOptionLevel == 0) {
         
         //root item:
@@ -448,6 +466,10 @@
             
             if (item.iconDataGIF != nil){
                 item.icon = [UIImage animatedImageWithAnimatedGIFData:item.iconDataGIF];
+            }
+            if(item.itemName){
+                
+                
             }
 
             if (item.icon != nil) {
@@ -574,6 +596,7 @@
                 
                 //Controle de subitens
                 if (currentItem.subItems.count > 0) {
+                   
                     
                     NSMutableArray<NSIndexPath*> *indexPathList = [NSMutableArray new];
                     //
@@ -751,7 +774,7 @@
         if (indexPath != nil) {
             
             SideMenuItem *item = [optionsList objectAtIndex:indexPath.row];
-            
+            NSLog(@"valor do array para pegar o item do carrinho %@",item.itemName);
             if (!item.blocked && item.subItems.count == 0 && item.itemInternalCode != SideMenuItemCode_Home) {
                 
                 if (tvMenu.tag == 0){
