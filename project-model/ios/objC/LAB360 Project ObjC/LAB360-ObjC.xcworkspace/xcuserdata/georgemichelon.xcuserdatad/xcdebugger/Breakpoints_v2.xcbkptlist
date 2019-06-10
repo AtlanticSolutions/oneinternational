@@ -9,61 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/VC_WebViewCustom.m"
-            timestampString = "581640076.588652"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "-configureWebViewController"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581642118.360952"
+            timestampString = "581872400.585747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1973"
-            endingLineNumber = "1973"
+            startingLineNumber = "1971"
+            endingLineNumber = "1971"
             landmarkName = "-insertPrototypeMenus"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/VC_WebViewCustom.m"
-            timestampString = "581640076.58912"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-urlToshop"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/VC_WebViewCustom.m"
-            timestampString = "581640076.58917"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "-urlToshop"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581642118.361378"
+            timestampString = "581872400.585829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "615"
-            endingLineNumber = "615"
+            startingLineNumber = "613"
+            endingLineNumber = "613"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581642118.3616199"
+            timestampString = "581872400.585874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "595"
-            endingLineNumber = "595"
+            startingLineNumber = "593"
+            endingLineNumber = "593"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -121,44 +73,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/VC_WebViewCustom.m"
-            timestampString = "581640076.589733"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "-configureWebViewController"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/ConnectionManager.m"
-            timestampString = "581640076.589784"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3812"
-            endingLineNumber = "3812"
-            landmarkName = "-getUrlForSMWebViewWithUrl:withCompletionHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581642118.3618751"
+            timestampString = "581872400.5859129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "765"
-            endingLineNumber = "765"
+            startingLineNumber = "763"
+            endingLineNumber = "763"
             landmarkName = "-actionPanGesture:"
             landmarkType = "7">
             <Locations>
@@ -170,11 +90,11 @@
                   moduleName = "OneInternational-Dev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360%20Project%20ObjC/LAB360-ObjC/VC_SideMenu.mm"
-                  timestampString = "581642118.944615"
+                  timestampString = "581872400.752902"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "765"
-                  endingLineNumber = "765"
+                  startingLineNumber = "763"
+                  endingLineNumber = "763"
                   offsetFromSymbolStart = "144">
                </Location>
                <Location
@@ -185,14 +105,30 @@
                   moduleName = "OneInternational-Dev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360%20Project%20ObjC/LAB360-ObjC/VC_SideMenu.mm"
-                  timestampString = "581642118.946892"
+                  timestampString = "581872400.754627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "765"
-                  endingLineNumber = "765"
+                  startingLineNumber = "763"
+                  endingLineNumber = "763"
                   offsetFromSymbolStart = "1328">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LAB360-ObjC/VC_WebViewCustom.m"
+            timestampString = "581872400.586352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-urlToshop"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

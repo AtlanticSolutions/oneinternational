@@ -106,9 +106,15 @@
 
 -(void) urlToshop {
     
-    
     flag=@"carrinho";
     NSLog(@"carregando Carrinho: %@", flag);
+    NSUserDefaults *recover = [NSUserDefaults standardUserDefaults];
+    NSString *carrinhoURL = [recover valueForKey:@"CarrinhoURL"];
+    NSLog(@" valor da url do carrinho %@",carrinhoURL);
+    fileURL=carrinhoURL;
+   
+    [self configureWebViewController];
+   
     
     
 }
@@ -233,6 +239,10 @@
     
     if(checkUrl) {
         
+        NSUserDefaults *recover = [NSUserDefaults standardUserDefaults];
+        NSString *carrinhoURL = [recover valueForKey:@"CarrinhoURL"];
+        NSLog(@" valor da url do carrinho %@",carrinhoURL);
+        
         ConnectionManager *connectionManager = [[ConnectionManager alloc] init];
         
         if ([connectionManager isConnectionActive])
@@ -240,6 +250,9 @@
             dispatch_async(dispatch_get_main_queue(),^{
                 [AppD showLoadingAnimationWithType:eActivityIndicatorType_Loading];
             });
+            
+          
+            
             
             [connectionManager getUrlForSMWebViewWithUrl:fileURL withCompletionHandler:^(NSDictionary * _Nonnull response, NSInteger statusCode, NSError * _Nonnull error) {
                 [AppD performSelectorOnMainThread:@selector(hideLoadingAnimation) withObject:nil waitUntilDone:NO];

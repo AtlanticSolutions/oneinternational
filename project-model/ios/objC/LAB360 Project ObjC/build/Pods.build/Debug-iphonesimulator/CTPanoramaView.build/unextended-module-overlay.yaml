@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Debug-iphonesimulator/CTPanoramaView/CTPanoramaView.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Pods.build/Debug-iphonesimulator/CTPanoramaView.build/unextended-module.modulemap",
+    }]
+  }]
+}

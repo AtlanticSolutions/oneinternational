@@ -454,9 +454,7 @@
         [carrinhoTemp setValue:item.webPageURL  forKey:@"CarrinhoURL"];
         [carrinhoTemp synchronize];
    
-        NSUserDefaults *recover = [NSUserDefaults standardUserDefaults];
-        NSString *carrinhoURL = [recover valueForKey:@"CarrinhoURL"];
-        NSLog(@" valor da url do carrinho %@",carrinhoURL);
+        
     }
     
     if (item.uiControlOptionLevel == 0) {
