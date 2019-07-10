@@ -433,7 +433,7 @@
 "LABEL_CHAT_YESTERDAY" = "Ontem";
 "LABEL_CHAT_TOMORROW" = "Amanhã";
 //
-"LABEL_APP_VERSION" = "Versão App";
+"LABEL_APP_VERSION" = "";
 "LABEL_APP_DEVELOPED_BY" = "Desenvolvido por";
 //
 "LABEL_TEXT_PRODUCT_SEARCH" = "O que você deseja pedir?";
@@ -571,9 +571,7 @@
 "PLACEHOLDER_PHONE" = "Telefone";
 "PLACEHOLDER_PHONE_FIX" = "Telefone Fixo";
 "PLACEHOLDER_CPF" = "CPF";
-"PLACEHOLDER_CNPJ" = "CNPJ";
 "PLACEHOLDER_COMPANY" = "Empresa";
-"PLACEHOLDER_CNPJ" = "CNPJ";
 "PLACEHOLDER_ROLE" = "Cargo";
 "PLACEHOLDER_SHOPPING" = "Shopping";
 "PLACEHOLDER_COUNTRY" = "País";

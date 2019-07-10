@@ -695,7 +695,7 @@
         footerLabel.textColor = AppD.styleManager.colorPalette.backgroundNormal;
         //
         NSString *sei = [AppD serverEnvironmentIdentifier];
-        footerLabel.text = [NSString stringWithFormat:@"%@: %@ %@", NSLocalizedString(@"LABEL_APP_VERSION", @""),[ToolBox applicationHelper_VersionBundle], sei];
+       // footerLabel.text = [NSString stringWithFormat:@"%@: %@ %@", NSLocalizedString(@"LABEL_APP_VERSION", @""),[ToolBox applicationHelper_VersionBundle], sei];
         //
         [footerView addSubview:footerLabel];
     }

@@ -239,9 +239,7 @@
     
     if(checkUrl) {
         
-        NSUserDefaults *recover = [NSUserDefaults standardUserDefaults];
-        NSString *carrinhoURL = [recover valueForKey:@"CarrinhoURL"];
-        NSLog(@" valor da url do carrinho %@",carrinhoURL);
+       
         
         ConnectionManager *connectionManager = [[ConnectionManager alloc] init];
         
@@ -250,9 +248,7 @@
             dispatch_async(dispatch_get_main_queue(),^{
                 [AppD showLoadingAnimationWithType:eActivityIndicatorType_Loading];
             });
-            
-          
-            
+           
             
             [connectionManager getUrlForSMWebViewWithUrl:fileURL withCompletionHandler:^(NSDictionary * _Nonnull response, NSInteger statusCode, NSError * _Nonnull error) {
                 [AppD performSelectorOnMainThread:@selector(hideLoadingAnimation) withObject:nil waitUntilDone:NO];

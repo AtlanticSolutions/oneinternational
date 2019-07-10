@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>6R2226FVJJ.br.com.lab360.oneinternacional.enterprise</string>
+	<string>G6SQG7XCNV.br.com.lab360.oneinternational.enterprise</string>
 	<key>aps-environment</key>
 	<string>development</string>
 	<key>com.apple.developer.team-identifier</key>
-	<string>6R2226FVJJ</string>
+	<string>G6SQG7XCNV</string>
 	<key>get-task-allow</key>
 	<true/>
 </dict>

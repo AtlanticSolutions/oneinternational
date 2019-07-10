@@ -75,7 +75,9 @@
     //btnfacbook
     btnLoginFacebook.delegate = self;
     btnLoginFacebook.readPermissions = @[@"public_profile", @"email"];
-    btnLoginFacebook.loginBehavior = FBSDKLoginBehaviorNative; //FBSDKLoginBehaviorWeb;
+    btnLoginFacebook.loginBehavior = FBSDKLoginBehaviorNative;
+   
+    //FBSDKLoginBehaviorWeb;
     
     emailAvailable = false;
     fromFacebookLogin = false;

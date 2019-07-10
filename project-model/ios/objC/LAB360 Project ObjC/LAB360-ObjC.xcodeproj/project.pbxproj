@@ -6164,7 +6164,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					E7F6CEF21FA3384500D1FC0D = {
-						DevelopmentTeam = 6R2226FVJJ;
+						DevelopmentTeam = G6SQG7XCNV;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -8689,7 +8689,7 @@
 				CRASHLYTICS_BUILD_SECRET = c6b56ab717b1759b98c7978a45166ca85c8e88dc52d75648d97d7aa4e70a14d1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6R2226FVJJ;
+				DEVELOPMENT_TEAM = G6SQG7XCNV;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8816,7 +8816,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -8846,7 +8846,7 @@
 				CRASHLYTICS_API_KEY = 06fcfa9e5508a54f8f3e0e14aaa477c17a1cb7e6;
 				CRASHLYTICS_BUILD_SECRET = c6b56ab717b1759b98c7978a45166ca85c8e88dc52d75648d97d7aa4e70a14d1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6R2226FVJJ;
+				DEVELOPMENT_TEAM = G6SQG7XCNV;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8973,7 +8973,7 @@
 					"-framework",
 					"\"youtube_ios_player_helper\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternacional.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.lab360.oneinternational.enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

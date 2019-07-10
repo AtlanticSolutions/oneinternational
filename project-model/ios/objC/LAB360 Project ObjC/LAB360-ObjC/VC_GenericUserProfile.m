@@ -503,7 +503,7 @@
     //TextFields & Labels
     nameTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_NAME", @"")];
     cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CPF", @"")];
-    cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
+    cnpjTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
     rgTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_RG", @"")];
     birthdateTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_BIRTHDATE", @"")];
     dddTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_DDD", @"")];

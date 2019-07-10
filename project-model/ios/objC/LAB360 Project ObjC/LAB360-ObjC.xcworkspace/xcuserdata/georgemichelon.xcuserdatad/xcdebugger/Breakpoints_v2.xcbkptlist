@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581872400.585747"
+            timestampString = "584482689.098138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1971"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581872400.585829"
+            timestampString = "584482689.098335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "613"
-            endingLineNumber = "613"
+            startingLineNumber = "612"
+            endingLineNumber = "612"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,61 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581872400.585874"
+            timestampString = "584482689.098417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "593"
             endingLineNumber = "593"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LAB360-ObjC/VC_SideMenu.mm"
-            timestampString = "581872400.5859129"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "763"
-            endingLineNumber = "763"
-            landmarkName = "-actionPanGesture:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VC_SideMenu actionPanGesture:]"
-                  moduleName = "OneInternational-Dev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360%20Project%20ObjC/LAB360-ObjC/VC_SideMenu.mm"
-                  timestampString = "581872400.752902"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "763"
-                  endingLineNumber = "763"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VC_SideMenu actionPanGesture:]"
-                  moduleName = "OneInternational-Dev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360%20Project%20ObjC/LAB360-ObjC/VC_SideMenu.mm"
-                  timestampString = "581872400.754627"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "763"
-                  endingLineNumber = "763"
-                  offsetFromSymbolStart = "1328">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

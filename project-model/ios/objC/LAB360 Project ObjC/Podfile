@@ -7,7 +7,7 @@ target 'OneInternational-Dev' do
 
   # Pods for OneInternational-Dev
 
-pod 'AFNetworking', '~> 2.0'
+	pod 'AFNetworking', '~> 2.0'
 	pod 'JTCalendar', '~> 2.0'
 	pod 'Fabric'
 	pod 'Crashlytics'
@@ -19,7 +19,6 @@ pod 'AFNetworking', '~> 2.0'
 	pod 'JPSVolumeButtonHandler'
 	pod 'SSZipArchive'
 	pod 'LMGraphView'
-
 	pod 'Firebase/Messaging'
 	pod 'Firebase/Core'
 	pod 'Firebase/MLVision'
@@ -44,7 +43,6 @@ target 'OneInternational-Prod' do
 	pod 'JPSVolumeButtonHandler'
 	pod 'SSZipArchive'
 	pod 'LMGraphView'
-
 	pod 'Firebase/Messaging'
 	pod 'Firebase/Core'
 	pod 'Firebase/MLVision'
