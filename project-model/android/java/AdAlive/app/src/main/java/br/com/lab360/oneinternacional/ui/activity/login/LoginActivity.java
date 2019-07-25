@@ -13,6 +13,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -120,7 +122,8 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
         setTheme(R.style.SplashScreen);
 
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
@@ -335,7 +338,8 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
 
         Glide.with(this)
                 .load(backgroundUrl)
-                .listener(new RequestListener<Drawable>() {
+                .into(imgback);
+                /*.listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                         return false;
@@ -347,7 +351,7 @@ public class LoginActivity extends BaseActivity implements LoginPresenter.ILogin
                         layout.setBackground(resource);
                         return false;
                     }
-                }).preload();
+                }).preload();*/
     }
 
     @Override

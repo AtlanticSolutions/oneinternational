@@ -2,7 +2,10 @@ package br.com.lab360.oneinternacional.ui.activity;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -454,6 +457,7 @@ public class BaseActivity extends MarshmallowSupportActivity implements Thread.U
     @Override
     public void userLogOut() {
         UserUtils.clearSharedPrefs(this);
+
     }
 
     @Override

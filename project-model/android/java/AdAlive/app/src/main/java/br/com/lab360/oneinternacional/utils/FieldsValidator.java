@@ -92,7 +92,8 @@ public class FieldsValidator {
 
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({FieldType.CPF,FieldType.RG,FieldType.NAME , FieldType.BORN,FieldType.GENDER,FieldType.DDD_TEL,
-            FieldType.TELEPHONE, FieldType.DDD_CELL,FieldType.CELULAR,FieldType.ADDRESS, FieldType.NUMBER, FieldType.ZONE,FieldType.MORE_ADDRESS, FieldType.DISTRICT, FieldType.CITY, FieldType.STATE, FieldType.EMAIL})
+            FieldType.TELEPHONE, FieldType.DDD_CELL,FieldType.CELULAR,FieldType.ADDRESS, FieldType.NUMBER,
+            FieldType.ZONE,FieldType.MORE_ADDRESS, FieldType.DISTRICT, FieldType.CITY, FieldType.STATE, FieldType.EMAIL, FieldType.LASTNAME})
     public @interface FieldType{
 
         int CPF = 0;
@@ -112,6 +113,7 @@ public class FieldsValidator {
         int CITY = 14;
         int STATE = 15;
         int EMAIL = 16;
+        int LASTNAME = 17;
 
     }
 }

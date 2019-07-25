@@ -91,6 +91,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
     @BindView(R.id.edtCnpj)                  protected EditText edtCnpj;
     @BindView(R.id.edtRg)                   protected EditText edtRg;
     @BindView(R.id.edtName)                 protected EditText edtNome;
+    @BindView(R.id.edtSobrenome)            protected EditText edtSobrenome;
     @BindView(R.id.edtDataNasc)             protected EditText edtDataNasc;
     @BindView(R.id.sexo)                    protected Spinner spinnerSexo;
     @BindView(R.id.edtDDDTel)               protected EditText edtDddTel;
@@ -132,9 +133,11 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
     }
     private CustomerResponseDetail mCustomer;
     private static final int REQUEST_PICK_IMAGE = 0x32;
+    private static final int REQUEST_CHANGE_PASSWORD = 0x33;
     private static final int REQUEST_TAKE_PHOTO = 0x31;
     private static final int PERMISSION_REQUEST_CODE = 0x33;
     private boolean gettingCustomer = false;
+    public String password = "";
 
     private String[] ACTIVITY_PERMISSIONS = {
             Manifest.permission.CAMERA,
@@ -175,6 +178,8 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
                 case REQUEST_VALID_EMAIL:
                     edtEmail.setText(data.getStringExtra("RESULT_STRING"));
                     break;
+                case REQUEST_CHANGE_PASSWORD:
+                    password = data.getStringExtra(AdaliveConstants.INTENT_TAG_PASSWORD);
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -425,7 +430,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
                 break;
             case R.id.btnChangePassword:
                 Intent i = new Intent(this, ChangePasswordActivity.class);
-                startActivity(i);
+                startActivityForResult(i, REQUEST_CHANGE_PASSWORD);
                 break;
             case R.id.edtDataNasc:
                 hideKeyboard();
@@ -597,6 +602,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         user.setCpf(edtCpf.getText().toString().replaceAll("[^\\d]",""));
         user.setCnpj(edtCnpj.getText().toString().replaceAll("[^\\d]",""));
         user.setFirstName(edtNome.getText().toString());
+        user.setLastName(edtSobrenome.getText().toString());
         user.setRg(edtRg.getText().toString().replaceAll("[^\\d]",""));
         user.setBirthDate(edtDataNasc.getText().toString());
         user.setDddPhone(edtDddTel.getText().toString().replaceAll("[^\\d]", ""));
@@ -621,9 +627,13 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         }
 
         if (spinnerSexo.getSelectedItem().toString().equalsIgnoreCase("Feminino")) {
-            user.setGender(1);
+            user.setGender("1");
         } else if (spinnerSexo.getSelectedItem().toString().equalsIgnoreCase("Masculino")) {
-            user.setGender(0);
+            user.setGender("0");
+        }
+
+        if(!password.equals("")){
+            user.setPassword(password);
         }
 
         return user;
@@ -639,6 +649,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         edtCnpj.setText(user.getCnpj());
         edtRg.setText(user.getRg());
         edtNome.setText(user.getFirstName());
+        edtSobrenome.setText(user.getLastName());
         edtDataNasc.setText(user.getBirthDate());
         edtDddTel.setText(user.getDddPhone()); //To complete the mask
         edtTelefone.setText(user.getPhone());
@@ -686,10 +697,12 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
 
         }
 
-        if (user.getGender() == 0) {
+        if (user.getGender().equals("0")) {
             spinnerSexo.setSelection(2);
-        }else if (user.getGender() == 1) {
+        }else if (user.getGender().equals("1")) {
             spinnerSexo.setSelection(1);
+        }else{
+            spinnerSexo.setSelection(0);
         }
     }
 
@@ -735,6 +748,7 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
         edtToValidate.put(FieldsValidator.FieldType.CPF,edtCpf);
         edtToValidate.put(FieldsValidator.FieldType.RG,edtRg);
         edtToValidate.put(FieldsValidator.FieldType.NAME,edtNome);
+        edtToValidate.put(FieldsValidator.FieldType.LASTNAME,edtSobrenome);
         edtToValidate.put(FieldsValidator.FieldType.BORN,edtDataNasc);
         //edtToValidate.put(FieldsValidator.FieldType.DDD_TEL,edtDddTel);
         //edtToValidate.put(FieldsValidator.FieldType.TELEPHONE,edtTelefone);
@@ -884,12 +898,10 @@ public class EditProfileActivity extends BaseActivity implements PromotionRegist
                 Intent intent;
                 switch (id) {
                     case R.id.DIALOG_BUTTON_1:
-                        intent = new Intent(EditProfileActivity.this, TimelineActivity.class);
-                        startActivity(intent);
+                        finish();
                         break;
                     case R.id.DIALOG_BUTTON_2:
-                        intent = new Intent(EditProfileActivity.this, TimelineActivity.class);
-                        startActivity(intent);
+                        finish();
                         break;
                 }
             }

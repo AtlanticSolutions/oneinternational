@@ -4,12 +4,12 @@ apply plugin: 'realm-android'
 
 android {
     signingConfigs {
-//        release {
-//            storeFile file("../sign/shoppingbh.jks")
-//            storePassword "shoppingbh"
-//            keyAlias "shoppingbh"
-//            keyPassword "shoppingbh"
-//        }
+        release {
+            storeFile file("oneinternational.jks")
+            storePassword "oneinternational"
+            keyAlias "oneinternational"
+            keyPassword "oneinternational"
+        }
     }
 
     defaultConfig {
@@ -21,38 +21,41 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
+        versionName '1.0.0'
+        buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.prefs"'
+        buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.fileprovider"'
+        buildConfigField 'String', 'DEFAULT_ROLE', '"DEFAULT"'
+        dimension "tier"
+
+        ndk {
+            abiFilters "x86", "armeabi-v7a", "armeabi"
+        }
 
     }
 
-    flavorDimensions "tier"
+    /*flavorDimensions "tier"
     productFlavors {
         defaultApp {
-            applicationId = "br.com.lab360.oneinternacional"
-            versionCode 1
-            versionName '1.0.0'
-            buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.prefs"'
-            buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.fileprovider"'
-            buildConfigField 'String', 'DEFAULT_ROLE', '"DEFAULT"'
-            dimension "tier"
 
-            ndk {
-                abiFilters "x86", "armeabi-v7a", "armeabi"
-            }
         }
-    }
+    }*/
 
     buildTypes {
         debug {
             debuggable true
+            applicationIdSuffix ".debug"
             buildConfigField 'String', 'APP_ID', '"11025"'
+            resValue "string", "app_name", "One International HMLG"
             manifestPlaceholders = [ fabricApiKey :"d145d112565ed09d0136325b9feaf2473d9ed507"]
         }
 
         release {
-            //signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             debuggable false
+            applicationIdSuffix ".pro"
             minifyEnabled false
-            buildConfigField 'String', 'APP_ID', '"12"'
+            buildConfigField 'String', 'APP_ID', '"39"'
+            resValue "string", "app_name", "One International"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [ fabricApiKey :"3de84e93e4f29fa7a0107f648f758d68d8dd9a5f"]
         }
@@ -241,5 +244,7 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
 
     implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+
+    implementation 'com.jakewharton:process-phoenix:2.0.0'
 }
 apply plugin: 'com.google.gms.google-services'

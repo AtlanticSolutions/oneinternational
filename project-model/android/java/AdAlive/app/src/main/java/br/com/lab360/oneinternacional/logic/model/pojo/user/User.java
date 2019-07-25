@@ -12,12 +12,19 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 
 import br.com.lab360.oneinternacional.logic.model.pojo.ErrorResponse;
+import br.com.lab360.oneinternacional.logic.model.pojo.StatusResponse;
 import br.com.lab360.oneinternacional.utils.ValidatorUtils;
 
 /**
  * Created by Alessandro Valenza on 22/11/2016.
  */
 public class User implements Parcelable {
+
+    @SerializedName("success")
+    private boolean success;
+    @SerializedName("message")
+    private String message;
+
     @SerializedName("id")
     private int id;
 
@@ -94,7 +101,7 @@ public class User implements Parcelable {
     private String birthDate;
 
     @SerializedName("gender")
-    private int gender;
+    private String gender;
 
     @SerializedName("profile_image")
     private String profileImageURL;
@@ -129,15 +136,16 @@ public class User implements Parcelable {
 
     boolean create;
 
-    private ErrorResponse message;
     private boolean errors;
+
+
 
     public static User createUserForRegistration(String firstName, String email, String password, String facebookToken, String photoBase64, String companyName) {
         return new User(facebookToken, firstName, null, companyName, 0, photoBase64, null, null, email, null, null, null, null, null, null, password, 0);
     }
 
-    public static User createUserForRegistrationOneInternacional(String firstName, String email, String password, String cpf, String cnpj, String facebookToken, String photoBase64) {
-        return new User(facebookToken, firstName, cpf, cnpj, 0, photoBase64, email, password, 0);
+    public static User createUserForRegistrationOneInternacional(String firstName, String lastName, String email, String password, String facebookToken, String photoBase64) {
+        return new User(facebookToken, firstName, lastName, 0, photoBase64, email, password, 0);
     }
 
     public static User createUserToUpdateProfile(int id, String firstName, String companyName, String state, String city, String role, int sectorId, String profileImage, ArrayList<Integer> interestArea, String email, String newPassword) {
@@ -147,6 +155,7 @@ public class User implements Parcelable {
     public boolean equals(User user) {
 
         String currentFirstName = firstName == null ? "" : firstName;
+        String currentLastName = lastName == null ? "" : lastName;
         String currentCompanyName = companyName == null ? "" : companyName;
         String currentProfileImage = profileImage == null ? "" : profileImage;
         ArrayList<Integer> currentInterestArea = interestArea == null ? new ArrayList<Integer>() : interestArea;
@@ -154,6 +163,7 @@ public class User implements Parcelable {
         String currentPassword = password == null ? "" : password;
 
         String newFirstName = user.getFirstName() == null ? "" : user.getFirstName();
+        String newLastName = user.getLastName() == null ? "" : user.getLastName();
         String newCompanyName = user.getCompanyName() == null ? "" : user.getCompanyName();
         String newProfileImage = user.getProfileImage() == null ? "" : user.getProfileImage();
         ArrayList<Integer> newInterestArea = user.getInterestArea() == null ?
@@ -162,6 +172,7 @@ public class User implements Parcelable {
         String newPassword = user.getPassword() == null ? "" : user.getPassword();
 
         return currentFirstName.equals(newFirstName) &&
+                currentLastName.equals(newLastName) &&
                 currentCompanyName.equals(newCompanyName) &&
                 sectorId == user.getSectorId() &&
                 currentProfileImage.equals(newProfileImage) &&
@@ -195,11 +206,10 @@ public class User implements Parcelable {
         this.id = id;
     }
 
-    private User(String accessToken, String firstName, String cpf, String cnpj, int sectorId, String profileImage, String email, String password, int id) {
+    private User(String accessToken, String firstName, String lastName, int sectorId, String profileImage, String email, String password, int id) {
         this.accessToken = accessToken;
         this.firstName = firstName;
-        this.cpf = cpf;
-        this.cnpj = cnpj;
+        this.lastName = lastName;
         this.sectorId = sectorId;
         this.profileImage = profileImage;
         this.email = email;
@@ -285,7 +295,7 @@ public class User implements Parcelable {
      *
      * @return
      */
-    public ArrayList<Integer> getErrorFields() {
+    /*public ArrayList<Integer> getErrorFields() {
         ArrayList<Integer> wrongFields = new ArrayList<>();
 
         if (!TextUtils.isEmpty(message.getEmailErrorMessage())) {
@@ -296,7 +306,7 @@ public class User implements Parcelable {
         }
 
         return wrongFields.size() > 0 ? wrongFields : null;
-    }
+    }*/
 
     //endregion
 
@@ -306,7 +316,8 @@ public class User implements Parcelable {
             User.FieldType.NAME,
             User.FieldType.PASSWORD_CHARACTER,
             User.FieldType.INTEREST_AREA,
-            User.FieldType.SECTOR})
+            User.FieldType.SECTOR,
+            User.FieldType.LASTNAME})
     public @interface FieldType {
         int EMAIL = 0;
         int EMAIL_INVALID = 1;
@@ -317,6 +328,7 @@ public class User implements Parcelable {
         int INTEREST_AREA = 6;
         int SECTOR = 7;
         int COMPANY = 8;
+        int LASTNAME = 9;
     }
 
     //region Getter/Setters
@@ -561,11 +573,11 @@ public class User implements Parcelable {
         this.birthDate = birthDate;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -601,6 +613,22 @@ public class User implements Parcelable {
         this.cellPhone = cellPhone;
     }
 
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     //endregion
 
     //region Parcelable
@@ -631,7 +659,7 @@ public class User implements Parcelable {
         dest.writeString(this.state);
         dest.writeString(this.country);
         dest.writeString(this.password);
-        dest.writeParcelable(this.message, flags);
+        //dest.writeParcelable(this.message, flags);
         dest.writeString(this.role);
         dest.writeByte(this.errors ? (byte) 1 : (byte) 0);
     }
@@ -657,7 +685,7 @@ public class User implements Parcelable {
         this.state = in.readString();
         this.country = in.readString();
         this.password = in.readString();
-        this.message = in.readParcelable(ErrorResponse.class.getClassLoader());
+        //this.message = in.readParcelable(ErrorResponse.class.getClassLoader());
         this.role = in.readString();
         this.errors = in.readByte() != 0;
     }

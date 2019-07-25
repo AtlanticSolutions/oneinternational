@@ -1,5 +1,6 @@
 package br.com.lab360.oneinternacional.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
@@ -79,7 +80,7 @@ public abstract class UserUtils {
             e.printStackTrace();
         }
 
-        editor.putInt(AdaliveConstants.GENDER, user.getGender());
+        editor.putString(AdaliveConstants.GENDER, user.getGender());
 
 
         if(user.getProfileImageURL() != null && !user.getProfileImageURL().equals("")){
@@ -124,7 +125,7 @@ public abstract class UserUtils {
         user.setCnpj(preferences.getString(AdaliveConstants.CNPJ, ""));
         user.setRg(preferences.getString(AdaliveConstants.RG, ""));
         user.setBirthDate(preferences.getString(AdaliveConstants.BIRTHDATE, ""));
-        user.setGender(preferences.getInt(AdaliveConstants.GENDER, 99));
+        user.setGender(preferences.getString(AdaliveConstants.GENDER, ""));
         user.setProfileImage(preferences.getString(AdaliveConstants.BASE64_PROFILE_IMAGE, ""));
         user.setRole(preferences.getString(AdaliveConstants.ROLE_PROFILE, ""));
 
@@ -143,8 +144,10 @@ public abstract class UserUtils {
      * @param context current context app.
      */
     public static void clearSharedPrefs(Context context) {
+        LayoutParam layoutParam = getLayoutParam(context);
         SharedPreferences preferences = context.getSharedPreferences(AdaliveConstants.SHARED_PREFS, Context.MODE_PRIVATE);
         preferences.edit().clear().apply();
+        setLayoutParam(layoutParam, context);
     }
 
     public static void saveNameApp(Context context, String nameApp) {

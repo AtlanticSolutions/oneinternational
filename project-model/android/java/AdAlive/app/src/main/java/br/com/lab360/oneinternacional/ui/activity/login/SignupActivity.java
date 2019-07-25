@@ -61,6 +61,8 @@ public class SignupActivity extends BaseActivity implements ISignupView {
 
     @BindView(R.id.etFullName)
     protected EditText etFullName;
+    @BindView(R.id.etLastName)
+    protected EditText etLastName;
     @BindView(R.id.etEmail)
     protected EditText etEmail;
     /*@BindView(R.id.etConfirmEmail)
@@ -69,10 +71,10 @@ public class SignupActivity extends BaseActivity implements ISignupView {
     protected EditText etPassword;
     @BindView(R.id.etConfirmPassword)
     protected EditText etConfirmPassword;
-    @BindView(R.id.etCpf)
+    /*@BindView(R.id.etCpf)
     protected EditText etCpf;
     @BindView(R.id.etCnpj)
-    protected EditText etCnpj;
+    protected EditText etCnpj;*/
     @BindView(R.id.etCompany)
     protected EditText etCompany;
     @BindView(R.id.btnSignUp)
@@ -335,6 +337,11 @@ public class SignupActivity extends BaseActivity implements ISignupView {
     }
 
     @Override
+    public void showLastNameFieldError() {
+        etLastName.setError(getString(R.string.ERROR_ALERT_REQUIRED_FIELD));
+    }
+
+    @Override
     public void setActivityResult(User response) {
         AdaliveApplication.getInstance().setUser(response);
         AdaliveApplication.getInstance().setResultSignup(true);
@@ -419,24 +426,24 @@ public class SignupActivity extends BaseActivity implements ISignupView {
                 String email = etEmail.getText().toString().trim();
                 //String confirmEmail = etConfirmEmail.getText().toString().trim();
                 String name = etFullName.getText().toString().trim();
+                String lastName = etLastName.getText().toString().trim();
                 String password = etPassword.getText().toString();
                 String confirmPassword = etConfirmPassword.getText().toString();
-                String cpf = etCpf.getText().toString();
-                String cnpj = etCnpj.getText().toString();
+                /*String cpf = etCpf.getText().toString();
+                String cnpj = etCnpj.getText().toString();*/
 
                 //String companyName = etCompany.getText().toString();
 
 
                 mPresenter.attemptToSignUp(
                         name,
+                        lastName,
                         email,
                         email,
                         password,
                         confirmPassword,
                         mCurrentPhotoPath,
-                        "",
-                        cpf,
-                        cnpj);
+                        "");
                 break;
         }
     }

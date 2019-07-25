@@ -47,6 +47,7 @@ import br.com.lab360.oneinternacional.logic.rest.ApiManager;
 import br.com.lab360.oneinternacional.ui.activity.BaseActivity;
 import br.com.lab360.oneinternacional.ui.activity.mediaplayer.ExoPlayerActivity;
 import br.com.lab360.oneinternacional.ui.activity.survey.SurveyActionActivity;
+import br.com.lab360.oneinternacional.ui.activity.webview.WebviewActivity;
 import br.com.lab360.oneinternacional.utils.ScreenUtils;
 import br.com.lab360.oneinternacional.utils.UserUtils;
 import butterknife.BindView;

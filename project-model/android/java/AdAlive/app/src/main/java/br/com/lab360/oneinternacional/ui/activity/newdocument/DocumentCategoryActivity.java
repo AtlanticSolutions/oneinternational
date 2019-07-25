@@ -120,7 +120,7 @@ public class DocumentCategoryActivity extends BaseActivity implements DocumentCa
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                startTimelineActivity();
+                super.onBackPressed();
                 break;
         }
         return true;
@@ -128,7 +128,7 @@ public class DocumentCategoryActivity extends BaseActivity implements DocumentCa
 
     @Override
     public void onBackPressed() {
-        startTimelineActivity();
+        super.onBackPressed();
     }
 
     @Override

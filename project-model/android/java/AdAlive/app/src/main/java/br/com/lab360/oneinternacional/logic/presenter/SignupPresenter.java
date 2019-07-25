@@ -51,8 +51,8 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
         loadLayout();
     }
 
-    public void attemptToSignUp(String fullName, String email, String confirmEmail, String password, String confirmPassword,
-                                String mCurrentPhotoPath, String companyName, String cpf, String cnpj) {
+    public void attemptToSignUp(String fullName, String lastName, String email, String confirmEmail, String password, String confirmPassword,
+                                String mCurrentPhotoPath, String companyName) {
         boolean isValid = true;
 
         if (!mView.isOnline()) {
@@ -76,7 +76,7 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
         }
 
         String photoBase64 = getPhotoEncoded(mCurrentPhotoPath);
-        User user = User.createUserForRegistrationOneInternacional(fullName, email, password, cpf, cnpj, facebookToken, photoBase64);
+        User user = User.createUserForRegistrationOneInternacional(fullName, lastName, email, password, facebookToken, photoBase64);
 
         ArrayList<Integer> validation = user.validateSignup();
         if (!performValidation(validation) || !isValid) {
@@ -119,6 +119,9 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
                         break;
                     case User.FieldType.NAME:
                         mView.showNameFieldError();
+                        break;
+                    case User.FieldType.LASTNAME:
+                        mView.showLastNameFieldError();
                         break;
                 }
             }
@@ -205,6 +208,8 @@ public class SignupPresenter implements IBasePresenter, OnCreateAccountListener 
         void setColorViews();
 
         void showNameFieldError();
+
+        void showLastNameFieldError();
 
         void showEmailServerError();
 

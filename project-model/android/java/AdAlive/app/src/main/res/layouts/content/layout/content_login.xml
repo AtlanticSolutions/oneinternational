@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/ic_back"
-        android:visibility="invisible" />
+        android:visibility="visible"
+        android:scaleType="fitXY"/>
 
     <RelativeLayout
         android:id="@+id/container"

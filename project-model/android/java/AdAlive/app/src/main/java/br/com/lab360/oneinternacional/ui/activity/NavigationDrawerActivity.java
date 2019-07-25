@@ -1,6 +1,9 @@
 package br.com.lab360.oneinternacional.ui.activity;
 
 import android.Manifest;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AlertDialog;
@@ -28,7 +32,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
+import com.jakewharton.processphoenix.ProcessPhoenix;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -574,12 +580,20 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
         AdaliveApplication application = AdaliveApplication.getInstance();
         mInteractor = new ChatInteractor(this);
         mInteractor.unregisterDeviceId(1, application.getUser().getId(), application.getFcmToken(), this);
+
         userLogOut();
+
+        //ActivityCompat.finishAffinity(this);
+        //ProcessPhoenix.triggerRebirth(this);
+
         finish();
 
         Intent intent = new Intent(this, SplashScreenActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
+
+
 
 
     public void navigateToAtlantic() {
@@ -784,7 +798,13 @@ public class NavigationDrawerActivity extends BaseActivity implements INavigatio
         hideProgress();
         Intent it = new Intent(this, WebviewActivity.class);
         it.putExtra(AdaliveConstants.TAG_ACTION_URL, response.getUrl());
+        if(title.equals("Carrinho"))title = "Loja Virtual";
         it.putExtra(AdaliveConstants.TAG_ACTION_WEBVIEW_TITLE, title);
+
+        if (this instanceof WebviewActivity) {
+            finish();
+        }
+
         startActivity(it);
     }
     //endregion

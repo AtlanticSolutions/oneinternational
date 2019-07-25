@@ -89,6 +89,19 @@
                         android:background="@drawable/back_ground_edt_promotion_sign"
                         android:hint="@string/hint_name"
                         android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/edtSobrenome"
+                        android:padding="7dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edtSobrenome"
+                        style="@style/AppTheme.EditText.Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/back_ground_edt_promotion_sign"
+                        android:hint="Sobrenome*"
+                        android:inputType="textCapWords"
                         android:nextFocusDown="@+id/edtRg"
                         android:padding="7dp"
                         android:textColor="@color/black" />

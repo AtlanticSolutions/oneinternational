@@ -93,10 +93,10 @@ public class ChangePasswordActivity extends BaseActivity implements
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnSavePassword:
-                showToastMessage("Salvar");
-//                String password = etPassword.getText().toString();
-//                String confirmPassword = etConfirmPassword.getText().toString();
-//                mPresenter.attemptToSavePendingChanges(password,confirmPassword);
+                //showToastMessage("Salvar");
+                String password = etPassword.getText().toString();
+                String confirmPassword = etConfirmPassword.getText().toString();
+                mPresenter.attemptToSavePendingChanges(password,confirmPassword);
                 break;
         }
 

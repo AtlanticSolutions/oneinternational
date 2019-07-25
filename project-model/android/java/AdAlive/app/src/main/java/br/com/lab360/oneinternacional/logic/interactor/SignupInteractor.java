@@ -55,20 +55,21 @@ public class SignupInteractor extends BaseInteractor{
                             } else if (e instanceof IOException) {
                                 listener.onCreateAccountError(AdaliveApplication.getInstance().getString(R.string.ERROR_ALERT_MESSAGE_NO_CONNECTION));
                             } else {
-                                listener.onCreateAccountError(AdaliveApplication.getInstance().getString(R.string.ERROR_ALERT_UNKNOWN));
+                                listener.onCreateAccountError(e.getMessage());
                             }
                         }
                     }
 
                     @Override
                     public void onNext(User response) {
-                        if(response.hasErrors()){
-                            listener.onCreateAccountError(response.getErrorFields());
+                        if(!response.isSuccess() && response.getMessage() != null){
+                            listener.onCreateAccountError(response.getMessage());
                             return;
                         }
 
                         //Return request (instead of response) to use user credentials (email and password) to login attempt before signup
                         listener.onCreateAccountSuccess(request.getUser());
+
 
                     }
                 });

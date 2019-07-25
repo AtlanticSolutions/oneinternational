@@ -19,7 +19,6 @@
     <string name="facebook_app_id">299465907183064</string>
     <string name="fb_login_protocol_scheme">fb299465907183064</string>
 
-    <string name="app_name">One Internacional</string>
     <string name="SCREEN_TITLE_MAIN">One Internacional</string>
     <string name="SCREEN_TITLE_ABOUT">About the One Internacional</string>
 
@@ -77,6 +76,7 @@
     <string name="PLACEHOLDER_PASSWORD">Password</string>
     <string name="PLACEHOLDER_NEW_PASSWORD">New Password</string>
     <string name="PLACEHOLDER_FULLNAME">Name</string>
+    <string name="PLACEHOLDER_LASTNAME">Last name</string>
     <string name="PLACEHOLDER_COMPANY">Empresa</string>
     <string name="PLACEHOLDER_SECTOR">Job</string>
     <string name="PLACEHOLDER_NUMBER">Number</string>

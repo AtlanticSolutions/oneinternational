@@ -140,16 +140,17 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="br.com.atlantic.SECTOR" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <!--category android:name="android.intent.category.DEFAULT" /-->
             </intent-filter>
             <intent-filter>
                 <action android:name="br.com.atlantic.INTERACTIVE" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <!--category android:name="android.intent.category.DEFAULT" /-->
             </intent-filter>
         </activity>
         <activity
@@ -177,7 +178,7 @@
             <intent-filter>
                 <action android:name="br.com.atlantic.MESSAGE" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <!--category android:name="android.intent.category.DEFAULT" /-->
             </intent-filter>
         </activity>
         <activity
@@ -249,7 +250,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <!--category android:name="android.intent.category.DEFAULT" /-->
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
@@ -395,6 +396,7 @@
             android:launchMode="singleInstance"
             android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
+            android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity

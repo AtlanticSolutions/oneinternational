@@ -9,13 +9,16 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.common.base.Strings;
@@ -23,6 +26,7 @@ import com.google.common.base.Strings;
 import br.com.lab360.oneinternacional.R;
 import br.com.lab360.oneinternacional.application.AdaliveConstants;
 import br.com.lab360.oneinternacional.ui.activity.BaseActivity;
+import br.com.lab360.oneinternacional.ui.activity.MainActivity;
 import br.com.lab360.oneinternacional.ui.activity.NavigationDrawerActivity;
 import br.com.lab360.oneinternacional.utils.ScreenUtils;
 import br.com.lab360.oneinternacional.utils.UserUtils;
@@ -53,8 +57,10 @@ public class WebviewActivity extends NavigationDrawerActivity {
         settings.setAppCacheEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setLoadsImagesAutomatically(true);
+        settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setDatabaseEnabled(true);
-
+        settings.setLoadWithOverviewMode(true);
+        settings.setUseWideViewPort(true);
 
         mContainerLoading.setVisibility(View.VISIBLE);
 
@@ -80,6 +86,7 @@ public class WebviewActivity extends NavigationDrawerActivity {
 
         }
 
+        wvNavigation.setWebChromeClient(new WebChromeClient());
         wvNavigation.setWebViewClient(new MyWebClient());
 
 //        wvNavigation.setWebChromeClient(new WebChromeClient() {
@@ -156,8 +163,8 @@ public class WebviewActivity extends NavigationDrawerActivity {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view,
                                                 String urlNewString) {
-            view.loadUrl(urlNewString);
-            return true;
+            //view.loadUrl(urlNewString);
+            return false;
 
         }
 
@@ -200,4 +207,6 @@ public class WebviewActivity extends NavigationDrawerActivity {
             Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

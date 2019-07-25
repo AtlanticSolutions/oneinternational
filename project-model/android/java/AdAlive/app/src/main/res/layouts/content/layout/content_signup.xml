@@ -52,44 +52,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 style="@style/TextLabelWhite"
-                android:text="@string/PLACEHOLDER_CPF"
+                android:text="@string/PLACEHOLDER_LASTNAME"
                 android:layout_height="wrap_content" />
 
             <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
 
                 <ImageView
                     style="@style/AppTheme.ImageViewField"
-                    android:src="@drawable/ic_menu_documents" />
+                    android:src="@drawable/ic_nome" />
 
-                <com.vicmikhailau.maskededittext.MaskedEditText
-                    android:id="@+id/etCpf"
+                <EditText
+                    android:id="@+id/etLastName"
                     style="@style/AppTheme.EditText.Base"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/PLACEHOLDER_CPF"
-                    android:inputType="textCapWords"
-                    app:mask="###.###.###-##" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                style="@style/TextLabelWhite"
-                android:text="@string/PLACEHOLDER_CNPJ"
-                android:layout_height="wrap_content" />
-
-            <LinearLayout style="@style/AppTheme.LinearLayoutMargin.Field">
-
-                <ImageView
-                    style="@style/AppTheme.ImageViewField"
-                    android:src="@drawable/ic_menu_documents" />
-
-                <com.vicmikhailau.maskededittext.MaskedEditText
-                    android:id="@+id/etCnpj"
-                    style="@style/AppTheme.EditText.Base"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/PLACEHOLDER_CNPJ"
-                    app:mask="##.###.###/####-##"
+                    android:hint="@string/PLACEHOLDER_LASTNAME"
                     android:inputType="textCapWords" />
             </LinearLayout>
 
