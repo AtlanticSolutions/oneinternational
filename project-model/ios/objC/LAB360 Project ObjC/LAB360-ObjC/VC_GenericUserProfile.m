@@ -954,8 +954,8 @@
             });
             
             NSDictionary *dicParameters = [userModificado dictionaryJSON];
-            
-            [connectionManager updateUserUsingParameters:dicParameters withUserID:userEstatico.userID withCompletionHandler:^(NSDictionary *response, NSInteger statusCode, NSError *error) {
+       
+            [connectionManager updateUserUsingParametersWithoudID:dicParameters withCompletionHandler:^(NSDictionary *response, NSInteger statusCode, NSError *error) {
                 
                 if (error){
                     [AppD performSelectorOnMainThread:@selector(hideLoadingAnimation) withObject:nil waitUntilDone:NO];

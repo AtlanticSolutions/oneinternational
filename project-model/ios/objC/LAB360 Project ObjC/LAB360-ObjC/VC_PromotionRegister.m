@@ -1159,7 +1159,7 @@
                 [dicParameters2 setValue:@(1) forKey:@"gender"];
             }
             
-            [connectionManager updateUserUsingParameters:dicParameters withUserID:self.userEstatico.userID withCompletionHandler:^(NSDictionary *response, NSInteger statusCode, NSError *error) {
+            [connectionManager updateUserUsingParametersWithoudID:dicParameters  withCompletionHandler:^(NSDictionary *response, NSInteger statusCode, NSError *error) {
                 
                 if (error) {
                     

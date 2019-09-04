@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Debug-iphoneos/CTPanoramaView/CTPanoramaView.framework/Modules"
+    'name': "/Users/georgemichelon/onInternational/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Debug-iphoneos/CTPanoramaView/CTPanoramaView.framework/Modules"
     'contents': [{
       'type': 'file',
       'name': "module.modulemap",
-      'external-contents': "/Users/georgemichelon/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Pods.build/Debug-iphoneos/CTPanoramaView.build/unextended-module.modulemap",
+      'external-contents': "/Users/georgemichelon/onInternational/oneinternational/project-model/ios/objC/LAB360 Project ObjC/build/Pods.build/Debug-iphoneos/CTPanoramaView.build/unextended-module.modulemap",
     }]
   }]
 }

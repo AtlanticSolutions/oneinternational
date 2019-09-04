@@ -45,6 +45,14 @@
 - (void)updateUserUsingParameters:(NSDictionary *)dicParameters withUserID:(int)ID withCompletionHandler:(void (^)(NSDictionary *response, NSInteger statusCode, NSError *error)) handler;
 - (void)authenticateUserCode:(NSString *)code withCompletionHandler:(void (^)(NSDictionary *response, NSError *error)) handler;
 
+- (void)updateUserUsingParametersWithoudID:(NSDictionary *)dicParameters withCompletionHandler:(void (^)(NSDictionary *response, NSInteger statusCode, NSError *error)) handler;
+
+
+
+
+
+
+
 //events
 - (void)getAllEventsAvailableForMasterEventID:(long)masterEventID withCompletionHandler:(void (^)(NSArray *response, NSError *error)) handler;
 - (void)subscribeToEventUsingParameters:(NSDictionary *)dicParameters withCompletionHandler:(void (^)(NSDictionary *response, NSError *error)) handler;
