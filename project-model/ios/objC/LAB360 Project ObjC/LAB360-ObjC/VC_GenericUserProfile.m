@@ -159,7 +159,7 @@
 
         if ([nameTextField.text         isEqualToString:@""]
         || [cpfTextField.text           isEqualToString:@""]
-        || [cnpjTextField.text          isEqualToString:@""]
+      //  || [cnpjTextField.text          isEqualToString:@""]
         || [rgTextField.text            isEqualToString:@""]
         || [birthdateTextField.text     isEqualToString:@""]
         || [genderTextField.text        isEqualToString:@""]
@@ -329,7 +329,7 @@
     
     activeTextField = textField;
     
-    if ((textField == cpfTextField) || (textField == cnpjTextField)||(textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
+    if ((textField == cpfTextField) || (textField == cnpjTextField)|| (textField == rgTextField)||(textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
         
         NSString *mask = @"";
         
@@ -341,6 +341,11 @@
         else if (textField == self.cnpjTextField) {
             mask = @"##.###-###/####-##";
         }
+        
+        else if (textField == self.rgTextField) {
+            mask = @"##.###-###-##";
+        }
+        
         else if (textField == self.zipCodeTextField) {
             mask = @"##.###-###";
         } else if (textField == self.dddTextField) {
@@ -503,7 +508,7 @@
     //TextFields & Labels
     nameTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_NAME", @"")];
     cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CPF", @"")];
-    cnpjTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
+    cnpjTextField.placeholder = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
     rgTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_RG", @"")];
     birthdateTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_BIRTHDATE", @"")];
     dddTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_DDD", @"")];
@@ -682,9 +687,9 @@
     //Nome
     self.nameTextField.text = userData.name;
     //RG
-    self.rgTextField.text = userData.RG;
+    self.rgTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.RG usingMask:@"##.###.###-#"];
     //CNPJ
-    self.cnpjTextField.text = userData.CNPJ;
+   // self.cnpjTextField.text = userData.CNPJ;
     //Data Nascimento
     self.birthdateTextField.text = [ToolBox dateHelper_StringFromDate:userData.birthdate withFormat:TOOLBOX_DATA_BARRA_CURTA_NORMAL];
     //Sexo

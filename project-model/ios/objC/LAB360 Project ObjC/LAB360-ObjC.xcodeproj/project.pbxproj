@@ -15,6 +15,8 @@
 		70E7EF064E10C516C04991EE /* Pods_OneInternational_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60C3FD0BF829521B09A686 /* Pods_OneInternational_Dev.framework */; };
 		9013EDD622A8659D0086794F /* icons8-shopping-cart-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 9013EDD422A8659C0086794F /* icons8-shopping-cart-24.png */; };
 		9013EDD722A8659D0086794F /* icons8-shopping-cart-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 9013EDD522A8659D0086794F /* icons8-shopping-cart-48.png */; };
+		902AB4192321A21500B11860 /* LaunchScreenBioPrime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902AB4182321A21500B11860 /* LaunchScreenBioPrime.storyboard */; };
+		902AB41C2321A36B00B11860 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 902AB41B2321A36B00B11860 /* splash.jpg */; };
 		A0B30000225F5B99005F79A9 /* CS_AnswerUnitRating_TVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E761FC8321EF7D0200F6B857 /* CS_AnswerUnitRating_TVC.xib */; };
 		A0B30001225F5B99005F79A9 /* icon-cancelado@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E71C63AA1F94D0C700C3E26D /* icon-cancelado@3x.png */; };
 		A0B30002225F5B99005F79A9 /* SFDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E7AFE4BB21BA90D2004B3E5A /* SFDisplay-Regular.otf */; };
@@ -2049,6 +2051,58 @@
 		866633F221675FC5CBBDD5EA /* Pods-OneInternational-Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Prod/Pods-OneInternational-Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		9013EDD422A8659C0086794F /* icons8-shopping-cart-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-shopping-cart-24.png"; sourceTree = "<group>"; };
 		9013EDD522A8659D0086794F /* icons8-shopping-cart-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-shopping-cart-48.png"; sourceTree = "<group>"; };
+		902AB3B5232196AE00B11860 /* OneInternational-Prod copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OneInternational-Prod copy-Info.plist"; path = "/Users/georgemichelon/onInternational/oneinternational/project-model/ios/objC/LAB360 Project ObjC/OneInternational-Prod copy-Info.plist"; sourceTree = "<absolute>"; };
+		902AB3B62321971400B11860 /* CS_AnswerCollectionImageItem_CVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerCollectionImageItem_CVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerCollectionImageItem_CVC.xib"; sourceTree = "<group>"; };
+		902AB3B72321971400B11860 /* TVC_StoreItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TVC_StoreItem.xib; path = "Resources-iPad/LAB360-ObjC/TVC_StoreItem.xib"; sourceTree = "<group>"; };
+		902AB3B82321971400B11860 /* BannerDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BannerDisplayView.xib; path = "Resources-iPad/LAB360-ObjC/BannerDisplayView.xib"; sourceTree = "<group>"; };
+		902AB3B92321971400B11860 /* DocVidCategory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocVidCategory.xib; path = "Resources-iPad/LAB360-ObjC/DocVidCategory.xib"; sourceTree = "<group>"; };
+		902AB3BA2321971400B11860 /* CS_QuestionWebContent_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_QuestionWebContent_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_QuestionWebContent_TVC.xib"; sourceTree = "<group>"; };
+		902AB3BB2321971400B11860 /* CS_GroupImage_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_GroupImage_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_GroupImage_TVC.xib"; sourceTree = "<group>"; };
+		902AB3BC2321971400B11860 /* LightControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LightControlView.xib; path = "Resources-iPad/LAB360-ObjC/LightControlView.xib"; sourceTree = "<group>"; };
+		902AB3BD2321971400B11860 /* GenericFormItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GenericFormItemTVC.xib; path = "Resources-iPad/LAB360-ObjC/GenericFormItemTVC.xib"; sourceTree = "<group>"; };
+		902AB3BE2321971400B11860 /* CS_AnswerUnitRating_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerUnitRating_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerUnitRating_TVC.xib"; sourceTree = "<group>"; };
+		902AB3BF2321971400B11860 /* TVC_VideoPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TVC_VideoPlayer.xib; path = "Resources-iPad/LAB360-ObjC/TVC_VideoPlayer.xib"; sourceTree = "<group>"; };
+		902AB3C02321971400B11860 /* CS_AnswerStarRating_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerStarRating_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerStarRating_TVC.xib"; sourceTree = "<group>"; };
+		902AB3C12321971400B11860 /* AppOptionPermissionItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AppOptionPermissionItemTVC.xib; path = "Resources-iPad/LAB360-ObjC/AppOptionPermissionItemTVC.xib"; sourceTree = "<group>"; };
+		902AB3C22321971400B11860 /* OrderHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OrderHistoryTableViewCell.xib; path = "Resources-iPad/LAB360-ObjC/OrderHistoryTableViewCell.xib"; sourceTree = "<group>"; };
+		902AB3C32321971400B11860 /* CS_QuestionText_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_QuestionText_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_QuestionText_TVC.xib"; sourceTree = "<group>"; };
+		902AB3C42321971400B11860 /* Video360VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Video360VC.xib; path = "Resources-iPad/LAB360-ObjC/Video360VC.xib"; sourceTree = "<group>"; };
+		902AB3C52321971400B11860 /* CS_AnswerSingleSelection_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerSingleSelection_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerSingleSelection_TVC.xib"; sourceTree = "<group>"; };
+		902AB3C62321971400B11860 /* CS_AnswerMultiSelection_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerMultiSelection_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerMultiSelection_TVC.xib"; sourceTree = "<group>"; };
+		902AB3C72321971400B11860 /* CatalogProductOfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CatalogProductOfferCell.xib; path = "Resources-iPad/LAB360-ObjC/CatalogProductOfferCell.xib"; sourceTree = "<group>"; };
+		902AB3C82321971400B11860 /* CS_AnswerImageItem_CVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerImageItem_CVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerImageItem_CVC.xib"; sourceTree = "<group>"; };
+		902AB3C92321971400B11860 /* CS_AnswerItemList_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerItemList_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerItemList_TVC.xib"; sourceTree = "<group>"; };
+		902AB3CA2321971400B11860 /* CustomLetterViewSectionIndex.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomLetterViewSectionIndex.xib; path = "Resources-iPad/LAB360-ObjC/CustomLetterViewSectionIndex.xib"; sourceTree = "<group>"; };
+		902AB3CB2321971400B11860 /* CustomPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomPickerView.xib; path = "Resources-iPad/LAB360-ObjC/CustomPickerView.xib"; sourceTree = "<group>"; };
+		902AB3CC2321971400B11860 /* CS_AnswerImage_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerImage_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerImage_TVC.xib"; sourceTree = "<group>"; };
+		902AB3CD2321971400B11860 /* PointsTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PointsTransactionTableViewCell.xib; path = "Resources-iPad/LAB360-ObjC/PointsTransactionTableViewCell.xib"; sourceTree = "<group>"; };
+		902AB3CE2321971400B11860 /* CS_AnswerDecimal_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerDecimal_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerDecimal_TVC.xib"; sourceTree = "<group>"; };
+		902AB3CF2321971400B11860 /* TVC_PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TVC_PostCell.xib; path = "Resources-iPad/LAB360-ObjC/TVC_PostCell.xib"; sourceTree = "<group>"; };
+		902AB3D02321971400B11860 /* CS_QuestionImage_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_QuestionImage_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_QuestionImage_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D12321971400B11860 /* CS_AnswerMaskedText_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerMaskedText_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerMaskedText_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D22321971400B11860 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = "Resources-iPad/LAB360-ObjC/CategoryTableViewCell.xib"; sourceTree = "<group>"; };
+		902AB3D32321971400B11860 /* CS_GroupTitle_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_GroupTitle_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_GroupTitle_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D42321971400B11860 /* CS_AnswerLikeRating_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerLikeRating_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerLikeRating_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D52321971400B11860 /* CS_AnswerOrderlyOptions_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerOrderlyOptions_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerOrderlyOptions_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D62321971400B11860 /* TVC_InvoiceItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TVC_InvoiceItem.xib; path = "Resources-iPad/LAB360-ObjC/TVC_InvoiceItem.xib"; sourceTree = "<group>"; };
+		902AB3D72321971400B11860 /* CS_AnswerSingleLineText_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerSingleLineText_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerSingleLineText_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D82321971400B11860 /* CS_AnswerBarRating_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerBarRating_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerBarRating_TVC.xib"; sourceTree = "<group>"; };
+		902AB3D92321971400B11860 /* CatalogProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CatalogProductCell.xib; path = "Resources-iPad/LAB360-ObjC/CatalogProductCell.xib"; sourceTree = "<group>"; };
+		902AB3DA2321971400B11860 /* ViewSectionPost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewSectionPost.xib; path = "Resources-iPad/LAB360-ObjC/ViewSectionPost.xib"; sourceTree = "<group>"; };
+		902AB3DB2321971400B11860 /* CS_GroupHeader_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_GroupHeader_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_GroupHeader_TVC.xib"; sourceTree = "<group>"; };
+		902AB3DC2321971400B11860 /* CS_GroupFooter_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_GroupFooter_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_GroupFooter_TVC.xib"; sourceTree = "<group>"; };
+		902AB3DD2321971400B11860 /* ZoneActionInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ZoneActionInfoView.xib; path = "Resources-iPad/LAB360-ObjC/ZoneActionInfoView.xib"; sourceTree = "<group>"; };
+		902AB3DE2321971400B11860 /* CatalogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CatalogCollectionViewCell.xib; path = "Resources-iPad/LAB360-ObjC/CatalogCollectionViewCell.xib"; sourceTree = "<group>"; };
+		902AB3DF2321971400B11860 /* CS_AnswerCollectionView_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerCollectionView_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerCollectionView_TVC.xib"; sourceTree = "<group>"; };
+		902AB3E02321971400B11860 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingView.xib; path = "Resources-iPad/LAB360-ObjC/LoadingView.xib"; sourceTree = "<group>"; };
+		902AB3E12321971400B11860 /* CS_AnswerOptions_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerOptions_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerOptions_TVC.xib"; sourceTree = "<group>"; };
+		902AB3E22321971400B11860 /* CS_AnswerOptionRating_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerOptionRating_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerOptionRating_TVC.xib"; sourceTree = "<group>"; };
+		902AB3E32321971400B11860 /* CS_AnswerSpecialInput_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerSpecialInput_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerSpecialInput_TVC.xib"; sourceTree = "<group>"; };
+		902AB3E42321971400B11860 /* AppOptionItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AppOptionItemTVC.xib; path = "Resources-iPad/LAB360-ObjC/AppOptionItemTVC.xib"; sourceTree = "<group>"; };
+		902AB3E52321971400B11860 /* CS_AnswerMultiLineText_TVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CS_AnswerMultiLineText_TVC.xib; path = "Resources-iPad/LAB360-ObjC/CS_AnswerMultiLineText_TVC.xib"; sourceTree = "<group>"; };
+		902AB3E62321971400B11860 /* MessageNotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MessageNotificationView.xib; path = "Resources-iPad/LAB360-ObjC/MessageNotificationView.xib"; sourceTree = "<group>"; };
+		902AB4182321A21500B11860 /* LaunchScreenBioPrime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenBioPrime.storyboard; sourceTree = "<group>"; };
+		902AB41B2321A36B00B11860 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash.jpg; sourceTree = "<group>"; };
 		938110A4D6F058A65F087CCE /* Pods-OneInternational-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneInternational-Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneInternational-Dev/Pods-OneInternational-Dev.release.xcconfig"; sourceTree = "<group>"; };
 		A0B30185225F5B9A005F79A9 /* OneInternational-Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OneInternational-Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B30186225F5B9B005F79A9 /* OneInternational-Dev copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OneInternational-Dev copy-Info.plist"; path = "/Users/lucas/Desktop/Lab360/Git/OneInternational/project-model/ios/objC/LAB360 Project ObjC/OneInternational-Dev copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -3461,6 +3515,70 @@
 			name = Sponsor;
 			sourceTree = "<group>";
 		};
+		902AB3B4232196AD00B11860 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				902AB3B62321971400B11860 /* CS_AnswerCollectionImageItem_CVC.xib */,
+				902AB3B72321971400B11860 /* TVC_StoreItem.xib */,
+				902AB3B82321971400B11860 /* BannerDisplayView.xib */,
+				902AB3B92321971400B11860 /* DocVidCategory.xib */,
+				902AB3BA2321971400B11860 /* CS_QuestionWebContent_TVC.xib */,
+				902AB3BB2321971400B11860 /* CS_GroupImage_TVC.xib */,
+				902AB3BC2321971400B11860 /* LightControlView.xib */,
+				902AB3BD2321971400B11860 /* GenericFormItemTVC.xib */,
+				902AB3BE2321971400B11860 /* CS_AnswerUnitRating_TVC.xib */,
+				902AB3BF2321971400B11860 /* TVC_VideoPlayer.xib */,
+				902AB3C02321971400B11860 /* CS_AnswerStarRating_TVC.xib */,
+				902AB3C12321971400B11860 /* AppOptionPermissionItemTVC.xib */,
+				902AB3C22321971400B11860 /* OrderHistoryTableViewCell.xib */,
+				902AB3C32321971400B11860 /* CS_QuestionText_TVC.xib */,
+				902AB3C42321971400B11860 /* Video360VC.xib */,
+				902AB3C52321971400B11860 /* CS_AnswerSingleSelection_TVC.xib */,
+				902AB3C62321971400B11860 /* CS_AnswerMultiSelection_TVC.xib */,
+				902AB3C72321971400B11860 /* CatalogProductOfferCell.xib */,
+				902AB3C82321971400B11860 /* CS_AnswerImageItem_CVC.xib */,
+				902AB3C92321971400B11860 /* CS_AnswerItemList_TVC.xib */,
+				902AB3CA2321971400B11860 /* CustomLetterViewSectionIndex.xib */,
+				902AB3CB2321971400B11860 /* CustomPickerView.xib */,
+				902AB3CC2321971400B11860 /* CS_AnswerImage_TVC.xib */,
+				902AB3CD2321971400B11860 /* PointsTransactionTableViewCell.xib */,
+				902AB3CE2321971400B11860 /* CS_AnswerDecimal_TVC.xib */,
+				902AB3CF2321971400B11860 /* TVC_PostCell.xib */,
+				902AB3D02321971400B11860 /* CS_QuestionImage_TVC.xib */,
+				902AB3D12321971400B11860 /* CS_AnswerMaskedText_TVC.xib */,
+				902AB3D22321971400B11860 /* CategoryTableViewCell.xib */,
+				902AB3D32321971400B11860 /* CS_GroupTitle_TVC.xib */,
+				902AB3D42321971400B11860 /* CS_AnswerLikeRating_TVC.xib */,
+				902AB3D52321971400B11860 /* CS_AnswerOrderlyOptions_TVC.xib */,
+				902AB3D62321971400B11860 /* TVC_InvoiceItem.xib */,
+				902AB3D72321971400B11860 /* CS_AnswerSingleLineText_TVC.xib */,
+				902AB3D82321971400B11860 /* CS_AnswerBarRating_TVC.xib */,
+				902AB3D92321971400B11860 /* CatalogProductCell.xib */,
+				902AB3DA2321971400B11860 /* ViewSectionPost.xib */,
+				902AB3DB2321971400B11860 /* CS_GroupHeader_TVC.xib */,
+				902AB3DC2321971400B11860 /* CS_GroupFooter_TVC.xib */,
+				902AB3DD2321971400B11860 /* ZoneActionInfoView.xib */,
+				902AB3DE2321971400B11860 /* CatalogCollectionViewCell.xib */,
+				902AB3DF2321971400B11860 /* CS_AnswerCollectionView_TVC.xib */,
+				902AB3E02321971400B11860 /* LoadingView.xib */,
+				902AB3E12321971400B11860 /* CS_AnswerOptions_TVC.xib */,
+				902AB3E22321971400B11860 /* CS_AnswerOptionRating_TVC.xib */,
+				902AB3E32321971400B11860 /* CS_AnswerSpecialInput_TVC.xib */,
+				902AB3E42321971400B11860 /* AppOptionItemTVC.xib */,
+				902AB3E52321971400B11860 /* CS_AnswerMultiLineText_TVC.xib */,
+				902AB3E62321971400B11860 /* MessageNotificationView.xib */,
+			);
+			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		902AB41A2321A2C800B11860 /* ResourcesImages */ = {
+			isa = PBXGroup;
+			children = (
+				902AB41B2321A36B00B11860 /* splash.jpg */,
+			);
+			path = ResourcesImages;
+			sourceTree = "<group>";
+		};
 		A0BEE81F20C6B65A001CED96 /* Document */ = {
 			isa = PBXGroup;
 			children = (
@@ -4318,11 +4436,14 @@
 		E744C0121D9D861000711700 = {
 			isa = PBXGroup;
 			children = (
+				902AB41A2321A2C800B11860 /* ResourcesImages */,
+				902AB3B4232196AD00B11860 /* Resources-iPad */,
 				E744C01D1D9D861000711700 /* LAB360-ObjC */,
 				E744C01C1D9D861000711700 /* Products */,
 				BED23A0B8227D02A145B3C18 /* Frameworks */,
 				EEDE8FED500DB417B62312C5 /* Pods */,
 				A0B30186225F5B9B005F79A9 /* OneInternational-Dev copy-Info.plist */,
+				902AB3B5232196AE00B11860 /* OneInternational-Prod copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -4409,6 +4530,7 @@
 			isa = PBXGroup;
 			children = (
 				04AF3D631F6AF3A90015F6AA /* LaunchScreen-LAB360.storyboard */,
+				902AB4182321A21500B11860 /* LaunchScreenBioPrime.storyboard */,
 			);
 			name = LaucherScreen;
 			sourceTree = "<group>";
@@ -6172,10 +6294,9 @@
 			};
 			buildConfigurationList = E744C0161D9D861000711700 /* Build configuration list for PBXProject "LAB360-ObjC" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				"pt-BR",
@@ -6763,6 +6884,7 @@
 				E7F6CFDD1FA3384500D1FC0D /* icon-three-dot@3x.png in Resources */,
 				E7F6CFDE1FA3384500D1FC0D /* icon-user@2x.png in Resources */,
 				E7F6CFDF1FA3384500D1FC0D /* icon-button-chat@2x.png in Resources */,
+				902AB4192321A21500B11860 /* LaunchScreenBioPrime.storyboard in Resources */,
 				E7F6CFE01FA3384500D1FC0D /* ic_notifications@2x.png in Resources */,
 				E777F1CF21E8EBA000899229 /* CS_GroupImage_TVC.xib in Resources */,
 				E7261522211360B200E5D5CC /* LightControlView.xib in Resources */,
@@ -7171,6 +7293,7 @@
 				E7245B6A211C7FCE00CB76A3 /* lab360_vuforia_local_target_marker.jpg in Resources */,
 				E7F6D0EB1FA3384500D1FC0D /* haarcascade_frontalface_default.xml in Resources */,
 				E74AC54B21ED06A600B30C99 /* CS_AnswerMultiLineText_TVC.xib in Resources */,
+				902AB41C2321A36B00B11860 /* splash.jpg in Resources */,
 				E7AFE4C721BA90D5004B3E5A /* SFDisplay-Ultralight.otf in Resources */,
 				E7F6D0EC1FA3384500D1FC0D /* icon-main-menu-events-260x260.png in Resources */,
 				E7F6D0ED1FA3384500D1FC0D /* MessageNotificationView.xib in Resources */,

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PointsTransactionCell" rowHeight="143" id="KGk-i7-Jjw" customClass="PointsTransactionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLh-Xd-8Jy" userLabel="Date">
+                        <rect key="frame" x="16" y="47" width="153" height="21"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggj-KF-gbk">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD/MM/AAAA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m25-VV-nhd">
+                                <rect key="frame" x="46" y="0.0" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ggj-KF-gbk" firstAttribute="baseline" secondItem="m25-VV-nhd" secondAttribute="baseline" id="VdU-9e-oCe"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9md-Bq-vKP" userLabel="Points">
+                        <rect key="frame" x="216" y="47" width="134" height="21"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-MS-g2d">
+                                <rect key="frame" x="0.0" y="0.0" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" pontos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLl-Uq-dsP">
+                                <rect key="frame" x="73" y="0.0" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HLl-Uq-dsP" firstAttribute="baseline" secondItem="Jzw-MS-g2d" secondAttribute="baseline" id="0av-qi-ir8"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESGATE DE PRÊMIO  - FACA PARA COZINHA - BRANCA - 143002RESGATE DE PRÊMIO  - FACA PARA COZINHA - BRANCA - 143002" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-Oi-bFG">
+                        <rect key="frame" x="16" y="58" width="334" height="55"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ikO-Oi-bFG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="5SG-xM-exJ"/>
+                    <constraint firstItem="9md-Bq-vKP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zLh-Xd-8Jy" secondAttribute="trailing" constant="8" id="6gi-P3-XbV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9md-Bq-vKP" secondAttribute="trailing" id="FQR-kz-JSZ"/>
+                    <constraint firstItem="ikO-Oi-bFG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="VeA-Hq-Dmm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ikO-Oi-bFG" secondAttribute="bottom" constant="16" id="Vp6-VZ-yxB"/>
+                    <constraint firstItem="9md-Bq-vKP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="g7f-yw-6FB"/>
+                    <constraint firstItem="ikO-Oi-bFG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="58" id="geM-Cb-fnn"/>
+                    <constraint firstItem="zLh-Xd-8Jy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="vCc-R3-pNE"/>
+                    <constraint firstItem="zLh-Xd-8Jy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zCb-uH-e9o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="dateFixedLabel" destination="Ggj-KF-gbk" id="YKr-o5-qwn"/>
+                <outlet property="pointsDateLabel" destination="m25-VV-nhd" id="RWz-SG-J2S"/>
+                <outlet property="pointsFixedLabel" destination="HLl-Uq-dsP" id="dDy-zh-O2o"/>
+                <outlet property="pointsLabel" destination="Jzw-MS-g2d" id="740-Wr-igh"/>
+                <outlet property="pointsOrderLabel" destination="ikO-Oi-bFG" id="alH-1U-hEC"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="92"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CS_QuestionText_TVC_Identifier" rowHeight="82" id="M0a-Ws-Qxe" customClass="CS_QuestionText_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M0a-Ws-Qxe" id="L4h-X8-hrL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yp-YI-D2e">
+                        <rect key="frame" x="10" y="10" width="394" height="61"/>
+                        <color key="backgroundColor" red="1" green="0.70980392160000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="eQh-be-v50"/>
+                        </constraints>
+                        <string key="text">Grupo One
+Second Line
+Third Line</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1yp-YI-D2e" secondAttribute="bottom" constant="10" id="2EJ-Iu-Uwt"/>
+                    <constraint firstItem="1yp-YI-D2e" firstAttribute="leading" secondItem="L4h-X8-hrL" secondAttribute="leading" constant="10" id="5uC-eh-hgc"/>
+                    <constraint firstAttribute="trailing" secondItem="1yp-YI-D2e" secondAttribute="trailing" constant="10" id="6Va-L5-A6e"/>
+                    <constraint firstItem="1yp-YI-D2e" firstAttribute="top" secondItem="L4h-X8-hrL" secondAttribute="top" constant="10" id="zIz-Hf-m5j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblText" destination="1yp-YI-D2e" id="LbQ-pH-xx1"/>
+            </connections>
+            <point key="canvasLocation" x="348.80000000000001" y="-188.00599700149925"/>
+        </tableViewCell>
+    </objects>
+</document>

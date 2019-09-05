@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CS_AnswerImageItem_CVC_Identifier" id="D3D-ea-xmp" customClass="CS_AnswerImageItem_CVC">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="181"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="181"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-tp-l63">
+                        <rect key="frame" x="0.0" y="10" width="204" height="181"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="6T9-tp-l63" firstAttribute="centerX" secondItem="0ro-Sd-5ML" secondAttribute="centerX" id="0Oc-Ht-Gra"/>
+                <constraint firstItem="6T9-tp-l63" firstAttribute="centerY" secondItem="0ro-Sd-5ML" secondAttribute="centerY" id="VNo-Do-NGZ"/>
+                <constraint firstItem="6T9-tp-l63" firstAttribute="height" secondItem="D3D-ea-xmp" secondAttribute="height" id="bIp-6Z-ZJo"/>
+                <constraint firstItem="6T9-tp-l63" firstAttribute="width" secondItem="D3D-ea-xmp" secondAttribute="width" id="i4j-lh-joY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0ro-Sd-5ML"/>
+            <size key="customSize" width="204" height="181"/>
+            <connections>
+                <outlet property="imvPicture" destination="6T9-tp-l63" id="OJf-sv-x2N"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="-37.331334332833585"/>
+        </collectionViewCell>
+    </objects>
+</document>

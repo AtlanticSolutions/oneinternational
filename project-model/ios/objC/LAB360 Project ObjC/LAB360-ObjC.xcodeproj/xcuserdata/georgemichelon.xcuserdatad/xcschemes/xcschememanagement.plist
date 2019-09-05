@@ -11,13 +11,42 @@
 		</dict>
 		<key>OneInternational-Dev.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>35</integer>
+		</dict>
+		<key>OneInternational-Prod copy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>37</integer>
 		</dict>
 		<key>OneInternational-Prod.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>36</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>902AB010232196AC00B11860</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0B3FDE8225F5B99005F79A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7F6CEF21FA3384500D1FC0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageNotificationView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoz-KM-quf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HcN-7T-9Nx">
+                            <rect key="frame" x="10" y="28" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Gh0-6T-kSE"/>
+                                <constraint firstAttribute="width" constant="30" id="J0j-GI-ycy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grupo: Combustíveis Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al6-fC-ARZ">
+                            <rect key="frame" x="50" y="8" width="315" height="20"/>
+                            <color key="backgroundColor" red="0.21268532695333953" green="1" blue="0.14592289839312245" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="DS1-LR-Tly"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="João afonso: Tenha uma nova dúvida. Qual o nome do arquivo para download antes? Tenha uma nova dúvida. Tenha uma nova dúvida." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MgY-3d-GUd">
+                            <rect key="frame" x="50" y="30" width="315" height="48"/>
+                            <color key="backgroundColor" red="0.21268532700000001" green="1" blue="0.1459228984" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Aq-TD-J89">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                            <connections>
+                                <action selector="clickInNotification:" destination="iN0-l3-epB" eventType="touchUpInside" id="Pei-4s-q7R"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.36747239819999999" green="0.73424543850000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MgY-3d-GUd" secondAttribute="bottom" constant="8" id="2m4-6d-HjK"/>
+                        <constraint firstItem="5Aq-TD-J89" firstAttribute="height" secondItem="hoz-KM-quf" secondAttribute="height" id="7yQ-2V-yQb"/>
+                        <constraint firstItem="MgY-3d-GUd" firstAttribute="leading" secondItem="HcN-7T-9Nx" secondAttribute="trailing" constant="10" id="8TK-Rz-D8J"/>
+                        <constraint firstAttribute="trailing" secondItem="al6-fC-ARZ" secondAttribute="trailing" constant="10" id="D1i-81-n6b"/>
+                        <constraint firstItem="5Aq-TD-J89" firstAttribute="centerY" secondItem="hoz-KM-quf" secondAttribute="centerY" id="E6b-Nj-9nW"/>
+                        <constraint firstItem="al6-fC-ARZ" firstAttribute="leading" secondItem="HcN-7T-9Nx" secondAttribute="trailing" constant="10" id="FPB-e6-kmd"/>
+                        <constraint firstItem="HcN-7T-9Nx" firstAttribute="leading" secondItem="hoz-KM-quf" secondAttribute="leading" constant="10" id="Fff-OH-05l"/>
+                        <constraint firstItem="HcN-7T-9Nx" firstAttribute="centerY" secondItem="hoz-KM-quf" secondAttribute="centerY" id="WqV-hO-qox"/>
+                        <constraint firstItem="5Aq-TD-J89" firstAttribute="width" secondItem="hoz-KM-quf" secondAttribute="width" id="clJ-eU-ufB"/>
+                        <constraint firstItem="5Aq-TD-J89" firstAttribute="centerX" secondItem="hoz-KM-quf" secondAttribute="centerX" id="fR0-By-t8z"/>
+                        <constraint firstAttribute="trailing" secondItem="MgY-3d-GUd" secondAttribute="trailing" constant="10" id="htv-tI-hoI"/>
+                        <constraint firstItem="al6-fC-ARZ" firstAttribute="top" secondItem="hoz-KM-quf" secondAttribute="top" constant="8" id="kAs-3t-MfI"/>
+                        <constraint firstItem="MgY-3d-GUd" firstAttribute="top" secondItem="al6-fC-ARZ" secondAttribute="bottom" constant="2" id="yoT-TG-8vH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="hoz-KM-quf" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="EEY-Xd-DIl"/>
+                <constraint firstItem="hoz-KM-quf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pZ9-iT-28e"/>
+                <constraint firstItem="hoz-KM-quf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rRU-oF-dPj"/>
+                <constraint firstItem="hoz-KM-quf" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="w4N-nd-tkN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="hoz-KM-quf" id="R3O-JF-Sha"/>
+                <outlet property="imvIcon" destination="HcN-7T-9Nx" id="I9H-B6-n3V"/>
+                <outlet property="lblMessage" destination="MgY-3d-GUd" id="tgI-ch-PFu"/>
+                <outlet property="lblTitle" destination="al6-fC-ARZ" id="oEt-dh-Cfk"/>
+            </connections>
+            <point key="canvasLocation" x="-238.5" y="44"/>
+        </view>
+    </objects>
+</document>

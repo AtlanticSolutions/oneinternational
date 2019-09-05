@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="44" id="fIa-ys-qN4" customClass="GenericFormItemTVC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fIa-ys-qN4" id="DWa-Ar-T9Z">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-rt-Cbs">
+                        <rect key="frame" x="10" y="0.0" width="45" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="placeholder" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUX-05-Uf1">
+                        <rect key="frame" x="55" y="0.0" width="310" height="45"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    </textField>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W6G-dg-6ux">
+                        <rect key="frame" x="328" y="4" width="37" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="W6G-dg-6ux" secondAttribute="height" multiplier="1:1" id="xjb-CV-7gg"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-d0-g4J">
+                        <rect key="frame" x="5" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bVi-d0-g4J" secondAttribute="height" multiplier="1:1" id="hTV-Qx-dKY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Atz-rt-Cbs" firstAttribute="leading" secondItem="DWa-Ar-T9Z" secondAttribute="leading" constant="10" id="2rM-Sw-XUR"/>
+                    <constraint firstItem="dUX-05-Uf1" firstAttribute="height" secondItem="DWa-Ar-T9Z" secondAttribute="height" id="7UW-eb-Qq6"/>
+                    <constraint firstItem="W6G-dg-6ux" firstAttribute="centerY" secondItem="DWa-Ar-T9Z" secondAttribute="centerY" id="7kA-Ff-QvJ"/>
+                    <constraint firstItem="dUX-05-Uf1" firstAttribute="leading" secondItem="Atz-rt-Cbs" secondAttribute="trailing" id="9YR-az-EFg"/>
+                    <constraint firstItem="Atz-rt-Cbs" firstAttribute="centerY" secondItem="DWa-Ar-T9Z" secondAttribute="centerY" id="DdF-AI-Iix"/>
+                    <constraint firstItem="bVi-d0-g4J" firstAttribute="leading" secondItem="DWa-Ar-T9Z" secondAttribute="leading" constant="5" id="M6T-za-Zdx"/>
+                    <constraint firstAttribute="trailing" secondItem="dUX-05-Uf1" secondAttribute="trailing" constant="10" id="MdY-Bw-mDT"/>
+                    <constraint firstItem="dUX-05-Uf1" firstAttribute="centerY" secondItem="DWa-Ar-T9Z" secondAttribute="centerY" id="ThK-Tt-Coo"/>
+                    <constraint firstItem="bVi-d0-g4J" firstAttribute="centerY" secondItem="DWa-Ar-T9Z" secondAttribute="centerY" id="W9e-rH-XtM"/>
+                    <constraint firstItem="W6G-dg-6ux" firstAttribute="height" secondItem="DWa-Ar-T9Z" secondAttribute="height" constant="-8" id="kF3-1D-DHD"/>
+                    <constraint firstAttribute="trailing" secondItem="W6G-dg-6ux" secondAttribute="trailing" constant="10" id="rfr-gn-BdV"/>
+                    <constraint firstItem="bVi-d0-g4J" firstAttribute="height" secondItem="DWa-Ar-T9Z" secondAttribute="height" constant="-20" id="rzW-MW-RYO"/>
+                    <constraint firstItem="Atz-rt-Cbs" firstAttribute="height" secondItem="DWa-Ar-T9Z" secondAttribute="height" id="woG-4V-twk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imvIcon" destination="bVi-d0-g4J" id="KgQ-xt-DBh"/>
+                <outlet property="imvPicture" destination="W6G-dg-6ux" id="aTU-7q-nTy"/>
+                <outlet property="lblParameterName" destination="Atz-rt-Cbs" id="jAF-W4-rgF"/>
+                <outlet property="leftIconConstraint" destination="2rM-Sw-XUR" id="Rve-gA-RK0"/>
+                <outlet property="txtParameterValue" destination="dUX-05-Uf1" id="HVg-Dz-AZN"/>
+            </connections>
+            <point key="canvasLocation" x="-66.5" y="-136"/>
+        </tableViewCell>
+    </objects>
+</document>

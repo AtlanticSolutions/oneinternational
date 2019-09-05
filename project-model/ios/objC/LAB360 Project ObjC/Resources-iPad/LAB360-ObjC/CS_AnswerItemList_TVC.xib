@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="CS_AnswerItemList_TVC_Identifier" rowHeight="96" id="JaC-Ru-RQC" customClass="CS_AnswerItemList_TVC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JaC-Ru-RQC" id="rdW-3B-xeC">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTL-ry-xOu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0fh-WP-hTt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;n&gt; item(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-SD-V4i">
+                        <rect key="frame" x="10" y="10" width="197" height="36"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.92139895100000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="hW1-Xj-rPe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31H-Qo-ep2">
+                        <rect key="frame" x="217" y="10" width="187" height="36"/>
+                        <color key="backgroundColor" red="0.58112188909999996" green="1" blue="0.28230935060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="rpW-ky-wER"/>
+                        </constraints>
+                        <state key="normal" title="Inserir Item"/>
+                        <connections>
+                            <action selector="actionAddItemToList:" destination="JaC-Ru-RQC" eventType="touchUpInside" id="B7x-g5-6um"/>
+                        </connections>
+                    </button>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-Mz-fNt">
+                        <rect key="frame" x="10" y="55" width="394" height="24"/>
+                        <color key="backgroundColor" red="0.85027308779999999" green="1" blue="0.58567740800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="31H-Qo-ep2" secondAttribute="trailing" constant="10" id="6Fq-JZ-dv3"/>
+                    <constraint firstItem="7q6-Mz-fNt" firstAttribute="top" secondItem="31H-Qo-ep2" secondAttribute="bottom" constant="9" id="Ha9-Zq-Cav"/>
+                    <constraint firstItem="31H-Qo-ep2" firstAttribute="top" secondItem="rdW-3B-xeC" secondAttribute="top" constant="10" id="M4a-if-hXt"/>
+                    <constraint firstAttribute="trailing" secondItem="fTL-ry-xOu" secondAttribute="trailing" id="Pfh-Q5-h8g"/>
+                    <constraint firstItem="7q6-Mz-fNt" firstAttribute="leading" secondItem="rdW-3B-xeC" secondAttribute="leading" constant="10" id="PuX-HG-3QA"/>
+                    <constraint firstItem="fTL-ry-xOu" firstAttribute="leading" secondItem="rdW-3B-xeC" secondAttribute="leading" id="U9r-nJ-gu0"/>
+                    <constraint firstItem="Kk9-SD-V4i" firstAttribute="top" secondItem="rdW-3B-xeC" secondAttribute="top" constant="10" id="ZSp-1x-zTF"/>
+                    <constraint firstItem="Kk9-SD-V4i" firstAttribute="leading" secondItem="rdW-3B-xeC" secondAttribute="leading" constant="10" id="Zeo-SD-nJc"/>
+                    <constraint firstItem="fTL-ry-xOu" firstAttribute="top" secondItem="rdW-3B-xeC" secondAttribute="top" id="fIG-dX-9hd"/>
+                    <constraint firstItem="31H-Qo-ep2" firstAttribute="width" secondItem="rdW-3B-xeC" secondAttribute="width" multiplier="1/2" constant="-20" id="fkx-DZ-yd0"/>
+                    <constraint firstAttribute="bottom" secondItem="7q6-Mz-fNt" secondAttribute="bottom" constant="10" id="hMf-CK-TCD"/>
+                    <constraint firstItem="31H-Qo-ep2" firstAttribute="leading" secondItem="Kk9-SD-V4i" secondAttribute="trailing" constant="10" id="kYQ-JB-LG4"/>
+                    <constraint firstAttribute="trailing" secondItem="7q6-Mz-fNt" secondAttribute="trailing" constant="10" id="sv2-I9-TSn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnInsert" destination="31H-Qo-ep2" id="wML-V0-909"/>
+                <outlet property="lblItems" destination="Kk9-SD-V4i" id="3ug-pH-YPn"/>
+                <outlet property="viewItemsContainer" destination="7q6-Mz-fNt" id="jZS-Jp-INO"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="-340.92953523238384"/>
+        </tableViewCell>
+    </objects>
+</document>
