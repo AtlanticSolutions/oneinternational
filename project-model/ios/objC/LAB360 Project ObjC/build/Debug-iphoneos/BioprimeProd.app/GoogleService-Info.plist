@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>225130208837-coo92heh4j4b1c9e9b9m7u1h0aqu8gev.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.225130208837-coo92heh4j4b1c9e9b9m7u1h0aqu8gev</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA-GuvDUAf7NsaS5NwgaOSNDJ_mvYA5UJs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>225130208837</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.lab360.project.objc</string>
+	<key>PROJECT_ID</key>
+	<string>lab360-84dbb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lab360-84dbb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:225130208837:ios:f5421fc7ed7bb8ad</string>
+	<key>DATABASE_URL</key>
+	<string>https://lab360-84dbb.firebaseio.com</string>
+</dict>
+</plist>

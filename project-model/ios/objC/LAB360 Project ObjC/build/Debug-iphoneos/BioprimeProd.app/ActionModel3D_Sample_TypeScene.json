@@ -1,0 +1,61 @@
+{
+	"product": {
+		"actions": [{
+			"action_type": 100,
+			"auto_launch": 0,
+			"enabled": 1,
+			"id": 1000,
+			"label": "ActionModel3D-Scene-Label",
+			"name": "ActionModel3D-Scene-Name",
+			"short_description": "ActionModel3D-Scene-ShortDescription",
+			"type": "Model3dAction",
+			"action_model_3d" : {
+				"id" : 1,
+				"type" : 1,
+				"cache_policy" : 3,
+				"target_image_set" : {
+					"id" : 0,
+					"image_url" : "",
+					"physical_width" : 0
+				},
+				"screen_set" : {
+					"show_photo_button" : true,
+					"show_light_controls" : true,
+					"screen_title" : "Scene Viewer",
+					"footer_message" : "mensagem de rodapé!"
+				},
+				"obj_set" : {
+					"id" : 50,
+					"obj_url" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/objects3D/obj2.zip",
+					"auto_size_fit" : false,
+					"auto_shadow" : true,
+					"enable_material_auto_illumination" : false,
+					"model_rotation_x" : 0.0,
+					"model_rotation_y" : 0.0,
+					"model_rotation_z" : 0.0,
+					"model_translation_x" : 0.0,
+					"model_translation_y" : 0.0,
+					"model_translation_z" : 0.0,
+					"model_scale" : 1.0
+				},
+				"scene_set" : {
+					"background_color" : "#ffffff",
+					"background_url" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/resources/images/cube_map/virtual-skybox-enviroment-scene-1.jpg",
+					"scene_quality" : 4,
+					"rotation_mode" : 1,
+					"background_style" : 4,
+					"hdr_state" : 2,
+					"max_horizontal_angle" : 0.0,
+					"min_horizontal_angle" : 0.0,
+					"max_vertical_angle" : 0.0,
+					"min_vertical_angle" : 0.0
+				}
+			}
+		}],
+		"id": 1000,
+		"image_url": "http://d2h29zwvl2qzvf.cloudfront.net/attachments/b28c7014f3e206da65f8d49185cc616507c26ac7/store/1dd550cf5c0181fc03f430ac8608c563a12e4308cf3b7b4eff3dc912f4f1/image_target_scene.png",
+		"name": "LAB360 - ActionModel3D - Type Scene",
+		"sku": "AM3D-01",
+		"title": ""
+	}
+}

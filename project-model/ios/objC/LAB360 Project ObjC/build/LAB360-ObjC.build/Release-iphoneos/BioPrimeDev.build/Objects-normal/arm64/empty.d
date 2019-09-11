@@ -1,0 +1,3 @@
+dependencies: \
+  /Users/georgemichelon/onInternational/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/empty.m \
+  /Users/georgemichelon/onInternational/oneinternational/project-model/ios/objC/LAB360\ Project\ ObjC/LAB360-ObjC/empty.h

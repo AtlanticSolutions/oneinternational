@@ -1,0 +1,61 @@
+{
+	"product": {
+		"actions": [{
+			"action_type": 101,
+			"auto_launch": 0,
+			"enabled": 1,
+			"id": 1001,
+			"label": "ActionModel3D-AR-Label",
+			"name": "ActionModel3D-AR-Name",
+			"short_description": "ActionModel3D-AR-ShortDescription",
+			"type": "Model3dAction",
+			"action_model_3d" : {
+				"id" : 3,
+				"type" : 3,
+				"cache_policy" : 1,
+				"target_image_set" : {
+					"id" : 0,
+					"image_url" : "",
+					"physical_width" : 0
+				},
+				"screen_set" : {
+					"show_photo_button" : true,
+					"show_light_controls" : true,
+					"screen_title" : "AR Viewer",
+					"footer_message" : "mensagem de rodapé!"
+				},
+				"obj_set" : {
+					"id" : 21,
+					"obj_url" : "https://s3-sa-east-1.amazonaws.com/ad-alive.com/downloads/lab360/objects3D/obj2.zip",
+					"auto_size_fit" : false,
+					"auto_shadow" : true,
+					"enable_material_auto_illumination" : false,
+					"model_rotation_x" : 0.0,
+					"model_rotation_y" : 0.0,
+					"model_rotation_z" : 0.0,
+					"model_translation_x" : 0.0,
+					"model_translation_y" : 0.0,
+					"model_translation_z" : 0.0,
+					"model_scale" : 0.05
+				},
+				"scene_set" : {
+					"background_color" : "",
+					"background_url" : "",
+					"scene_quality" : 4,
+					"rotation_mode" : 0,
+					"background_style" : 4,
+					"hdr_state" : 2,
+					"max_horizontal_angle" : 0.0,
+					"min_horizontal_angle" : 0.0,
+					"max_vertical_angle" : 0.0,
+					"min_vertical_angle" : 0.0
+				}
+			}
+		}],
+		"id": 1002,
+		"image_url": "http://d2h29zwvl2qzvf.cloudfront.net/attachments/37b92ef42fdd11479cf7a5bcbe22c2caf14f882f/store/0cd554cfe20c76190dcd064a12a208e5f79abb43f1a30aec681ebe9b2636/image_target_ar.png",
+		"name": "LAB360 - ActionModel3D - Type AR",
+		"sku": "AM3D-02",
+		"title": ""
+	}
+}
