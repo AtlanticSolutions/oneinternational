@@ -1,10 +1,14 @@
 package br.com.lab360.oneinternacional.ui.activity.webview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +26,9 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.common.base.Strings;
+
+import java.net.URISyntaxException;
+import java.util.Objects;
 
 import br.com.lab360.oneinternacional.R;
 import br.com.lab360.oneinternacional.application.AdaliveConstants;
@@ -160,12 +167,58 @@ public class WebviewActivity extends NavigationDrawerActivity {
 //        }
 
         @SuppressWarnings("deprecation")
-        @Override
+        /*@Override
         public boolean shouldOverrideUrlLoading(WebView view,
                                                 String urlNewString) {
             //view.loadUrl(urlNewString);
-            return false;
 
+            *//*if (urlNewString.startsWith("http") || urlNewString.startsWith("https")) {
+                return true;
+            }else if (urlNewString.startsWith("whatsapp")) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+                return true;
+            }else{
+                view.stopLoading();
+                view.goBack();
+                Toast.makeText(WebviewActivity.this, "Unknown Link, unable to handle", Toast.LENGTH_SHORT).show();
+            }
+            return false;*//*
+
+            Uri uri = request.getUrl();
+            if (Objects.equals(uri.getScheme(), "whatsapp")) {
+                try {
+                    Intent intent = Intent.parseUri(request.getUrl().toString(), Intent.URI_INTENT_SCHEME);
+                    if(intent.resolveActivity(getPackageManager()) != null)
+                        startActivity(intent);
+                    return true;
+                } catch (URISyntaxException use) {
+                    Log.e(TAG, use.getMessage());
+                }
+            }
+            return super.shouldOverrideUrlLoading(view, request);
+
+        }*/
+
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view,
+                                                WebResourceRequest request) {
+            Uri uri = request.getUrl();
+            if (Objects.equals(uri.getScheme(), "whatsapp")) {
+                try {
+                    Intent intent = Intent.parseUri(request.getUrl().toString(), Intent.URI_INTENT_SCHEME);
+                    if(intent.resolveActivity(getPackageManager()) != null)
+                        startActivity(intent);
+                    return true;
+                } catch (URISyntaxException use) {
+                    Log.e("Webview", use.getMessage());
+                }
+            }
+            return super.shouldOverrideUrlLoading(view, request);
         }
 
 

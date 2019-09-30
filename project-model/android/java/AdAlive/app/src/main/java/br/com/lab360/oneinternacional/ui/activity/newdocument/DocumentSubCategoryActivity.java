@@ -73,7 +73,7 @@ public class DocumentSubCategoryActivity extends BaseActivity implements Documen
     @Override
     public void configRecyclerView() {
         if(subCategories != null){
-            rvSubCategory.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+            rvSubCategory.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             rvSubCategory.setHasFixedSize(true);
             final SubCategoryRecyclerAdapter adapter = new SubCategoryRecyclerAdapter(subCategories, this, this);
             rvSubCategory.setAdapter(adapter);
@@ -102,7 +102,8 @@ public class DocumentSubCategoryActivity extends BaseActivity implements Documen
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                startDocumentsCategoryActivity();
+                finish();
+                //startDocumentsCategoryActivity();
                 break;
         }
         return true;
@@ -110,7 +111,8 @@ public class DocumentSubCategoryActivity extends BaseActivity implements Documen
 
     @Override
     public void onBackPressed() {
-        startDocumentsCategoryActivity();
+        //startDocumentsCategoryActivity();
+        finish();
     }
 
     @Override

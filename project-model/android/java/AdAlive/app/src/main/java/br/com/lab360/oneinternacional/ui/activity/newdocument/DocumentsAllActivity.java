@@ -77,7 +77,7 @@ public class DocumentsAllActivity extends BaseActivity implements DocumentAllPre
     @Override
     public void configRecyclerView(ArrayList<DownloadInfoObject> documents) {
         if (documents != null && documents.size() != 0) {
-            rvDocument.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+            rvDocument.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             rvDocument.setHasFixedSize(true);
             final DocumentRecyclerAdapter adapter = new DocumentRecyclerAdapter(documents, this, this);
             rvDocument.setAdapter(adapter);
@@ -113,11 +113,11 @@ public class DocumentsAllActivity extends BaseActivity implements DocumentAllPre
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                if (subCategory == null) {
+                /*if (subCategory == null) {
                     startDocumentsCategoryActivity();
                 } else {
                     startDocumentsSubCategoryActivity();
-                }
+                }*/
 
                 finish();
                 break;
@@ -143,20 +143,21 @@ public class DocumentsAllActivity extends BaseActivity implements DocumentAllPre
 
     @Override
     public void onBackPressed() {
-        if (subCategory == null) {
+        /*if (subCategory == null) {
             startDocumentsCategoryActivity();
         } else {
             startDocumentsSubCategoryActivity();
-        }
+        }*/
+        finish();
     }
 
     @Override
     public void setmPresenter(DocumentAllPresenter presenter) {
-        this.mPresenter = presenter;
-        this.mPresenter.start();
         this.sharedPrefsHelper = AdaliveApplication.getInstance().getSharedPrefsHelper();
         this.gson = new Gson();
         loadValuesFromPreferences();
+        this.mPresenter = presenter;
+        this.mPresenter.start();
         mPresenter.attemptLoadDocumentsByCategoryAndSubCategory(null, null, categoryId, subcategoryId);
     }
 }
