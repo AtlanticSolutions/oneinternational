@@ -21,8 +21,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
-        versionCode 3
-        versionName '1.0.0'
+        versionCode 4
+        versionName '1.0.1'
         buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.pro.prefs"'
         buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.pro.fileprovider"'
         buildConfigField 'String', 'DEFAULT_ROLE', '"DEFAULT"'
@@ -195,6 +195,7 @@ dependencies {
 
     //Google Firebase, Push notification
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
 
     //Simplify Permissions
     implementation 'com.github.anshulagarwal06:Simplify-Permissions:v1'
