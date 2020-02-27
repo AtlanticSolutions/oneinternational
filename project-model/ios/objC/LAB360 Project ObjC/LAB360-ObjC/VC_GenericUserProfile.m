@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *imgBackground;
 //
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *lastNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *cpfTextField;
 @property (nonatomic, weak) IBOutlet UITextField *cnpjTextField;
 @property (nonatomic, weak) IBOutlet UITextField *rgTextField;
@@ -49,6 +50,7 @@
 @property (nonatomic, assign) Boolean isFirstLoad;
 @property (nonatomic, assign) Boolean isState;
 @property (nonatomic, assign) Boolean photoChanged;
+@property (nonatomic, assign) Boolean passwordChanged;
 @property (nonatomic, assign) long  lastTagSelected;
 
 @end
@@ -65,8 +67,8 @@
 #pragma mark - • SYNTESIZES
 
 @synthesize imgBackground, btnNavPhoto, btnChangePassword, btnSave, activeTextField;
-@synthesize nameTextField, cnpjTextField,cpfTextField, rgTextField, birthdateTextField, genderTextField, dddTextField, phoneTextField, dddMobileTextField, mobilePhoneTextField, emailTextField, zipCodeTextField, addressTextField, addressNumberTextField,complementTextField, districtTextField, cityTextField,stateTextField;
-@synthesize userModificado, userEstatico, selectedPhoto, selectedItem, isFirstLoad, isState, photoChanged, lastTagSelected;
+@synthesize nameTextField, lastNameTextField, cnpjTextField,cpfTextField, rgTextField, birthdateTextField, genderTextField, dddTextField, phoneTextField, dddMobileTextField, mobilePhoneTextField, emailTextField, zipCodeTextField, addressTextField, addressNumberTextField,complementTextField, districtTextField, cityTextField,stateTextField;
+@synthesize userModificado, userEstatico, selectedPhoto, selectedItem, isFirstLoad, isState, photoChanged, lastTagSelected, passwordChanged;
 
 #pragma mark - • CLASS METHODS
 
@@ -158,6 +160,7 @@
     //Preenchendo dados do usuário:
 
         if ([nameTextField.text         isEqualToString:@""]
+        || [lastNameTextField.text      isEqualToString:@""]
         || [cpfTextField.text           isEqualToString:@""]
       //  || [cnpjTextField.text          isEqualToString:@""]
         || [rgTextField.text            isEqualToString:@""]
@@ -196,6 +199,7 @@
 
 -(IBAction)clickPasswordChange:(id)sender
 {
+    self.passwordChanged = true;
     [self.view endEditing:YES];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     [self performSegueWithIdentifier:@"SegueToChangePassword" sender:nil];
@@ -251,7 +255,12 @@
 {
     if (activeTextField == genderTextField){
         genderTextField.text = itemText;
-        userModificado.gender = itemText;
+        if( [itemText isEqualToString: NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"") ]) {
+            userModificado.gender = @"0";
+        } if( [itemText isEqualToString: NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"") ]) {
+            userModificado.gender = @"1";
+        }
+        
     }else if (activeTextField == stateTextField){
         stateTextField.text = itemText;
         userModificado.state = itemText;
@@ -329,7 +338,7 @@
     
     activeTextField = textField;
     
-    if ((textField == cpfTextField) || (textField == cnpjTextField)|| (textField == rgTextField)||(textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
+    if ((textField == cpfTextField) || (textField == cnpjTextField) || (textField == zipCodeTextField) || (textField == dddTextField) || (textField == dddMobileTextField) || (textField == phoneTextField) || (textField == mobilePhoneTextField)) {
         
         NSString *mask = @"";
         
@@ -341,13 +350,8 @@
         else if (textField == self.cnpjTextField) {
             mask = @"##.###-###/####-##";
         }
-        
-        else if (textField == self.rgTextField) {
-            mask = @"##.###-###-##";
-        }
-        
         else if (textField == self.zipCodeTextField) {
-            mask = @"##.###-###";
+            mask = @"#####-###";
         } else if (textField == self.dddTextField) {
             mask = @"##";
         } else if (textField == self.dddMobileTextField) {
@@ -410,6 +414,9 @@
     
     if (textField == self.nameTextField) {
         self.userModificado.name = self.nameTextField.text;
+    } else if (textField == self.lastNameTextField)
+    {
+        self.userModificado.lastName = self.lastNameTextField.text;
     }
     else if (textField == self.emailTextField) {
         self.userModificado.email = self.emailTextField.text;
@@ -507,6 +514,7 @@
     
     //TextFields & Labels
     nameTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_NAME", @"")];
+    lastNameTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_LAST_NAME", @"")];
     cpfTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_CPF", @"")];
     cnpjTextField.placeholder = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_CNPJ", @"")];
     rgTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_RG", @"")];
@@ -526,6 +534,7 @@
     zipCodeTextField.placeholder = [NSString stringWithFormat:@"%@*", NSLocalizedString(@"PLACEHOLDER_ZIPCODE", @"")];
     
     [nameTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
+    [lastNameTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [cpfTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [cnpjTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [rgTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
@@ -545,6 +554,7 @@
     [zipCodeTextField setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     
     nameTextField.delegate = self;
+    lastNameTextField.delegate = self;
     cpfTextField.delegate = self;
     cnpjTextField.delegate = self;
     rgTextField.delegate = self;
@@ -564,6 +574,7 @@
     stateTextField.delegate = self;
     
     nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    lastNameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     cpfTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     rgTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     cnpjTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -682,18 +693,24 @@
     self.cpfTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.CPF usingMask:@"###.###.###-##"];
     //CNPJ
     //99.999.999/9999-99"
-    self.cnpjTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.CPF usingMask:@"##.###.###-###-##"];
+    self.cnpjTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.CNPJ usingMask:@"##.###.###-###-##"];
     //Nome
     //Nome
     self.nameTextField.text = userData.name;
+    //Sobrenome
+    self.lastNameTextField.text = userData.lastName;
     //RG
-    self.rgTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.RG usingMask:@"##.###.###-#"];
+    self.rgTextField.text = userData.RG;
     //CNPJ
    // self.cnpjTextField.text = userData.CNPJ;
     //Data Nascimento
     self.birthdateTextField.text = [ToolBox dateHelper_StringFromDate:userData.birthdate withFormat:TOOLBOX_DATA_BARRA_CURTA_NORMAL];
     //Sexo
-    self.genderTextField.text = userData.gender;
+    if ([userData.gender  isEqualToString: @"0"]) {
+     self.genderTextField.text = NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"");
+    } else if ([userData.gender  isEqualToString: @"1"]) {
+        NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"");
+    }
     //DDD - Telefone
     self.dddTextField.text = userData.phoneDDD;
     //Telefone
@@ -705,7 +722,7 @@
     //Email
     self.emailTextField.text = userData.email;
     //CEP
-    self.zipCodeTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.zipCode usingMask:@"##.###-###"];
+    self.zipCodeTextField.text = [ToolBox textHelper_UpdateMaskToText:userData.zipCode usingMask:@"#####-###"];
     //Rua
     self.addressTextField.text = userData.address;
     //Número
@@ -761,6 +778,8 @@
     self.userModificado.CPF = [self clearMask:self.cpfTextField.text];
     //Nome
     self.userModificado.name = self.nameTextField.text;
+    //Nome
+    self.userModificado.lastName = self.lastNameTextField.text;
     //RG
     self.userModificado.RG = self.rgTextField.text;
     //CNPJ
@@ -768,7 +787,11 @@
     //Data Nascimento
     self.userModificado.birthdate = [ToolBox dateHelper_DateFromString:self.birthdateTextField.text withFormat:TOOLBOX_DATA_BARRA_CURTA_NORMAL];
     //Sexo
-    self.userModificado.gender = [self.genderTextField.text isEqualToString:@""] ? @"" : self.genderTextField.text; //([self.genderTextField.text isEqualToString:NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")] ? @"MALE" : ([self.genderTextField.text isEqualToString:NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")] ? @"FEMALE" : @""));
+    if ([self.genderTextField.text isEqualToString:NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")]){
+        self.userModificado.gender = @"0";
+    } else if ([self.genderTextField.text isEqualToString:NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")]) {
+        self.userModificado.gender = @"1";
+    }
     //DDD - Telefone
     self.userModificado.phoneDDD = self.dddTextField.text;
     //Telefone
@@ -948,7 +971,7 @@
 
 - (void)updateUserData
 {
-    if(![userModificado isEqualToObject:userEstatico] || photoChanged)
+    if(![userModificado isEqualToObject:userEstatico] || photoChanged || passwordChanged)
     {
         ConnectionManager *connectionManager = [[ConnectionManager alloc] init];
         

@@ -97,6 +97,11 @@
         SCLAlertView *alert = [AppD createDefaultAlert];
         [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_ERROR", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_PASSWORD_MATCH", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
     }
+    else if(txtNewPass2.text.length < 8)
+    {
+        SCLAlertView *alert = [AppD createDefaultAlert];
+        [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_ERROR", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_PASSWORD_INVALID", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
+    }
     else
     {
         user.password = txtNewPass2.text;

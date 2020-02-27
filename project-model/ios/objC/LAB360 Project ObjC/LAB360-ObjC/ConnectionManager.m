@@ -405,10 +405,10 @@
         [manager setRequestSerializer:requestSerializer];
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.serverPreference, SERVICE_URL_CREATE_USER];
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.serverPreference, SERVICE_URL_UPDATE_USER];
     
     ////
-    [manager POST:urlString parameters:dicParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager PUT:urlString parameters:dicParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSDictionary *dicUser = (NSDictionary *)responseObject;
          

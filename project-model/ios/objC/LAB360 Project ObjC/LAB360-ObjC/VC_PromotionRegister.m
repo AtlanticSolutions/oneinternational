@@ -739,9 +739,9 @@
     AppD.loggedUser.district = [keysList containsObject:@"district"] ? [NSString stringWithFormat:@"%@", [userDic  valueForKey:@"district"]] : AppD.loggedUser.district;
     AppD.loggedUser.name = [keysList containsObject:@"first_name"] ? [NSString stringWithFormat:@"%@", [userDic  valueForKey:@"first_name"]] : AppD.loggedUser.name;
     NSString *gender = [keysList containsObject:@"gender"] ? [NSString stringWithFormat:@"%@", [userDic  valueForKey:@"gender"]] : AppD.loggedUser.gender;
-    if ([[gender uppercaseString] isEqualToString:@"MALE"]) {
+    if ([[gender uppercaseString] isEqualToString:@"0"]) {
         AppD.loggedUser.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")];
-    } else if ([[gender uppercaseString] isEqualToString:@"FEMALE"]) {
+    } else if ([[gender uppercaseString] isEqualToString:@"1"]) {
         AppD.loggedUser.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")];
     } else{
         AppD.loggedUser.gender = @"";
@@ -886,9 +886,9 @@
                         self.userModificado.state = [keysList containsObject:@"state"] ? [NSString stringWithFormat:@"%@", [costumer  valueForKey:@"state"]] : self.userModificado.state;;
                         
                         NSString *gender = [keysList containsObject:@"gender"] ? [NSString stringWithFormat:@"%@", [costumer  valueForKey:@"gender"]] : self.userModificado.gender;
-                        if ([[gender uppercaseString] isEqualToString:@"MALE"]) {
+                        if ([[gender uppercaseString] isEqualToString:@"0"]) {
                             self.userModificado.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")];
-                        } else if ([[gender uppercaseString] isEqualToString:@"FEMALE"]) {
+                        } else if ([[gender uppercaseString] isEqualToString:@"1"]) {
                             self.userModificado.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")];
                         } else{
                             self.userModificado.gender = @"";
@@ -965,9 +965,9 @@
                         self.userModificado.state = [keysList containsObject:@"state"] ? [NSString stringWithFormat:@"%@", [costumer  valueForKey:@"state"]] : self.userModificado.state;;
                         
                         NSString *gender = [keysList containsObject:@"gender"] ? [NSString stringWithFormat:@"%@", [costumer  valueForKey:@"gender"]] : self.userModificado.gender;
-                        if ([[gender uppercaseString] isEqualToString:@"MALE"]) {
+                        if ([[gender uppercaseString] isEqualToString:@"0"]) {
                             self.userModificado.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")];
-                        } else if ([[gender uppercaseString] isEqualToString:@"FEMALE"]) {
+                        } else if ([[gender uppercaseString] isEqualToString:@"1"]) {
                             self.userModificado.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")];
                         } else{
                             self.userModificado.gender = @"";
