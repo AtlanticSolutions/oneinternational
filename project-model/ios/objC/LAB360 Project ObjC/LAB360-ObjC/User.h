@@ -18,6 +18,7 @@
 @property (nonatomic, assign) int userID;
 @property (nonatomic, assign) int accountID;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *CPF;

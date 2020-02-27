@@ -99,6 +99,7 @@
 "ALERT_MESSAGE_AUTHENTICATION_AFTER_SIGNUP_ERROR" = "Sua conta foi criada com sucesso, mas não não foi possível criar uma sessão automaticamente. Por favor, autentique-se manualmente.";
 
 "ALERT_TITLE_CREATION_ERROR" = "Erro Criação";
+"ALERT_MESSAGE_CATEGORY_ERROR" = "Sessão expiridada. Tente novamente.";
 "ALERT_MESSAGE_CREATION_ERROR" = "Não foi possível criar o usuário. Tente novamente.";
 "ALERT_MESSAGE_UPDATE_ERROR" = "Não foi possível atualizar o usuário. Tente novamente.";
 "ALERT_MESSAGE_PASSWORD_ERROR" = "Não foi possível atualizar a senha. Tente novamente.";

@@ -13,6 +13,7 @@
 #define CLASS_USER_KEY_ID @"id"
 #define CLASS_USER_KEY_ACCOUNT_ID @"account_id"
 #define CLASS_USER_KEY_NAME @"first_name"
+#define CLASS_USER_KEY_LASTNAME @"last_name"
 #define CLASS_USER_KEY_CATEGORY @"interest_areas"
 #define CLASS_USER_KEY_SECTOR_ID @"sector_id"
 #define CLASS_USER_KEY_SECTOR_NAME @"sector"
@@ -47,7 +48,7 @@
 
 @implementation User
 
-@synthesize userID, accountID, notReadCount, name, email, phone, password, CPF, RG, gender, company, CNPJ, address, zipCode, city, country, state, role, jobRole, jobRoleDescription, profilePic, urlProfilePic, sectorID, sectorName, category, chatBlocked, birthdate, complement, district, addressNumber, mobilePhone, mobilePhoneDDD, phoneDDD;
+@synthesize userID, accountID, notReadCount, name, lastName, email, phone, password, CPF, RG, gender, company, CNPJ, address, zipCode, city, country, state, role, jobRole, jobRoleDescription, profilePic, urlProfilePic, sectorID, sectorName, category, chatBlocked, birthdate, complement, district, addressNumber, mobilePhone, mobilePhoneDDD, phoneDDD;
 
 //-------------------------------------------------------------------------------------------------------------
 #pragma mark - Init
@@ -60,6 +61,7 @@
         userID = DOMP_OPD_INT;
         accountID = APP_ACCOUNT_ID;
         name = DOMP_OPD_STRING;
+        lastName = DOMP_OPD_STRING;
         email = DOMP_OPD_STRING;
         CPF = DOMP_OPD_STRING;
         RG = DOMP_OPD_STRING;
@@ -123,16 +125,13 @@
         u.userID = [keysList containsObject:CLASS_USER_KEY_ID] ? [[neoDic  valueForKey:CLASS_USER_KEY_ID] intValue] : u.userID;
         //u.accountID = [keysList containsObject:CLASS_USER_KEY_ACCOUNT_ID] ? [[neoDic  valueForKey:CLASS_USER_KEY_ACCOUNT_ID] intValue] : u.accountID;
         u.name = [keysList containsObject:CLASS_USER_KEY_NAME] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_NAME]] : u.name;
+        u.lastName = [keysList containsObject:CLASS_USER_KEY_LASTNAME] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_LASTNAME]] : u.lastName;
         u.sectorName = [keysList containsObject:CLASS_USER_KEY_SECTOR_NAME] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_SECTOR_NAME]] : u.sectorName;
         u.CPF = [keysList containsObject:CLASS_USER_KEY_CPF] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_CPF]] : u.CPF;
         u.RG = [keysList containsObject:CLASS_USER_KEY_RG] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_RG]] : u.RG;
         
         NSString *gender = [keysList containsObject:CLASS_USER_KEY_GENDER] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_GENDER]] : u.gender;
-        if ([[gender uppercaseString] isEqualToString:@"MALE"]) {
-            u.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")];
-        } else if ([[gender uppercaseString] isEqualToString:@"FEMALE"]) {
-            u.gender = [NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")];
-        }
+        u.gender = gender;        
       
         u.phone = [keysList containsObject:CLASS_USER_KEY_PHONE] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_PHONE]] : u.phone;
         u.password = [keysList containsObject:CLASS_USER_KEY_PASSWORD] ? [NSString stringWithFormat:@"%@", [neoDic  valueForKey:CLASS_USER_KEY_PASSWORD]] : u.password;
@@ -187,16 +186,17 @@
     //[dicData  setValue:@(self.accountID) forKey:CLASS_USER_KEY_ACCOUNT_ID];
     [dicData  setValue:@(self.sectorID) forKey:CLASS_USER_KEY_SECTOR_ID];
     [dicData  setValue:self.name forKey:CLASS_USER_KEY_NAME];
+    [dicData  setValue:self.lastName forKey:CLASS_USER_KEY_LASTNAME];
     [dicData  setValue:self.sectorName forKey:CLASS_USER_KEY_SECTOR_NAME];
     [dicData  setValue:self.password forKey:CLASS_USER_KEY_PASSWORD];
     [dicData  setValue:self.email forKey:CLASS_USER_KEY_EMAIL];
     [dicData  setValue:self.CPF forKey:CLASS_USER_KEY_CPF];
     [dicData  setValue:self.RG forKey:CLASS_USER_KEY_RG];
     
-    if ([self.gender isEqualToString:[NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_MALE", @"")]]) {
-        [dicData setValue:@"male" forKey:CLASS_USER_KEY_GENDER];
-    } else if ([self.gender isEqualToString:[NSString stringWithFormat:@"%@", NSLocalizedString(@"PLACEHOLDER_GENDER_FEMALE", @"")]]) {
-        [dicData setValue:@"female" forKey:CLASS_USER_KEY_GENDER];
+    if ([self.gender isEqualToString:[NSString stringWithFormat:@"%@", @"0"]]) {
+        [dicData setValue:@"0" forKey:CLASS_USER_KEY_GENDER];
+    } else if ([self.gender isEqualToString:[NSString stringWithFormat:@"%@", @"1"]]) {
+        [dicData setValue:@"1" forKey:CLASS_USER_KEY_GENDER];
     }else{
         [dicData setValue:@"" forKey:CLASS_USER_KEY_GENDER];
     }
@@ -240,6 +240,7 @@
     //[dicData  setValue:@(self.accountID) forKey:CLASS_USER_KEY_ACCOUNT_ID];
     [dicData  setValue:@(self.sectorID) forKey:CLASS_USER_KEY_SECTOR_ID];
     [dicData  setValue:self.name forKey:CLASS_USER_KEY_NAME];
+    [dicData  setValue:self.lastName forKey:CLASS_USER_KEY_LASTNAME];
     [dicData  setValue:self.sectorName forKey:CLASS_USER_KEY_SECTOR_NAME];
     [dicData  setValue:self.password forKey:CLASS_USER_KEY_PASSWORD];
     [dicData  setValue:self.email forKey:CLASS_USER_KEY_EMAIL];
@@ -299,6 +300,7 @@
     u.sectorName = [NSString stringWithFormat:@"%@", self.sectorName];
     u.category = [[NSMutableArray alloc] initWithArray:self.category];
     u.name = [NSString stringWithFormat:@"%@", self.name];
+    u.lastName = [NSString stringWithFormat:@"%@", self.lastName];
     u.CPF = [NSString stringWithFormat:@"%@", self.CPF];
     u.RG = [NSString stringWithFormat:@"%@", self.RG];
     u.gender = [NSString stringWithFormat:@"%@", self.gender];
@@ -346,6 +348,10 @@
         return false;
     }
     else if(![self.name isEqualToString:object.name])
+    {
+        return false;
+    }
+    else if (![self.lastName isEqualToString:object.lastName])
     {
         return false;
     }

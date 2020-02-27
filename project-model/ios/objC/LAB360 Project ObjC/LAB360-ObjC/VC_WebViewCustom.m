@@ -256,6 +256,11 @@
                 if (error){
                     SCLAlertView *alert = [AppD createDefaultAlert];
                     [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_ERROR", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_CATEGORY_ERROR", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
+                    //PushNotification - Firebase
+                       [AppD removeForRemoteNotifications];
+                       //
+                       [AppD registerLogoutForCurrentUser];
+                       [AppD.rootViewController.navigationController popToRootViewControllerAnimated:YES];
                 }else{
                     
                     if ([response.allKeys containsObject:@"url"]){

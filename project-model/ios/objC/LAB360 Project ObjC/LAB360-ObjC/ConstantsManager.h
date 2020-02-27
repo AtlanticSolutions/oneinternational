@@ -325,6 +325,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define SERVICE_URL_AUTHENTICATE_STORE @"/api/v1/authenticate"
 #define SERVICE_URL_RESET_PASSWORD @"/api/v1/app_users/change_password"
 #define SERVICE_URL_CREATE_USER @"/api/v5/app_users/pre"
+#define SERVICE_URL_UPDATE_USER @"/api/v5/app_users/update"
 #define SERVICE_URL_EVENTS_DOWNLOADS @"/api/v1/<master_event_id>/events/<event_id>/files"
 #define SERVICE_URL_MASTER_EVENTS_DOWNLOADS @"/api/v1/documents?master_event_id=<master_event_id>&app_id=<app_id>"
 #define SERVICE_URL_POST_SUBSCRIBED_EVENT @"/api/v1/<master_event_id>/events/app_user/append"

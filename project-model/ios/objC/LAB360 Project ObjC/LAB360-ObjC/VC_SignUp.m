@@ -16,10 +16,12 @@
 
 //Components
 @property (nonatomic, weak) IBOutlet UILabel *lbName;
+@property (nonatomic, weak) IBOutlet UILabel *lbLastName;
 @property (nonatomic, weak) IBOutlet UILabel *lbEmail;
 @property (nonatomic, weak) IBOutlet UILabel *lbPassword;
 @property (nonatomic, weak) IBOutlet UILabel *lbPasswordConfirmation;
 @property (nonatomic, weak) IBOutlet UITextField *txtName;
+@property (nonatomic, weak) IBOutlet UITextField *txtLastName;
 @property (nonatomic, weak) IBOutlet UITextField *txtEmail;
 @property (nonatomic, weak) IBOutlet UITextField *txtPassword;
 @property (nonatomic, weak) IBOutlet UITextField *txtPasswordConfirmation;
@@ -55,7 +57,7 @@
 
 #pragma mark - • SYNTESIZES
 
-@synthesize lbEmail, lbPassword, txtEmail, txtPassword, btnSave, btnPhoto, scvMenu, imvBackground, txtPasswordConfirmation, txtName, lbPasswordConfirmation, lbName, btnNavPhoto;
+@synthesize lbEmail, lbPassword, txtEmail, txtPassword, btnSave, btnPhoto, scvMenu, imvBackground, txtPasswordConfirmation, txtName, txtLastName, lbPasswordConfirmation, lbName, lbLastName, btnNavPhoto;
 @synthesize activeTextField;
 @synthesize user, isSector, selected, isFirstLoad, listSector, listCategory, fromFacebook, emailAvailable;
 
@@ -173,8 +175,9 @@
     [txtPassword resignFirstResponder];
     [txtPasswordConfirmation resignFirstResponder];
     [txtName resignFirstResponder];
+    [txtLastName resignFirstResponder];
     
-    if ([self.txtName.text isEqualToString:@""] || [self.txtEmail.text isEqualToString:@""] || [self.txtPasswordConfirmation.text isEqualToString:@""] || [self.txtPassword.text isEqualToString:@""])
+    if ([self.txtName.text isEqualToString:@""] || [self.txtLastName.text isEqualToString:@""] || [self.txtEmail.text isEqualToString:@""] || [self.txtPasswordConfirmation.text isEqualToString:@""] || [self.txtPassword.text isEqualToString:@""] )
     {
         SCLAlertView *alert = [AppD createDefaultAlert];
         [alert showError:self title:NSLocalizedString(@"ALERT_TITLE_EMPTY_FIELDS", @"") subTitle:NSLocalizedString(@"ALERT_MESSAGE_EMPTY_FIELDS_USER", @"") closeButtonTitle:NSLocalizedString(@"ALERT_OPTION_OK", @"") duration:0.0];
@@ -200,6 +203,7 @@
         user.email = txtEmail.text;
         user.password = txtPassword.text;
         user.name = txtName.text;
+        user.lastName = txtLastName.text;
         
         ConnectionManager *connectionManager = [[ConnectionManager alloc] init];
         
@@ -405,24 +409,29 @@
     txtPassword.secureTextEntry = true;
     txtPasswordConfirmation.secureTextEntry = true;
     lbName.text = NSLocalizedString(@"PLACEHOLDER_NAME", @"");
+    lbLastName.text = NSLocalizedString(@"PLACEHOLDER_LAST_NAME", @"");
     lbEmail.text = NSLocalizedString(@"PLACEHOLDER_EMAIL", @"");
     lbPassword.text = NSLocalizedString(@"PLACEHOLDER_PASSWORD", @"");
     lbPasswordConfirmation.text = NSLocalizedString(@"PLACEHOLDER_NEW_PASSWORD2", @"");
     txtName.placeholder = NSLocalizedString(@"PLACEHOLDER_NAME", @"");
+    txtLastName.placeholder = NSLocalizedString(@"PLACEHOLDER_LAST_NAME", @"");
     txtEmail.placeholder = NSLocalizedString(@"PLACEHOLDER_EMAIL", @"");
     txtPassword.placeholder = NSLocalizedString(@"PLACEHOLDER_PASSWORD", @"");
     txtPasswordConfirmation.placeholder = NSLocalizedString(@"PLACEHOLDER_NEW_PASSWORD2", @"");
     
     [lbName setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
+    [lbLastName setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [lbEmail setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [lbPassword setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [lbPasswordConfirmation setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [txtName setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
+    [txtLastName setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [txtEmail setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [txtPassword setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     [txtPasswordConfirmation setFont:[UIFont fontWithName:FONT_DEFAULT_REGULAR size:15.0]];
     
     lbName.textColor = AppD.styleManager.colorPalette.textDark;
+    lbLastName.textColor = AppD.styleManager.colorPalette.textDark;
     lbEmail.textColor = AppD.styleManager.colorPalette.textDark;
     lbPassword.textColor = AppD.styleManager.colorPalette.textDark;
     lbPasswordConfirmation.textColor = AppD.styleManager.colorPalette.textDark;
@@ -432,31 +441,37 @@
     UIImageView *ivLoginLock = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30.0, 30.0)];
     UIImageView *ivLoginCompany = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30.0, 30.0)];
     UIImageView *ivLoginName = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30.0, 30.0)];
+    UIImageView *ivLoginLastName = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30.0, 30.0)];
     
     ivLoginUser.tintColor = [UIColor grayColor];
     ivLoginLock.tintColor = [UIColor grayColor];
     ivLoginCompany.tintColor = [UIColor grayColor];
     ivLoginName.tintColor = [UIColor grayColor];
+    ivLoginLastName.tintColor = [UIColor grayColor];
     
     ivLoginUser.image = [[UIImage imageNamed:@"icon-email"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     ivLoginLock.image = [[UIImage imageNamed:@"icon-password"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     ivLoginCompany.image = [[UIImage imageNamed:@"icon-password"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     ivLoginName.image = [[UIImage imageNamed:@"icon-user"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    ivLoginLastName.image = [[UIImage imageNamed:@"icon-user"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     [ivLoginUser setContentMode:UIViewContentModeScaleAspectFit];
     [ivLoginLock setContentMode:UIViewContentModeScaleAspectFit];
     [ivLoginCompany setContentMode:UIViewContentModeScaleAspectFit];
     [ivLoginName setContentMode:UIViewContentModeScaleAspectFit];
+    [ivLoginLastName setContentMode:UIViewContentModeScaleAspectFit];
     //
     [txtEmail setLeftViewMode:UITextFieldViewModeAlways];
     [txtPassword setLeftViewMode:UITextFieldViewModeAlways];
     [txtPasswordConfirmation setLeftViewMode:UITextFieldViewModeAlways];
     [txtName setLeftViewMode:UITextFieldViewModeAlways];
+    [txtLastName setLeftViewMode:UITextFieldViewModeAlways];
     //
     txtEmail.leftView = ivLoginUser;
     txtPassword.leftView = ivLoginLock;
     txtPasswordConfirmation.leftView = ivLoginCompany;
     txtName.leftView = ivLoginName;
+    txtLastName.leftView = ivLoginLastName;
 }
 
 - (UIBarButtonItem*)createNavPhotoButton {

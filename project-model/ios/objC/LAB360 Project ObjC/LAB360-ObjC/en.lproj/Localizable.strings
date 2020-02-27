@@ -99,6 +99,7 @@
 "ALERT_MESSAGE_AUTHENTICATION_AFTER_SIGNUP_ERROR" = "Your account was created successfully, but it was not possible to connect you automatically. Please login manually.";
 
 "ALERT_TITLE_CREATION_ERROR" = "Creation Error";
+"ALERT_MESSAGE_CATEGORY_ERROR" = "Session Expired. Please try again.";
 "ALERT_MESSAGE_CREATION_ERROR" = "It was not possible to create the user. Please try again.";
 "ALERT_MESSAGE_UPDATE_ERROR" = "It was not possible to update the user. Please try again.";
 "ALERT_MESSAGE_PASSWORD_ERROR" = "It was not possible to update the password. Please try again.";
