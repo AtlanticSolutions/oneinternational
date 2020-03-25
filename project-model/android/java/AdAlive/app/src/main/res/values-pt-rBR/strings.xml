@@ -3,7 +3,7 @@
     <string name="fb_app_secret">90acb762bb9c9a6fdce990bb3680d98a</string>
     <string name="facebook_app_id">299465907183064</string>
     <string name="fb_login_protocol_scheme">fb299465907183064</string>
-    <string name="SCREEN_TITLE_MAIN">One Internacional</string>
+    <string name="SCREEN_TITLE_MAIN">BioPrime</string>
     <string name="SCREEN_TITLE_ABOUT">Sobre</string>
 
     <string name="geofence_enter">Entrando na Região %1$s</string>

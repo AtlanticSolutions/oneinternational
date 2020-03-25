@@ -5,15 +5,15 @@ apply plugin: 'realm-android'
 android {
     signingConfigs {
         release {
-            storeFile file("oneinternational.jks")
-            storePassword "oneinternational"
-            keyAlias "oneinternational"
-            keyPassword "oneinternational"
+            storeFile file("bioprime.jks")
+            storePassword "bioprime"
+            keyAlias "bioprime"
+            keyPassword "bioprime"
         }
     }
 
     defaultConfig {
-        applicationId "br.com.lab360.oneinternacional"
+        applicationId "br.com.lab360.bioprime"
         compileSdkVersion rootProject.ext.compileSdkVersion
         buildToolsVersion rootProject.ext.buildToolsVersion
         multiDexEnabled true
@@ -23,8 +23,8 @@ android {
         vectorDrawables.useSupportLibrary = true
         versionCode 4
         versionName '1.0.1'
-        buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.oneinternacional.pro.prefs"'
-        buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.oneinternacional.pro.fileprovider"'
+        buildConfigField 'String', 'SHARED_PREFS', '"br.com.lab360.bioprime.pro.prefs"'
+        buildConfigField 'String', 'FILE_PROVIDER_URI', '"br.com.lab360.bioprime.pro.fileprovider"'
         buildConfigField 'String', 'DEFAULT_ROLE', '"DEFAULT"'
         dimension "tier"
 
@@ -43,18 +43,18 @@ android {
         debug {
             debuggable true
             applicationIdSuffix ".debug"
-            buildConfigField 'String', 'APP_ID', '"11025"'
-            resValue "string", "app_name", "One International HMLG"
+            buildConfigField 'String', 'APP_ID', '"1000041"'
+            resValue "string", "app_name", "BioPrime HMLG"
             manifestPlaceholders = [ fabricApiKey :"d145d112565ed09d0136325b9feaf2473d9ed507"]
         }
 
         release {
             signingConfig signingConfigs.release
-            debuggable false
+            debuggable true
             applicationIdSuffix ".pro"
             minifyEnabled false
-            buildConfigField 'String', 'APP_ID', '"39"'
-            resValue "string", "app_name", "One International"
+            buildConfigField 'String', 'APP_ID', '"41"'
+            resValue "string", "app_name", "BioPrime"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [ fabricApiKey :"3de84e93e4f29fa7a0107f648f758d68d8dd9a5f"]
         }
@@ -64,16 +64,21 @@ android {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }
 
-    testOptions {
+    /*testOptions {
         unitTests.returnDefaultValues = true
-    }
+    }*/
 
-    splits {
+    /*splits {
         abi {
             enable true
             reset()
             universalApk false
         }
+    }*/
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     lintOptions {
@@ -126,13 +131,10 @@ dependencies {
 
 
     //Android Framework
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.browser:browser:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     implementation "com.google.guava:guava:$rootProject.guavaVersion"
@@ -170,8 +172,8 @@ dependencies {
     implementation 'com.github.adrielcafe:AndroidOAuth:1.1.5'
 
     //Butterknife - View Injection
-    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
 
     //Retrofit - A type-safe HTTP client for Android and Java
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'

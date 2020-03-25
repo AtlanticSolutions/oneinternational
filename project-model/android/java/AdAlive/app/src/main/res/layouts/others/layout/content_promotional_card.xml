@@ -96,7 +96,7 @@
                     android:clickable="true"
                     android:focusable="true">
 
-                    <br.com.lab360.oneinternacional.ui.decorator.CoverCardView
+                    <br.com.lab360.bioprime.ui.decorator.CoverCardView
                         android:id="@+id/coverCardView"
                         android:layout_width="232dp"
                         android:layout_height="232dp"
@@ -133,7 +133,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <br.com.lab360.oneinternacional.ui.decorator.AnimationPromotionalCard
+    <br.com.lab360.bioprime.ui.decorator.AnimationPromotionalCard
         android:id="@+id/animationParticleObject"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

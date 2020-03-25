@@ -1,16 +1,16 @@
 {
   "project_info": {
     "project_number": "208422456958",
-    "firebase_url": "https://lab360-oneinternacional.firebaseio.com",
-    "project_id": "lab360-oneinternacional",
-    "storage_bucket": "lab360-oneinternacional.appspot.com"
+    "firebase_url": "https://lab360-bioprime.firebaseio.com",
+    "project_id": "lab360-bioprime",
+    "storage_bucket": "lab360-bioprime.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:208422456958:android:8a3e0a74fdcdbe47",
         "android_client_info": {
-          "package_name": "br.com.lab360.oneinternacional.pro"
+          "package_name": "br.com.lab360.bioprime.debug"
         }
       },
       "oauth_client": [

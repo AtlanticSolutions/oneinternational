@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.lab360.oneinternacional.ui.activity.EquipActivity"
+    tools:context="br.com.lab360.bioprime.ui.activity.EquipActivity"
     tools:showIn="@layout/activity_equip">
 
     <androidx.recyclerview.widget.RecyclerView

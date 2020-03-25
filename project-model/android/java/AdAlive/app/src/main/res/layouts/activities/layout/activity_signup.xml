@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="br.com.lab360.oneinternacional.ui.activity.login.SignupActivity">
+    tools:context="br.com.lab360.bioprime.ui.activity.login.SignupActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

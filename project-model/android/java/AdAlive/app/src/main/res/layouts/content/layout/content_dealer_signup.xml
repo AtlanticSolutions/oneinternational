@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_marginTop="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.lab360.oneinternacional.ui.activity.dealer.DealerSignupActivity"
+    tools:context="br.com.lab360.bioprime.ui.activity.dealer.DealerSignupActivity"
     tools:showIn="@layout/activity_dealer_signup">
 
 

@@ -18,7 +18,11 @@
 
 -keepattributes JavascriptInterface
 
+-dontwarn java.lang.invoke.**
+
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
+
+
 }
 

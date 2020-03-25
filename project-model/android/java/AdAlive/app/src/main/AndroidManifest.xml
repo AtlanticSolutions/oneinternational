@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="br.com.lab360.oneinternacional">
+    package="br.com.lab360.bioprime">
 
     <!-- FEATURES -->
     <uses-feature android:name="android.hardware.camera" />
@@ -30,7 +30,7 @@
         android:protectionLevel="normal" />
 
     <application
-        android:name="br.com.lab360.oneinternacional.application.AdaliveApplication"
+        android:name="br.com.lab360.bioprime.application.AdaliveApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -84,30 +84,30 @@
 
 
         <service
-            android:name="br.com.lab360.oneinternacional.logic.geofence.GeolocationService"
+            android:name="br.com.lab360.bioprime.logic.geofence.GeolocationService"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name" >
         </service>
         <service
-            android:name="br.com.lab360.oneinternacional.logic.geofence.GeofenceReceiver"
+            android:name="br.com.lab360.bioprime.logic.geofence.GeofenceReceiver"
             android:exported="false" >
         </service>
 
-        <service android:name="br.com.lab360.oneinternacional.logic.fcm.FirebaseIDService">
+        <service android:name="br.com.lab360.bioprime.logic.fcm.FirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="br.com.lab360.oneinternacional.logic.fcm.FireMsgService">
+        <service android:name="br.com.lab360.bioprime.logic.fcm.FireMsgService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service
-            android:name="br.com.lab360.oneinternacional.logic.fcm.RegistrationInstanceIDService"
+            android:name="br.com.lab360.bioprime.logic.fcm.RegistrationInstanceIDService"
             android:exported="false" />
         <service
-            android:name="br.com.lab360.oneinternacional.logic.fcm.InteractiveNotificationWsService"
+            android:name="br.com.lab360.bioprime.logic.fcm.InteractiveNotificationWsService"
             android:exported="false" />
 
         <service
@@ -118,10 +118,10 @@
         <!-- =========================== -->
         <!-- Receive notification -->
         <!-- =========================== -->
-        <receiver android:name="br.com.lab360.oneinternacional.logic.fcm.ButtonReceiver" />
+        <receiver android:name="br.com.lab360.bioprime.logic.fcm.ButtonReceiver" />
 
         <receiver
-            android:name="br.com.lab360.oneinternacional.logic.geofence.GeofenceReceiver"
+            android:name="br.com.lab360.bioprime.logic.geofence.GeofenceReceiver"
             android:exported="false" >
             <intent-filter>
                 <action android:name=".logic.geofence.ACTION_RECEIVE_GEOFENCE" />
@@ -133,7 +133,7 @@
         <!-- =========================== -->
         <!-- Splash Screen -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.SplashScreenActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.SplashScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -158,7 +158,7 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.login.LoginActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.login.LoginActivity"
             android:configChanges="keyboardHidden"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
@@ -166,12 +166,12 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.chat.ChatActivity"
             android:label="@string/SCREEN_TITLE_CHAT"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -182,70 +182,70 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatSearchActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.chat.ChatSearchActivity"
             android:label="@string/SCREEN_TITLE_SEARCH_CHAT"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.chat.ChatActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.chat.ChatActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.chat.ChatGroupListActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.chat.ChatGroupListActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.chat.ChatGroupListActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.chat.ChatGroupListActivity"
             android:label="@string/SCREEN_TITLE_CHAT"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.CommentActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.timeline.CommentActivity"
             android:label="@string/TITLE_ACTIVITY_COMMENT"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.timeline.CreatePostActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.timeline.CreatePostActivity"
             android:label=""
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity" />
         </activity>
 
         <!-- Notificacoes -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.notifications.NotificationActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.notifications.NotificationActivity"
             android:label="@string/SCREEN_TITLE_NOTIFICATIONS"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.events.EventsTabActivity"
             android:label="@string/SCREEN_TITLE_EVENT_TABS"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.videos.VideoFeedActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.videos.VideoFeedActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.videos.VideoPlayerActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.videos.VideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -256,290 +256,290 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.sponsors.SponsorsActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.sponsors.SponsorsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.profile.EditProfileActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.profile.EditProfileActivity"
             android:label="@string/BUTTON_TITLE_MY_PROFILE"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.downloads.MyDownloadsActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.downloads.MyDownloadsActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.scanner.ScannerActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.scanner.ScannerActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCaseActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.ShowCaseActivity"
             android:label="@string/BUTTON_SHOWCASE"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.ShowCase360Activity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.RotateProductActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.RotateProductActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.showcase.ShowCase360Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.RotateHDProductActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.RotateHDProductActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.RotateProductActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.showcase.RotateProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.video360.Video360Activity"
+            android:name="br.com.lab360.bioprime.ui.activity.video360.Video360Activity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCase360Activity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.showcase.ShowCase360Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.GalleryImagesActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.GalleryImagesActivity"
             android:label="@string/BUTTON_GALLERY"
 
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.ShowCaseActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.showcase.ShowCaseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.survey.SurveyActionActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.survey.SurveyActionActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.survey.LaucherSurveyActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.survey.LaucherSurveyActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.profile.ChangePasswordActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.profile.ChangePasswordActivity"
             android:label="Redefinir Senha"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.profile.EditProfileActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.profile.EditProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.login.SignupActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.login.SignupActivity"
             android:label="@string/SCREEN_TITLE_SIGNUP"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.login.LoginActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.login.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.webview.WebviewActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.webview.WebviewActivity"
             android:hardwareAccelerated="true"
             android:label=""
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.about.AboutActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.about.AboutActivity"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.MainActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.events.EventDownloadsActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventDetailActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.events.EventDetailActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.downloads.FileDescriptionActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.downloads.FileDescriptionActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.events.EventDownloadsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventDownloadsActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.events.EventDownloadsActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.events.EventDetailActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.events.EventDetailActivity"
             android:label="@string/SCREEN_TITLE_EVENT_DETAIL"
             android:launchMode="singleTask"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.events.EventsTabActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.com.lab360.oneinternacional.ui.activity.events.EventsTabActivity" />
+                android:value="br.com.lab360.bioprime.ui.activity.events.EventsTabActivity" />
         </activity>
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.mediaplayer.MediaPlayerActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.mediaplayer.MediaPlayerActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.GallerySliderActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.GallerySliderActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.showcase.GalleryImagesActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.showcase.GalleryImagesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Category -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newdocument.DocumentCategoryActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- SubCategory -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newdocument.DocumentCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- AllDocuments -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentsAllActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newdocument.DocumentsAllActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newdocument.DocumentSubCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Search -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSearchActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newdocument.DocumentSearchActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newdocument.DocumentCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- Document -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newdocument.DocumentSubCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newdocument.DocumentActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newdocument.DocumentSubCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- Category -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newvideo.VideoCategoryActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- SubCategory -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newvideo.VideoCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- AllDocuments -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideosAllActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newvideo.VideosAllActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newvideo.VideoSubCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Search -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSearchActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newvideo.VideoSearchActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newvideo.VideoCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- Document -->
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.newvideo.VideoSubCategoryActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.newvideo.VideoActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.newvideo.VideoSubCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.CapturePhotoActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.CapturePhotoActivity"
             android:launchMode="singleInstance"
             android:noHistory="true"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.PhotoShowcaseActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.PhotoShowcaseActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.managerapplication.ManagerApplicationActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.managerapplication.ManagerApplicationActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.showcase.SavePictureActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.showcase.SavePictureActivity"
             android:launchMode="singleInstance"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.product.ProductActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.scanner.ScannerActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.product.ProductActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.scanner.ScannerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.mediaplayer.ExoPlayerActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.product.ProductActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.mediaplayer.ExoPlayerActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.product.ProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.promotionalcard.PrePromotionalCardActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.promotionalcard.PrePromotionalCardActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.promotionalcard.PromotionalCardActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.promotionalcard.PromotionalCardActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
 
         <activity
-            android:name="br.com.lab360.oneinternacional.ui.activity.geofence.GeofenceActivity"
-            android:parentActivityName="br.com.lab360.oneinternacional.ui.activity.timeline.TimelineActivity"
+            android:name="br.com.lab360.bioprime.ui.activity.geofence.GeofenceActivity"
+            android:parentActivityName="br.com.lab360.bioprime.ui.activity.timeline.TimelineActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 

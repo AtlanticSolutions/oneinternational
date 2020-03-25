@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.video360.Video360Activity">
 
-    <br.com.lab360.oneinternacional.ui.activity.video360.SphericalVideoPlayer
+    <br.com.lab360.bioprime.ui.activity.video360.SphericalVideoPlayer
         android:id="@+id/spherical_video_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

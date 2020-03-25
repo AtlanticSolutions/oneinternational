@@ -1,4 +1,4 @@
-package br.com.lab360.oneinternacional;
+package br.com.lab360.bioprime;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

@@ -19,8 +19,8 @@
     <string name="facebook_app_id">299465907183064</string>
     <string name="fb_login_protocol_scheme">fb299465907183064</string>
 
-    <string name="SCREEN_TITLE_MAIN">One Internacional</string>
-    <string name="SCREEN_TITLE_ABOUT">About the One Internacional</string>
+    <string name="SCREEN_TITLE_MAIN">BioPrime</string>
+    <string name="SCREEN_TITLE_ABOUT">About the BioPrime</string>
 
     <string name="SCREEN_TITLE_LOGIN">Login</string>
     <string name="SCREEN_TITLE_RESET_PASSWORD">Recover Password</string>
@@ -280,7 +280,7 @@
     <string name="ALERT_TITLE_CHAT_BLOCKED_USER">Blocked</string>
 
     <!--ABOUT-->
-    <string name="ABOUT_DESCRIPTION">The application of the One Internacional aims to facilitate access to information and activities developed by the institution.</string>
+    <string name="ABOUT_DESCRIPTION">The application of the BioPrime aims to facilitate access to information and activities developed by the institution.</string>
     <string name="VERSION">Version App.: </string>
     <string name="ERRO_ABOUT">There was an error loading the text.</string>
 
